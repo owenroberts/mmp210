@@ -1,5 +1,7 @@
+var dead = false;
+
 var player;
-var speed = 0.5;
+var speed = 10;
 var jump = 20;
 var jumping = false;
 
@@ -30,36 +32,40 @@ function setup() {
     player.addAnimation("walk", player_walk);
     player.addAnimation("stand", player_stand);
     player.setCollider("circle", 0, 0, 22, 22);
-    player.debug = true;
+    //player.debug = true;
     
     platform = createSprite(width/2, height, width, 20);
     platform.addImage(ground);
-    platform.debug = true;
+    //platform.debug = true;
     platform.setCollider("rectangle", 0, 0, width, 5);
     
-    obstacle = createSprite(300, height, 60, 80);
+    obstacle = createSprite(width, height/2, 60, 80);
     obstacle.addImage(fire);
     obstacle.setCollider("rectangle", 0, 0, 40, 60);
-    obstacle.debug = true;
+    //obstacle.debug = true;
+    obstacle.velocity.x = -5;
 }
 
 function draw() {
     background("black");
+    
+    if (!dead) {
     
     if ( keyDown("space") && !jumping ) {
         player.velocity.y -= jump;
         jumping = true;
     }
     
-    if ( keyDown("a") ) {
-        player.velocity.x -= speed;
-        player.changeAnimation("walk");
-    } else if ( keyDown("d") ) {
-        player.velocity.x += speed;
+    if ( keyDown("d") ) {
+        obstacle.position.x -= speed;
+        platform.position.x -= speed;
         player.changeAnimation("walk");
     } else {
         player.changeAnimation("stand");   
     }
+    
+    if ( platform.position.x < 0 ) platform.position.x = width/2;
+    if ( obstacle.position.x < -obstacle.width ) obstacle.position.x = random(width, width*2);
     
     player.velocity.y += gravity;
     if ( player.collide(platform) ) {
@@ -72,7 +78,12 @@ function draw() {
         player.position.x = 100;
         player.position.y = 0;
         player.velocity.x = 0;
+        dead = true;
     }
     
     drawSprites();
+    } else {
+        fill("white");
+       text("You're dead", 100, 100); 
+    }
 }
