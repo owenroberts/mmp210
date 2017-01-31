@@ -15,6 +15,6 @@
 <h2>Assignment 1</h2>
 <ul>
 	<li>Using p5, draw a self portrait in a web page.</li>
-	<li>You can use text, graphics, images and anything else you can think of.</li>
+	<li>You can use the shape and color functions.</li>
 	<li>Be creative.  Show us something about yourself through drawing and design.</li>
 </ul>
