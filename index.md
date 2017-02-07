@@ -29,17 +29,17 @@ This is the <a href="https://docs.google.com/document/d/1lDRKn-vQuvl1kne6qjAJKmx
 - DM @owen a URL to the assignment on your blog, WordPress or GitHub
 - Late assignments are automatic 20 points off
 
-### Software
+## Software
 - Text Editor: [Brackets](http://brackets.io/)
 - Browser: Chrome
 - GitHub
 
-### Computer Labs
+## Computer Labs
 Computers are available for student usage in the locations listed on [http://www.bmcc.cuny.edu/it](http://www.bmcc.cuny.edu/it)
 ### Tutoring
 For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmcc.cuny.edu/lrc/schedule.jsp)
 
-### Topics
+## Topics
 - Programming Basics
 	- statements
 	- control structures
@@ -57,6 +57,12 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 - Canvas and graphics
 - Multimedia elements
 - Web Applications
+
+## Resources
+
+- [p5 inspiration](https://github.com/ITPNYU/ICM-2016/wiki/Inspiration)
+- [p5 web editor](http://alpha.editor.p5js.org/)
+- [p5 reference](http://p5js.org/reference/)
 
 # Schedule
 
@@ -79,6 +85,18 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 
 - [JavaScript statements, operators & variables](week2/)
 - [p5 color, stroke, fill](week2/p5.html)
+- Assignment 2
+	- Using p5, create a design that uses variables as the arguments for the drawing functions.
+	- Drawing functions include fill(), stroke(), rect(), line(), ellipse(), triangle() etc...
+	- There should be at least 5 colors and 5 shapes.
+
+```
+fill(0); // this is hard coded
+ var c = color(255,0,255);
+ fill(c); // this uses the variable 'c'
+```
+
+
 
 <!--
 
