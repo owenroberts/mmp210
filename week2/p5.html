@@ -16,19 +16,19 @@
 	<div id="container" class="slides language-js">
 		<div class="slide">
 			<h1>p5: color, stroke, fill</h1>
-			<p><a href="https://github.com/owenroberts/mmp210">MMP 210</a> > <a href="https://github.com/owenroberts/mmp210/tree/master/week2">Week 2</a></p>
+			<p><a href="../">Home</a></p>
 		</div>
 
 		<!--  color rgb and name and hex -->
 		<div class="slide">
 			<p>By default, the <a href="http://p5js.org/reference/#/p5/color" target="blank">color()</a> function will take either 1 argument for grayscale or 3 arguments for rgb.</p>
-			<pre><code>var gray = color(100); // gray
+			<pre><code class="javascript">var gray = color(100); // gray
 var pink = color(255, 0, 200); // pink</code></pre>
 		</div>
 
 		<div class="slide">
 			<p>We can also use conventional HTML color names and HEX values.</p>
-			<pre><code>var blue = color("blue"); // blue
+			<pre><code class="javascript">var blue = color("blue"); // blue
 var red = color("#ff0000"); // red</code></pre>
 		</div>
 		
@@ -74,29 +74,9 @@ background(green);</code></pre>
 		</div>
 
 		<div class="slide">
-			<p>Now lets trying the statements and operators we learned to change a color over time.</p>
-			<pre><code>var red = 0;
-var redIncrement = 20;
-
-fill(red, 0, 0);
-ellipse(red, 20, redIncrement, redIncrement);
-
-red += redIncrement;
-fill(red, 0, 0);
-ellipse(red, 20, redIncrement, redIncrement);
-
-red += redIncrement;
-fill(red, 0, 0);
-ellipse(red, 20, redIncrement, redIncrement);
-
-red += redIncrement;
-fill(red, 0, 0);
-ellipse(red, 20, redIncrement, redIncrement);</code></pre>
+			
 		</div>
 
-		<div class="slide">
-			<p>Notice how the variables <code>red</code> and <code>redIncrement</code> are being used to do more then just set the color.</p>
-		</div>
 	</div>
 </body>
 </html>
