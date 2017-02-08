@@ -35,8 +35,11 @@ This is the <a href="https://docs.google.com/document/d/1lDRKn-vQuvl1kne6qjAJKmx
 - GitHub
 
 ## Computer Labs
+
 Computers are available for student usage in the locations listed on [http://www.bmcc.cuny.edu/it](http://www.bmcc.cuny.edu/it)
+
 ### Tutoring
+
 For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmcc.cuny.edu/lrc/schedule.jsp)
 
 ## Topics
