@@ -16,9 +16,9 @@ var platform, ground;
 var obstacle, fire;
 
 function preload() {
-    player_walk_sprites = loadSpriteSheet("player.png", 64, 64, 8);
+    player_walk_sprites = loadSpriteSheet("player.png", 40, 40, 4);
     player_walk = loadAnimation(player_walk_sprites);
-    player_stand_sprites = loadSpriteSheet("player.png", 64, 64, 1);
+    player_stand_sprites = loadSpriteSheet("player.png", 40, 40, 1);
     player_stand = loadAnimation(player_stand_sprites);
     
     fire = loadImage("fire.png");
@@ -29,9 +29,9 @@ function setup() {
     createCanvas(720, 360);
     
     player = createSprite(100, 100);
-    player.addAnimation("walk", player_walk);
-    player.addAnimation("stand", player_stand);
-    player.setCollider("circle", 0, 0, 22, 22);
+  	player.draw = function() {
+		ellipse(0, 0, 20, 20);
+	}
     //player.debug = true;
     
     platform = createSprite(width/2, height, width, 20);
