@@ -73,6 +73,7 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 
 - [HTML / CSS Review notes](week1/)
 - [Intro to p5](week1/p5.html)
+- [GitHub Publishing](week1/github.html)
 - In class assignment
 	- Create a simple web site to use as the portfolio page for your work this semester.
 	- Your site should have at least one of each:
