@@ -1,9 +1,6 @@
 ---
 layout: default
 ---
-<style>
-.outline { width: 580px }
-</style>
 # MMP 210: Multimedia Programming I
 
 This is the class page of MMP 210 at BMCC.
