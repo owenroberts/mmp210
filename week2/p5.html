@@ -1,82 +1,136 @@
-<!doctype html>
-<html>
-<head>
-	<title>MMP 210 - Week 1</title>
-	<meta charset="utf-8" />
-	<link rel="stylesheet" href="../slides/slides.css" type="text/css" />
-	<link rel="stylesheet" href="../slides/highlight/github-gist.css" type="text/css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="../slides/highlight/highlight.pack.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
-	<script src="../slides/p5.min.js"></script>
-	<script src="../slides/bkg.js"></script>
-	<script src="../slides/slides.js"></script>
-</head>
-<body>
-	<div id="container" class="slides language-js">
-		<div class="slide">
-			<h1>p5: color, stroke, fill</h1>
-			<p><a href="../">Home</a></p>
-		</div>
+---
+layout: slides
+---
+<div class="slide">
+	<h1>p5: color, stroke, fill</h1>
+	<p><a href="{{site.github.url}}/">MMP 210</a> > <a href="{{site.github.url}}/schedule.html#week-2">Week 2</a></p>
+</div>
 
-		<!--  color rgb and name and hex -->
-		<div class="slide">
-			<p>By default, the <a href="http://p5js.org/reference/#/p5/color" target="blank">color()</a> function will take either 1 argument for grayscale or 3 arguments for rgb.</p>
-			<pre><code class="javascript">var gray = color(100); // gray
+<!--  color rgb and name and hex -->
+<div class="slide">
+	<p>By default, the <a href="http://p5js.org/reference/#/p5/color" target="blank">color()</a> function will take either 1 argument for grayscale or 3 arguments for rgb.</p>
+	<pre><code class="javascript">var gray = color(100); // gray
 var pink = color(255, 0, 200); // pink</code></pre>
-		</div>
+</div>
 
-		<div class="slide">
-			<p>We can also use conventional HTML color names and HEX values.</p>
-			<pre><code class="javascript">var blue = color("blue"); // blue
+<div class="slide">
+	<p>We can also use conventional HTML color names and HEX values.</p>
+	<pre><code class="javascript">var blue = color("blue"); // blue
 var red = color("#ff0000"); // red</code></pre>
-		</div>
-		
-		<!--  fill & no fill -->
-		<div class="slide">
-			<p>The <a href="http://p5js.org/reference/#/p5/fill" target="blank">fill()</a> function sets the color of the fill for all drawable elements like shapes and lines.</p>
-			<pre><code>fill(51);
+</div>
+
+<!--  fill & no fill -->
+<div class="slide">
+	<p>The <a href="http://p5js.org/reference/#/p5/fill" target="blank">fill()</a> function sets the color of the fill for all drawable elements like shapes and lines.</p>
+	<pre><code>fill(51);
 rect(25, 25, 100, 100);</code></pre>
-		</div>
+</div>
 
-		<div class="slide">
-			<p>Color values saved in variables can also be used as colors.</p>
-			<pre><code>fill(pink);
+<div class="slide">
+	<p>Color values saved in variables can also be used as colors.</p>
+	<pre><code>fill(pink);
 rect(125, 25, 100, 100);</code></pre>			
-		</div>
+</div>
 
-		<div class="slide">
-			<p>The function <a href="http://p5js.org/reference/#/p5/noFill" target="blank">noFill()</a> turns the fill off.</p>
-			<pre><code>noFill();
+<div class="slide">
+	<p>The function <a href="http://p5js.org/reference/#/p5/noFill" target="blank">noFill()</a> turns the fill off.</p>
+	<pre><code>noFill();
 rect(150, 50, 100, 100);</code></pre>			
-		</div>
+</div>
 
-		<!--  stroke, stroke weight & no stroke -->
-		<div class="slide">
-			<p>The <a href="http://p5js.org/reference/#/p5/stroke" target="blank">stroke()</a> function works in a similar way, but changes the stroke of the drawable element.</p>
-			<pre><code>stroke(blue);
+<!--  stroke, stroke weight & no stroke -->
+<div class="slide">
+	<p>The <a href="http://p5js.org/reference/#/p5/stroke" target="blank">stroke()</a> function works in a similar way, but changes the stroke of the drawable element.</p>
+	<pre><code>stroke(blue);
 triangle(50, 50, 50, 100, 100, 50);</code></pre>
-		</div>
+</div>
 
-		<div class="slide">
-			<p>The function <a href="http://p5js.org/reference/#/p5/noStroke" target="blank">noStroke()</a> turns the stroke off (remember to turn the fill back on or you won't see anything!).</p>
-			<pre><code>noStroke();
+<div class="slide">
+	<p>The function <a href="http://p5js.org/reference/#/p5/noStroke" target="blank">noStroke()</a> turns the stroke off (remember to turn the fill back on or you won't see anything!).</p>
+	<pre><code>noStroke();
 fill(red);
 ellipse(200, 200, 60, 60);</code></pre>			
-		</div>
+</div>
 
-		<!--  background -->
-		<div class="slide">
-			<p>The <a href="http://p5js.org/reference/#/p5/background" target="blank">background()</a> function sets the color of the canvas element, and can use grayscale, rgb or HTML values, just like stroke and fill.</p>
-			<pre><code>var green = color(0, 190, 120);
+<!--  background -->
+<div class="slide">
+	<p>The <a href="http://p5js.org/reference/#/p5/background" target="blank">background()</a> function sets the color of the canvas element, and can use grayscale, rgb or HTML values, just like stroke and fill.</p>
+	<pre><code>var green = color(0, 190, 120);
 background(green);</code></pre>
-			<p>Make sure to draw you background before drawing anything else.</p>
-		</div>
+	<p>Make sure to draw you background before drawing anything else.</p>
+</div>
 
-		<div class="slide">
-			
-		</div>
+<div class="slide">
+	<h2>Using variables</h2>
+	<p>In the last class we drew a self portrait, using <note>hardcoded</note> values.  A hardcoded value is a number or string written directly into the program.  It will not change unless you rewrite it.  Let's take a look at that program:</p>
+	<pre><code>// self portrait
+function setup() { 
+	createCanvas(640, 480);
+	background("black");
+	noStroke();
+	
+	// head
+	fill("yellow");
+	ellipse(300, 300, 300, 300);
+	
+	// eyes
+	fill("orange");
+	rect(175, 175, 50, 50);
+	rect(275, 175, 50, 50);
+	
+	// mouth
+	fill("orange");
+	triangle(175, 400, 325, 425, 345, 380);
+	
+	// nose
+	stroke("orange");
+	strokeWeight(6);
+	line(250, 245, 200, 350);
 
-	</div>
-</body>
-</html>
+	// ear
+	fill("yellow");
+	arc(450, 280, 70, 90, PI+1, HALF_PI+1);
+}</code></pre>
+</div>
+<div class="slide">
+	<p>We can improve this program using variables.  My self portrait uses two hardcoded values for colors: <code>"yellow"</code> and <code>"orange"</code>.  If I want to change the color of any of the parts of the face I need to rewrite this.  If I use a variable instead, I can change all of the shapes using each color and change them all at the same time.</p>
+	<pre><code>var base = "yellow";
+var parts = "orange";
+
+// head
+fill(base);
+ellipse(300, 300, 300, 300);
+
+// eyes
+fill(parts);
+rect(175, 175, 50, 50);
+rect(275, 175, 50, 50);
+
+// mouth
+fill(parts);
+triangle(175, 400, 325, 425, 345, 380);
+
+// nose
+stroke(parts);
+strokeWeight(6);
+line(250, 245, 200, 350);
+
+// ear
+fill(base);
+arc(450, 280, 70, 90, PI+1, HALF_PI+1);</code></pre>
+	<p>Now I can change the whole drawing by changing one line: </p>
+	<pre><code>var parts = "green";</code></pre>
+</div>
+
+<div class="div">
+	<p>We can also do this with numbers.  Noticed I used the same size for the eyes width and height in my self portrait?  I can use one variable to save that value and adjust all of those dimensions at one time:</p>
+	<pre><code>// eyes
+var eyeSize = 50;
+fill(parts);
+rect(175, 175, eyeSize, eyeSize);
+rect(275, 175, eyeSize, eyeSize);</code></pre>
+</div>
+
+<div class="slide">
+	<p>See if you can update your self portrait with variables!</p>
+</div>

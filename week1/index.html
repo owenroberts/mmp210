@@ -2,43 +2,40 @@
 layout: slides
 ---
 <style>
-	#box1 {
-		border:1px dashed black;
-		width:540px;
-		height:280px;
-		background-color:lightgray;
-		text-align:center
-	}
-	
-	#box2 {
-		border:1px solid black;
-		background-color:orange;
-		width:480px;
-		height:220px;
-		margin: 10px 30px;
-	}
-	
-	#box3 {
-		border:1px solid black;
-		width:400px;
-		height:140px;
-		background-color:white;
-		text-align:center;
-		margin: 20px 40px;
-	}
-
-	#box4 {
-		border:1px dashed black;
-		width:300px;
-		height:80px;
-		background-color:white;
-		text-align:center;
-		margin:10px 50px;
-	}
+#box1 {
+	border:1px dashed black;
+	width:540px;
+	height:280px;
+	background-color:lightgray;
+	text-align:center
+}
+#box2 {
+	border:1px solid black;
+	background-color:orange;
+	width:480px;
+	height:220px;
+	margin: 10px 30px;
+}
+#box3 {
+	border:1px solid black;
+	width:400px;
+	height:140px;
+	background-color:white;
+	text-align:center;
+	margin: 20px 40px;
+}
+#box4 {
+	border:1px dashed black;
+	width:300px;
+	height:80px;
+	background-color:white;
+	text-align:center;
+	margin:10px 50px;
+}
 </style>
 <div class="slide">
 	<h1>HTML / CSS Review</h1>
-	<p><a href="../">MMP 210 Home</a></p>
+	 <p><a href="{{site.github.url}}/">MMP 210</a> > <a href="{{site.github.url}}/schedule.html#week-1">Week 1</a></p>
 </div>
 <div class="slide">
 	<script src="https://gist.github.com/owenroberts/7d477c7007cfe14b6681.js"></script>
@@ -119,8 +116,8 @@ layout: slides
 <div class="slide">
 	<p>Internal stylesheets can be added anywhere inside of an HTML document, using the <code>style</code> tag, but are typically found in the <code>&lt;head&gt;</code> section.  These styles will only apply to elements on a single page, but will apply to all elements of that page.</p>
 	<pre><code>&lt;style&gt;
-a { color: pink; }
-a:hover { color: blue; }
+	a { color: pink; }
+	a:hover { color: blue; }
 &lt;/style&gt;</code></pre>
 </div>
 <div class="slide">
@@ -142,28 +139,28 @@ a:hover { color: blue; }
 	<pre><code>&lt;div class="content"&gt;&lt;/div&gt;</code></pre>
 	<p>Classes can be applied to multiple elements in a layout and multiple classes can be applied to one element:</p>
 	<pre><code>&lt;div class="content post active"&gt;&lt;/div&gt;
-&lt;div class="content post"&gt;&lt;/div&gt;
-&lt;div class="content post"&gt;&lt;/div&gt;</code></pre>
+	&lt;div class="content post"&gt;&lt;/div&gt;
+	&lt;div class="content post"&gt;&lt;/div&gt;</code></pre>
 </div>
 <div class="slide">
 	<p>IDs can only be used once, on one element:</p>
 	<pre><code>&lt;div id="header"&gt;&lt;/div&gt;
-&lt;div id="main"&gt;&lt;/div&gt;</code></pre>
+	&lt;div id="main"&gt;&lt;/div&gt;</code></pre>
 	<p>Classes and IDs can be contained in the same div:</p>
 	<pre><code>&lt;div id="header" class="content"&gt;&lt;/div&gt;
-&lt;div id="main" class="content post"&gt;&lt;/div&gt;</code></pre>
+	&lt;div id="main" class="content post"&gt;&lt;/div&gt;</code></pre>
 </div>
 <div class="slide">
 	<p>In CSS, rules for classes use a period or full stop <code>.</code> while IDS use the hashtag <code>#</code>.</p>
 	<pre><code>#header {
-background-color:gray;
-font-size:2em;
-height:60px;
+	background-color:gray;
+	font-size:2em;
+	height:60px;
 }
 .content {
-background-color:lightgray;
-font-size:1em;
-width:40px;
+	background-color:lightgray;
+	font-size:1em;
+	width:40px;
 }</code></pre>
 </div>
 
@@ -171,28 +168,28 @@ width:40px;
 	<h2>Nested selectors </h2></strong></p>
 	<p>We can also use the relationships between HTML elements to create styles.  An element that is a child of another element can be selected with a space between two selector tags.  For example, the following HTML:</p>
 	<pre><code>&lt;ul&gt;
-&lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
 </div>
 <div class="slide">
 	<p>Can be styled with the following rules:</p>
 	<pre><code>ul {
-width:200px;
-height:20px;
-list-style:none;
+	width:200px;
+	height:20px;
+	list-style:none;
 }
 
 ul li {
-display:inline;
+	display:inline;
 }
 
 ul li a {
-color: blue;
+	color: blue;
 }
 
 ul li a:hover {
-color:darkblue;
+	color:darkblue;
 }</code></pre>
 </div>
 <div class="slide">
@@ -225,9 +222,9 @@ color:darkblue;
 	<p>The <code>width</code> and <code>height</code> of each block element can also be set in <code>px</code>, <code>em</code> or <code>%</code>.  HTML elements without width or height properties will expand to fit the content inside of them.</p>
 	<p>The above example shows this rule (highlighted by Google Chrome Inspect Element):</p>
 	<pre><code>p {
-border:10px solid transparent;
-margin:10px;
-padding:10px;
+	border:10px solid transparent;
+	margin:10px;
+	padding:10px;
 }</code></pre>
 </div>
 <div class="slide">

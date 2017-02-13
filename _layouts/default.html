@@ -4,27 +4,14 @@
 	<title>MMP 210</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link type="text/css" href="slides/slides.css" rel="stylesheet">
-	<style>
-		nav {
-			float:right;
-			width:200px;
-			margin-top:10em;
-		}
-		nav li, nav ul {
-			list-style:none;
-			padding:0;
-			margin:0;
-		}
-	</style>
+	<link type="text/css" href="{{site.github.url}}/slides/slides.css" rel="stylesheet">
+	<link rel="stylesheet" href="{{ site.github.url }}/slides/highlight/github-gist.css" type="text/css" />
+	<script src="{{ site.github.url }}/slides/highlight/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
 </head>  
 <body>
-	<!-- <nav>
-		<ul>
-			<li><a href="index">Home</a></li>
-			<li><a href="schedule">Schedule</a></li>
-		</ul>
-	</nav> -->
+
 	<div id="container" class="outline">
 		{{ content }}
 	</div>

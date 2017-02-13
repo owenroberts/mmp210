@@ -1,98 +1,131 @@
-<!doctype html>
-<html>
-<head>
-	<title>MMP 210 - Week 2</title>
-	<meta charset="utf-8" />
-	<link rel="stylesheet" href="../slides/slides.css" type="text/css" />
-	<link rel="stylesheet" href="../slides/highlight/github-gist.css" type="text/css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="../slides/highlight/highlight.pack.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
-	<script src="../slides/p5.min.js"></script>
-	<script src="../slides/bkg.js"></script>
-	<script src="../slides/slides.js"></script>
-</head>
-<body>
-	<div id="container" class="slides language-js">
-		<div class="slide">
-			<h1>JavaScript statements, operators & variables</h1>
-			<p><a href="../">Home</a></p>
-		</div>
+---
+layout: slides
+---
+<div class="slide">
+	<h1>JavaScript statements, operators & variables</h1>
+	<p><a href="{{site.github.url}}/">MMP 210</a> > <a href="{{site.github.url}}/schedule.html#week-2">Week 2</a></p>
+</div>
 
-		<div class="slide">
-			<p>Let's start by opening the JavaScript console (in Google Chrome).</p>
-			<div class="key">CAj</div>
-			<p>We're going to add a series of commands and see what happens.</p>
-		</div>
+<div class="slide">
+	<p>Let's start by opening the JavaScript console (in Google Chrome).</p>
+	<div class="key">CAj</div>
+	<p>We're going to add a series of commands and see what happens.</p>
+</div>
 
-		<div class="slide">
-			<h2>Syntax basics</h2>
-			<p>A simple statment.</p>
-			<pre><code><c></c>var s = "hello world";</code></pre>
-			<p>We can ignore <code>whitespace</code> (except for inside the quotation marks).</p>
-			<pre><code><c></c>var x =         " hello world ! ";</code></pre>
-			<p>The <code>=</code> sign is for assigning values.</p>
-			<blockquote>x "gets" 10</blockquote>
-		</div>
+<div class="slide">
+	<h2>Syntax basics</h2>
+	<p>A simple statment.</p>
+	<pre><code><c></c>var s = "hello world";</code></pre>
+	<p>We can ignore <code>whitespace</code> (except for inside the quotation marks).</p>
+	<pre><code><c></c>var x =         " hello world ! ";</code></pre>
+	<p>The <code>=</code> sign is for assigning values.</p>
+	<blockquote>x "gets" 10</blockquote>
+</div>
 
-		<div class="slide">
-			<h2>Operators</h2>
-			<p>Add and subtract</p>
-			<pre><code class="javascript"><c></c>var x = 10;
+<div class="slide">
+	<p>But wait, what is that <code>var</code> thing, and what are those functions??</p>
+</div>
+<div class="slide">
+	<h2>Variables</h2>
+	<p>In Javascript, most variables are declared as <code>var</code> regardless of what type of information they hold.</p>  
+<!-- 	<p>Soon we will discuss datatypes as they relate to JavaScript.  JavaScript only works with a few basic variable types: numbers, strings and booleans, along with arrays and objects and functions, which can all be declared with <code>var</code>. </p> -->
+<!-- 	<p>Variables in JavaScript are more easily converted into each other.  This is called type coercion and we'll talk about that more next week as well.</p>
+	<p>For now, let's write some variables and then keep going.</p>
+ -->
+	<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var" target="blank">var on MDN</a></p>
+</div>
+
+<div class="slide">
+	<p>Creating a variable requires two steps: <em>declaration</em> and <em>assignment</em>.</p>
+	<pre><code>// declaration
+<c></c>var a;
+<c></c>console.log(a); // undefined
+
+// assignment
+<c></c>a = 10;
+<c></c>console.log(a); // 10</code></pre>
+</div>
+
+<div class="slide">
+	<p>A variables can be <em>initialized</em> by declaring <em>and</em> assigning in one statement:</p>
+	<pre><code>// initialize
+<c></c> var a = "Hello world!";</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Numbers and Strings</h2>
+	<p>JavaScript has several basic data types, including <em>Numbers</em> and <em>Strings</em>.</p>
+	<p>Numbers can represent any numerical value:</p>
+	<pre><code><c></c>10;
+<c></c>10.5;
+<c></c>0.1 + 0.2;
+<c></c>1 / 0 // Infinity</code></pre>
+	<p>Because variables can be set to different types, you can check in a value is a Number.  If not, you will get the error type <code>NaN</code> or "Not a Number".</p>
+	<pre><code><c></c>var a = "ten";
+<c></c>Number(a); // NaN
+<c></c>typeof a; // "string"</code></pre>
+</div>
+
+<div class="slide">
+	<p>Strings are "strings" of characters.  They usually store messages, names or other text that needs to be rendered in a program.  They can also store data.</p>
+	<pre><code><c></c>var s = "Hello"
+<c></c>var name = "Jerry";
+<c></c>s + " " + name;</code></pre>
+</div>
+
+<div class="slide">
+	<p>Once a variables is declared, the value can be assigned or changed using an <strong>operator</strong>.</p>
+	<pre><code><c></c>var a = 0;
+<c></c>a = 10;
+<c></c>a = 10 + 20;
+<c></c>a = "ten plus twenty";</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Operators</h2>
+	<p>Add and subtract</p>
+	<pre><code class="javascript"><c></c>var x = 10;
 <c></c>var y = 20;
 <c></c>x + y;
 <c></c>x - 5;
 <c></c>x - y + 5;
-<c></c>x - (y + 5); // use parentheses for order of operations</code></pre>
-		</div>
+// use parentheses for order of operations
+<c></c>x - (y + 5); </code></pre>
+</div>
 
-		<div class="slide">
-			<p>But wait, what is that <code>var</code> thing, and what are those functions??</p>
-			<p>In Javascript, every variable is declared as <code>var</code> regardless of what type of information it holds.  Soon we will discuss datatypes as they relate to JavaScript.  JavaScript only works with a few basic variable types: numbers, strings and booleans, along with arrays and objects and functions, which can all be declared with <code>var</code>. </p>
-			<p>Variables in JavaScript are more easily converted into each other.  This is called type coercion and we'll talk about that more next week as well.</p>
-			<p>For now, let's write some variables and then keep going.</p>
-			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var" target="blank">var on MDN</a></p>
-		</div>
-
-		<div class="slide">
-			<p>Multiply and divide</p>
-			<pre><code><c></c>2 * 2;
+<div class="slide">
+	<p>Multiply and divide</p>
+	<pre><code><c></c>2 * 2;
 <c></c>2 / 3;</code></pre>
-		</div>
+</div>
 
-		<div class="slide">
-			<p>Concatenation</p>
-			<pre><code><c></c>var h = "hello";
+<div class="slide">
+	<p>Concatenation</p>
+	<pre><code><c></c>var h = "hello";
 <c></c>var w = "world";
 <c></c>x + w;
 <c></c>"hello" + "world";
 <c></c>"hello " + "world";</code></pre>
-		</div>
+</div>
 
-		<div class="slide">
-			<p>Increment, decrement</p>
-			<pre><code><c></c>var x = 0;
+<div class="slide">
+	<p>Increment, decrement</p>
+	<pre><code><c></c>var x = 0;
 <c></c>x++;
 <c></c>x += 10;
 <c></c>var y = ++x;
 <c></c>var z = x++;
 <c></c>x--;
 <c></c>x -= 5;</code></pre>
-		</div>
+</div>
 
-		<div class="slide">
-			<p>Addition vs. concatenation</p>
-			<pre><code><c></c>var x = 1;
+<div class="slide">
+	<p>Addition vs. concatenation</p>
+	<pre><code><c></c>var x = 1;
 <c></c>var y = "7";
 <c></c>x + y;
 <c></c>typeof x + y;
 <c></c>y + x;
 <c></c>x + +y;
 <c></c>x + Number(y);</code></pre>
-		</div>
-
-		<!--  assignment use operators to change color -->
-		
-	</div>
-</body>
-</html>
+</div>
