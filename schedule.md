@@ -27,6 +27,7 @@ layout: default
 
 - [JavaScript statements, operators & variables](week2/)
 - [p5 color, stroke, fill](week2/p5.html)
+	- [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/)
 - [Code academy review](http://www.codecademy.com/courses/getting-started-v2)
 - Assignment 2
 	- Using p5, create a design that uses variables as the arguments for the drawing functions.
