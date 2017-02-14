@@ -3,7 +3,7 @@ layout: default
 ---
 # MMP 210: Multimedia Programming I
 
-[Home]({{github.site.url}}) [Schedule](schedule.html)
+[Home](index.html) [Schedule](schedule.html)
 
 This is the class page of MMP 210 at BMCC.
 

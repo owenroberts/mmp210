@@ -3,7 +3,7 @@ layout: default
 ---
 # Schedule
 
-[Home]({{github.site.url}}/) [Schedule](schedule.html)
+[Home](index.html) [Schedule](schedule.html)
 
 ## Week 1
 **Intro to JavaScript, p5.js**
