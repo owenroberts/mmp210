@@ -50,6 +50,8 @@ fill(c); // this uses the variable 'c'
 
 <!--
 
+where to add class examples???
+
 **Week 3: Logic**
 - [JavaScript comparison operators and conditionals](https://owenroberts.github.io/mmp210/week3/index.html)
 - [p5 system variables](https://owenroberts.github.io/mmp210/week3/p5.html)
