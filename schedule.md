@@ -52,11 +52,10 @@ fill(c); // this uses the variable 'c'
 **Debugging**
 - [JavaScript debugging](week3/)
 - [p5: text](week3/p5.html)
-- Debugging challenge
+- [Debugging challenge](week3/debug.zip)
 - **Assignment 7**
-	- Make an animated logo with your name (or some other project)
-	- Should use text and other shapes
-	- Upload to mmp.bmcc.cuny.edu and submit link via Blackboard
+	- Make a logo design with your name
+	- Use text and other shapes
 
 <!--
 

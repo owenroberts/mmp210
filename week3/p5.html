@@ -25,7 +25,7 @@ layout: slides
 </div>
 
 <div class="slide">
-	<h2>Let's review <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="blank"><code>string</code></a>.</h2>
+	<h2>Let's review <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="blank">string</a>.</h2>
 	<p>A <code>string</code> is a datatype comprised of a "string" of characters.  Characters can be alphabetic, numeric and special characters.  Strings can be made of English characters as well as characters from other supported languages. Some examples:</p>
 	<pre><code><c></c>var str1 = "Hello world.";
 <c></c>var str2 = "你好，世界";
@@ -39,24 +39,27 @@ layout: slides
 	<p>Strings have a bunch of <code>methods</code> and <code>properties</code> that can be used to manipulate them.</p>
 	<pre><code><c></c>var str = "Hello world";
 <c></c>console.log(str.length);
-<c></c>console.log(str.charAt(0));
-<c></c>console.log(str.charAt(str.length - 1));
 <c></c>console.log(str[0]);
+<c></c>console.log(str.replace("Hello", "goodbye"));
+</code></pre>
+<!-- 
 <c></c>console.log(str[str.length - 1]);
-<c></c>console.log(str.replace("Hello", "goodbye"));</code></pre>
+<c></c>console.log(str.charAt(str.length - 1));
+<c></c>console.log(str.charAt(0));
+ -->
 </div>
 
 <div class="slide">
-	<p>Strings can also be added together (remember our <code>greet()</code> function from week 5?) and compared.</p>
-	<pre><code><c></c>var a = "a";
-<c></c>var b = "b";
-<c></c>console.log(a > b);
-<c></c>console.log(b > a);
-<c></c>
-<c></c>var h = "hello";
+	<p>Strings can be concatenated or added together.</p>
+	<pre><code><c></c>var h = "hello";
 <c></c>var w = "world";
 <c></c>console.log(h + " " + w);</code></pre>
 </div>
+<!-- 	var a = "a";
+<c></c>var b = "b";
+<c></c>console.log(a > b);
+<c></c>console.log(b > a);
+<c></c> -->
 
 <div class="slide">
 	<h2>Styling strings with p5</h2>
@@ -96,12 +99,12 @@ layout: slides
 	createCanvas(640, 480);
 	background("white");
 
-	textWidth(width);
+	textWidth(640);
 	textAlign(CENTER);
 
 	var paragraph = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse earum quod exercitationem vero, temporibus veritatis in ea voluptates dolore doloremque amet sint, doloribus blanditiis maiores enim qui fuga. Adipisci, quaerat?"
 
-	text(paragraph, width/2, 20);
+	text(paragraph, 640/2, 20);
 }</code></pre>
 </div>
 
