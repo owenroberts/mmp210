@@ -53,7 +53,7 @@ fill(c); // this uses the variable 'c'
 - [JavaScript debugging](week3/)
 - [p5: text](week3/p5.html)
 - [Debugging challenge](week3/debug.zip)
-- **Assignment 7**
+- **Assignment 3**
 	- Make a logo design with your name
 	- Use text and other shapes
 
