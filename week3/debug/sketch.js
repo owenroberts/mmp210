@@ -3,7 +3,8 @@ function setup() {
     backGround(50);
     noStoke;
     fill("lightblue");
-    ellipse(350, 320, 300);
+    var size = "one hundred" / 5;
+    ellipse(350, 320, size);
 
     fill(0 0 0);
     ellipse 450, 250, 50;
