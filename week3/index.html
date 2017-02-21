@@ -1,126 +1,86 @@
-<!doctype html>
-<html>
-<head>
-	<title>MMP 210 - Week 3</title>
-	<meta charset="utf-8" />
-	<link rel="stylesheet" href="../slides/slides.css" type="text/css" />
-	<link rel="stylesheet" href="../slides/highlight/github-gist.css" type="text/css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="../slides/highlight/highlight.pack.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
-	<script src="../slides/p5.min.js"></script>
-	<script src="../slides/bkg.js"></script>
-	<script src="../slides/slides.js"></script>
-</head>
-<body>
-	<div id="container" class="slides language-js">
-		<div class="slide">
-			<h1>JavaScript comparison operators and conditionals</h1>
-			<p><a href="https://github.com/owenroberts/mmp210">MMP 210</a> > <a href="https://github.com/owenroberts/mmp210/tree/master/week3">Week 3</a></p>
-		</div>
-		<div class="slide">
-			<h2>Comparison operators</h2>
-			<p>Using comparison operators, we can test the values of variables to detect if they are equivalent.</p>
-			<pre><code><c></c>var x = 1;
-<c></c>var y = 0;
-<c></c>var z = "1";
-<c></c>var a = 5;
+---
+layout: slides
+---
+<div class="slide">
+	<h1>JavaScript debugging</h1>
+	<p><a href="{{site.github.url}}/">MMP 210</a> > <a href="{{site.github.url}}/schedule.html#week-3">Week 3</a></p>
+</div>
 
-<c></c>x == y;
-<c></c>x != y;
-<c></c>x == z;
+<!-- what is debugging? -->
+<div class="slide">
+	<h2>What is debugging?</h2>
+	<p>The term "computer bug" was coined by <a href="https://en.wikipedia.org/wiki/Grace_Hopper" target="blank">Grace Hopper</a> in 1946, when she discovered that a computer program running on the Mark II machine had a moth trapped in an eletrical relay.  The moth was trapped and preserved in the log book.</p>
+	<p>Generally, a bug is an error or flaw in a computer program that causes the execution to fail.</p>
+	<p>In JavaScript there are fewer fatal errors.  The language is very forgiving of type errors and other things that would cause classical languages to fail.  However, JavaScript programs can fail, and when they do it can be difficult to understand why, in part because other elements of the HTML page, and even other JavaScripts scripts can continue to execture.  The web page will still load, so we need to use debugging tools like the Chrome Developer console to find these errors.</p>
+</div>
 
+<div class="slide">
+	<p>Go ahead and open the console now:</p>
+	<p><strong class="karla">View > Developer > JavaScript Console</strong></p>
+	<p><span class="key">CAj</span></p>
+</div>
 
-<c></c>x === z;
-<c></c>x !== z;
+<div class="slide">
+	<p>It's pretty easy to create an error.  Try typing this:</p>
+	<pre><code><c></c>x + 1</code></pre>
+	<p>You will see some red text like this:</p>
+	<pre><code class="nohighlight"><c></c><span style="color:red;">Uncaught ReferenceError: x is not defined at:1:1</span></code></pre>
+	<p>We haven't initalized <code>x</code> with a string or number value, so we can't add a number to it.</p>
+</div>
 
-<c></c>x > y;
-<c></c>x < y;
-<c></c>x >= z;
-<c></c>x <= a;</code></pre>
-		</div>
-		<div class="slide">
-			<ul>
-				<li><code>==</code> two values are the same</li>
-				<li><code>!=</code> two values are <strong>not</strong> the same</li>
-				<li><code>></code> value 1 is greater than value 2</li>
-				<li><code><</code> value 1 is less than value 2</li>
-				<li><code>>=</code> value 1 is greater than or equal to value 2</li>
-				<li><code><=</code> value 1 is less than or equal to value 2</li>
-				<li><code>===</code> two values are the same and same type</li>
-				<li><code>!==</code> two values are <strong>not</strong> the same or <strong>not</strong> the same type</li>
-			</ul>
-		</div>
-				<div class="slide">
-			<p>We can compare strings as well as numbers.</p>
-			<pre><code><c></c>var x = "hello";
-<c></c>var y = "world";
+<!-- general approach -->
+<div class="slide">
+	<h2>How to debug</h2>
+	<p>All programmers encounter bugs in their code and many will spend more time debugging then writing new code.  It is a good idea to develop strategies for debugging as you learn programming to save time.</p>
+	<p>Bugs can be <strong>technical</strong> problems with your code, like a typo or misspelled method.  But they can also be <strong>conceptual gaps</strong> between what you expect a program to do and how it actually performs.  They can also be a combination of the two things.  The first thing to do is <strong>identify which type</strong> of bug you are facing.</p>
+	<p>Finding a bug requires a different mindset than writing a program.  Instead of writing what you want the computer to do, you need to go back through your code and figure out where it stopped doing what you thought it would.  <strong>Don't be upset!</strong>  Everyone gets bugs.  If your program suddenly stops rendering, don't get mad and say "it's just not doing anything."  Take a step back, maybe go for a quick drink of water or walk around the block, and then look at your code with fresh eyes.</p>
+	<p><strong>Don't delete you code!</strong>  You will need to add some new lines of code to figure out what's behaving incorrectly.  Don't undo everything or trash your file.  You might lose some useful work.</p>
+	<p>Make sure you are <strong>editing the right file</strong>.  Try closing Brackets (or your text editor) and reopening to make sure the file you are editing is the same one you are viewing in your browser.</p>
+	<p>Once you are sure you are using the right files, start writing some lines to log parts of you code.  If something is not running, add a <code>console.log()</code> before and after to see what happens.  Test all of your variables in different parts of your program to make sure they are logging what you expect.</p>
+	<p>When your code throws error, remember to look at the line number and read through the JavaScript function stack to find where the error originated.</p>
+	<p>When you log errors that you don't understand, try searching the same error on Google or <a href="http://stackoverflow.com" target="blank">Stack Overflow</a>.  Remember that some parts of your program are not universal.  If you error is <code style="color:red;">mySpecialVariable is not defined</code> you won't find other examples with the exact same variable names.</p>
+</div>
 
-<c></c>x == y;
-<c></c>x != y;</code></pre>
-		</div>
-
-		<div class="slide">
-			<h2>Booleans</h2>
-			<p>A <code>boolean</code> is a datatype that can be either <code>true</code> or <code>false</code>.</p>
-			<p>Booleans default to the values <code>true</code> and <code>false</code>.</p>
-			<p>In JavaScript other values will evaluate to <code>false</code>, such as <code>0</code>, <code>""</code> (empty string), <code>NaN</code>, <code>null</code>, and <code>undefined</code>.  Everything else defaults to <code>true</code>, such as <code>"Hello World"</code>, <code>1</code>, <code>99</code>, or <code>-99</code>.  Try evaluating some booleans in the console with this syntax:</p>
-			<pre><code><c></c>Boolean(true);
-<c></c>Boolean(false);
-<c></c>Boolean("");
-<c></c>Boolean(null);
-<c></c>Boolean(0);
-<c></c>Boolean(4);</code></pre>
-		</div>
-
-		<div class="slide">
-			<h2>Conditionals</h2>
-			<p>Using booleans, we can make decision in our program with conditional statements starting with the keyword <code>if</code>:</p>
-			<pre><code><c></c>var a = true;
-<c></c>var b = false;
-<c></c>if (a == true) {
-	console.log("This is true!");
-}
-<c></c>if (a == false) {
-	console.log("This is false!");
-}
-<c></c>if (b) {
-	console.log("This is true!");
-}
-<c></c>if (!b) {
-	console.log("This is false!");
-}
-</code></pre>
-		</div>
-
-		<div class="slide">
-			<p>We can evaluate statements using numbers and strings as well:</p>
-			<pre><code><c></c>var x = 0;
-<c></c>var y = 1;
-<c></c>var a = "hello";
-<c></c>var b = "world";
-<c></c>if (x == y) { console.log("This is true!"); }
-<c></c>if (x > y) { console.log("This is true!"); }
-<c></c>if (x != y) { console.log("This is true!"); }
-<c></c>if (x == a) { console.log("This is true!"); }
-<c></c>if (x > a.length) { console.log("This is true!"); }
-<c></c>if (x <= a.length) { console.log("This is true!"); }</code></pre>
-		</div>
-
-		<div class="slide">
-			<p>We can use <code>else</code> to tell our program what to do if the conditional is false:</p>
-			<pre><code><c></c>var x = 0;
-<c></c>var y = 5;
-<c></c>if (x < y) {
-	x++;
-} else {
-	x--;
-}
-console.log(x);</code></pre>
-		</div>
-
-		
-		
-	</div>
-</body>
-</html>
+<!-- using console.log -->
+<div class="slide">
+	<h2>console.log()</h2>
+	<p>The JavaScript <code>console</code> is an object that let's you interact with your program while it's running.  The <code>.log()</code> method is used to write message with strings, numbers and variables, to the web console.  You can log as much as you want, but it will impact performance a little, so it's a good idea to remove the <code>console.log()</code> calls from your program when you are done debugging.</p>
+	<pre><code><c></c>var msg = "Hello world!";
+<c></c>console.log(msg);
+<c></c>var i = 0;
+<c></c>console.log(i);
+<c></c>console.log(i, msg);
+<c></c>console.log("my error", i, msg);</code></pre>
+</div>
+<!-- common errors -->
+<div class="slide">
+	<h2>Common errors</h2>
+	<style>
+		td:first-child {
+			color:red;
+			font-family:"monaco";
+			border-color:black;
+		}
+	</style>
+	<table>
+		<tr>
+			<th>Error</th>
+			<th>What to look for</th>
+		</tr>
+		<tr>
+			<td>SyntaxError</td>
+			<td>syntactically invalid code <br>
+			look for a missing comma, operator, parenthesis</td>
+		</tr>
+		<tr>
+			<td>Reference Error</td>
+			<td>a non-existant variable is references <br>
+			check for misspelled or undeclared variables</td>
+		</tr>
+		<tr>
+			<td>GET</td>
+			<td>attempting to load a file that doesn't exist <br>
+			make sure the file exists and has the correct path</td>
+		</tr>
+	</table>
+</div>

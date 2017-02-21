@@ -1,237 +1,107 @@
-<!doctype html>
-<html>
-<head>
-	<title>MMP 210 - Week 3</title>
-	<meta charset="utf-8" />
-	<link rel="stylesheet" href="../slides/slides.css" type="text/css" />
-	<link rel="stylesheet" href="../slides/highlight/github-gist.css" type="text/css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="../slides/highlight/highlight.pack.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
-	<script src="../slides/p5.min.js"></script>
-	<script src="../slides/bkg.js"></script>
-	<script src="../slides/slides.js"></script>
-</head>
-<body>
-	<div id="container" class="slides language-js">
-		<div class="slide">
-			<h1>p5: system variables</h1>
-			<p><a href="https://github.com/owenroberts/mmp210">MMP 210</a> > <a href="https://github.com/owenroberts/mmp210/tree/master/week3">Week 3</a></p>
-		</div>
+---
+layout: slides
+---
+<div class="slide">
+	<h1>p5: text</h1>
+		<p><a href="{{site.github.url}}/">MMP 210</a> > <a href="{{site.github.url}}/schedule.html#week-3">Week 3</a></p>
+</div>
 
-		<div class="slide">
-			<h2>setup() and draw()</h2>
-			<p>Before we look at system variables, let's review <code>setup()</code> and <code>draw()</code>, because we'll need them in our lesson.</p>
-			<ul>
-				<li><a href="http://p5js.org/reference/#/p5/setup" target="blank">setup()</a> is called <strong>once</strong> when the page loads, and defines some initial variables and does other things we only want to do once, like loading image data, or perhaps setting the background color.</li>
-				<li><a href="http://p5js.org/reference/#/p5/draw" target="blank">draw()</a> after setup() is done, draw() will loop continuously (unless <code>noLoop()</code> is called) until the browser window is closed.  Every line inside of the draw() function will be called in order everytime it runs, often as fast as 60 frames per second.</li>
-			</ul>
-		</div>
-
-		<div class="slide">
-			<p>This simple program will demonstrate setup() and draw():</p>
-			<pre><code>var x;
-
-function setup() {
-    x = 100;
-}
-
-function draw() {
-    background(255);
-    
-    x++;
-
-    text(x, 20, 20);
-}</code></pre>
-		</div>
-
-		<div class="slide">
-			<p><span class="note">A quick note on scope:</span> We'll talk about scope in more detail later in the semester, but at this point it's important to understand that in order for a variable to be used by both setup() and draw(), it must be declared outside of both functions, usually at the beginning of our program.</p>
-			<p>Read more on <a href="http://p5js.org/examples/examples/Data_Variable_Scope.php" target="blank">scope</a>.</p>
-		</div>
-
-		<div class="slide">
-			<h2>Static system variables</h2>
-			<p>Some basic variables will stay the same throughout the lifetime of your sketch</p>
-			<p><code>width</code> and <code>height</code> are static variables that are set to the width and height of the sketch, which is (100, 100) by default or whatever is set in createCanvas();</p>
-			<p>Let's use <code>width</code> and <code>height</code> to draw a simple grid.</p>
-		</div>
-
-		<div class="slide">
-			<pre><code>function setup() {
-	createCanvas(640, 480);
-
-	background("white");
-
-	stroke("purple");
-	strokeWeight(2);
-
-	line(width/2, 0, width/2, height);
-
-	line(0, height/2, width, height/2);
-}</code></pre>
-		</div>
-		<div class="slide">
-			<p>Or a more complex grid:</p>
-			<pre><code>function setup() {
-	createCanvas(640, 480);
-
-	background("white");
-
-	stroke("darkblue");
-	strokeWeight(1);
-
-	var x = 0;
-	var y = 0;
-
-	var xunit = width/4;
-	var yunit = height/4;
-
-	x += xunit;
-	y += yunit;
-
-	line(x, 0, x, height);
-	line(0, y, width, y);
-
-	x += xunit;
-	y += yunit;
-
-	line(x, 0, x, height);
-	line(0, y, width, y);
-
-	x += xunit;
-	y += yunit;
-
-	line(x, 0, x, height);
-	line(0, y, width, y);
-
-}</code></pre>
-		</div>
-
-		<div class="slide">
-			<h2>Dynamic system variables</h2>
-			<p>Some system variables change over time.  Remember <code>mouseX</code> and <code>mouseY</code> from our first class?  These values change everytime you move your mouse.</p>
-			<p>To capture those values over time, we need to use a draw loop to capture the movement of our mouse by running the program every frame.</p>
-		</div>
-		<div class="slide">
-			<pre><code>function setup() {
-	createCanvas(640, 480);
-}
-
-function draw() {
-	background("white");
-
-	strokeWeight(4);
-	stroke("blue");
-	fill("lightblue");
-
-	line(mouseX, mouseY, width, height);
-	ellipse(mouseX, mouseY, 40, 40);
-}</code></pre>
-		</div>
-
-		<div class="slide">
-			<p>p5 also has <code>pmouseX</code> and <code>pmouseY</code> values that keep track of where you mouse was last.</p>
-			<pre><code>function setup() {
-	createCanvas(640, 480);
-}
-
-function draw() {
-	background("white");
-
-	strokeWeight(4);
-	stroke("blue");
-	fill("lightblue");
-
-	line(mouseX, mouseY, pmouseX, pmouseY);
-
-	ellipse(mouseX, mouseY, 40, 40);
-	ellipse(pmouseX, pmouseY, 20, 20);
-	
-}</code></pre>
-		</div>
-
-		<div class="slide">
-			<p>Another fun system variable is <code>frameCount</code>.  This number tells us how many frames the program has run.  It goes up by one for every frame.  It's sort of like our earlier example where we icremented <code>x++</code> every frame.</p>
-		</div>
-
-		<div class="slide">
-			<pre><code>function setup() {
+<div class="slide">
+	<p>We can add text to our sketches with the <a href="http://p5js.org/reference/#/p5/text" target="blank">text()</a> function of <code>p5</code>.</p>
+	<p><code>text(string, x, y)</code> requires at least 3 arguments:</p>
+	<ul>
+		<li><code>string</code>: the text to display</li>
+		<li><code>x</code>: x-coordinate of text</li>
+		<li><code>y</code>: y-coordinate of text</li>
+	</ul>
+</div>
+<div class="slide">
+	<p>A simple example:</p>
+	<pre><code>function setup() {
 	createCanvas(640, 480);
 	background("white");
-}
-
-function draw() {
-	stroke("green");
-	fill("lightgreen");
-	ellipse(width/2, height/2, frameCount, frameCount);
-
-	fill(255, 0, frameCount);
-	ellipse(100, 100, 40, 40);
+	text("MMP 210", 20, 20);	
 }</code></pre>
-		</div>
+</div>
 
-		<div class="slide">
-			<p>In our last example, let's combine system variables with the conditional logic we learned earlier.</p>
-			<pre><code>function setup() {
+<div class="slide">
+	<h2>Let's review <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="blank"><code>string</code></a>.</h2>
+	<p>A <code>string</code> is a datatype comprised of a "string" of characters.  Characters can be alphabetic, numeric and special characters.  Strings can be made of English characters as well as characters from other supported languages. Some examples:</p>
+	<pre><code><c></c>var str1 = "Hello world.";
+<c></c>var str2 = "你好，世界";
+<c></c>var str3 = "Strings can also include numbers like 100, punctuation like !~+:) and special characters like π or © or ∆";
+<c></c>text(str1, 20, 20);
+<c></c>text(str2, 20, 40);
+<c></c>text(str3, 20, 60);</code></pre>        
+</div>
+
+<div class="slide">
+	<p>Strings have a bunch of <code>methods</code> and <code>properties</code> that can be used to manipulate them.</p>
+	<pre><code><c></c>var str = "Hello world";
+<c></c>console.log(str.length);
+<c></c>console.log(str.charAt(0));
+<c></c>console.log(str.charAt(str.length - 1));
+<c></c>console.log(str[0]);
+<c></c>console.log(str[str.length - 1]);
+<c></c>console.log(str.replace("Hello", "goodbye"));</code></pre>
+</div>
+
+<div class="slide">
+	<p>Strings can also be added together (remember our <code>greet()</code> function from week 5?) and compared.</p>
+	<pre><code><c></c>var a = "a";
+<c></c>var b = "b";
+<c></c>console.log(a > b);
+<c></c>console.log(b > a);
+<c></c>
+<c></c>var h = "hello";
+<c></c>var w = "world";
+<c></c>console.log(h + " " + w);</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Styling strings with p5</h2>
+	<p>p5 uses the the <code>stroke</code> and <code>fill</code> colors like other shapes, but also uses <code>textSize()</code>, <code>textStyle()</code> and <code>textFont()</code> to change the style of our text.</p>
+	<pre><code>function setup() {
 	createCanvas(640, 480);
-}
-
-function draw() {
-
-	strokeWeight(4);
-	stroke("blue");
-	
-	if (mouseX > width/2) {
-		fill("lightblue");
-	} else {
-		fill("pink");
-	}
-	
-	ellipse(mouseX, mouseY, 40, 40);
-}</code></pre>
-		</div>
-
-		<div class="slide">
-			<p>One last example, where we'll combine everything.  Bear with me.</p>
-			<pre><code>var x = 0;
-var y = 0;
-var radius = 5;
-
-function setup() {
-	createCanvas(640, 480);
-}
-
-function draw() {
 	background("white");
 
-	strokeWeight(4);
-	stroke("blue");
-	
-	if (mouseX > width/2) {
-		fill("lightblue");
-	} else {
-		fill("pink");
-	}
+	text("MMP 210", 20, 20);
 
-	
-	if (frameCount < 100) {
-		radius = frameCount;
-	}
+	textSize(100);
+	text("Week 7", 20, 150);
 
-	if (x < width) {
-		x++;
-	} else {
-		if (y < height) {
-			y++;
-		}
-	}
+	textStyle(ITALIC);
+	text("p5 Text", 20, 300);
 
-	line(mouseX, mouseY, x, y);
-	ellipse(mouseX, mouseY, radius, radius);
+	textFont("Georgia");
+	text("MMP 210", 220, 20);
 }</code></pre>
-		</div>
+</div>
 
-	</div>
-</body>
-</html>
+<div class="slide">
+	<p>p5 can also use other default HTML fonts, anything that is <a href="http://www.cssfontstack.com/" target="blank">browser supported</a>.</p>
+
+	<pre><code>function setup() {
+	createCanvas(640, 480);
+	background("white");
+
+	textFont("Monaco");
+	text("MMP 210", 20, 20);
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>Paragraph styles are set with <code>textWidth()</code> and <code>textAlign()</code>.</p>
+	<pre><code>function setup() {
+	createCanvas(640, 480);
+	background("white");
+
+	textWidth(width);
+	textAlign(CENTER);
+
+	var paragraph = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse earum quod exercitationem vero, temporibus veritatis in ea voluptates dolore doloremque amet sint, doloribus blanditiis maiores enim qui fuga. Adipisci, quaerat?"
+
+	text(paragraph, width/2, 20);
+}</code></pre>
+</div>
+

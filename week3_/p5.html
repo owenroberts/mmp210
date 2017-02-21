@@ -1,0 +1,169 @@
+---
+layout: slides
+---
+<div class="slide">
+	<h1>p5: system variables</h1>
+	<p><a href="{{site.github.url}}/">MMP 210</a> > <a href="{{site.github.url}}/schedule.html#week-3">Week 3</a></p>
+</div>
+
+<div class="slide">
+	<h2>setup() and draw()</h2>
+	<p>Before we look at system variables, let's review <code>setup()</code> and <code>draw()</code>, because we'll need them in our lesson.</p>
+	<ul>
+		<li><a href="http://p5js.org/reference/#/p5/setup" target="blank">setup()</a> is called <strong>once</strong> when the page loads, and defines some initial variables and does other things we only want to do once, like loading image data, or perhaps setting the background color.</li>
+		<li><a href="http://p5js.org/reference/#/p5/draw" target="blank">draw()</a> after setup() is done, draw() will loop continuously (unless <code>noLoop()</code> is called) until the browser window is closed.  Every line inside of the draw() function will be called in order everytime it runs, often as fast as 60 frames per second.</li>
+	</ul>
+</div>
+
+<div class="slide">
+	<p>This simple program will demonstrate setup() and draw():</p>
+	<pre><code>var x;
+function setup() {
+	x = 100;
+}
+function draw() {
+	background(255);
+	x++;
+	text(x, 20, 20);
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p><span class="note">A quick note on scope:</span> We'll talk about scope in more detail later in the semester, but at this point it's important to understand that in order for a variable to be used by both setup() and draw(), it must be declared outside of both functions, usually at the beginning of our program.</p>
+	<p>Read more on <a href="http://p5js.org/examples/examples/Data_Variable_Scope.php" target="blank">scope</a>.</p>
+</div>
+
+<div class="slide">
+	<h2>Static system variables</h2>
+	<p>Some basic variables will stay the same throughout the lifetime of your sketch</p>
+	<p><code>width</code> and <code>height</code> are static variables that are set to the width and height of the sketch, which is (100, 100) by default or whatever is set in createCanvas();</p>
+	<p>Let's use <code>width</code> and <code>height</code> to draw a simple grid.</p>
+</div>
+
+<div class="slide">
+	<pre><code>function setup() {
+	createCanvas(640, 480);
+	background("white");
+	stroke("purple");
+	strokeWeight(2);
+	line(width/2, 0, width/2, height);
+	line(0, height/2, width, height/2);
+}</code></pre>
+</div>
+<!-- <div class="slide">
+	<p>Or a more complex grid:</p>
+	<pre><code>function setup() {
+	createCanvas(640, 480);
+	background("white");
+
+	stroke("darkblue");
+	strokeWeight(1);
+
+	var x = 0;
+	var y = 0;
+
+	var xunit = width/4;
+	var yunit = height/4;
+
+	x += xunit;
+	y += yunit;
+
+	line(x, 0, x, height);
+	line(0, y, width, y);
+
+	x += xunit;
+	y += yunit;
+
+	line(x, 0, x, height);
+	line(0, y, width, y);
+
+	x += xunit;
+	y += yunit;
+
+	line(x, 0, x, height);
+	line(0, y, width, y);
+}</code></pre>
+</div> -->
+
+<div class="slide">
+	<h2>Dynamic system variables</h2>
+	<p>Some system variables change over time.  Remember <code>mouseX</code> and <code>mouseY</code> from our first class?  These values change everytime you move your mouse.</p>
+	<p>To capture those values over time, we need to use a draw loop to capture the movement of our mouse by running the program every frame.</p>
+</div>
+<div class="slide">
+	<pre><code>function setup() {
+	createCanvas(640, 480);
+}
+
+	function draw() {
+	background("white");
+
+	strokeWeight(4);
+	stroke("blue");
+	fill("lightblue");
+
+	line(mouseX, mouseY, width, height);
+	ellipse(mouseX, mouseY, 40, 40);
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>p5 also has <code>pmouseX</code> and <code>pmouseY</code> values that keep track of where you mouse was last.</p>
+	<pre><code>function setup() {
+	createCanvas(640, 480);
+}
+
+	function draw() {
+	background("white");
+
+	strokeWeight(4);
+	stroke("blue");
+	fill("lightblue");
+
+	line(mouseX, mouseY, pmouseX, pmouseY);
+
+	ellipse(mouseX, mouseY, 40, 40);
+	ellipse(pmouseX, pmouseY, 20, 20);
+
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>Another fun system variable is <code>frameCount</code>.  This number tells us how many frames the program has run.  It goes up by one for every frame.  It's sort of like our earlier example where we icremented <code>x++</code> every frame.</p>
+</div>
+
+<div class="slide">
+	<pre><code>function setup() {
+	createCanvas(640, 480);
+	background("white");
+}
+
+	function draw() {
+	stroke("green");
+	fill("lightgreen");
+	ellipse(width/2, height/2, frameCount, frameCount);
+
+	fill(255, 0, frameCount);
+	ellipse(100, 100, 40, 40);
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>In our last example, let's combine system variables with the conditional logic we learned earlier.</p>
+	<pre><code>function setup() {
+	createCanvas(640, 480);
+}
+
+function draw() {
+	strokeWeight(4);
+	stroke("blue");
+
+	if (mouseX > width/2) {
+		fill("lightblue");
+	} else {
+		fill("pink");
+	}
+
+	ellipse(mouseX, mouseY, 40, 40);
+}</code></pre>
+</div>

@@ -11,13 +11,14 @@ layout: default
 - [HTML / CSS Review notes](week1/)
 - [Intro to p5](week1/p5.html)
 - [GitHub Publishing](week1/github.html)
+- <a href="https://owenbmcc.github.io/classwork210/week1/" target="blank">Class example</a>
 - In class assignment
 	- Create a simple web site to use as the portfolio page for your work this semester.
 	- Your site should have at least one of each:
 		- Image
 		- Stylesheet
 		- Menu, with links
-- Assignment 1
+- **Assignment 1**
 	- Draw a self-portrait using p5
 	- Use the shape and color functions
 	- Be creative, try to show us something about yourself through drawing and design
@@ -26,10 +27,11 @@ layout: default
 **Statements, operators & variables**
 
 - [JavaScript statements, operators & variables](week2/)
-- [p5 color, stroke, fill](week2/p5.html)
+- [p5: color, stroke, fill](week2/p5.html)
 	- [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/)
 - [Code academy review](http://www.codecademy.com/courses/getting-started-v2)
-- Assignment 2
+- <a href="https://owenbmcc.github.io/classwork210/week2/" target="blank">Class example</a>
+- **Assignment 2**
 	- Using p5, create a design that uses variables as the arguments for the drawing functions.
 	- Drawing functions include fill(), stroke(), rect(), line(), ellipse(), triangle() etc...
 	- There should be at least 5 colors and 5 shapes.
@@ -46,15 +48,30 @@ var c = color(255,0,255);
 fill(c); // this uses the variable 'c'
 ```
 
-
+## Week 3
+**Debugging**
+- [JavaScript debugging](week3/)
+- [p5: text](week3/p5.html)
+- Debugging challenge
+- **Assignment 7**
+	- Make an animated logo with your name (or some other project)
+	- Should use text and other shapes
+	- Upload to mmp.bmcc.cuny.edu and submit link via Blackboard
 
 <!--
 
-where to add class examples???
+**Logic**
+- [JavaScript comparison operators and conditionals](week3/)
+- [p5 system variables](week3/p5.html)
+- **Assignment 3**
+	- Create a design that uses system variables to change the color of the shapes being drawn
+	- The color should change over time or space
+	- Time can be measured with `frameCount`
+	- Space is measured with `mouseX`, `mouseY`, `width` and `height` 
 
-**Week 3: Logic**
-- [JavaScript comparison operators and conditionals](https://owenroberts.github.io/mmp210/week3/index.html)
-- [p5 system variables](https://owenroberts.github.io/mmp210/week3/p5.html)
+
+
+https://itpnyu.github.io/ICM-Quizzes/
 
 **Week 4: Loops**
 - [JavaScript for loops](https://owenroberts.github.io/mmp210/week4/index.html)
@@ -69,7 +86,6 @@ where to add class examples???
 - [p5: animation, random, modulo](https://owenroberts.github.io/mmp210/week6/index.html)
 
 **Week 7: Text**
-- [p5: text](https://owenroberts.github.io/mmp210/week7/index.html)
 - [p5: push, pop, transform](https://owenroberts.github.io/mmp210/week7/transform.html)
 
 **Week 8: Generating designs**
