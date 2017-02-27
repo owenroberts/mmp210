@@ -59,18 +59,18 @@ fill(c); // this uses the variable 'c'
 	- Use text and other shapes
 	- Drawing and text functions must use variables
 
-<!--
 
+## Week 4
 **Logic**
-- [JavaScript comparison operators and conditionals](week3/)
-- [p5 system variables](week3/p5.html)
+- [JavaScript comparison operators and conditionals](week4/)
+- [p5 system variables](week4/p5.html)
 - **Assignment 3**
 	- Create a design that uses system variables to change the color of the shapes being drawn
 	- The color should change over time or space
 	- Time can be measured with `frameCount`
 	- Space is measured with `mouseX`, `mouseY`, `width` and `height` 
 
-
+<!--
 
 https://itpnyu.github.io/ICM-Quizzes/
 
