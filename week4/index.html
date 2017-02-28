@@ -3,11 +3,13 @@ layout: slides
 ---
 <div class="slide">
 	<h1>JavaScript comparison operators and conditionals</h1>
-	<p><a href="{{site.github.url}}/">MMP 210</a> > <a href="{{site.github.url}}/schedule.html#week-3">Week 3</a></p>
+	<p><a href="{{site.github.url}}/">MMP 210</a> > <a href="{{site.github.url}}/schedule.html#week-4">Week 4</a></p>
 </div>
 <div class="slide">
 	<h2>Comparison operators</h2>
 	<p>Using comparison operators, we can test the values of variables to detect if they are equivalent.</p>
+</div>
+<div class="slide">
 	<pre><code><c></c>var x = 1;
 <c></c>var y = 0;
 <c></c>var z = "1";
@@ -37,7 +39,7 @@ layout: slides
 		<li><code>!==</code> two values are <strong>not</strong> the same or <strong>not</strong> the same type</li>
 	</ul>
 </div>
-		<div class="slide">
+<div class="slide">
 	<p>We can compare strings as well as numbers.</p>
 	<pre><code><c></c>var x = "hello";
 <c></c>var y = "world";
@@ -50,7 +52,6 @@ layout: slides
 	<h2>Booleans</h2>
 	<p>A <code>boolean</code> is a datatype that can be either <code>true</code> or <code>false</code>.</p>
 	<p>Booleans default to the values <code>true</code> and <code>false</code>.</p>
-	<p>In JavaScript other values will evaluate to <code>false</code>, such as <code>0</code>, <code>""</code> (empty string), <code>NaN</code>, <code>null</code>, and <code>undefined</code>.  Everything else defaults to <code>true</code>, such as <code>"Hello World"</code>, <code>1</code>, <code>99</code>, or <code>-99</code>.  Try evaluating some booleans in the console with this syntax:</p>
 	<pre><code><c></c>Boolean(true);
 <c></c>Boolean(false);
 <c></c>Boolean("");
@@ -60,8 +61,16 @@ layout: slides
 </div>
 
 <div class="slide">
+	<p>In JavaScript other values will evaluate to <code>false</code>, such as <code>0</code>, <code>""</code> (empty string), <code>NaN</code>, <code>null</code>, and <code>undefined</code>.</p>  
+	<p>Other values default to <code>true</code>, such as <code>"Hello World"</code>, <code>1</code>, <code>99</code>, or <code>-99</code>.  Try evaluating some booleans in the console with this syntax:</p>
+
+</div>
+
+<div class="slide">
 	<h2>Conditionals</h2>
 	<p>Using booleans, we can make decision in our program with conditional statements starting with the keyword <code>if</code>:</p>
+</div>
+<div class="slide">
 	<pre><code><c></c>var a = true;
 <c></c>var b = false;
 <c></c>if (a == true) {
@@ -100,7 +109,7 @@ layout: slides
 <c></c>if (x < y) {
 	x++;
 } else {
-	x--;
+	x = 0;
 }
 console.log(x);</code></pre>
 </div>

@@ -63,8 +63,9 @@ fill(c); // this uses the variable 'c'
 ## Week 4
 **Logic**
 - [JavaScript comparison operators and conditionals](week4/)
+- [GitHub client](week4/github.html)
 - [p5 system variables](week4/p5.html)
-- **Assignment 3**
+- **Assignment 4**
 	- Create a design that uses system variables to change the color of the shapes being drawn
 	- The color should change over time or space
 	- Time can be measured with `frameCount`

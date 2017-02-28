@@ -3,7 +3,7 @@ layout: slides
 ---
 <div class="slide">
 	<h1>p5: system variables</h1>
-	<p><a href="{{site.github.url}}/">MMP 210</a> > <a href="{{site.github.url}}/schedule.html#week-3">Week 3</a></p>
+	<p><a href="{{site.github.url}}/">MMP 210</a> > <a href="{{site.github.url}}/schedule.html#week-4">Week 4</a></p>
 </div>
 
 <div class="slide">
@@ -87,7 +87,7 @@ function draw() {
 
 <div class="slide">
 	<h2>Dynamic system variables</h2>
-	<p>Some system variables change over time.  Remember <code>mouseX</code> and <code>mouseY</code> from our first class?  These values change everytime you move your mouse.</p>
+	<p>Some system variables change over time.  <code>mouseX</code> and <code>mouseY</code> change everytime you move your mouse.  They represent the position of the mouse in the p5 canvas.</p>
 	<p>To capture those values over time, we need to use a draw loop to capture the movement of our mouse by running the program every frame.</p>
 </div>
 <div class="slide">
@@ -95,7 +95,7 @@ function draw() {
 	createCanvas(640, 480);
 }
 
-	function draw() {
+function draw() {
 	background("white");
 
 	strokeWeight(4);

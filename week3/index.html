@@ -31,14 +31,23 @@ layout: slides
 <!-- general approach -->
 <div class="slide">
 	<h2>How to debug</h2>
-	<p>All programmers encounter bugs in their code and many will spend more time debugging then writing new code.  It is a good idea to develop strategies for debugging as you learn programming to save time.</p>
-	<p>Bugs can be <strong>technical</strong> problems with your code, like a typo or misspelled method.  But they can also be <strong>conceptual gaps</strong> between what you expect a program to do and how it actually performs.  They can also be a combination of the two things.  The first thing to do is <strong>identify which type</strong> of bug you are facing.</p>
-	<p>Finding a bug requires a different mindset than writing a program.  Instead of writing what you want the computer to do, you need to go back through your code and figure out where it stopped doing what you thought it would.  <strong>Don't be upset!</strong>  Everyone gets bugs.  If your program suddenly stops rendering, don't get mad and say "it's just not doing anything."  Take a step back, maybe go for a quick drink of water or walk around the block, and then look at your code with fresh eyes.</p>
-	<p><strong>Don't delete you code!</strong>  You will need to add some new lines of code to figure out what's behaving incorrectly.  Don't undo everything or trash your file.  You might lose some useful work.</p>
-	<p>Make sure you are <strong>editing the right file</strong>.  Try closing Brackets (or your text editor) and reopening to make sure the file you are editing is the same one you are viewing in your browser.</p>
-	<p>Once you are sure you are using the right files, start writing some lines to log parts of you code.  If something is not running, add a <code>console.log()</code> before and after to see what happens.  Test all of your variables in different parts of your program to make sure they are logging what you expect.</p>
-	<p>When your code throws error, remember to look at the line number and read through the JavaScript function stack to find where the error originated.</p>
-	<p>When you log errors that you don't understand, try searching the same error on Google or <a href="http://stackoverflow.com" target="blank">Stack Overflow</a>.  Remember that some parts of your program are not universal.  If you error is <code style="color:red;">mySpecialVariable is not defined</code> you won't find other examples with the exact same variable names.</p>
+	<p><code>0.</code> All programmers encounter bugs in their code and many will spend more time debugging then writing new code.  It is a good idea to develop strategies for debugging as you learn programming to save time.</p>
+	<p><code>1.</code> Bugs can be <note>technical</note> problems with your code, like a typo or misspelled method.  But they can also be <note>conceptual gaps</note> between what you expect a program to do and how it actually performs.  They can also be a combination of the two things.  The first thing to do is <note>identify which type</note> of bug you are facing.</p>
+</div>
+
+<div class="slide">
+	<p><code>2.</code> Finding a bug requires a different mindset than writing a program.  Instead of writing what you want the computer to do, you need to go back through your code and figure out where it stopped doing what you thought it would.  <note>Don't be upset!</note>  Everyone gets bugs.  If your program suddenly stops rendering, don't get mad and say "it's just not doing anything."  Take a step back, maybe go for a quick drink of water or walk around the block, and then look at your code with fresh eyes.</p>
+	<p><code>3.</code> <note>Don't delete you code!</note>  You will need to add some new lines of code to figure out what's behaving incorrectly.  Don't undo everything or trash your file.  You might lose some useful work.</p>
+</div>
+
+<div class="slide">
+	<p><code>4.</code> Make sure you are <note>editing the right file</note>.  Try closing Brackets (or your text editor) and reopening to make sure the file you are editing is the same one you are viewing in your browser.</p>
+	<p><code>5.</code> Once you are sure you are using the right files, start writing some lines to log parts of you code.  If something is not running, add a <code>console.log()</code> before and after to see what happens.  Test all of your variables in different parts of your program to make sure they are logging what you expect.</p>
+</div>
+
+<div class="slide">	
+	<p><code>6.</code> When your code throws error, remember to look at the line number and read through the JavaScript function stack to find where the error originated.</p>
+	<p><code>7.</code> When you log errors that you don't understand, try searching the same error on Google or <a href="http://stackoverflow.com" target="blank">Stack Overflow</a>.  Remember that some parts of your program are not universal.  If you error is <code style="color:red;">mySpecialVariable is not defined</code> you won't find other examples with the exact same variable names.</p>
 </div>
 
 <!-- using console.log -->
