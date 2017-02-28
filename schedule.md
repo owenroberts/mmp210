@@ -69,7 +69,11 @@ fill(c); // this uses the variable 'c'
 	- Create a design that uses system variables to change the color of the shapes being drawn
 	- The color should change over time or space
 	- Time can be measured with `frameCount`
-	- Space is measured with `mouseX`, `mouseY`, `width` and `height` 
+	- Space is measured with `mouseX`, `mouseY`, `width` and `height`
+	- Examples
+		- [Tickle](https://p5js.org/examples/interaction-tickle.html)
+		- [Follow](https://p5js.org/examples/interaction-follow-1.html)
+
 
 <!--
 
