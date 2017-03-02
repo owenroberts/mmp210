@@ -1,5 +1,7 @@
 ---
 layout: default
+title: MMP 210 - Schedule
+desk: Schedule with class notes & assignments
 ---
 # Schedule
 

@@ -1,5 +1,7 @@
 ---
 layout: default
+title: MMP 210 - Home
+desk: Class info, notes and schedule
 ---
 # MMP 210: Multimedia Programming I
 
