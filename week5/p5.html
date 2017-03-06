@@ -1,102 +1,70 @@
-<!doctype html>
-<html>
-<head>
-	<title>MMP 210 - Week 1</title>
-	<meta charset="utf-8" />
-	<link rel="stylesheet" href="../slides/slides.css" type="text/css" />
-	<link rel="stylesheet" href="../slides/highlight/github-gist.css" type="text/css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="../slides/highlight/highlight.pack.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
-	<script src="../slides/p5.min.js"></script>
-	<script src="../slides/bkg.js"></script>
-	<script src="../slides/slides.js"></script>
-</head>
-<body>
-	<div id="container" class="slides language-js">
-		<div class="slide">
-			<h1>p5: drawing with loops</h1>
-			<p><a href="https://github.com/owenroberts/mmp210">MMP 210</a> > <a href="https://github.com/owenroberts/mmp210/tree/master/week4">Week 4</a></p>
-		</div>
+---
+layout: slides
+title: MMP 210 - Week 5
+dek: p5 - drawing with loops
+---
+<div class="slide">
+	<h1>p5: drawing with loops</h1>
+	<p><a href="{{site.github.url}}/">MMP 210</a> > <a href="{{site.github.url}}/schedule.html#week-5">Week 5</a></p>
+</div>
 
-		<div class="slide">
-			<p>In p5, we can use loop to draw many more shapes and colors with much less code.  Let's look at a few of our old examples, reworked using loops.</p>
-		</div>
+<div class="slide">
+	<p>In p5, we can use loop to draw many more shapes and colors with much less code.  Let's look at a few of our old examples, reworked using loops.</p>
+</div>
 
-		<div class="slide">
-			<p>Week 2: <a href="https://owenroberts.github.io/mmp210/classwork1400/week2/index.html" target="blank">Changing color</a>:</p>
-			<pre><code>function setup() {
-    createCanvas(640, 200);
-    background("pink");
-    noStroke();
+<div class="slide">
+	<p>In week 2 we did an example that made several circles with different colors by repeating the same line of code several times: <a href="http://alpha.editor.p5js.org/owenroberts/sketches/r1Z8cxbFx" target="blank">drawing variables example</a>.  Here are the lines that were repeated five times:</p>
+	<pre><code>fill(r, g, b);
+ellipse(xPos, yPos, size);
+r -= redInc;</code></pre>
+	<p>Let's try rewriting this with a loop.</p>
+</div>
 
-    var y = 100;
-    var g = 0;
-    var b = 0;
-    var rIncrement = 50;
+<div class="slide">
+	<p>Last week we made a grid using static variables <code>width</code> and <code>height</code>:</p>
+	<pre><code>/* draw a grid */
+stroke("green");
+line(0, height/2, width, height/2);
+line(width/2, 0, width/2, height);</code></pre>
+</div>
 
-    for (var r = 0; r < width; r += rIncrement) {
-        fill(r, g, b);
-        ellipse(r, y, rIncrement, rIncrement);
-    }
+<div class="slide">
+	<p>Let's try extending our grid using a loop.</p>
+	<pre><code>function setup() {
+	createCanvas(640, 480);
+	background("white");
+	
+	stroke("darkblue");
+	strokeWeight(2);
+	
+	var x = 0;
+	var y = 0;
+	
+	var ratio = 10;
+	var xunit = width/ratio;
+	var yunit = height/ratio;
+	
+	for (var i = 0; i < ratio - 1; i++) {
+		x += xunit;
+		y += yunit;
+		line(x, 0, x, height);
+		line(0, y, width, y);
+	}
 }</code></pre>
-		</div>
+</div>
 
-		<div class="slide">
-			<p>Week 3: <a href="https://owenroberts.github.io/mmp210/classwork1400/week3/static.html" target="blank">Grid with static variables</a>:</p>
-			<pre><code>function setup() {
-    createCanvas(640, 480);
-    background("white");
-    
-    stroke("darkblue");
-    strokeWeight(2);
+<div class="slide">
+	<p>In the last example we will use two loops to make a grid of shapes.  We can grab the conditions from the grid example and use them as the basis for the for loop.</p>
+	<pre><code>function setup() { 
+  createCanvas(400, 400);
+  background(220);
+  
+  var space = 25;
 
-    var x = 0;
-    var y = 0;
-    
-    var ratio = 10;
-    var xunit = width/ratio;
-    var yunit = height/ratio;
-
-    for (var i = 0; i < ratio - 1; i++) {
-        x += xunit;
-        y += yunit;
-        line(x, 0, x, height);
-        line(0, y, width, y);
+  for (var x = space/2; x < width; x+=space) {
+    for (var y = space/2; y < height; y+=space) {
+      ellipse(x, y, 20);
     }
+  }
 }</code></pre>
-		</div>
-
-		<div class="slide">
-			<p>For one more example, let's add in a conditional statment to our ellipse example.</p>
-			<pre><code>function setup() {
-    createCanvas(640, 480);
-    background("white");
-    
-    stroke("darkblue");
-    strokeWeight(1);
-
-    var x = 0;
-    var y = 0;
-    var radius = 40;
-    
-    var ratio = 4;
-    var xunit = width/ratio;
-    var yunit = height/ratio;
-
-    for (var i = 0; i < ratio * ratio; i++) {
-        if ( x >= width) {
-            x = 0;
-            y += yunit;
-        }        
-        if (x >= width/2) fill("lightblue");
-        else fill("pink");
-        ellipse(x + xunit/2, y + yunit/2, radius, radius);
-        x += xunit;
-    }
-}</code></pre>
-		</div>
-
-	</div>
-</body>
-</html>
+</div>

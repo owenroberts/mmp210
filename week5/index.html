@@ -11,12 +11,41 @@ dek: JavaScript loops
 
 <div class="slide">
 	<h2>Loops</h2>
-	<p>A loop defines a set of commands to execute a certain number of times.  JavaScript uses several loops statements, including <code>do</code>, <code>while</code> and <code>for</code>.  We will most often use the <code>for</code> loop, so that's where we'll start today.</p>
+	<p>A loop defines a set of commands to execute a certain number of times.  It's the best way to do something repeatedly.  JavaScript uses several loops statements, including <code>do</code>, <code>while</code> and <code>for</code>.</p>
+	<p>The syntax of a loop looks like a conditional, and in fact it uses conditions to determine how many times to run the loop.</p>
+</div>
+
+<div class="slide">
+	<p>Last week we wrote the following conditional statement and then ran it a bunch of times in the console.</p>
+	<pre><code><c></c>var x = 0;
+<c></c>var y = 5;
+<c></c>if (x < y) {
+	x++;
+}
+<c></c>console.log(x);</code></pre>
+</div>
+
+<div class="slide">
+	<p>This week, let's automate that process by using a <code>while</code> loop.  Just replace the <code>if</code> with a <code>while</code>.</p>
+	<pre><code><c></c>var x = 0;
+<c></c>var y = 5;
+<c></c>while (x < y) {
+	x++;
+	console.log(x);
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>The while loop is useful but it can be a little dangerous to write.  This works because the loop increments <code>x</code> and then evaluates it, so the same value is being changed and used to determine when to stop the loop.  If we wanted to do something a bunch of times other than increment x, say something like <code>console.log("banana");</code> we might write a loop that never reaches it's ending condition.  That will cause a <note style="color:red">stack overflow</note> in the browser, meaning the the loop will never stop executing so our program will never finish running.</p>
+</div>
+
+<div class="slide">
+	<p>We will most often use the <code>for</code> loop, so that's where we'll start today.  The <code>for</code> loop works the same way as the <code>while</code> loop, but it is written in a syntax that includes the beginning, update and conditional expressions in one line.</p>
 </div>
 
 <div class="slide">
 	<pre><code><c></c>for (var i = 0; i < 5; i++) {
-console.log("This is the " + i + " loop.");
+	console.log("This is the " + i + " loop.");
 }</code></pre>
 </div>
 
@@ -24,26 +53,28 @@ console.log("This is the " + i + " loop.");
 	<p>The <code>for</code> keyword indicates the beginning of the for loop.  Inside the parentheses there are three statements that control the duration of the loop.</p>
 		<p>The first statement establishes the initial condition: <code>var i = 0;</code>.</p>
 		<p>The second statement establishes a conditional: <code>i < 5;</code>.  As long as this condition evaluates to <code>true</code>, the loop will continue.</p>
-		<p>The final statement is the incremental/decremental statement or iteration: <code>i++;</code>.</p>
+		<p>The final statement updates the condition, often with a simple increment, statement or iteration: <code>i++;</code>.</p>
 		<p>The code block for the loop is then contained in the curly brackets: <code>{ ... }</code>.</p>
-	<pre><code>for (initialization; conditional; iteration;) {
-loop body;
+</div>
+
+<div class="slide">
+	<pre><code>for (initialization; conditional; update;) {
+	loop body;
 }</code></pre>
 	<p>This is essentially like copying and pasting the same piece of code five times, while changing a number or input.  Loops are an efficient way to excecute actions on a list or array of data.</p>
 </div>
 
 <div class="slide">
-	<p>In many cases the initial condition will be the value <code>0</code> as in <code>var i = 0;</code> ("i" in this case is shorthand for <strong>index</strong>).</p>
+	<p>In many cases the initial condition will be the value <code>0</code> as in <code>var i = 0;</code> ("i" in this case is shorthand for <note>index</note>).</p>
 	<p>But our initial condition could be anything.</p>
 	<pre><code><c></c>for (var i = 1; i < 6; i++) {
 	console.log("This is the " + i + " loop.");
-}</code></pre>
-	<pre><code><c></c>for (var i = 1, len = i + 5; i < len; i++) {
-	console.log(i);
-}</code></pre>
-	<pre><code><c></c>for (var i = 1, len = i + 5; i < len; i++) {
-	console.log(i);
-}</code></pre>
+}
+<c></c>for (var i = 99; i < 105; i++) {
+	console.log("This is the " + i + " loop.");
+}
+</code></pre>
+
 </div>
 
 <div class="slide">
@@ -57,18 +88,25 @@ loop body;
 </div>
 
 <div class="slide">
+	<p>With a <code>for</code> loop we don't need to worry about forgetting to increment our index value because it's written into the statement.  So we can do whatever we want in the loop block.</p>
+		<pre><code><c></c>for (var i = 0; i < 5; i++) {
+	console.log("I like bananas.");
+}</code></pre>
+</div>
+
+<!-- <div class="slide">
 	<p>A practical example of a loop in JavaScript:</p>
 	<pre><code><c></c> var imgs = ["cat.jpg", "dog.jpg", "bird.jpg"];
 <c></c> for (var i = 0, len = imgs.length; i < len; i++) { 
 	console.log('&#60;img src="'+imgs[i]+'"&#62;');
 }</code></pre>
-</div>
+</div> -->
 
 <div class="slide">
-	<p><span class="note">Note on scope:</span> variables declared inside a <code>for</code> loop (or any other loop) are not scoped to the loop.  Loops do not have the same scope priveleges of functions.</p>
+	<p><note>Note on scope:</note> variables declared inside a <code>for</code> loop (or any other loop) are not scoped to the loop.  Loops do not have the same scope priveleges of functions.</p>
 	<pre><code><c></c>for (var i = 0; i < 5; i++) {
 	var x = i;
 	console.log(x);
 }
-console.log(x);</code></pre>
+<c></c>console.log(x);</code></pre>
 </div>
