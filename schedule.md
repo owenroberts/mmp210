@@ -82,6 +82,10 @@ fill(c); // this uses the variable 'c'
 - [JavaScript for loops](week5/index.html)
 - [p5: drawing with loops](week5/p5.html)
 - In class: [Code academy: for loops](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/0/1)
+- Class examples
+	- [Basic loop](http://alpha.editor.p5js.org/owenroberts/sketches/rydx-sncx)
+	- [Grid](https://owenbmcc.github.io/classwork210/week5/)
+	- [Windows Template](https://owenbmcc.github.io/classwork210/week5/windows.html)
 - **Assignment 5**
 	- Draw the a grid of windows like the front of a city building.  
 	- Each window should be at least 5 shapes.  
