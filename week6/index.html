@@ -1,0 +1,124 @@
+---
+layout: slides
+title: MMP 210 - Week 6
+dek: p5 - animation, random, modulo
+---
+<div class="slide">
+	<h1>p5: animation, random, modulo</h1>
+	<p><a href="{{site.github.url}}/">MMP 210</a> > <a href="{{site.github.url}}/schedule.html#week-6">Week 6</a></p>
+</div>
+
+<div class="slide">
+	<p>We're going to be using the <code>draw()</code> function again today to create motion and animation.  This time we're going to be adding new techniques beyond the system variables we used in week 4.</p>
+</div>
+
+<div class="slide">
+	<p>Let's start with a simple shape:</p>
+	<pre><code>function setup() {
+    createCanvas(640, 480);
+}
+function draw() {
+    ellipse(100, 100, 20, 20);
+}</code></pre>
+</div>
+
+<div class="slide">
+	<div data-src="ellipsemove.json"></div>
+	<p>If we want to animate the shape across the screen, we need to change the point where it's being drawn from.</p>
+</div>
+
+<div class="slide">
+	<p>So let's create a variable:</p>
+	<pre><code>var x = 10;
+function setup() {
+    createCanvas(640, 480);
+}
+function draw() {
+    ellipse(x, 100, 20, 20);
+}</code></pre>
+</div>
+<div class="slide">
+	<p>And then increment it:</p>
+	<pre><code>x++;</code></pre>
+</div>
+<div class="slide">
+	<p>That's cool, but our circle is flying off the screen!</p>
+	<p>Let's use a conditional statement to set it back to the beginning:</p>
+	<pre><code>if (x > width) {
+    x = 0;
+}</code></pre>
+</div>
+<div class="slide">
+	<p>Can we make it go faster?</p>
+	<pre><code>x += 10;</code></pre>
+</div>
+<div class="slide">
+	<p>Let's move on the y axis too:</p>
+	<pre><code>var y = 20;
+if (x < width/2) {
+    y++;
+}
+else {
+    y--;
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>We can also add some randomness to the movement using the <a href="http://p5js.org/examples/examples/Math_Random.php" target="blank">p5 function</a>: <code>random</code></p>
+	<pre><code>var r = random(0,2);
+if (x < width/2) {
+    y += r;
+}
+else {
+    y -= r;
+}</code></pre>
+	<p>Try increasing the range of random <code>(0,2)</code> and see what happens.</p>
+</div>
+
+<div class="slide">
+	<p>Or we could use <code>random</code> to animate the color:</p>
+	        	<pre><code>var r = random(0,255);
+var g = random(0,255);
+var b = random(0,255);
+fill(r, g, b); </code></pre>
+</div>
+
+<div class="slide">
+	<p>That's cool, but it's a little crazy.  What if we wanted to change the color only once every 30 frames?</p>
+	<p>JavaScript has a mathematical operator called <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_()" target="blank">modulo</a> <code>%</code> which gives the remainder of a division of two values.  Let's look at some examples in the console:</p>
+	<pre><code><c></c>10 % 9;
+<c></c>5 % 4;
+<c></c>2 % 1;
+<c></c>1 % 2;
+<c></c>30 % 3;
+<c></c>31 % 3;
+<c></c>for (var i = 0; i < 20; i++) {
+    console.log(i % 5);
+}</code></pre>
+</div>
+<div class="slide">
+	<p>Notice that when we count up using modulo, we repeat the same count, even though i keeps going up.</p>
+	<p>We can use that with the <code>frameCount</code> in p5 to tell how many time we've gone a certain number of frames.</p>
+</div>
+<div class="slide">
+		<p>We need to make our color values global, and then change them whenever the frameCount remainder of 30 is 0 (this will happen at 30, 60, 90, 120...)</p>
+		<pre><code>var x = 10;
+var y = 20;
+var r = random(0,255);
+var g = random(0,255);
+var b = random(0,255);
+
+function draw() {
+if (frameCount % 30 == 0) {
+    r = random(0,255);
+    g = random(0,255);
+    b = random(0,255);
+}
+    fill(r, g, b);
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>What else can we animate with <code>frameCount</code>, <code>%</code>, <code>random()</code> and our shapes?</p>
+	<p>Try position, size, color, speed or other factors.</p>
+</div>

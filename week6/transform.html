@@ -1,0 +1,163 @@
+---
+layout: slides
+title: MMP 210 - Week 6
+dek: p5 - push, pop, transform
+---
+<div class="slide">
+	<h1>p5: push, pop, transform</h1>
+	<p><a href="{{site.github.url}}/">MMP 210</a> > <a href="{{site.github.url}}/schedule.html#week-6">Week 6</a></p>
+</div>
+
+<div class="slide">
+	<p>In p5, we can change shapes by changing the fill, shape and size, but we can also change the whole canvas using transformations.  Usually we draw everything starting at <code>0, 0</code> in the upper left corner, but we can change that.  We can also change the size and rotation or our sketches.  And we can do it multiple times throughout the program.  This is an convenient way to create new effects and animations.</p>
+</div>
+
+<!-- transform, rotate -->
+<div class="slide">
+	<p><a href="http://p5js.org/reference/#/p5/translate" target="blank">translate()</a> moves the origin to a new point on the canvas:</p>
+	<pre><code>function setup() {
+    createCanvas(640, 480);
+    background("white");
+    
+    translate(width/2, height/2);
+    ellipse(0, 0, 40, 40);
+    rect(-100, -100, 40, 40);
+}</code></pre>
+</div>
+
+
+<div class="slide">
+	<p><a href="http://p5js.org/reference/#/p5/rotate" target="blank">rotate()</a> rotates the canvas around it's origin point.  Let's look at a few examples:</p>
+
+	<pre><code>function setup() {
+    createCanvas(640, 480);
+    background("white");
+    
+    rect(0, 0, 40, 40);
+    ellipse(100, 100, 40, 40);
+}</code></pre>
+</div>
+
+<div class="slide">
+	<pre><code>function setup() {
+    createCanvas(640, 480);
+    background("white");
+    
+    rotate(PI/16);
+    rect(0, 0, 40, 40);
+    ellipse(100, 100, 40, 40);
+    
+    rotate(PI/16);
+    ellipse(100, 100, 40, 40);
+    
+    rotate(PI/16);
+    ellipse(100, 100, 40, 40);
+}</code></pre>
+	<p>Notice that rotate is cumulative.</p>
+</div>
+
+<div class="slide">
+	<pre><code>function setup() {
+    createCanvas(640, 480);
+    background("white");
+    
+    translate(width/2, height/2);
+    
+    rotate(PI/4);
+    rect(0, 0, 40, 40);
+    ellipse(100, 100, 40, 40);
+    
+    rotate(PI/4);
+    ellipse(100, 100, 40, 40);
+    
+    rotate(PI/4);
+    ellipse(100, 100, 40, 40);
+}</code></pre>
+	<p>We can translate and then rotate.</p>
+</div>
+
+<div class="slide">
+	<p>After that, if we add more rotates and translates, things start to get crazy, so let's figure out how to reset the canvas.</p>
+	<p>There are too simple functions to do this: <code><a href="http://p5js.org/reference/#/p5/push" target="blank">push()</a></code> and <code><a href="http://p5js.org/reference/#/p5/push" target="blank">pop()</a></code>.</p>
+	<p><code>push()</code> saves the current transform (any rotation or translation), and <code>pop()</code> returns it to the saved state.  Usually we want to save the transform at the original state, starting with <code>0,0</code> in the upper left, and no rotation.</p>
+</div>
+
+
+<div class="slide">
+	<p>So we can place our rectangle and rotate and then pop back to the origin for our circles.</p>
+	<pre><code>function setup() {
+    createCanvas(640, 480);
+    background("white");
+    
+    push();
+    translate(width/2, height/2);
+    rotate(PI/4);
+    rect(0, 0, 40, 40);
+    pop();
+    
+    ellipse(100, 100, 40, 40);
+    rotate(PI/16);
+    ellipse(100, 100, 40, 40);
+    rotate(PI/16);
+    ellipse(100, 100, 40, 40);
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>One more example: Let's look at a couple of ways to do the same thing, one using <code>push</code> and <code>pop</code> and the other not.</p>
+
+	<pre><code>function setup() {
+    createCanvas(640, 480);
+    background("white");
+    
+    translate(width/2, height/2);
+    for (var i = 0; i < 16; i++) {
+        rotate(PI/8);
+        ellipse(100, 100, 40, 40);
+    }
+}</code></pre>
+</div>
+
+<div class="slide">
+	<pre><code>function setup() {
+    createCanvas(640, 480);
+    background("white");
+
+    translate(width/2, height/2);
+    for (var i = 0; i < 16; i++) {
+        push();
+        rotate(PI/8 * i);
+        ellipse(100, 100, 40, 40);
+    pop();
+    }
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>Okay, one last thing: <code>push</code> and <code>pop</code> is a great way to animate:</p>
+
+	<pre><code>function setup() {
+    createCanvas(640, 480);
+    background("white");
+    translate(width/2, height/2);
+}
+function draw() {
+    rotate(PI*frameCount/100);
+    rect(0, 0, 100, 100);
+}</code></pre>
+</div>
+
+<div class="slide">
+	<pre><code>function setup() {
+        createCanvas(640, 480);
+        background("white");
+        translate(width/2, height/2);
+}
+function draw() {
+    rotate(PI*frameCount/100);
+    textSize(50);
+    stroke("white");
+    fill("green");
+    text("MMP 210", 0, 0);
+}</code></pre>
+</div>

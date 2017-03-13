@@ -91,7 +91,18 @@ fill(c); // this uses the variable 'c'
 	- Each window should be at least 5 shapes.  
 	- Use your apartment building or [Windows of New York](http://windowsofnewyork.com/) for inspiration.
 
+## Week 6
+**Animation**
+- [p5: animation, random, modulo](week6/)
+- [p5: push, pop, transform](week6/transform.html)
+- **Assignment 6**
+	- Add animation to a previous drawing (or a new drawing if you prefer)
+	- Use two different types of animation
+- Inspiration
+	- [Animated name logos](http://www.flamingtext.com/Animated-Logos)
+	- [Animated logos](http://www.howdesign.com/featured/animated-logos/)
 
+	
 <!--
 
 https://itpnyu.github.io/ICM-Quizzes/
@@ -102,10 +113,10 @@ https://itpnyu.github.io/ICM-Quizzes/
 
 **Week 6: Animation**
 - Draw a spaceship
-- [p5: animation, random, modulo](https://owenroberts.github.io/mmp210/week6/index.html)
+- 
 
 **Week 7: Text**
-- [p5: push, pop, transform](https://owenroberts.github.io/mmp210/week7/transform.html)
+- 
 
 **Week 8: Generating designs**
 - [p5: Generating patterns](https://owenroberts.github.io/mmp210/week8/index.html)
