@@ -95,6 +95,9 @@ fill(c); // this uses the variable 'c'
 **Animation**
 - [p5: animation, random, modulo](week6/)
 - [p5: push, pop, transform](week6/transform.html)
+- [Class animation example](https://owenbmcc.github.io/classwork210/week6/)
+- [Class transform animation example](https://owenbmcc.github.io/classwork210/week6/transform.html)
+- [Screensaver example](http://alpha.editor.p5js.org/owenroberts/sketches/BknrFeynx)
 - **Assignment 6**
 	- Add animation to a previous drawing (or a new drawing if you prefer)
 	- Use two different types of animation
