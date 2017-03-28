@@ -105,21 +105,25 @@ fill(c); // this uses the variable 'c'
 	- [Animated name logos](http://www.flamingtext.com/Animated-Logos)
 	- [Animated logos](http://www.howdesign.com/featured/animated-logos/)
 
-	
+## Week 7
+**Functions**
+- [JavaScript functions](week7/)
+- [p5: defining functions](week7/p5.html)
+- In class: [Code academy: functions](https://www.codecademy.com/courses/functions-in-javascript-2-0/)
+- **Assignment 7**
+	- Rewrite your window drawing as a defined function.
+	- Use it to draw at least two windows with different origin and size.
+
+
 <!--
 
 https://itpnyu.github.io/ICM-Quizzes/
 
-**Week 5: Functions**
-- [JavaScript functions](https://owenroberts.github.io/mmp210/week5/index.html)  
-- [p5: defining functions](https://owenroberts.github.io/mmp210/week5/p5.html)
 
 **Week 6: Animation**
 - Draw a spaceship
 - 
 
-**Week 7: Text**
-- 
 
 **Week 8: Generating designs**
 - [p5: Generating patterns](https://owenroberts.github.io/mmp210/week8/index.html)
