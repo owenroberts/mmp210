@@ -110,6 +110,8 @@ fill(c); // this uses the variable 'c'
 - [JavaScript functions](week7/)
 - [p5: defining functions](week7/p5.html)
 - In class: [Code academy: functions](https://www.codecademy.com/courses/functions-in-javascript-2-0/)
+- [Class example: two ellipses](https://owenbmcc.github.io/classwork210/week7/)
+- [Class example: window function](https://owenbmcc.github.io/classwork210/week7/windows.html)
 - **Assignment 7**
 	- Rewrite your window drawing as a defined function.
 	- Use it to draw at least two windows with different origin and size.
