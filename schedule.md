@@ -119,6 +119,7 @@ fill(c); // this uses the variable 'c'
 ## Week 8
 **Generating designs**
 - [Generating patterns](week8/index.html)
+- [Generative design example](https://owenbmcc.github.io/classwork210/midterm/)
 - Midterm review
 - **Midterm: Generative design**
 	- Choose a theme that will inform your design
