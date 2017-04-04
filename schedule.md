@@ -121,6 +121,7 @@ fill(c); // this uses the variable 'c'
 - [Generating patterns](week8/index.html)
 - [Generative design example](https://owenbmcc.github.io/classwork210/midterm/)
 - Midterm review
+	- [Review example](https://owenbmcc.github.io/classwork210/review/)
 - **Midterm: Generative design**
 	- Choose a theme that will inform your design
 	- Create a sketch that generates new patterns based on a theme
