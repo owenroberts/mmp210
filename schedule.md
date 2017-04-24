@@ -135,6 +135,32 @@ fill(c); // this uses the variable 'c'
 		- [Grids: Generative pattern design](http://nicholas-taylor.com/Grids)
 		- [Libs Elliott: Generated quilt design](http://themakersnation.com/maker-spotlight-libs-elliott/)
 
+## Week 9
+- Midterm Presentation
+- [Interaction](week9/)
+- [DOM Library](week9/dom.html)
+- Final requirements
+	- The final project is making an interactive design
+	- Choose a new theme to inform design choices, like shape, color and pattern
+	- Designs can be abstract, represtational or combination
+	- Each program must use:
+		- variables
+		- if ... else logic statement
+		- at least one for loop
+		- at least one defined function
+		- shape and color functions
+		- user input
+		- animation
+		- image
+	- User input can be mouse, keyboard, HTML elements, or a combination
+	- Inspiration
+		- <https://nvioli.github.io/>
+		- <https://fcjou.github.io/fish-piano/>
+		- <http://share.framerjs.com/4ie4c9u5jodh/>
+		- <https://www.jdjohnsonmedia.com/session5/index.html>
+		- <https://www.jdjohnsonmedia.com/session9/index.html>
+		- <http://uxdesignercoding.tumblr.com/post/143328882704/for-this-week-i-have-worked-on-data-visualization>
+		- <http://www.typotopo.com/typemenot/index.html>
 
 <!--
 
