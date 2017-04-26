@@ -137,18 +137,15 @@ fill(c); // this uses the variable 'c'
 
 ## Week 9
 - Midterm Presentation
-
-- [Interaction](week9/)
+* [Interaction](week9/)
 	- [Mapping mouseX and mouseY](https://owenbmcc.github.io/classwork210/week8/mapping.html)
 	- [mousePressed circle](https://owenbmcc.github.io/classwork210/week8/mouse-press.html)
 	- [Rectangle button rotate](https://owenbmcc.github.io/classwork210/week8/) 
-
-- [DOM Library](week9/dom.html)  
+* [DOM Library](week9/dom.html)  
  	- [Button](https://owenbmcc.github.io/classwork210/week8-dom/button.html)
  	- [Input](https://owenbmcc.github.io/classwork210/week8-dom/input.html)
  	- [Arrow keys](https://owenbmcc.github.io/classwork210/week8-dom/)
-
-- Final requirements
+* Final requirements
 	- The final project is making an interactive design
 	- Choose a new theme to inform design choices, like shape, color and pattern
 	- Designs can be abstract, represtational or combination
