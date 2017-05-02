@@ -168,6 +168,21 @@ fill(c); // this uses the variable 'c'
 		- <http://uxdesignercoding.tumblr.com/post/143328882704/for-this-week-i-have-worked-on-data-visualization>
 		- <http://www.typotopo.com/typemenot/index.html>
 
+## Week 10
+**Arrays**
+- [Arrays](week10/)
+- [Review Arrays](https://www.khanacademy.org/computing/computer-programming/programming/arrays/p/intro-to-arrays)
+- In class
+	- Write a spaceship function (if you don't like spaceships, make a car, or a animal, or anything else that moves)
+	- Animate the spaceship in space and color
+- **Assignment: Final project description**
+	- 3-5 sentence "pitch" for final project
+	- 1 sketch or "mood board" with visual references
+	- Keep the programming requirements in mind, but think of something you would like to do
+	- Has to be interactive!
+	- Could be a game, interactive visualization, animation or combination
+	- Make a web page or PDF and post on Slack
+
 <!--
 
 https://itpnyu.github.io/ICM-Quizzes/
@@ -176,10 +191,7 @@ https://itpnyu.github.io/ICM-Quizzes/
 - Draw a spaceship
 - 
 
-
-
 **Week 9: Arrays**
-- [Arrays](https://owenroberts.github.io/mmp210/week9/)
 - Midterm workshop
 
 **Week 10: Midterm presentations**

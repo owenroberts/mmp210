@@ -1,0 +1,256 @@
+---
+layout: slides
+title: MMP 210
+week: 10
+dek: Arrays
+---
+
+<div class="slide">
+	<p><note>Arrays</note> are lists of variables.</p>
+	<p>In JavaScript, an Array can hold any type of variables (number, string, boolean, object or array) and can mix different types as well.</p>
+	<ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="blank">Array on MDN</a></li></ul>
+</div>
+
+<!-- <div class="slide">
+	<div data-src="array.json"></div>
+</div> -->
+
+<div class="slide">
+	<p>Arrays use square brackets <code>[ ]</code> with the values separated by commas:</p>
+	<pre><code><c></c>var a = [0, 1, 2];
+<c></c>var b = ["hello", "world"];</code></pre>
+	<p>The values in an array are referenced by their index number inside of brackets:</p>
+	<pre><code><c></c>console.log(a[0]);
+<c></c>console.log(a[1]);
+<c></c>console.log(a[2]);
+<c></c>console.log(b[0]);
+<c></c>console.log(b[1]);</code></pre>
+</div>
+
+<div class="slide">
+	<p>Individual elements of the array can be set using the same bracket notation.</p>
+	<pre><code><c></c>a[0] = 10;
+<c></c>console.log(a);</code></pre>
+	<p>New values can be added using the <code>push()</code> method:</p>
+	<pre><code><c></c>a.push(99);
+<c></c>console.log(a);</code></pre>
+	<p>The last value in an array can be removed with the <code>pop()</code> method:</p>
+	<pre><code><c></c>a.pop();
+<c></c>console.log(a);</code></pre>
+</div>		
+
+<div class="slide">
+	<p>A <note>method</note> is a function that is associated with an object.</p>
+	<p>A <note>property</note> is a variable value associated with an object.</p>
+</div>
+
+<div class="slide">
+	<pre><code><c></c>var a = ["cat", "dog", "alligator"];
+<c></c>console.log(a.length);
+<c></c>var i = a.indexOf("dog");
+<c></c>console.log(i);</code></pre>
+</div>
+
+<div class="slide">
+	<p><code>.length</code> is a property, because it just returns one value, the number of elements in the array.</p>
+	<p><code>.indexOf()</code> is a method, because, like a function, it takes an argument and runs a block of code which returns a value.</p>
+	<pre><code>console.log(a.indexOf);</code></pre>
+</div>
+
+<div class="slide">
+	<p>Arrays are often used with loops to repeat actions with a series of values:</p>
+	<pre><code><c></c>var fruits = ["banana", "apple", "orange"];
+<c></c>for (var i = 0; i < fruits.length; i++) {
+	console.log("Item " + i + " is a " + fruits[i]);
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>Let's use an array in p5 to make a fleet of spaceships.   Let's start by making a bunch of ellipses:</p>
+	<pre><code>function setup() {
+	createCanvas(720, 360);
+	background("white");
+	
+	for (var i = 0; i < 20; i++) {
+		var x = random(0, width/4);
+		var y = random(0, height);
+		var size = random(20, 40);
+		ellipse(x, y, size, size);
+	}
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>Now if we add the draw function we can get some animation but it's just a bunch of random circles.  If we want to animate all of the circles we would need an x variable for every ellipse.</p>
+	<pre><code>function setup() {
+	createCanvas(720, 360);
+}
+function draw(){
+	background("white");
+
+	for (var i = 0; i < 20; i++) {
+		var x = random(0, width/4);
+		var y = random(0, height);
+		var size = random(20, 40);
+		ellipse(x, y, size, size);
+	}
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>Instead of changing every value in each draw loop, we can make an array that saves all of the x values for each ellipse (for now let's make y constant).</p>
+	<pre><code>var numRockets = 20;
+var x = [];
+function setup() {
+	createCanvas(720, 360);
+	for (var i = 0; i < numRockets; i++) {
+		x[i] = random(0, width/4);
+	}
+	console.log(x);
+}
+function draw(){
+	background("white");
+
+	for (var i = 0; i < numRockets; i++) {
+		ellipse(x[i], height/2, 20, 20);
+	}
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>Okay, now we can keep the same basic ellipse shapes, but they're not moving anywhere so let's increment all of the x values.</p>
+	<pre><code>var numRockets = 20;
+var x = [];
+function setup() {
+	createCanvas(720, 360);
+	for (var i = 0; i < numRockets; i++) {
+		x[i] = random(0, width/4);
+	}
+}
+function draw(){
+	background("white");
+
+	for (var i = 0; i < numRockets; i++) {
+		ellipse(x[i], height/2, 20, 20);
+		if (x[i] < width) x[i]++;
+		else x[i] = 0;
+	}
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>Hmm, kinda boring still.  Let's make them go at different speeds.  If we need to save a speed for every ellipse, we need an array of speeds.</p>
+	<pre><code>var numRockets = 20;
+var x = [];
+var speed = [];
+function setup() {
+	createCanvas(720, 360);
+	for (var i = 0; i < numRockets; i++) {
+		x[i] = random(0, width/4);
+		speed[i] = random(1, 3);
+	}
+}
+function draw(){
+	background("white");
+
+	for (var i = 0; i < numRockets; i++) {
+		ellipse(x[i], height/2, 20, 20);
+		if (x[i] < width) x[i] += speed[i];
+		else x[i] = 0;
+	}
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>That's cool.  Now let's add y and size arrays:</p>
+	<pre><code>var numRockets = 20;
+var x = [];
+var y = [];
+var size = [];
+var speed = [];
+function setup() {
+	createCanvas(720, 360);
+	for (var i = 0; i < numRockets; i++) {
+		x[i] = random(0, width/4);
+		speed[i] = random(1, 3);
+		y[i] = random(0, height);
+		size[i] = random(10, 40);
+	}
+}
+function draw(){
+	background("white");
+
+	for (var i = 0; i < numRockets; i++) {
+		ellipse(x[i], y[i], size[i], size[i]);
+		if (x[i] < width) x[i] += speed[i];
+		else x[i] = 0;
+	}
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>Okay, for the final step let's grab out old spaceship function and throw that in there:</p>
+	<pre><code>var spaceship = function(x, y, size) {
+        
+    var fin = size/4;
+    var cone = size * 1.5;
+    var windowWidth = size/3.33;
+    var distance = size/2;
+        
+    rect(x, y, size * 2, size);
+    triangle(x, y, x, y - fin, x + size, y);
+    triangle(x, y + size, x, y + size + fin, x + size, y + size);  
+    arc(x + size*2, y + size/2, cone, size, PI + HALF_PI, HALF_PI);
+    
+    for (var i = 0; i < 3; i++ ) {
+        ellipse( 
+            x + distance + i*distance, 
+            y + size/2, 
+            windowWidth, 
+            windowWidth );
+    }
+}
+
+function draw(){
+	background("white");
+
+	for (var i = 0; i < numRockets; i++) {
+		spaceship(x[i], y[i], size[i]);
+		if (x[i] < width) x[i] += speed[i];
+		else x[i] = 0;
+	}
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>Okay, let's make a fill for each one too:</p>
+	<pre><code>var numRockets = 20;
+var x = [];
+var y = [];
+var size = [];
+var speed = [];
+var fills = [];
+function setup() {
+	createCanvas(720, 360);
+	for (var i = 0; i < numRockets; i++) {
+		x[i] = random(0, width/4);
+		speed[i] = random(1, 3);
+		y[i] = random(0, height);
+		size[i] = random(10, 40);
+		var r = random(0, 200);
+		var g = random(0, 100);
+		var b = random(200, 255);
+		fills[i] = color(r, g, b);
+	}
+}
+function draw(){
+	background("white");
+
+	for (var i = 0; i < numRockets; i++) {
+		fill(fills[i]);
+		spaceship(x[i], y[i], size[i]);
+		if (x[i] < width) x[i] += speed[i];
+		else x[i] = 0;
+	}
+}</code></pre>
+</div>
