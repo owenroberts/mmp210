@@ -171,6 +171,7 @@ fill(c); // this uses the variable 'c'
 ## Week 10
 **Arrays**
 - [Arrays](week10/)
+	- [Spaceships example](https://owenbmcc.github.io/classwork210/week10/)
 - [Review Arrays](https://www.khanacademy.org/computing/computer-programming/programming/arrays/p/intro-to-arrays)
 - In class
 	- Write a spaceship function (if you don't like spaceships, make a car, or a animal, or anything else that moves)
