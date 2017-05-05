@@ -137,15 +137,16 @@ fill(c); // this uses the variable 'c'
 
 ## Week 9
 - Midterm Presentation
-* [Interaction](week9/)
+- [Interaction](week9/)
 	- [Mapping mouseX and mouseY](https://owenbmcc.github.io/classwork210/week8/mapping.html)
 	- [mousePressed circle](https://owenbmcc.github.io/classwork210/week8/mouse-press.html)
 	- [Rectangle button rotate](https://owenbmcc.github.io/classwork210/week8/) 
-* [DOM Library](week9/dom.html)  
+- [DOM Library](week9/dom.html)  
  	- [Button](https://owenbmcc.github.io/classwork210/week8-dom/button.html)
  	- [Input](https://owenbmcc.github.io/classwork210/week8-dom/input.html)
  	- [Arrow keys](https://owenbmcc.github.io/classwork210/week8-dom/)
-* Final requirements
+- [Beyond the canvas (DOM Tutorial)](https://github.com/processing/p5.js/wiki/Beyond-the-canvas)
+- Final requirements
 	- The final project is making an interactive design
 	- Choose a new theme to inform design choices, like shape, color and pattern
 	- Designs can be abstract, represtational or combination
@@ -184,37 +185,20 @@ fill(c); // this uses the variable 'c'
 	- Could be a game, interactive visualization, animation or combination
 	- Make a web page or PDF and post on Slack
 
+## Week 11
+**Image and Media**
+- [Image & video](week11/)
+- [Sound library](week11/sound.html)
+
 <!--
 
 https://itpnyu.github.io/ICM-Quizzes/
 
-**Week 6: Animation**
-- Draw a spaceship
-- 
-
-**Week 9: Arrays**
-- Midterm workshop
 
 **Week 10: Midterm presentations**
 - [Objects](https://owenroberts.github.io/mmp210/week10/)
 
-**Week 11: Interaction**
-- [Interaction](https://owenroberts.github.io/mmp210/week11/)
-- Final requirements
-	- The final project is making an interactive design
-	- Choose a new theme to inform design choices, like shape, color and pattern
-	- Designs can be abstract, represtational or combination
-	- Each program must use:
-		- variables
-		- if ... else logic statement
-		- at least one for loop
-		- at least one defined function
-		- shape and color functions
-		- user input
-		- animation
-		- image
-	- User input can be mouse, keyboard, HTML elements, or a combination
-	- [p5 examples for inspiration](https://p5js.org/gallery/)
+
 
 **Week 12: Image**
 - [Image](https://owenroberts.github.io/mmp210/week12/)
