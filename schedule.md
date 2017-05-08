@@ -1,11 +1,13 @@
 ---
 layout: default
 title: MMP 210 - Schedule
-desk: Schedule with class notes & assignments
+dek: Schedule with class notes & assignments
 ---
 # Schedule
 
 [Home](index.html) [Schedule](schedule.html)
+
+{% for i in (1..11) %}<a href="#week-{{i}}">Week {{i}}</a> {% endfor %}
 
 ## Week 1
 **Intro to JavaScript, p5.js**
@@ -187,6 +189,7 @@ fill(c); // this uses the variable 'c'
 
 ## Week 11
 **Image and Media**
+- Present Final project concepts
 - [Image & video](week11/)
 	- [WEBGL 3d tutorial](https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5)
 - [Sound library](week11/sound.html)
