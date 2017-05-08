@@ -49,10 +49,11 @@ function draw() {
 	<pre><code>function mousePressed() {
 	explosion.play();
 }</code></pre>
+	<p>Cool!</p>
 </div>
 
 <div class="slide">
-	<p>Cool!</p>
+	
 	<p>Let's bring back our <a href="http://alpha.editor.p5js.org/owenroberts/sketches/BknrFeynx">screen saver</a> example, and add an explosion when it hits a wall:</p>
 	<pre><code>// screen saver
 var x = 10;
@@ -104,6 +105,48 @@ function preload() {
 <div class="slide">
 	<p>Update the code to play the explosion with a random selection from the array:</p>
 	<pre><code>explosions[floor(random(0,explosions.length))].play();</code></pre>
+	<p>This line is a little long so let's break it down.</p>
 </div>
 
-<!--  add background music and fuck with pitch -->
+<div class="slide">
+	<p>First off, we're just using the <code>explosions</code> array and playing one of the sounds by choosing an index and then using the <code>.play()</code> method.</p>
+	<pre><code>explosions[0].play();</code></pre>
+	<p>But we want the index to be random, so we're getting a random number between 0 and the number of explosions sounds that are in the array:</p>
+	<pre><code>random(0, explosions.length)</code></pre>
+	<p>But that random number could be a floating point number like <code>1.33</code> or <code>2.134152</code> so we use <code>floor()</code> to round it off to the lower whole number.  Basically we just chop off the decimal point to give us something we can use as the index for an array:</p>
+	<pre><code>floor(random(0, explosions.length))</code></pre>
+	<p>So then we stick that into the index for the array:</p>
+	<pre><code>explosions[floor(random(0, explosions.length))]</code></pre>
+
+</div>
+
+<div class="slide">
+	<p>Let's add some background music and play with a few parameters to see other things we can do with the p5 sound library.  First I'll <a href="http://freemusicarchive.org/genre/Classical/" target="blank">download a track</a> from the Free Music Archive and load it in my sketch.</p>
+	<pre><code class="javascript">var bkgMusic;
+function preload() {
+	bkgMusic = loadSound('music.mp3');
+}
+function setup() { 
+	bkgMusic.play();
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>One thing we can change is the overall volume of the track, using <a href="https://p5js.org/reference/#/p5.SoundFile/setVolume">.setVolume()</a>.  Let's <a href="https://p5js.org/reference/#/p5/map">map</a> the height of our <code>rect</code> to the volume.</p>
+	<pre><code>function draw() {
+	var vol = map(y, 0, height, 1, 0);
+	bkgMusic.setVolume(vol);
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>We can also pan the stereo field of the track using <a href="https://p5js.org/reference/#/p5.SoundFile/pan">.pan()</a>.  Let's map pan to x:</p>
+	<pre><code>var p = map(x, 0, width, -1, 1);
+bkgMusic.pan(p);</code></pre>
+</div>
+
+<div class="slide">
+	<p>There's a ton of stuff we could do with this sound file, so let's just try one more.  This time we'll map playback <a href="https://p5js.org/reference/#/p5.SoundFile/rate">rate</a> of the track to the mouse position.</p>
+	<pre><code>var rate = map(mouseX, 0, width, 0.5, 4);
+bkgMusic.rate(rate);</code></pre>
+</div>

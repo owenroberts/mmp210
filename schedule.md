@@ -188,7 +188,9 @@ fill(c); // this uses the variable 'c'
 ## Week 11
 **Image and Media**
 - [Image & video](week11/)
+	- [WEBGL 3d tutorial](https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5)
 - [Sound library](week11/sound.html)
+
 
 <!--
 
