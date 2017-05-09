@@ -191,8 +191,12 @@ fill(c); // this uses the variable 'c'
 **Image and Media**
 - Present Final project concepts
 - [Image & video](week11/)
+	- [Image example](https://owenbmcc.github.io/classwork210/week11/image.html)
+	- [Video example](https://owenbmcc.github.io/classwork210/week11/video.html)
+	- [3D textures example](https://owenbmcc.github.io/classwork210/week11/textures.html)
 	- [WEBGL 3d tutorial](https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5)
 - [Sound library](week11/sound.html)
+	- [Sound example](https://owenbmcc.github.io/classwork210/week11/)
 
 
 <!--
