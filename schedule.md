@@ -203,14 +203,19 @@ fill(c); // this uses the variable 'c'
 
 https://itpnyu.github.io/ICM-Quizzes/
 
+more inspiration for week 12
+- http://www.newrafael.com/websites
+- https://the-internet.click/
+- http://superpixelquest.com/
+- http://www.bdnext.net/roaxaca-zone/
+- http://www.molleindustria.org/to-build-a-better-mousetrap/
+- http://weavesilk.com/
+- http://agar.io/
+- http://paper-io.com/
+- 
 
 **Week 10: Midterm presentations**
 - [Objects](https://owenroberts.github.io/mmp210/week10/)
-
-
-
-**Week 12: Image**
-- [Image](https://owenroberts.github.io/mmp210/week12/)
 
 **Week 13: Libraries**
 - [p5.play](https://owenroberts.github.io/mmp210/week13/)
