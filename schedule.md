@@ -212,7 +212,7 @@ more inspiration for week 12
 - http://weavesilk.com/
 - http://agar.io/
 - http://paper-io.com/
-- 
+- https://quickdraw.withgoogle.com/#
 
 **Week 10: Midterm presentations**
 - [Objects](https://owenroberts.github.io/mmp210/week10/)
