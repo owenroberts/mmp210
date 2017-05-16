@@ -7,7 +7,7 @@ dek: Schedule with class notes & assignments
 
 [Home](index.html) [Schedule](schedule.html)
 
-{% for i in (1..11) %}<a href="#week-{{i}}">Week {{i}}</a> {% endfor %}
+{% for i in (1..12) %}<a href="#week-{{i}}">Week {{i}}</a> {% endfor %}
 
 ## Week 1
 **Intro to JavaScript, p5.js**
@@ -198,24 +198,28 @@ fill(c); // this uses the variable 'c'
 - [Sound library](week11/sound.html)
 	- [Sound example](https://owenbmcc.github.io/classwork210/week11/)
 
+## Week 12
+**Objects**
+- [JavaScript Objects](week12/)
+- Final Project workshop
+- More inspiration
+	- <http://www.newrafael.com/websites>
+	- <https://the-internet.click/>
+	- <http://superpixelquest.com/>
+	- <http://www.bdnext.net/roaxaca-zone/>
+	- <http://www.molleindustria.org/to-build-a-better-mousetrap/>
+	- <http://weavesilk.com/>
+	- <http://agar.io/>
+	- <http://paper-io.com/>
+	- <https://quickdraw.withgoogle.com/#>
+
+
 
 <!--
 
 https://itpnyu.github.io/ICM-Quizzes/
 
 more inspiration for week 12
-- http://www.newrafael.com/websites
-- https://the-internet.click/
-- http://superpixelquest.com/
-- http://www.bdnext.net/roaxaca-zone/
-- http://www.molleindustria.org/to-build-a-better-mousetrap/
-- http://weavesilk.com/
-- http://agar.io/
-- http://paper-io.com/
-- https://quickdraw.withgoogle.com/#
-
-**Week 10: Midterm presentations**
-- [Objects](https://owenroberts.github.io/mmp210/week10/)
 
 **Week 13: Libraries**
 - [p5.play](https://owenroberts.github.io/mmp210/week13/)

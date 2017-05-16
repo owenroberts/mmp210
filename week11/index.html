@@ -55,45 +55,6 @@ function setup(){
 }</code></pre>
 </div>
 
-<!-- <div class="slide">
-	<p>In our demo today we will look at adding objects and mouse interaction to interaction with the color data in an image:</p>
-	<pre><code>var img;
-var circles = [];
-var w = 20;
-var r = 50;
-function setup(){
-	img = loadImage("cat.jpg");
-	createCanvas(640, 480);
-	noStroke();
-}
-
-function draw(){
-	background("black");
-	image(img, 0, 0);
-	for (var i = 0; i < circles.length; i++) {
-		circles[i].display();	
-	}
-}
-
-function mouseDragged() {
-	var x = mouseX + random(-r, r);
-	var y = mouseY + random(-r, r);
-	var imgcolor = img.get(x, y);
-	circles.push( new Circle(x, y, imgcolor) );
-}
-
-function Circle(x, y, c) {
-	this.x = x;
-	this.y = y;
-	this.c = c;
-	this.display = function() {
-		fill(this.c);
-		ellipse(this.x, this.y, w, w);
-	}
-}</code></pre>
-</div> -->
-<!--  requires an object move to objects -->
-
 <div class="slide">
 	<h2>Video</h2>
 	<p>p5 also supports video, but it is treated as an HTML element, like the <code>input</code> and <code>button</code> elements we looked at last week.</p>
