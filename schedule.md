@@ -15,7 +15,6 @@ dek: Schedule with class notes & assignments
 - [HTML / CSS Review notes](week1/)
 - [Intro to p5](week1/p5.html)
 - [GitHub Publishing](week1/github.html)
-- <a href="https://owenbmcc.github.io/classwork210/week1/" target="blank">Class example</a>
 - In class assignment
 	- Create a simple web site to use as the portfolio page for your work this semester.
 	- Your site should have at least one of each:
@@ -34,7 +33,7 @@ dek: Schedule with class notes & assignments
 - [p5: color, stroke, fill](week2/p5.html)
 	- [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/)
 - [Code academy review](http://www.codecademy.com/courses/getting-started-v2)
-- <a href="https://owenbmcc.github.io/classwork210/week2/" target="blank">Class example</a>
+- [GitHub client](week4/github.html)
 - **Assignment 2**
 	- Using p5, create a design that uses variables as the arguments for the drawing functions.
 	- Drawing functions include fill(), stroke(), rect(), line(), ellipse(), triangle() etc...
@@ -57,7 +56,6 @@ fill(c); // this uses the variable 'c'
 - [JavaScript debugging](week3/)
 - [p5: text](week3/p5.html)
 - [Debugging challenge](week3/debug.zip)
-- <a href="https://owenbmcc.github.io/classwork210/week3/" target="blank">Class example</a>
 - **Assignment 3**
 	- Make a logo design with your name
 	- Use text and other shapes
@@ -67,9 +65,7 @@ fill(c); // this uses the variable 'c'
 ## Week 4
 **Logic**
 - [JavaScript comparison operators and conditionals](week4/)
-- [GitHub client](week4/github.html)
 - [p5 system variables](week4/p5.html)
-- [Class example](https://owenbmcc.github.io/classwork210/week4/)
 - **Assignment 4**
 	- Create a design that uses system variables to change the color of the shapes being drawn
 	- The color should change over time or space
@@ -84,10 +80,6 @@ fill(c); // this uses the variable 'c'
 - [JavaScript for loops](week5/index.html)
 - [p5: drawing with loops](week5/p5.html)
 - In class: [Code academy: for loops](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/0/1)
-- Class examples
-	- [Basic loop](http://alpha.editor.p5js.org/owenroberts/sketches/rydx-sncx)
-	- [Grid](https://owenbmcc.github.io/classwork210/week5/)
-	- [Windows Template](https://owenbmcc.github.io/classwork210/week5/windows.html)
 - **Assignment 5**
 	- Draw the a grid of windows like the front of a city building.  
 	- Each window should be at least 5 shapes.  
@@ -97,9 +89,6 @@ fill(c); // this uses the variable 'c'
 **Animation**
 - [p5: animation, random, modulo](week6/)
 - [p5: push, pop, transform](week6/transform.html)
-- [Class animation example](https://owenbmcc.github.io/classwork210/week6/)
-- [Class transform animation example](https://owenbmcc.github.io/classwork210/week6/transform.html)
-- [Screensaver example](http://alpha.editor.p5js.org/owenroberts/sketches/BknrFeynx)
 - **Assignment 6**
 	- Add animation to a previous drawing (or a new drawing if you prefer)
 	- Use two different types of animation
@@ -112,8 +101,6 @@ fill(c); // this uses the variable 'c'
 - [JavaScript functions](week7/)
 - [p5: defining functions](week7/p5.html)
 - In class: [Code academy: functions](https://www.codecademy.com/courses/functions-in-javascript-2-0/)
-- [Class example: two ellipses](https://owenbmcc.github.io/classwork210/week7/)
-- [Class example: window function](https://owenbmcc.github.io/classwork210/week7/windows.html)
 - **Assignment 7**
 	- Rewrite your window drawing as a defined function.
 	- Use it to draw at least two windows with different origin and size.
@@ -121,9 +108,7 @@ fill(c); // this uses the variable 'c'
 ## Week 8
 **Generating designs**
 - [Generating patterns](week8/index.html)
-- [Generative design example](https://owenbmcc.github.io/classwork210/midterm/)
 - Midterm review
-	- [Review example](https://owenbmcc.github.io/classwork210/review/)
 - **Midterm: Generative design**
 	- Choose a theme that will inform your design
 	- Create a sketch that generates new patterns based on a theme
@@ -174,7 +159,6 @@ fill(c); // this uses the variable 'c'
 ## Week 10
 **Arrays**
 - [Arrays](week10/)
-	- [Spaceships example](https://owenbmcc.github.io/classwork210/week10/)
 - [Review Arrays](https://www.khanacademy.org/computing/computer-programming/programming/arrays/p/intro-to-arrays)
 - In class
 	- Write a spaceship function (if you don't like spaceships, make a car, or a animal, or anything else that moves)
@@ -191,12 +175,7 @@ fill(c); // this uses the variable 'c'
 **Image and Media**
 - Present Final project concepts
 - [Image & video](week11/)
-	- [Image example](https://owenbmcc.github.io/classwork210/week11/image.html)
-	- [Video example](https://owenbmcc.github.io/classwork210/week11/video.html)
-	- [3D textures example](https://owenbmcc.github.io/classwork210/week11/textures.html)
-	- [WEBGL 3d tutorial](https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5)
 - [Sound library](week11/sound.html)
-	- [Sound example](https://owenbmcc.github.io/classwork210/week11/)
 
 ## Week 12
 **Objects**

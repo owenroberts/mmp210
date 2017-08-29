@@ -20,14 +20,14 @@ This is the <a href="https://docs.google.com/document/d/1lDRKn-vQuvl1kne6qjAJKmx
 - Email: oroberts AT bmcc DOT cuny  DOT edu
 - Office: S622J
 - Office extension: 8057
-- Office hours: Monday 4pm - 5pm / Thursday 4pm - 6pm
-- Class times: Tuesday 2pm - 5:30pm
-- Fiterman 706
+- Office hours: TDB
+- Class times: Tuesday & Thursday 7:45pm - 9:10pm
+- Fiterman 1006
 
 ## Turning in assignments
 
 - Assignments are due the night before class
-- DM @owen a URL to the assignment on your blog, WordPress or GitHub
+- DM @owen a URL to the assignment 
 - Late assignments are automatic 20 points off
 
 ## Software
