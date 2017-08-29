@@ -180,6 +180,9 @@ fill(c); // this uses the variable 'c'
 ## Week 12
 **Objects**
 - [JavaScript Objects](week12/)
+	- [Spaceships](https://owenbmcc.github.io/classwork210/week12/spaceships.html)
+	- [Cat image](https://owenbmcc.github.io/classwork210/week12/image.html)
+	- [Button colliders](https://owenbmcc.github.io/classwork210/week12/)
 - Final Project workshop
 - More inspiration
 	- <http://www.newrafael.com/websites>
