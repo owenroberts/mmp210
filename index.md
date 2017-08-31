@@ -11,11 +11,10 @@ This is the class page of MMP 210 at BMCC.
 
 The class notes, schedule and assignments are all found here.
 
-<a href="https://mmp210spring17.slack.com/" target="blank">Click here for the class slack channel</a>
+- <a href="https://mmp210f17.slack.com/" target="blank">Slack channel</a>
+- <a href="https://docs.google.com/document/d/1GxHJ2VBMlp_7FTv8uAGFv3rWI6-9HFggymuXzMXXKoM/" target="blank">Class syllabus</a>
 
-This is the <a href="https://docs.google.com/document/d/1lDRKn-vQuvl1kne6qjAJKmxDO6FybfiAU3lX9UVnSQk/" target="blank">class syllabus</a>
-
-## Spring 2017
+## Fall 2017
 - Instructor: Owen Roberts
 - Email: oroberts AT bmcc DOT cuny  DOT edu
 - Office: S622J
