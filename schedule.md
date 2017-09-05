@@ -14,7 +14,6 @@ dek: Schedule with class notes & assignments
 
 - [HTML / CSS Review notes](week1/)
 - [Intro to p5](week1/p5.html)
-- [GitHub Publishing](week1/github.html)
 - In class assignment
 	- Create a simple web site to use as the portfolio page for your work this semester.
 	- Your site should have at least one of each:
@@ -29,11 +28,11 @@ dek: Schedule with class notes & assignments
 ## Week 2
 **Statements, operators & variables**
 
+- [GitHub Publishing](week2/github.html)
 - [JavaScript statements, operators & variables](week2/)
 - [p5: color, stroke, fill](week2/p5.html)
 	- [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/)
 - [Code academy review](http://www.codecademy.com/courses/getting-started-v2)
-- [GitHub client](week4/github.html)
 - **Assignment 2**
 	- Using p5, create a design that uses variables as the arguments for the drawing functions.
 	- Drawing functions include fill(), stroke(), rect(), line(), ellipse(), triangle() etc...
