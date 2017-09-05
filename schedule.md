@@ -14,6 +14,7 @@ dek: Schedule with class notes & assignments
 
 - [HTML / CSS Review notes](week1/)
 - [Intro to p5](week1/p5.html)
+- [Class example](https://owenbmcc.github.io/classwork210/selfportrait/)
 - In class assignment
 	- Create a simple web site to use as the portfolio page for your work this semester.
 	- Your site should have at least one of each:
