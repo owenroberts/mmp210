@@ -40,7 +40,6 @@ dek: Schedule with class notes & assignments
 	- There should be at least 5 colors and 5 shapes.
 	- You can draw whatever you like, but if you are having trouble deciding what to draw, try choosing something from an activity you like, maybe an instrument like drums, a soccer or basket ball, a skateboard or anything else that represents something you like to do.
 	- Variables are useful for reusing information.  Think of ways to manipulate variables to use the same data repetitively.
-	- [p5 example](http://alpha.editor.p5js.org/owenroberts/sketches/r1Z8cxbFx)
 
 ```
 // don't use hardcoded values
