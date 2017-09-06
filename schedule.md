@@ -30,6 +30,7 @@ dek: Schedule with class notes & assignments
 **Statements, operators & variables**
 
 - [GitHub Publishing](week2/github.html)
+	- [Old GitHub Desktop Notes](week2/github_old.html)
 - [JavaScript statements, operators & variables](week2/)
 - [p5: color, stroke, fill](week2/p5.html)
 	- [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/)
