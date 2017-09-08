@@ -4,28 +4,115 @@ title: MMP 210
 week: 1
 dek: JavaScript and p5.js
 ---
+
+<div class="slide">
+	<h2>JavaScript</h2>
+	<p>JavaScript is a programming language, created in 1995, specifically designed to work with websites, meaning browsers and web pages built with HTML and CSS.</p>
+	<p>HTML, CSS and JavaScript are the core technologies that every web pages is built with.</p>
+	<p>For more on history and workings of JavaScript I highly recommend <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript" target="blank">What is JavaScript</a> on MDN, as well as the <a href="https://www.youtube.com/watch?v=RO1Wnu-xKoY" target="blank">Crockford on JavaScript</a> lecture series by Douglas Crockford, one of the architects of the language.</p>
+</div>
+
 <!-- HTML canvas -->
 <div class="slide">
 	<h2>HTML5 Canvas</h2>
-	<p>The HTML5 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API" target="blank">Canvas</a> is a relatively new HTML element introduced with the HTML5 standard around 2011 to implement graphical programming within the web browser.</p>
-	<p>The canvas can be used to draw graphics on the screen using JavaScript.  This can be done in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial" target="blank">pure JavaScript</a> but there are many libraries that make drawing to the canvas easier.</p>
+	<p>The HTML5 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API" target="blank">Canvas</a> is a HTML element introduced with the HTML5 standard around 2011 to implement graphical programming within the web browser.</p>
+	<p>The canvas can be used to draw graphics on the screen using JavaScript.  This can be done in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial" target="blank">vanilla JavaScript</a> (vanilla refers to the practice of writing JavaScript without the addition of libraries like jQuery or underscore) but there are many libraries that make drawing to the canvas easier.</p>
 </div>
-<!-- adding p5 -->
+
 <!-- what is p5? -->
 <div class="slide">
+	<h2>p5</h2>
 	<p>One such library is <a href="http://p5js.org/" target="blank">p5</a> which we will use in this class to learn some programming basics.</p>
-	<p>Today we're going to <a href="http://p5js.org/get-started/" target="blank">get started</a> by adding the p5 library to our web page and playing with some of the functionality.</p>
-	<p>We will also go over some basics with the <a href="https://github.com/processing/p5.js/wiki/p5.js-overview/" target="blank">p5 overview</a>.</p>
+	<p>p5 is a JavaScript library inspired by the design, code and philosophy of <a href="https://processing.org/" target="blank">Processing</a>, a Java based library designed starting in 2001 in order to be a language friedly to artists and educators learning how to use programming in an artistic context.</p>
+	<p>Like Processing, p5 is developed with idea of drawing in mind.  Programs are referred to as <em>sketches</em> and basic drawing tools like shape and color form the basis of the language.</p>
+	<p>Since it's origin, many other functionalities have been added to this set to incorporate things like interaction, audio and video.</p>
+</div>
+
+<!-- adding p5 -->
+<div class="slide">
+	<p>Let's get started by adding the p5 library to an HTML project and creating a new JavaScript sketch file to begin writing our program.</p>
+	<p>Start by <a href="https://github.com/processing/p5.js/releases/download/0.5.14/p5.min.js" target="blank">downloading the p5 library</a>.</p>
+	<p>In our HTML/CSS review, we created a basic HTML and CSS file to be a placeholder for our project this semester. To begin let's make a copy of those files to start a new project.  We're going to work on the first assignemnt, a self portrait, so we can name that folder <note>selfportrait/</note> and place it inside our main <note>mmp120</note> folder.</p>
+</div>
+
+<div class="slide">
+	<p>Then add the <code>p5.min.js</code> file into the same folder and update your HTML page to add two <code>&lt;script&gt;</code> tags, which are like a <code>&lt;link&gt;</code> tag for CSS or <code>&lt;img&gt;</code> tag for images, but for loading JavaScript documents.</p>
+</div>
+
+<div class="slide">
+	<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;MMP 210 Homepage&lt;/title&gt;
+	&lt;link rel="stylesheet" type="text/css" href="style.css"&gt;
+	&lt;meta charset="utf-8"&gt;
+&lt;/head&gt;
+&lt;body id="home"&gt;
+	&lt;h1&gt;Self Portrait&lt;/h1&gt;
+	&lt;ul&gt;
+		&lt;li class="link"&gt;&lt;a href="../index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;script src="p5.min.js"&gt;&lt;/script&gt;
+	&lt;script src="sketch.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+<div class="slide">
+	<p>The second <code>&lt;script&gt;</code> tag is for <code>sketch.js</code> which doesn't exist yet, so create a new file and save it as <code>sketch.js</code>.  This is where our JavaScript program will begin.</p>
+	<p>Before we start let's talk about the way a p5 sketch considers dimensions.</p>
 </div>
 
 <!-- cartesian vs screen coordinates -->
 <div class="slide">
+	<h2>Cartesian coordinate system</h2>
 	<img src="p5/cartesian.png" />
 	<p class="label"><a href="https://en.wikipedia.org/wiki/Cartesian_coordinate_system" target="blank">https://en.wikipedia.org/wiki/Cartesian_coordinate_system</a></p>
 </div>
 <div class="slide">
+	<h2>p5 coordinate system</h2>
 	<img src="p5/coordinates2D3D.png" />
 	<p class="label"><a href="https://processing.org/reference/environment/" target="blank">https://processing.org/reference/environment/</a></p>
 </div>
 
+<div class="slide">
+	<h2>First sketch</h2>
+	<p>Okay, let's get started.  Here's the beginning of our program:</p>
+	<pre><code>function setup() {
+	createCanvas(640, 460);
+}</code></pre>
+	<p>Every p5 sketch starts this way.  The <code>setup</code> function is used to setup our drawing and initialize some basics.  It runs <em>once</em> when our program starts.  A function is simply a series of commands or actions we want the program to take.  Functions have names so we can call them.  When we call a function, the program runs the lines of code contained inside.</p>
+</div>
 
+<div class="slide">
+	<p>The <code>createCanvas</code> function creates a new <code>&lt;canvas&gt;</code> element on the HTML page where our drawing code will be rendered.</p>
+	<p>The two numbers, <code>(640, 640)</code> in parentheses are <em>arguments</em>.  Some functions, like <code>createCanvas</code> take arguments, which have an effect on the way the function behaves.  In this case, the numbers determines the <code>width</code> and <code>height</code> of our drawing in pixel dimensions.</p>
+</div>
+
+<div class="slide">
+	<p>Here's the next part of the self portrait:</p>
+	<pre><code>function draw() {
+	background("white");
+	
+	noStroke();
+	fill("green");
+	rect(100, 100, 200, 250);
+	
+	fill(180, 50, 250, 200);
+	ellipse(150, 200, 50, 100);
+	ellipse(250, 200, 40, 80);
+	
+	fill(200);
+	ellipse(150, 200, 40);
+	ellipse(250, 200, 30);
+	
+	stroke("blue");
+	line(150, 300, 250, 280);
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>The <code>draw</code> function is where all of our drawing code will go.  This function runs over and over again for as long as the program is open.  So all of that code is being executed about 60 times a second, or however fast your browser is running.</p>
+	<p>The rest of the code in this section is using the p5 <a href="https://p5js.org/reference/#group-Color" target="blank">Color</a> and <a href="https://p5js.org/reference/#group-Shape" target="blank">Shape</a> functions to draw a self portrait.</p>
+	<p>Try playing around with these functions and arguments to change the drawing and create your own self portrait.  We'll go over the functions in further detail next week.</p>
+</div>
