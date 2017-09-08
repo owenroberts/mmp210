@@ -3,9 +3,7 @@ layout: default
 title: MMP 210 - Home
 desk: Class info, notes and schedule
 ---
-# MMP 210: Multimedia Programming I
-
-[Home](index.html) [Schedule](schedule.html)
+Go to [Schedule](schedule.html)
 
 This is the class page of MMP 210 at BMCC.
 

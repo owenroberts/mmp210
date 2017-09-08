@@ -3,11 +3,8 @@ layout: default
 title: MMP 210 - Schedule
 dek: Schedule with class notes & assignments
 ---
-# Schedule
 
-[Home](index.html) [Schedule](schedule.html)
-
-{% for i in (1..12) %}<a href="#week-{{i}}">Week {{i}}</a> {% endfor %}
+Go to [Home](index.html)
 
 ## Week 1
 **Intro to JavaScript, p5.js**
