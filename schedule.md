@@ -13,8 +13,9 @@ dek: Schedule with class notes & assignments
 **Intro to JavaScript, p5.js**
 
 - [HTML / CSS Review notes](week1/)
+	- [Class example](https://owenbmcc.github.io/classwork210/review/)
 - [Intro to p5](week1/p5.html)
-- [Class example](https://owenbmcc.github.io/classwork210/selfportrait/)
+	- [Self Portrait example](https://owenbmcc.github.io/classwork210/selfportrait/)
 - In class assignment
 	- Create a simple web site to use as the portfolio page for your work this semester.
 	- Your site should have at least one of each:
@@ -32,7 +33,9 @@ dek: Schedule with class notes & assignments
 - [GitHub Publishing](week2/github.html)
 	- [Old GitHub Desktop Notes](week2/github_old.html)
 - [JavaScript statements, operators & variables](week2/)
+	- [Self portrait with variables](https://owenbmcc.github.io/classwork210/selfportrait_var/)
 - [p5: color, stroke, fill](week2/p5.html)
+	- [Color example](https://owenbmcc.github.io/classwork210/color/)
 	- [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/)
 - [Code academy review](http://www.codecademy.com/courses/getting-started-v2)
 - **Assignment 2**
@@ -55,6 +58,7 @@ fill(c); // this uses the variable 'c'
 **Debugging**
 - [JavaScript debugging](week3/)
 - [p5: text](week3/p5.html)
+	- [Text Example](https://owenbmcc.github.io/classwork210/text/)
 - [Debugging challenge](week3/debug.zip)
 - **Assignment 3**
 	- Make a logo design with your name
