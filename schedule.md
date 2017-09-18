@@ -67,9 +67,15 @@ fill(c); // this uses the variable 'c'
 
 
 ## Week 4
+**Interaction**
+- [p5 system variables](week4/p5.html)
+- [Interaction](week4/)
+
+
+## Week 4
 **Logic**
 - [JavaScript comparison operators and conditionals](week4/)
-- [p5 system variables](week4/p5.html)
+
 - **Assignment 4**
 	- Create a design that uses system variables to change the color of the shapes being drawn
 	- The color should change over time or space
@@ -129,13 +135,7 @@ fill(c); // this uses the variable 'c'
 ## Week 9
 - Midterm Presentation
 - [Interaction](week9/)
-	- [Mapping mouseX and mouseY](https://owenbmcc.github.io/classwork210/week8/mapping.html)
-	- [mousePressed circle](https://owenbmcc.github.io/classwork210/week8/mouse-press.html)
-	- [Rectangle button rotate](https://owenbmcc.github.io/classwork210/week8/) 
 - [DOM Library](week9/dom.html)  
- 	- [Button](https://owenbmcc.github.io/classwork210/week8-dom/button.html)
- 	- [Input](https://owenbmcc.github.io/classwork210/week8-dom/input.html)
- 	- [Arrow keys](https://owenbmcc.github.io/classwork210/week8-dom/)
 - [Beyond the canvas (DOM Tutorial)](https://github.com/processing/p5.js/wiki/Beyond-the-canvas)
 - Final requirements
 	- The final project is making an interactive design
@@ -184,9 +184,6 @@ fill(c); // this uses the variable 'c'
 ## Week 12
 **Objects**
 - [JavaScript Objects](week12/)
-	- [Spaceships](https://owenbmcc.github.io/classwork210/week12/spaceships.html)
-	- [Cat image](https://owenbmcc.github.io/classwork210/week12/image.html)
-	- [Button colliders](https://owenbmcc.github.io/classwork210/week12/)
 - Final Project workshop
 - More inspiration
 	- <http://www.newrafael.com/websites>
