@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: main
 title: MMP 210 - Schedule
 dek: Schedule with class notes & assignments
 ---

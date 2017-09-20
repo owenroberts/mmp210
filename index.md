@@ -1,14 +1,13 @@
 ---
-layout: default
+layout: main
 title: MMP 210 - Home
-desk: Class info, notes and schedule
+dek: Class info, notes and schedule
 ---
-Go to [Schedule](schedule.html)
-
 This is the class page of MMP 210 at BMCC.
 
 The class notes, schedule and assignments are all found here.
 
+- [Schedule](schedule.html)
 - <a href="https://mmp210f17.slack.com/" target="blank">Slack channel</a>
 - <a href="https://docs.google.com/document/d/1GxHJ2VBMlp_7FTv8uAGFv3rWI6-9HFggymuXzMXXKoM/" target="blank">Class syllabus</a>
 
