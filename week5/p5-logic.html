@@ -15,6 +15,8 @@ function draw() {
 	strokeWeight(4);
 	stroke("blue");
 
+	/* if mouse is on right half of canvas
+	 else mouse on left half of canvas */
 	if (mouseX > width/2) {
 		fill("lightblue");
 	} else {
@@ -43,22 +45,124 @@ function draw() {
 	line(width/2, 0, width/2, height);
 	line(0, height/2, width, height/2);
 
+	/* if mouse is on right half, else left */
 	if (mouseX > width/2) {
 		r += 1;
 	} else {
 		r -= 1;
 	}
 	
+	/* if mouse on left half, else right */
 	if (mouseX < width/2) {
 		g += 1;
 	} else {
 		g -= 1;
 	}
-	
+	/* could i combine previous two 
+	if/else statments? */
+
+	/* if mouse is on bottom half of canvas
+	else top half */
 	if (mouseY > height/2) {
 		b += 1;
 	} else {
 		b -= 1;
+	}
+}</code></pre>
+</div>
+
+<div class="slide">
+	<h2>mouseIsPressed system var</h2>
+	<pre><code>function setup() { 
+  createCanvas(400, 400);
+} 
+
+function draw() { 
+	/* mouseIsPressed is true when mouse is pressed
+	and false when no mouse button is pressed */
+	if (mouseIsPressed) {
+		background("lightgreen");
+	} else {
+		background("lightblue");
+	}
+}</code></pre>
+</div>
+
+<div class="slide">
+	<h2>A boolean toggle</h2>
+	<pre><code>/* global clicked toggle */
+var clicked = false;
+function setup() { 
+	createCanvas(400, 400);
+} 
+
+function draw() { 
+	if (clicked) {
+		background("lightgreen");
+	} else {
+		background("lightblue");
+	}
+}
+
+function mouseClicked() {
+	/* on click, flip the toggle
+	set it to the opposite of current value */
+	clicked = !clicked;
+}</code></pre>
+</div>
+
+<div class="slide">
+	<iframe src="http://alpha.editor.p5js.org/embed/SyyN8-Dob"></iframe>
+</div>
+
+<div class="slide">
+	<h2>frameCount and size</h2>
+	<pre><code>/* global size for ellipse */
+var sz = 100;
+function setup() { 
+  createCanvas(400, 400);
+} 
+
+function draw() { 
+	ellipse(width/2, height/2, sz);
+
+	/* between frame 30 and 60 increase sz
+		between frame 120 and 180 decrease sz */
+	if (frameCount > 30 && frameCount < 60) {
+		sz++;
+	} else if (frameCount > 120 && frameCount < 180) {
+		sz--;
+	}
+}</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Compound conditionals</h2>
+	<pre><code>function setup() {
+	createCanvas(640, 360);
+}
+
+function draw() {
+	background("black");
+	
+	/* draw quandrant lines */
+	strokeWeight(1);
+	stroke("white");
+	line(width/2, 0, width/2, height);
+	line(0, height/2, width, height/2);
+
+	fill("white");
+
+	/* for each quandrant, determine of mouse 
+		is inside bounds */	
+	if (mouseX > width/2 && mouseY > height/2) {
+		rect(width/2, height/2, width, height);
+	} else if (mouseX < width/2 && mouseY > height/2) {
+		rect(0, height/2, width/2, height);
+	} else if (mouseX > width/2 && mouseY < height/2) {
+		rect(width/2, 0, width, height/2);
+	} else {
+		rect(0, 0, width/2, height/2);
 	}
 }</code></pre>
 </div>

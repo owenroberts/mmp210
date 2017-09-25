@@ -50,7 +50,8 @@ dek: JavaScript comparison operators & conditionals
 <div class="slide">
 	<h2>Booleans</h2>
 	<p>A <code>boolean</code> is a datatype that can be either <code>true</code> or <code>false</code>.</p>
-	<p>Booleans default to the values <code>true</code> and <code>false</code>.</p>
+	<p>In JavaScript other values will evaluate to <code>false</code>, such as <code>0</code>, <code>""</code> (empty string), <code>NaN</code>, <code>null</code>, and <code>undefined</code>.</p>  
+	<p>Other values default to <code>true</code>, such as <code>"Hello World"</code>, <code>1</code>, <code>99</code>, or <code>-99</code>.  Try evaluating some booleans in the console with this syntax:</p>
 	<pre><code><c></c>Boolean(true);
 <c></c>Boolean(false);
 <c></c>Boolean("");
@@ -59,11 +60,7 @@ dek: JavaScript comparison operators & conditionals
 <c></c>Boolean(4);</code></pre>
 </div>
 
-<div class="slide">
-	<p>In JavaScript other values will evaluate to <code>false</code>, such as <code>0</code>, <code>""</code> (empty string), <code>NaN</code>, <code>null</code>, and <code>undefined</code>.</p>  
-	<p>Other values default to <code>true</code>, such as <code>"Hello World"</code>, <code>1</code>, <code>99</code>, or <code>-99</code>.  Try evaluating some booleans in the console with this syntax:</p>
 
-</div>
 
 <div class="slide">
 	<h2>Conditionals</h2>
@@ -123,7 +120,7 @@ dek: JavaScript comparison operators & conditionals
 </div>
 
 
-<!-- <div class="slide">
+<div class="slide">
 	<h2>Logical operators - AND and OR</h2>
 	<p>There are a number of logical statements that help us evaluate more complex statements.  We can use <code>&&</code> and <code>||</code> to add statements to our condition.  <code>&&</code> requires all statements to evaluate true, reading left to right.  <code>||</code> requires one of the statements on either side to be true.</p>
 	</div>
@@ -136,17 +133,10 @@ dek: JavaScript comparison operators & conditionals
 	<pre><code><c></c>( true && true || false ) && true</code></pre>
 </div>
 	<div class="slide">
-	<pre><code><c></c>var x = 0;
-<c></c>var width = 5;
-<c></c>var start = true;
-<c></c>var incrementX = function() {
-	if (x < width && start) {
-		x++;
-	} else if (x > 0) {
-		if (start) start = false;
-		x--;
-	}
-	console.log(x);
-};
-incrementX();</code></pre>
-</div> -->
+	<pre><code><c></c>var min = 100;
+<c></c>var max = 500;
+<c></c>var x = 200;
+<c></c>if (x > min && x < max) {
+	console.log("x is in range");
+}</code></pre>
+</div>
