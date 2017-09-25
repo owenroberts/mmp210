@@ -76,15 +76,15 @@ fill(c); // this uses the variable 'c'
 
 ## Week 5
 **Logic**
-- [JavaScript comparison operators and conditionals](week4/)
-- **Assignment 4**
-	- Create a design that uses system variables to change the color of the shapes being drawn
-	- The color should change over time or space
-	- Time can be measured with `frameCount`
-	- Space is measured with `mouseX`, `mouseY`, `width` and `height`
-	- Examples
-		- [Tickle](https://p5js.org/examples/interaction-tickle.html)
-		- [Follow](https://p5js.org/examples/interaction-follow-1.html)
+- [JavaScript comparison operators and conditionals](week5/js-logic.html)
+<!-- dealing with compound conditionals??? -->
+- [Drawing with logic](week5/p5-logic.html)
+- **In class**: [Code Academy: Control Flow](https://www.codecademy.com/courses/learn-javascript-control-flow/lessons/control-flow/exercises/control-flow-intro)
+- **Assignment 5**
+
+
+
+<!-- 
 
 ## Week 6
 **Loops**
@@ -197,19 +197,6 @@ fill(c); // this uses the variable 'c'
 	- <http://paper-io.com/>
 	- <https://quickdraw.withgoogle.com/#>
 
-
-
-<!--
-
-https://itpnyu.github.io/ICM-Quizzes/
-
-more inspiration for week 12
-
-**Week 13: Libraries**
-- [p5.play](https://owenroberts.github.io/mmp210/week13/)
-
-**Week 14: Review**
-
-**Week 15: Final presentations**
-
 -->
+
+

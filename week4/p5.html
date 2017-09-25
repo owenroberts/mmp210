@@ -147,22 +147,3 @@ function draw() {
 }</code></pre>
 </div>
 
-<div class="slide">
-	<p>In our last example, let's combine system variables with the conditional logic we learned earlier.</p>
-	<pre><code>function setup() {
-	createCanvas(640, 480);
-}
-
-function draw() {
-	strokeWeight(4);
-	stroke("blue");
-
-	if (mouseX > width/2) {
-		fill("lightblue");
-	} else {
-		fill("pink");
-	}
-
-	ellipse(mouseX, mouseY, 40, 40);
-}</code></pre>
-</div>
