@@ -81,7 +81,9 @@ fill(c); // this uses the variable 'c'
 - [Drawing with logic](week5/p5-logic.html)
 - **In class**: [Code Academy: Control Flow](https://www.codecademy.com/courses/learn-javascript-control-flow/lessons/control-flow/exercises/control-flow-intro)
 - **Assignment 5**
-
+	- Create a design that splits the screen in half or quadrants
+	- Create a user interaction that changes according to the quadrant
+	- Change could be color, shape or size
 
 
 <!-- 

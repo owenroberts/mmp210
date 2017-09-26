@@ -17,6 +17,7 @@ constrain with math,
 should this be organized by topic and then change weeks ??
 
 https://itpnyu.github.io/ICM-Quizzes/
+http://www.prpinkas.com/mmp210/syllabus
 
 more inspiration for week 12
 
