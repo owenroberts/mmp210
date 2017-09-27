@@ -6,20 +6,19 @@ dek: HTML/CSS Review
 ---
 
 <div class="slide">
-	<script src="https://gist.github.com/owenroberts/7d477c7007cfe14b6681.js"></script>
-</div>
-<div class="slide">
-	<img src="html/element.png" />
-</div>
-<div class="slide">
 	<h2>Elements, tags, attributes and content</h2>
+	<img src="html/element.png" >
 	<p>HTML can be broken down into these four components.</p>
 	<p>Elements are the basic structure of an HTML document.</p>
+</div>
+
+<div class="slide">
 	<p>Like other markup languages, HTML uses brackets like this: <code>< ></code> to divide content and tags. Tags tell the browser what to do with the content.  Some elements have an open tag and closing tag.</p>
 	<p>The content always goes in between the tag.  This can include text, other forms of media and other HTML elements.</p>
 	<p>Inside of the tags we can also add attributes which add information or functionality to elements with a name and value pair.</p>
 	<p>HTML elements are nested inside each other to create simple and complex structures.  If an HTML tag is opened inside of another HTML tag, it must be closed before it's parent tag is closed.</p>
 </div>
+
 <div class="slide">
 	<h2>Structural tags</h2>
 	<p>The basic structural tags of HTML include <code>doctype, html, head</code> and <code>body</code></p>
@@ -29,6 +28,7 @@ dek: HTML/CSS Review
 	<p><code>body</code> contains all of the content and structure that goes on the page.</p>
 	<p><code>div</code> is a basic element that stand for division.  It is used as a neutral building block for position and creating hierarchy with a page.</p>
 </div>
+
 <div class="slide">
 	<h2>Text tags</h2>
 	<p>Tags for text include:</p>
@@ -39,6 +39,7 @@ dek: HTML/CSS Review
 		<li><code>ul, ol, li</code> are used to create lists such as this one.  <code>ul</code> is unordered list, which makes a list with bullets.  <code>ol</code> is ordered, for numbers.  <code>li</code> is a list item.  They are useful for navigation menus.</li>
 	</ul>
 </div>
+
 <div class="slide">
 	<h2>Hyperlinks</h2>
 	<ul>
@@ -47,6 +48,7 @@ dek: HTML/CSS Review
 		<li>Internal links are links to pages within the same site, server or domain, and use relative paths: <code>href="work/assignment1/index.html"</code></li>
 	</ul>
 </div>
+
 <div class="slide">
 	<h2>Image tag</h2>
 	<ul>
@@ -54,43 +56,63 @@ dek: HTML/CSS Review
 	</ul>
 	<p>There are many other tags we will explore throughout the semester for structure, advanced media and other functionality.</p>
 </div>
+
 <div class="slide">
-	<h2>References</h2>
+	<h2>HTML Template</h2>
+	<script src="https://gist.github.com/owenroberts/7d477c7007cfe14b6681.js"></script>
+</div>
+
+<div class="slide">
+	<h2>HTML References</h2>
 	<ul>
 		<li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction" target="blank">MDN Intro to HTML</a></li>
 		<li><a href="https://developer.mozilla.org/en/docs/Web/HTML/Element" target="blank">MDN Element Reference</a></li>
 	</ul>
 </div>
+
 <div class="slide">
 	<h1>CSS</h1>
 </div>
-<div class="slide">
-	<script src="https://gist.github.com/owenroberts/a5e083b1e7aa0c148d6b.js"></script>
-</div>
+
 <div class="slide">
 	<p>CSS stands for Cascading Style Sheets.  It was first proposed in 1994 to define visual styles for HTML pages on the World Wide Web but took time to gain acceptance, though eventually becoming standard.</p>
 	<p>"Cascading" refers to the way the style are implemented, with external, internal and inline style rules being applied to pages in order.</p>
+</div>
+
+<div class="slide">
+	<h2>Selectors</h2>
 	<p>CSS uses <code>selectors</code> to target elements and add visual styles.  Any HTML element, such as <code>body</code> or <code>p</code> can be used as a CSS selector, although the default styles and behaviors of HTML elements vary.  Every selector has one or multiple values that define a corresponding property.</p>
 	<p>CSS defines rules for the colors, fonts, dimensions and positions of elements on a web page.</p>
 </div>
+
 <div class="slide">
 	<img src="html/selector.png" />
 </div>
+
 <div class="slide">
+	<h2>Stylesheet link</h2>
 	<p>There are three ways to include CSS styles in an HTML document.</p>
 	<p>External stylesheets are linked into the HTML page by a tag.  These styles can be applied to multiple HTML pages: </p>
 	<pre><code>&lt;link rel="stylesheet" href="style.css" type="text/css" /&gt;</code></pre>
 </div>
+
 <div class="slide">
+	<h2>Internal and inline styles</h2>
 	<p>Internal stylesheets can be added anywhere inside of an HTML document, using the <code>style</code> tag, but are typically found in the <code>&lt;head&gt;</code> section.  These styles will only apply to elements on a single page, but will apply to all elements of that page.</p>
 	<pre><code>&lt;style&gt;
 	a { color: pink; }
 	a:hover { color: blue; }
 &lt;/style&gt;</code></pre>
 </div>
+
 <div class="slide">
 	<p>Inline styles are added inside of an HTML element as an attribute and will apply to that element only.</p>
 	<pre><code>&lt;div style="background:blue;padding:5px;"&gt;&lt;/div&gt;</code></pre>
+</div>
+
+<div class="slide">
+	<h2>CSS Template</h2>
+	<script src="https://gist.github.com/owenroberts/a5e083b1e7aa0c148d6b.js"></script>
 </div>
 
 <div class="slide">
@@ -101,6 +123,7 @@ dek: HTML/CSS Review
 	<h2>Class & Id</h2>
 	<p>Along with tag based selectors, CSS rules can be applied by adding a <code>class</code> or <code>id</code> to a tag.  Class and ID work essentially the same way but have different uses and syntax.</p>
 </div>
+
 <div class="slide">
 	<h2>Class</h2>
 	<p>Classes describe a basic set of styles that can be applied multiple tags in an HTML page.  In HTML a class is added to an element with the <strong>class attribute</strong>.</p>
@@ -109,23 +132,7 @@ dek: HTML/CSS Review
 	<pre><code>&lt;div class="content post active"&gt;&lt;/div&gt;
 	&lt;div class="content post"&gt;&lt;/div&gt;
 	&lt;div class="content post"&gt;&lt;/div&gt;</code></pre>
-</div>
-<div class="slide">
-	<p>IDs can only be used once, on one element:</p>
-	<pre><code>&lt;div id="header"&gt;&lt;/div&gt;
-	&lt;div id="main"&gt;&lt;/div&gt;</code></pre>
-	<p>Classes and IDs can be contained in the same div:</p>
-	<pre><code>&lt;div id="header" class="content"&gt;&lt;/div&gt;
-	&lt;div id="main" class="content post"&gt;&lt;/div&gt;</code></pre>
-</div>
-<div class="slide">
-	<p>In CSS, rules for classes use a period or full stop <code>.</code> while IDS use the hashtag <code>#</code>.</p>
-	<pre><code>#header {
-	background-color:gray;
-	font-size:2em;
-	height:60px;
-}
-.content {
+	<pre><code>.content {
 	background-color:lightgray;
 	font-size:1em;
 	width:40px;
@@ -133,13 +140,34 @@ dek: HTML/CSS Review
 </div>
 
 <div class="slide">
-	<h2>Nested selectors </h2></strong></p>
+	<h2>Id</h2>
+	<p>IDs can only be used once, on one element:</p>
+	<pre><code>&lt;div id="header"&gt;&lt;/div&gt;
+	&lt;div id="main"&gt;&lt;/div&gt;</code></pre>
+	<p>Classes and IDs can be contained in the same div:</p>
+	<pre><code>&lt;div id="header" class="content"&gt;&lt;/div&gt;
+	&lt;div id="main" class="content post"&gt;&lt;/div&gt;</code></pre>
+</div>
+
+<div class="slide">
+	<p>In CSS, rules for classes use a period or full stop <code>.</code> while IDS use the hashtag <code>#</code>.</p>
+	<pre><code>#header {
+	background-color:gray;
+	font-size:2em;
+	height:60px;
+}</code></pre>
+
+</div>
+
+<div class="slide">
+	<h2>Nested selectors</h2>
 	<p>We can also use the relationships between HTML elements to create styles.  An element that is a child of another element can be selected with a space between two selector tags.  For example, the following HTML:</p>
 	<pre><code>&lt;ul&gt;
 	&lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
 	&lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
 </div>
+
 <div class="slide">
 	<p>Can be styled with the following rules:</p>
 	<pre><code>ul {
@@ -160,6 +188,7 @@ ul li a:hover {
 	color:darkblue;
 }</code></pre>
 </div>
+
 <div class="slide">
 	<p>There are selectors for other relationships beyond the ancestor/parent to descendant/child.  See all of the possibilities for <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors" target="_blank">selectors here</a>.</p>
 </div>
@@ -170,7 +199,6 @@ ul li a:hover {
 </div>
 
 <div class="slide">
-
 	<h2>Box model</h2>
 	<p>The position, size and layout of HTML elements is determined by the CSS box model, the display property and floats.  Without these rules, HTML pages are rendered in the order of the elements from the top to the bottom.</p>
 	<img src="html/boxmodel.png" alt="">
@@ -188,6 +216,7 @@ ul li a:hover {
 	padding:10px;
 }</code></pre>
 </div>
+
 <div class="slide">
 	<p>These rules can also be applied to one side of the box, with the following rules:</p>
 	<pre><code>border-top:
@@ -196,6 +225,7 @@ border-right:
 border-left:</code></pre>
 	<p>Which can be applied to padding and margin as well.</p>
 </div>
+
 <div class="slide">
 	<p>The side can also be combined into one rule.  <code>margin: 1em;</code> will apply a 1em margin to each side.  <code>margin: 1em 0;</code> will apply a 1em margin to the top and bottom and a 0 margin to the right and left sides.  Using four numbers, we can apply in this order- top, right, bottom, left (clockwise around the circle), so, <code>margin: 1em 0 10px 5px;</code> is equivalent to:</p>
 	<pre><code>margin-top:1em;
@@ -203,6 +233,7 @@ margin-right:0;
 margin-bottom:10px;
 margin-left:5px;</code></pre>
 </div>
+
 <div class="slide">
 	<p>Other properties include <code>auto</code>, which will attempt to fill the space between an element and its parent, <code>inherit</code>, which will inherit the rule from the parent element, and initial, which will set it to the <code>initial</code> property of the element tag name.</p>
 </div>
@@ -211,14 +242,17 @@ margin-left:5px;</code></pre>
 	<h2>Display property</h2>
 	<p>The <code>display</code> property determines the horizontal space of each element.  Elements <code>with display: block;</code> will take up the entire width of the page, their own &#8220;block&#8221;.  Block elements can be assigned box model properties.  Inline elements can not.  Elements that default to block display include <code>h1-h6, div, ul, li, p</code> and others.  Default inline elements include <code>span, em, strong</code> and <code>a</code>.</p>
 </div>
+
 <div class="slide">
 	<img src="html/block.png" />
 	<p class="label">Block display.</p>
 </div>
+
 <div class="slide">
 	<img src="html/inline.png" />
 	<p class="label">Inline display.</p>
 </div>
+
 <div class="slide">
 	<p>Elements can also be set to <code>display: none;</code> which makes them not appear in the layout.  This has advantages that we&#8217;ll look at next class in combination with <strong>pseudo tags</strong>.  There are also hybrid elements like <code>inline-block</code>, which allows an inline element to be given padding, margin and border, as well as width and height.</p>
 </div>
@@ -261,7 +295,7 @@ margin-left:5px;</code></pre>
 </div>
 
 <div class="slide">
-	<h2>References</h2>
+	<h2>CSS References</h2>
 	<p><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started" target="blank">MDN Getting Started With CSS</a></p>
 	<h2>Tutorials</h2>
 	<p><a href="https://www.codecademy.com/en/tracks/web" target="blank">Code Academy</a></p>
