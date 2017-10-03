@@ -6,16 +6,16 @@ dek: p5 - animation, random, modulo
 ---
 
 <div class="slide">
-	<p>We're going to be using the <code>draw()</code> function again today to create motion and animation.  This time we're going to be adding new techniques beyond the system variables we used in week 4.</p>
+	<p>We're going to be using the <code>draw()</code> function to create motion and animation.  This time we're going to be adding new techniques beyond the system variables we used in week 4.</p>
 </div>
 
 <div class="slide">
 	<p>Let's start with a simple shape:</p>
 	<pre><code>function setup() {
-    createCanvas(640, 480);
+	createCanvas(640, 480);
 }
 function draw() {
-    ellipse(100, 100, 20, 20);
+	ellipse(100, 100, 20, 20);
 }</code></pre>
 </div>
 
@@ -28,53 +28,74 @@ function draw() {
 	<p>So let's create a variable:</p>
 	<pre><code>var x = 10;
 function setup() {
-    createCanvas(640, 480);
+	createCanvas(640, 360);
 }
 function draw() {
-    ellipse(x, 100, 20, 20);
+	ellipse(x, 100, 50);
 }</code></pre>
 </div>
+
 <div class="slide">
 	<p>And then increment it:</p>
 	<pre><code>x++;</code></pre>
 </div>
+
 <div class="slide">
 	<p>That's cool, but our circle is flying off the screen!</p>
 	<p>Let's use a conditional statement to set it back to the beginning:</p>
-	<pre><code>if (x > width) {
+	<pre><code>if (x >= width) {
     x = 0;
 }</code></pre>
 </div>
+
 <div class="slide">
 	<p>Can we make it go faster?</p>
 	<pre><code>x += 10;</code></pre>
 </div>
+
 <div class="slide">
 	<p>Let's move on the y axis too:</p>
-	<pre><code>var y = 20;
-if (x < width/2) {
-    y++;
-}
-else {
-    y--;
+	<pre><code>var y = 10;
+if (y >= height) {
+	y = 0;
 }</code></pre>
 </div>
 
 <div class="slide">
+	<p>How do we make the ellipse move back across the canvas?  Last week we looked at a <a href="https://owenroberts.github.io/mmp210/week5/p5-logic.html#a-boolean-toggle" target="blank">boolean toggle</a>.  We can use a similar structure here, except we will toggle the direction of the ellipse.</p>
+	<p>First we will create a `speed` variable to save the speed of the ellipse:</p>
+	<pre><code>var speed = 2;
+x += speed;</code></pre>
+</div>
+
+<div class="slide">
+	<p>Next, instead of resetting <code>x</code>  back to <code>0</code> let's reverse the direction.</p>
+	<pre><code>if (x >= width) {
+	speed *= -1;
+}</code></pre>
+	<p>Uh oh, that only works in one direction.  We need to update our condition:</p>
+		<pre><code>if (x >= width || x <= 0) {
+	speed *= -1;
+}</code></pre>
+	<p>Cool.  So what do we need to implement this on the <code>y</code> axis?</p>
+</div>
+
+
+<div class="slide">
+	<h2>Add randomness</h2>
 	<p>We can also add some randomness to the movement using the <a href="http://p5js.org/examples/examples/Math_Random.php" target="blank">p5 function</a>: <code>random</code></p>
 	<pre><code>var r = random(0,2);
-if (x < width/2) {
-    y += r;
+if (x < width) {
+	x += speed * r;
 }
-else {
-    y -= r;
-}</code></pre>
+</code></pre>
 	<p>Try increasing the range of random <code>(0,2)</code> and see what happens.</p>
 </div>
 
 <div class="slide">
+	<h2>Animating color</h2>
 	<p>Or we could use <code>random</code> to animate the color:</p>
-	        	<pre><code>var r = random(0,255);
+	 <pre><code>var r = random(0,255);
 var g = random(0,255);
 var b = random(0,255);
 fill(r, g, b); </code></pre>
@@ -90,7 +111,7 @@ fill(r, g, b); </code></pre>
 <c></c>30 % 3;
 <c></c>31 % 3;
 <c></c>for (var i = 0; i < 20; i++) {
-    console.log(i % 5);
+	console.log(i % 5);
 }</code></pre>
 </div>
 <div class="slide">
@@ -100,18 +121,18 @@ fill(r, g, b); </code></pre>
 <div class="slide">
 		<p>We need to make our color values global, and then change them whenever the frameCount remainder of 30 is 0 (this will happen at 30, 60, 90, 120...)</p>
 		<pre><code>var x = 10;
-var y = 20;
+var y = 10;
 var r = random(0,255);
 var g = random(0,255);
 var b = random(0,255);
 
 function draw() {
-if (frameCount % 30 == 0) {
-    r = random(0,255);
-    g = random(0,255);
-    b = random(0,255);
-}
-    fill(r, g, b);
+	if (frameCount % 30 == 0) {
+		r = random(0,255);
+		g = random(0,255);
+		b = random(0,255);
+	}
+	fill(r, g, b);
 }</code></pre>
 </div>
 

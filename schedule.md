@@ -87,11 +87,11 @@ fill(c); // this uses the variable 'c'
 
 ## Week 6
 **Animation**
-- [p5: animation, random, modulo](week6/)
+- [p5: animation, random, modulo](week6/animation.html)
 - [p5: push, pop, transform](week6/transform.html)
 - **Assignment 6**
-	- Add animation to a previous drawing (or a new drawing if you prefer)
-	- Use two different types of animation
+	- Add animation to your logo or another previous drawing (or a new drawing if you prefer)
+	- Use two different types of animation (size, color, position, shape, rotation, etc)
 - Inspiration
 	- [Animated name logos](http://www.flamingtext.com/Animated-Logos)
 	- [Animated logos](http://www.howdesign.com/featured/animated-logos/)
