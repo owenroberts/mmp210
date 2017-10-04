@@ -96,9 +96,9 @@ fill(c); // this uses the variable 'c'
 	- [Animated name logos](http://www.flamingtext.com/Animated-Logos)
 	- [Animated logos](http://www.howdesign.com/featured/animated-logos/)
 
-<!-- 
 
-## Week 6
+
+## Week 7
 **Loops**
 - [JavaScript for loops](week5/index.html)
 - [p5: drawing with loops](week5/p5.html)
@@ -108,7 +108,7 @@ fill(c); // this uses the variable 'c'
 	- Each window should be at least 5 shapes.  
 	- Use your apartment building or [Windows of New York](http://windowsofnewyork.com/) for inspiration.
 
-
+<!-- 
 
 ## Week 8
 **Functions**
