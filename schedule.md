@@ -100,10 +100,10 @@ fill(c); // this uses the variable 'c'
 
 ## Week 7
 **Loops**
-- [JavaScript for loops](week5/index.html)
-- [p5: drawing with loops](week5/p5.html)
+- [JavaScript for loops](week7/js-loops.html)
+- [p5: drawing with loops](week7/p5-loops.html)
 - In class: [Code academy: for loops](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/0/1)
-- **Assignment 5**
+- **Assignment 7**
 	- Draw the a grid of windows like the front of a city building.  
 	- Each window should be at least 5 shapes.  
 	- Use your apartment building or [Windows of New York](http://windowsofnewyork.com/) for inspiration.
