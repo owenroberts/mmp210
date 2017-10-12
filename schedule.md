@@ -1,13 +1,10 @@
 ---
-layout: default
+layout: main
 title: MMP 210 - Schedule
 dek: Schedule with class notes & assignments
 ---
-# Schedule
 
-[Home](index.html) [Schedule](schedule.html)
-
-{% for i in (1..12) %}<a href="#week-{{i}}">Week {{i}}</a> {% endfor %}
+Go to [Home](index.html)
 
 ## Week 1
 **Intro to JavaScript, p5.js**
@@ -67,19 +64,41 @@ fill(c); // this uses the variable 'c'
 
 
 ## Week 4
-**Logic**
-- [JavaScript comparison operators and conditionals](week4/)
+**Interaction**
 - [p5 system variables](week4/p5.html)
+- [Interaction](week4/)
 - **Assignment 4**
-	- Create a design that uses system variables to change the color of the shapes being drawn
-	- The color should change over time or space
-	- Time can be measured with `frameCount`
-	- Space is measured with `mouseX`, `mouseY`, `width` and `height`
-	- Examples
-		- [Tickle](https://p5js.org/examples/interaction-tickle.html)
-		- [Follow](https://p5js.org/examples/interaction-follow-1.html)
+	- Create a simple interactive design
+	- Give the user an instruction using `text`
+		- For example: "Click to add shapes"
+	- Change color, position or size of shapes
+
 
 ## Week 5
+**Logic**
+- [JavaScript comparison operators and conditionals](week5/js-logic.html)
+<!-- dealing with compound conditionals??? -->
+- [Drawing with logic](week5/p5-logic.html)
+- **In class**: [Code Academy: Control Flow](https://www.codecademy.com/courses/learn-javascript-control-flow/lessons/control-flow/exercises/control-flow-intro)
+- **Assignment 5**
+	- Create a design that splits the screen in half or quadrants
+	- Create a user interaction that changes according to the quadrant
+	- Change could be color, shape or size
+
+## Week 6
+**Animation**
+- [p5: animation, random, modulo](week6/animation.html)
+- [p5: push, pop, transform](week6/transform.html)
+- **Assignment 6**
+	- Add animation to your logo or another previous drawing (or a new drawing if you prefer)
+	- Use two different types of animation (size, color, position, shape, rotation, etc)
+- Inspiration
+	- [Animated name logos](http://www.flamingtext.com/Animated-Logos)
+	- [Animated logos](http://www.howdesign.com/featured/animated-logos/)
+
+
+
+## Week 7
 **Loops**
 - [JavaScript for loops](week5/index.html)
 - [p5: drawing with loops](week5/p5.html)
@@ -89,18 +108,9 @@ fill(c); // this uses the variable 'c'
 	- Each window should be at least 5 shapes.  
 	- Use your apartment building or [Windows of New York](http://windowsofnewyork.com/) for inspiration.
 
-## Week 6
-**Animation**
-- [p5: animation, random, modulo](week6/)
-- [p5: push, pop, transform](week6/transform.html)
-- **Assignment 6**
-	- Add animation to a previous drawing (or a new drawing if you prefer)
-	- Use two different types of animation
-- Inspiration
-	- [Animated name logos](http://www.flamingtext.com/Animated-Logos)
-	- [Animated logos](http://www.howdesign.com/featured/animated-logos/)
+<!-- 
 
-## Week 7
+## Week 8
 **Functions**
 - [JavaScript functions](week7/)
 - [p5: defining functions](week7/p5.html)
@@ -109,7 +119,7 @@ fill(c); // this uses the variable 'c'
 	- Rewrite your window drawing as a defined function.
 	- Use it to draw at least two windows with different origin and size.
 
-## Week 8
+## Week 9
 **Generating designs**
 - [Generating patterns](week8/index.html)
 - Midterm review
@@ -126,16 +136,10 @@ fill(c); // this uses the variable 'c'
 		- [Grids: Generative pattern design](http://nicholas-taylor.com/Grids)
 		- [Libs Elliott: Generated quilt design](http://themakersnation.com/maker-spotlight-libs-elliott/)
 
-## Week 9
+## Week 10
 - Midterm Presentation
 - [Interaction](week9/)
-	- [Mapping mouseX and mouseY](https://owenbmcc.github.io/classwork210/week8/mapping.html)
-	- [mousePressed circle](https://owenbmcc.github.io/classwork210/week8/mouse-press.html)
-	- [Rectangle button rotate](https://owenbmcc.github.io/classwork210/week8/) 
 - [DOM Library](week9/dom.html)  
- 	- [Button](https://owenbmcc.github.io/classwork210/week8-dom/button.html)
- 	- [Input](https://owenbmcc.github.io/classwork210/week8-dom/input.html)
- 	- [Arrow keys](https://owenbmcc.github.io/classwork210/week8-dom/)
 - [Beyond the canvas (DOM Tutorial)](https://github.com/processing/p5.js/wiki/Beyond-the-canvas)
 - Final requirements
 	- The final project is making an interactive design
@@ -160,7 +164,7 @@ fill(c); // this uses the variable 'c'
 		- <http://uxdesignercoding.tumblr.com/post/143328882704/for-this-week-i-have-worked-on-data-visualization>
 		- <http://www.typotopo.com/typemenot/index.html>
 
-## Week 10
+## Week 11
 **Arrays**
 - [Arrays](week10/)
 - [Review Arrays](https://www.khanacademy.org/computing/computer-programming/programming/arrays/p/intro-to-arrays)
@@ -175,18 +179,15 @@ fill(c); // this uses the variable 'c'
 	- Could be a game, interactive visualization, animation or combination
 	- Make a web page or PDF and post on Slack
 
-## Week 11
+## Week 12
 **Image and Media**
 - Present Final project concepts
 - [Image & video](week11/)
 - [Sound library](week11/sound.html)
 
-## Week 12
+## Week 13
 **Objects**
 - [JavaScript Objects](week12/)
-	- [Spaceships](https://owenbmcc.github.io/classwork210/week12/spaceships.html)
-	- [Cat image](https://owenbmcc.github.io/classwork210/week12/image.html)
-	- [Button colliders](https://owenbmcc.github.io/classwork210/week12/)
 - Final Project workshop
 - More inspiration
 	- <http://www.newrafael.com/websites>
@@ -199,19 +200,6 @@ fill(c); // this uses the variable 'c'
 	- <http://paper-io.com/>
 	- <https://quickdraw.withgoogle.com/#>
 
-
-
-<!--
-
-https://itpnyu.github.io/ICM-Quizzes/
-
-more inspiration for week 12
-
-**Week 13: Libraries**
-- [p5.play](https://owenroberts.github.io/mmp210/week13/)
-
-**Week 14: Review**
-
-**Week 15: Final presentations**
-
 -->
+
+
