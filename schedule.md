@@ -108,6 +108,22 @@ fill(c); // this uses the variable 'c'
 	- Each window should be at least 5 shapes.  
 	- Use your apartment building or [Windows of New York](http://windowsofnewyork.com/) for inspiration.
 
+## Week 8
+**Midterm**
+- [Generating patterns](week8/index.html)
+- **Midterm: Generative design**
+	- Create a concept for a product that will have a generative pattern design
+	- Choose a theme that will inform your design
+	- Create a sketch that generates new patterns based on a theme, a new pattern each time the user clicks
+	- Use `saveCanvas` to save images
+	- The sketch must use variables, a for loop, colors, and shapes
+	- Use a series of decisions (if, else) or randomly generated values to change the pattern
+	- Write a short, 3-4 sentence description of the project, for example: *I'm designing a pattern for socks.  My theme is Spring and I'm using a polka dot pattern.  I chose different shades of green for the background to represent  the new leaves on the trees.  I also chose pinks and purples for foreground shapes to represent flowers.*
+	- Inspiration
+		- [Generative landscapes](https://generativelandscapes.wordpress.com/2014/08/15/complex-pattern-from-simple-arcs-example-3-6/)
+		- [Libs Elliott: Generated quilt design](http://themakersnation.com/maker-spotlight-libs-elliott/)
+		- [Generative Patterns Google Image Search](https://www.google.com/search?q=generative+patterns&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiA-OPl3fbWAhWD6iYKHTihD7EQ_AUICigB&biw=1897&bih=984#imgrc=_)
+
 <!-- 
 
 ## Week 8
@@ -118,23 +134,6 @@ fill(c); // this uses the variable 'c'
 - **Assignment 7**
 	- Rewrite your window drawing as a defined function.
 	- Use it to draw at least two windows with different origin and size.
-
-## Week 9
-**Generating designs**
-- [Generating patterns](week8/index.html)
-- Midterm review
-- **Midterm: Generative design**
-	- Choose a theme that will inform your design
-	- Create a sketch that generates new patterns based on a theme
-	- Each time the sketch is loaded, or website refreshed, a variation of your basic pattern should appear
-	- The sketch must use variables, a for loop, colors, and shapes
-	- Use a series of decisions (if, else) or randomly generated values to change the pattern
-	- Write a short description explaining your choices, 3 - 4 sentences. For example:
-  	- My theme is Spring and I'm using a polka dot pattern.  I chose different shades of green for the background to represent  the new leaves on the trees.  I also chose pinks and purples for foreground shapes to represent flowers.
-	- Inspiration
-		- [Generative landscapes](https://generativelandscapes.wordpress.com/2014/08/15/complex-pattern-from-simple-arcs-example-3-6/)
-		- [Grids: Generative pattern design](http://nicholas-taylor.com/Grids)
-		- [Libs Elliott: Generated quilt design](http://themakersnation.com/maker-spotlight-libs-elliott/)
 
 ## Week 10
 - Midterm Presentation

@@ -9,12 +9,10 @@ dek: p5 - drawing with loops
 	<p>In p5, we can use loop to draw many more shapes and colors with much less code.  Let's look at a few of our old examples, reworked using loops.</p>
 </div>
 
-<!-- 
-this all sucks, rewrite with this progression:
-draw ten circles hard coded
--->
+
 <div class="slide">
-<pre><code>function setup() { 
+	<h2>Ten circles, hard coded</h2>
+	<pre><code>function setup() { 
 	createCanvas(640, 360);
 	ellipse(50, height/2, 40);
 	ellipse(100, height/2, 40);
@@ -29,11 +27,11 @@ draw ten circles hard coded
 }</code></pre>
 </div>
 <div class="slide">
-<!-- draw ten circles with x and space vars -->
-<pre><code>var x = 50;
+	<h2>Ten cicles with a variable</h2>
+	<pre><code>var x = 50;
 var space = 50;
 function setup() { 
-  createCanvas(640, 360);
+	createCanvas(640, 360);
 	ellipse(x, height/2, 40);
 	x += space;
 	ellipse(x, height/2, 40);
@@ -56,20 +54,20 @@ function setup() {
 }</code></pre>
 </div>
 <div class="slide">
-<!-- draw ten circles with a loop -->
-<pre><code>var space = 50;
+	<h2>Ten circles with a loop!</h2>
+	<pre><code>var space = 50;
 function setup() { 
-  createCanvas(640, 360);
+  	createCanvas(640, 360);
 	for (var x = 50; x < width; x += space) {
 		ellipse(x, height/2, 40);
 	}
 }</code></pre>
 </div>
 <div class="slide">
-<!-- draw ten self portraits with a loop -->
-<pre><code>var space = 50;
+	<h2>Ten self portraits</h2>
+	<pre><code>var space = 50;
 function setup() { 
-  createCanvas(640, 360);
+	createCanvas(640, 360);
 	rectMode(CENTER);
 	for (var x = 50; x < width; x += space) {
 		ellipse(x, height/2, 40);
@@ -80,11 +78,10 @@ function setup() {
 }</code></pre>
 </div>
 <div class="slide">
-<!-- draw a grid with a loop
-columns -->
-<pre><code>var column = 40;
+	<h2>A column grid</h2>
+	<pre><code>var column = 40;
 function setup() { 
-  createCanvas(640, 360);
+	createCanvas(640, 360);
 	rectMode(CENTER);
 	for (var x = 0; x <= width; x += space) {
 		line(x, 0, x, height);
@@ -92,11 +89,11 @@ function setup() {
 }</code></pre>
 </div>
 <div class="slide">
-<!-- columns and rows -->
-<pre><code>var column = 40;
+	<h2>Columns and rows</h2>
+	<pre><code>var column = 40;
 var row = 20;
 function setup() { 
-  createCanvas(640, 360);
+	createCanvas(640, 360);
 	rectMode(CENTER);
 	for (var x = 0; x <= width; x += column) {
 		line(x, 0, x, height);
@@ -107,8 +104,8 @@ function setup() {
 }</code></pre>
 </div>
 <div class="slide">
-<!-- do the cool mouse thing with a loop -->
-<pre><code>function setup() { 
+	<h2>Interactive loop</h2>
+	<pre><code>function setup() { 
 	createCanvas(640, 360);
 	noStroke();
 } 
@@ -125,7 +122,4 @@ function draw() {
 		rect(x,0,sz, height);
 	}
 }</code></pre>
-</div>
-
-
 </div>

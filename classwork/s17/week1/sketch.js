@@ -27,5 +27,6 @@ function draw() {
  
     fill('yellow');
     arc(450 - 300, 280 - 300, 70, 90, PI+1, HALF_PI+1);
+	saveCanvas("sketch", "png");
    
 }

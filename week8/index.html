@@ -17,6 +17,7 @@ dek: Generating patterns
 </div>
 
 <div class="slide">
+	<h2>Draw 1000 rectangles</h2>
 	<p>Okay, our task is to draw 1000 rectangles that are all different colors and different sizes.  Let's start by drawing one rectangle.</p>
 	<pre><code>function setup() {
 	createCanvas(640, 640);
@@ -44,8 +45,9 @@ dek: Generating patterns
 </div>
 
 <div class="slide">
+	<h2>Change the color</h2>
 	<p>Kinda hard to see huh?  Maybe if we make each one a different color?</p>
-	<p>Let's grab the color randomization code from <a href="../week6/index.html" target="blank">week 6</a>:</p>
+	<p>Let's grab the color randomization code from <a href="../week6/animation.html#add-randomness" target="blank">week 6</a>:</p>
 	<pre><code>function setup() {
 	createCanvas(640, 640);
 	background("white");
@@ -69,6 +71,7 @@ dek: Generating patterns
 </div>
 
 <div class="slide">
+	<h2>Make a grid</h2>
 	<p>Still pretty hard to see huh?  Let's draw them vertically and horizontally, then maybe we can see them more easily.</p>
 	<p>Start by using x in the for loop we already have:</p>
 	<pre><code>function setup() {
@@ -88,7 +91,7 @@ dek: Generating patterns
 	<p>That's simpler.  Now let's figure out how to draw both verical and horizontal.</p>
 	<p>First we need to calculate the rows and columns.</p>
 	<p>So solve for <code>columns * rows = 1000</code></p>
-	<p>If the number of rows and columns is the same this is also <code>columns*columns = 1000</code> or columns is the square route of 1000.</p>
+	<p>If the number of rows and columns is the same this is also <code>columns * columns = 1000</code> or columns is the square route of 1000.</p>
 	<p>Fortunately, JavaScript has a built in function for getting the square root:</p>
 	<p><code>Math.sqrt(1000); // 31.622776601683793</code></p>
 	<p>Let's round up to 32, a nice even numbers, which will give us 1024 squares (<a href="http://superuser.com/questions/358031/why-does-everything-in-computing-work-with-a-base-number-of-2-to-the-power-of-x" target="blank">a power of 2</a>).</p>
@@ -113,6 +116,7 @@ dek: Generating patterns
 </div>
 
 <div class="slide">
+	<h2>Simplified grid</h2>
 	<p>Okay, okay, a simpler way of doing this is just deciding how many rows and columns we want to begin with.  Since we've already determined we can draw > 1000 squares with 32 columns and 32 rows, let's stick with that.  But we could change it later.</p>
 	<pre><code>function setup() {
 	createCanvas(640, 640);
@@ -175,7 +179,8 @@ var h = height/rows;</code></pre>
 </div>
 
 <div class="slide">
-	<p>You can then play with the range of colors to get different pallettes.  If you want mostly green, put in less red and less blue, and more green:</p>
+	<h2>Color palettes</h2>
+	<p>You can then play with the range of colors to get different palettes.  If you want mostly green, put in less red and less blue, and more green:</p>
 	<pre><code>var r = random(0,100);
 var g = random(100,255);
 var b = random(0,100);
@@ -202,6 +207,7 @@ fill(r, g, b * x);</code></pre>
 </div>
 
 <div class="slide">
+	<h2>Size variation</h2>
 	<p>What if we vary the size?</p>
 	<pre><code>var randomSize = random(-10, 10);
 rect(x, y, w + randomSize, w + randomSize);</code></pre>
@@ -245,6 +251,7 @@ if (x > w*3 && x < w*7 && y > h*3 && y < h*7) {
 </div>
 
 <div class="slide">
+	<h2>Choosing shapes</h2>
 	<p>Okay, what about four different shapes?  Let's try four different kind of arcs:</p>
 	<pre><code>function setup() {
 	createCanvas(640, 640);
