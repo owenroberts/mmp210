@@ -124,16 +124,17 @@ fill(c); // this uses the variable 'c'
 		- [Libs Elliott: Generated quilt design](http://themakersnation.com/maker-spotlight-libs-elliott/)
 		- [Generative Patterns Google Image Search](https://www.google.com/search?q=generative+patterns&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiA-OPl3fbWAhWD6iYKHTihD7EQ_AUICigB&biw=1897&bih=984#imgrc=_)
 
-<!-- 
 
-## Week 8
+
+## Week 9
 **Functions**
 - [JavaScript functions](week7/)
 - [p5: defining functions](week7/p5.html)
-- In class: [Code academy: functions](https://www.codecademy.com/courses/functions-in-javascript-2-0/)
-- **Assignment 7**
+- **In class**
 	- Rewrite your window drawing as a defined function.
-	- Use it to draw at least two windows with different origin and size.
+	- Use it to draw multiple windows with different origin and size.
+
+<!-- 
 
 ## Week 10
 - Midterm Presentation
