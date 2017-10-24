@@ -128,8 +128,9 @@ fill(c); // this uses the variable 'c'
 
 ## Week 9
 **Functions**
+- Present Midterms
 - [JavaScript functions](week9/js-functions.html)
-- [p5: defining functions](week9/p5-functions.html)
+- [p5: Defining a function](week9/p5-functions.html)
 - **In class**
 	- Rewrite your window drawing as a defined function.
 	- Use it to draw multiple windows with different origin and size.
