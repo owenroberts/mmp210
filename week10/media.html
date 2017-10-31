@@ -1,12 +1,13 @@
 ---
 layout: slides
 title: MMP 210
-week: 11
-dek: p5 image & video 
+week: 10
+dek: p5 Media
 ---
         
 <div class="slide">
-	<p>In p5, an <a href="https://p5js.org/examples/examples/Image_Load_and_Display_Image.php" target="blank">image</a> must be loaded into memory before it is displayed on the page.</p>
+	<h2>Image</h2>
+	<p>In p5, an <a href="https://p5js.org/reference/#group-Image" target="blank">image</a> must be loaded into memory before it is displayed on the page.</p>
 </div>
 
 <div class="slide">
@@ -50,6 +51,29 @@ function setup(){
 	for (var x = 0; x < width; x += w) {
 		for (var y = 0; y < height; y += h) {
 			image(img, x, y, w, h);
+		}
+	}
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>We can also get the color of the image at specific pixels:</p>
+	<pre><code>var img;
+var w = 10, h = 10;
+
+function preload() {
+	img = loadImage("cat.png");
+}
+
+function setup() {
+	createCanvas(640, 360);
+	noStroke();
+	image(img, 0, 0, width, height);
+	for (var x = 0; x < width; x += w) {
+		for (var y = 0; y < height; y += h) {
+			var c = get(x, y);
+			fill(c);
+			rect(x, y, w, h);
 		}
 	}
 }</code></pre>

@@ -2,10 +2,11 @@
 layout: slides
 title: MMP 210
 week: 11
-dek: p5 sound library
+dek: p5 sound
 ---
 
 <div class="slide">
+	<h2>Sound library</h2>
 	<p>To use sound in p5 we need to add a library like we did with the DOM library in <a href="../week9/">week 9</a>.  The <a href="https://p5js.org/reference/#/libraries/p5.sound" target="blank">sound library</a> is explained here.  You can <a href="https://raw.githubusercontent.com/processing/p5.js-sound/master/lib/p5.sound.js" target="blank">download it here</a>.</p>
 </div>
 
@@ -18,7 +19,7 @@ dek: p5 sound library
 
 <div class="slide">
 	<p>Let's get started by loading a sound and playing it.</p>
-	<p>We can use the screen saver code we wrote but add a sound whenever the ball hits a wall.  We can also use an array to play multiple sounds.  We'll start with one.  To make sounds, there's lot of options.  One of my favorite tools is <a href="http://www.bfxr.net/" target="blank">BFXR</a>, which is a Flash web application ported from <a href="http://drpetter.se/project_sfxr.html" target="blank">sfxr</a>, a program designed to generate 8-bit style sound effects.  There a version for Apple called <a href="http://thirdcog.eu/apps/cfxr" target="blank">cfxr</a> if you want to download the software.</p>
+	<p>We can use the screen saver code we wrote but add a sound whenever the ball hits a wall.  We can also use an array to play multiple sounds.  We'll start with one.  To make sounds, there's lot of options.  One of my favorite tools is <a href="https://jfxr.frozenfractal.com/" target="blank">jfxr</a>, which is a web application ported from <a href="http://drpetter.se/project_sfxr.html" target="blank">sfxr</a>, a program designed to generate 8-bit style sound effects.  There a version for Apple called <a href="http://thirdcog.eu/apps/cfxr" target="blank">cfxr</a> if you want to download the software.</p>
 </div>
 
 <div class="slide">
@@ -27,6 +28,7 @@ dek: p5 sound library
 </div>
 
 <div class="slide">
+	<h2>Preload</h2>
 	<p>The sound needs to be preloaded:</p>
 	<pre><code>var explosion;
 function preload() {
@@ -45,16 +47,16 @@ function draw() {
 </div>
 
 <div class="slide">
+	<h2>Play</h2>
 	<p>And then play sound on <code>mousePressed()</code> just to test:</p>
 	<pre><code>function mousePressed() {
 	explosion.play();
 }</code></pre>
-	<p>Cool!</p>
 </div>
 
 <div class="slide">
 	
-	<p>Let's bring back our <a href="http://alpha.editor.p5js.org/owenroberts/sketches/BknrFeynx">screen saver</a> example, and add an explosion when it hits a wall:</p>
+	<p>Let's make our screensaver example again and add an explosion when it hits a wall:</p>
 	<pre><code>// screen saver
 var x = 10;
 var y = 10;
@@ -91,7 +93,8 @@ if (y > height || y <= 0) {
 }</code></pre>
 </div>
 
-<div class="slide">
+<!--  add this to arrays ...  -->
+<!-- <div class="slide">
 	<p>Let's add some variety by making a few more sounds, saving them in an array, and then randomly playing them.</p>
 	<pre><code>var explosions = [];
 function preload() {
@@ -100,7 +103,7 @@ function preload() {
 	explosions.push( loadSound('Explosion21.wav') );
 	explosions.push( loadSound('Explosion32.wav') );
 }</code></pre>
-</div>
+</div> 
 
 <div class="slide">
 	<p>Update the code to play the explosion with a random selection from the array:</p>
@@ -119,8 +122,10 @@ function preload() {
 	<pre><code>explosions[floor(random(0, explosions.length))]</code></pre>
 
 </div>
+-->
 
 <div class="slide">
+	<h2>Manipulating sound</h2>
 	<p>Let's add some background music and play with a few parameters to see other things we can do with the p5 sound library.  First I'll <a href="http://freemusicarchive.org/genre/Classical/" target="blank">download a track</a> from the Free Music Archive and load it in my sketch.</p>
 	<pre><code class="javascript">var bkgMusic;
 function preload() {

@@ -135,10 +135,27 @@ fill(c); // this uses the variable 'c'
 	- Rewrite your window drawing as a defined function.
 	- Use it to draw multiple windows with different origin and size.
 
+## Week 10
+**Media**
+- [Image & video](week10/media.html)
+- [Sound library](week10/sound.html)
+- **Final Project**
+	- The final project will be an interactive media player
+	- This week do some research on existing projects and think about what you want to make
+	- Next week we will make a final pitch
+	- Some examples
+		- <https://nvioli.github.io/>
+		- <https://fcjou.github.io/fish-piano/>
+		- <http://share.framerjs.com/4ie4c9u5jodh/>
+		- <https://www.jdjohnsonmedia.com/session5/index.html>
+		- <https://www.jdjohnsonmedia.com/session9/index.html>
+		- <http://uxdesignercoding.tumblr.com/post/143328882704/for-this-week-i-have-worked-on-data-visualization>
+		- <http://www.typotopo.com/typemenot/index.html>
+
 <!-- 
 
 ## Week 10
-- Midterm Presentation
+- Midterm Presentatio
 - [Interaction](week9/)
 - [DOM Library](week9/dom.html)  
 - [Beyond the canvas (DOM Tutorial)](https://github.com/processing/p5.js/wiki/Beyond-the-canvas)
