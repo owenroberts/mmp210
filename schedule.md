@@ -152,6 +152,31 @@ fill(c); // this uses the variable 'c'
 		- <http://uxdesignercoding.tumblr.com/post/143328882704/for-this-week-i-have-worked-on-data-visualization>
 		- <http://www.typotopo.com/typemenot/index.html>
 
+## Week 11
+**Arrays**
+- [Arrays](week11/)
+- [Review Arrays](https://www.khanacademy.org/computing/computer-programming/programming/arrays/p/intro-to-arrays)
+- **In class**
+	- Write a spaceship function (or a car, or a animal, or anything else that moves)
+	- Animate the spaceship in space and color
+- **Assignment: Final project pitch**
+	- 3-5 sentence "pitch" for final project
+	- 1 sketch or "mood board" with visual references
+	- Must use some type of media, sound, image or video
+	- Must be interactive
+	- Could be a game, interactive visualization, animation or combination
+- More inspiration
+	- <http://www.newrafael.com/websites>
+	- <https://the-internet.click/>
+	- <http://superpixelquest.com/>
+	- <http://www.bdnext.net/roaxaca-zone/>
+	- <http://www.molleindustria.org/to-build-a-better-mousetrap/>
+	- <http://weavesilk.com/>
+	- <http://agar.io/>
+	- <http://paper-io.com/>
+	- <https://quickdraw.withgoogle.com/#>
+
+
 <!-- 
 
 ## Week 10
@@ -173,29 +198,8 @@ fill(c); // this uses the variable 'c'
 		- animation
 		- image
 	- User input can be mouse, keyboard, HTML elements, or a combination
-	- Inspiration
-		- <https://nvioli.github.io/>
-		- <https://fcjou.github.io/fish-piano/>
-		- <http://share.framerjs.com/4ie4c9u5jodh/>
-		- <https://www.jdjohnsonmedia.com/session5/index.html>
-		- <https://www.jdjohnsonmedia.com/session9/index.html>
-		- <http://uxdesignercoding.tumblr.com/post/143328882704/for-this-week-i-have-worked-on-data-visualization>
-		- <http://www.typotopo.com/typemenot/index.html>
 
-## Week 11
-**Arrays**
-- [Arrays](week10/)
-- [Review Arrays](https://www.khanacademy.org/computing/computer-programming/programming/arrays/p/intro-to-arrays)
-- In class
-	- Write a spaceship function (if you don't like spaceships, make a car, or a animal, or anything else that moves)
-	- Animate the spaceship in space and color
-- **Assignment: Final project description**
-	- 3-5 sentence "pitch" for final project
-	- 1 sketch or "mood board" with visual references
-	- Keep the programming requirements in mind, but think of something you would like to do
-	- Has to be interactive!
-	- Could be a game, interactive visualization, animation or combination
-	- Make a web page or PDF and post on Slack
+
 
 ## Week 12
 **Image and Media**

@@ -1,7 +1,7 @@
 ---
 layout: slides
 title: MMP 210
-week: 10
+week: 11
 dek: Arrays
 ---
 
@@ -28,6 +28,7 @@ dek: Arrays
 </div>
 
 <div class="slide">
+	<h2>Push and pop</h2>
 	<p>Individual elements of the array can be set using the same bracket notation.</p>
 	<pre><code><c></c>a[0] = 10;
 <c></c>console.log(a);</code></pre>
@@ -40,6 +41,7 @@ dek: Arrays
 </div>		
 
 <div class="slide">
+	<p>Arrays have methods and properties.</p>
 	<p>A <note>method</note> is a function that is associated with an object.</p>
 	<p>A <note>property</note> is a variable value associated with an object.</p>
 </div>
@@ -58,6 +60,7 @@ dek: Arrays
 </div>
 
 <div class="slide">
+	<h2>Array with for loop</h2>
 	<p>Arrays are often used with loops to repeat actions with a series of values:</p>
 	<pre><code><c></c>var fruits = ["banana", "apple", "orange"];
 <c></c>for (var i = 0; i < fruits.length; i++) {
@@ -66,6 +69,7 @@ dek: Arrays
 </div>
 
 <div class="slide">
+	<h2>p5 Spaceships</h2>
 	<p>Let's use an array in p5 to make a fleet of spaceships.   Let's start by making a bunch of ellipses:</p>
 	<pre><code>function setup() {
 	createCanvas(720, 360);
@@ -189,8 +193,9 @@ function draw(){
 </div>
 
 <div class="slide">
-	<p>Okay, for the final step let's grab out old spaceship function and throw that in there:</p>
-	<pre><code>var spaceship = function(x, y, size) {
+	<h2>Spaceship function</h2>
+	<p>Okay, let's write a function to draw a spaceship to add in for the ellipse:</p>
+	<pre><code>function spaceship(x, y, size) {
         
     var fin = size/4;
     var cone = size * 1.5;
@@ -209,16 +214,6 @@ function draw(){
             windowWidth, 
             windowWidth );
     }
-}
-
-function draw(){
-	background("white");
-
-	for (var i = 0; i < numRockets; i++) {
-		spaceship(x[i], y[i], size[i]);
-		if (x[i] < width) x[i] += speed[i];
-		else x[i] = 0;
-	}
 }</code></pre>
 </div>
 
