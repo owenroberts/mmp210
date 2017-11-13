@@ -5,9 +5,8 @@ week: 9
 dek: Interaction
 ---
 <div class="slide">
-    <p>Besides the ability to draw a thousands circles or spaceships and create random colors, programming gives us the ability to make our designs interactive.  See some examples from the <a href="https://p5js.org/gallery/" target="blank">p5 gallery</a>.</p>
+    <p>Besides the ability to draw a thousands circles or spaceships and create random colors, programming gives us the ability to make our designs interactive.  See some examples from the <a href="https://p5js.org/examples/" target="blank">p5 gallery</a>.</p>
     <p>Interactive design give the user the ability to influence the design.  Sometimes the changes are small, sometimes they are large -- the artist has the ability to control how much the user can change.</p>
-    <p>In JavaScript, we use <strong>events</strong> to detect when a user interacts with a program.  We can detect things like mouse movement, mouse clicks, key board inputs and change in orientation or touches in mobile devices.  Today we'll start with some simple interactions.</p>
 </div>
 
 <div class="slide">
@@ -30,6 +29,13 @@ function draw(){
 </div>
 
 <div class="slide">
+	<h2>map()</h2>
+	<p>The <a href="https://p5js.org/reference/#/p5/map" target="blank">map()</a> function if useful for interaction because it maps a value from one range to another.  Because the range of color we want to change is <code>0 - 255</code> and the range of space on the canvas is <code>0 - width</code> or <code>0 - height</code>, we need to use math to translate the value of the mouse to the color we want to correspond.  The map function does this for us.</p>
+	<!--  map drawing --> 
+</div>
+
+
+<div class="slide">
 	<h2>mousePressed()</h2>
     <p>We can also detect when the mouse is clicked using <code>mousePressed()</code>:</p>
     <pre><code>var r, g, b;
@@ -49,7 +55,7 @@ function mousePressed() {
 }</code></pre>
 </div>
 
-<!-- <div class="slide">
+<div class="slide">
 	<p>We can add new shapes with each mouse press:</p>
 	<pre><code>var r, g, b;
 var x = [];
@@ -71,11 +77,11 @@ function mousePressed() {
 	x.push(mouseX);
 	y.push(mouseY);
 }</code></pre>
-</div> covering arrays later this time -->
+</div> 
 
 <div class="slide">
 	<h2>Detecting mousePressed position</h2>
-    <p>We can use the <code>dist()</code> function to determine if the mouse is inside of the ellipse to create a button:</p>
+    <p>We can use the <a href="https://p5js.org/reference/#/p5/dist" target="blank">dist()</a> function to determine if the mouse is inside of the ellipse to create a button:</p>
     <pre><code>var r, g, b;
 function setup(){
 	createCanvas(720, 360);
@@ -95,6 +101,13 @@ function mousePressed() {
 </div>
 
 <div class="slide">
+	<h2>dist()</h2>
+	<p>The <a href="https://p5js.org/reference/#/p5/dist" target="blank">dist()</a> function takes two points and calculates the distance between the two using the Pythagorean theorem.</p>
+	<!-- dist drawing -->
+</div> 
+
+<div class="slide">
+	<h2>rect button</h2>
 	<p>Using a rect as a button requires a different method:</p>
 	<pre><code>var r, g, b;
 var x, y, w, h;
@@ -122,6 +135,7 @@ function mousePressed() {
 
 <div class="slide">
 	<p>Buttons don't have to change themselves:</p>
+	<!-- change this to add spaceships or whatever -->
 	<pre><code>var r, g, b;
 var x, y, w, h;
 var angle = 0;

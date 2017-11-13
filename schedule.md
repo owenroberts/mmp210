@@ -176,52 +176,24 @@ fill(c); // this uses the variable 'c'
 	- <http://paper-io.com/>
 	- <https://quickdraw.withgoogle.com/#>
 
+## Week 12
+**Interaction**
+- Present Final idea
+- [Interaction](week12/)
+- Begin work on Final
+
 
 <!-- 
-
 ## Week 10
 - Midterm Presentatio
 - [Interaction](week9/)
 - [DOM Library](week9/dom.html)  
 - [Beyond the canvas (DOM Tutorial)](https://github.com/processing/p5.js/wiki/Beyond-the-canvas)
-- Final requirements
-	- The final project is making an interactive design
-	- Choose a new theme to inform design choices, like shape, color and pattern
-	- Designs can be abstract, represtational or combination
-	- Each program must use:
-		- variables
-		- if ... else logic statement
-		- at least one for loop
-		- at least one defined function
-		- shape and color functions
-		- user input
-		- animation
-		- image
-	- User input can be mouse, keyboard, HTML elements, or a combination
-
-
-
-## Week 12
-**Image and Media**
-- Present Final project concepts
-- [Image & video](week11/)
-- [Sound library](week11/sound.html)
 
 ## Week 13
 **Objects**
 - [JavaScript Objects](week12/)
 - Final Project workshop
-- More inspiration
-	- <http://www.newrafael.com/websites>
-	- <https://the-internet.click/>
-	- <http://superpixelquest.com/>
-	- <http://www.bdnext.net/roaxaca-zone/>
-	- <http://www.molleindustria.org/to-build-a-better-mousetrap/>
-	- <http://weavesilk.com/>
-	- <http://agar.io/>
-	- <http://paper-io.com/>
-	- <https://quickdraw.withgoogle.com/#>
-
 -->
 
 
