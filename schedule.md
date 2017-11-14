@@ -179,7 +179,7 @@ fill(c); // this uses the variable 'c'
 ## Week 12
 **Interaction**
 - Present Final idea
-- [Interaction](week12/)
+- [Interaction](week12/interaction.html)
 - Begin work on Final
 
 
