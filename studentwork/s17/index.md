@@ -1,5 +1,5 @@
 ---
-layout: main
+layout: default
 title: MMP 210 - Student Work
 dek: Spring 2017
 ---

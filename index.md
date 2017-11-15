@@ -1,5 +1,5 @@
 ---
-layout: main
+layout: default
 title: MMP 210 - Home
 dek: Class info, notes and schedule
 ---
