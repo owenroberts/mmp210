@@ -10,6 +10,7 @@ The class notes, schedule and assignments are all found here.
 - [Schedule](schedule.html)
 - <a href="https://mmp210f17.slack.com/" target="blank">Slack channel</a>
 - <a href="https://docs.google.com/document/d/1GxHJ2VBMlp_7FTv8uAGFv3rWI6-9HFggymuXzMXXKoM/" target="blank">Class syllabus</a>
+- [Student Work](studentwork/)
 
 ## Fall 2017
 - Instructor: Owen Roberts

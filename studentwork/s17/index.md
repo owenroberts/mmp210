@@ -3,6 +3,7 @@ layout: default
 title: MMP 210 - Student Work
 dek: Spring 2017
 ---
+[Student Work](../) [Home](../../)
 
 - [Marcus Novoa Midterm](marcus_novoa/midterm/)
 - [Savannah Hendrix](savannah_hendrix/midterm/)
