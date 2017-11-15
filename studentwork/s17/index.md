@@ -4,4 +4,8 @@ title: MMP 210 - Student Work
 dek: Spring 2017
 ---
 
+- [Marcus Novoa Midterm](marcus_novoa/midterm/)
+- [Savannah Hendrix](savannah_hendrix/midterm/)
+- [Philip Cohen Midterm](philip_cohen/midterm/)
+- [Fane Lili Midterm](fane_lili/midterm/)
 - [Cammy Wan Final](cammy_wan/final/)
