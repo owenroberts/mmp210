@@ -1,7 +1,6 @@
 ---
 layout: default
-title: MMP 210 - Student Work
-dek: Spring 2017
+title: MMP 210 - Student Work - Spring 2016
 ---
 [Student Work](../) [Home](../../)
 
