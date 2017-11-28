@@ -182,6 +182,10 @@ fill(c); // this uses the variable 'c'
 - [Interaction](week12/interaction.html)
 - Begin work on Final
 
+## Week 13
+**Objects**
+- [Objects](week13/objects.html)
+- Continue work on final
 
 <!-- 
 ## Week 10
