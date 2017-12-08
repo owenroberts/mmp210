@@ -9,11 +9,11 @@ Go to [Home](index.html)
 ## Week 1
 **Intro to JavaScript, p5.js**
 
-- [HTML](notes/html#week1) & [CSS](notes/css) Review
-	- [Class example](https://owenbmcc.github.io/classwork210/review/)
-- [Intro to p5](week1/p5.html)
+- [HTML](notes/html) & [CSS](notes/css) Review
+	- [Class example](examples/{{site.semester}}/review/)
+- [Intro to p5](notes/p5)
 <!-- address comments -->
-	- [Self Portrait example](https://owenbmcc.github.io/classwork210/selfportrait/)
+	- [Self Portrait example](examples/{{site.semester}}/selfportrait)
 - In class assignment
 	- Create a simple web site to use as the portfolio page for your work this semester.
 	- Your site should have at least one of each:
@@ -28,10 +28,9 @@ Go to [Home](index.html)
 ## Week 2
 **Statements, operators & variables**
 
-- [GitHub Publishing](week2/github.html)
-	- [Old GitHub Desktop Notes](week2/github_old.html)
-- [JavaScript statements, operators & variables](week2/)
-	- [Self portrait with variables](https://owenbmcc.github.io/classwork210/selfportrait_var/)
+- [GitHub Publishing](notes/github)
+- [JavaScript statements, operators & variables](notes/variables)
+	- [Self portrait with variables](examples/selfportrait_var/)
 - [p5: color, stroke, fill](week2/p5.html)
 	- [Color example](https://owenbmcc.github.io/classwork210/color/)
 	- [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/)
