@@ -9,9 +9,10 @@ Go to [Home](index.html)
 ## Week 1
 **Intro to JavaScript, p5.js**
 
-- [HTML / CSS Review notes](week1/)
+- [HTML](notes/html#week1) & [CSS](notes/css) Review
 	- [Class example](https://owenbmcc.github.io/classwork210/review/)
 - [Intro to p5](week1/p5.html)
+<!-- address comments -->
 	- [Self Portrait example](https://owenbmcc.github.io/classwork210/selfportrait/)
 - In class assignment
 	- Create a simple web site to use as the portfolio page for your work this semester.

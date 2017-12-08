@@ -34,7 +34,7 @@ ul li {
 }
 
 ul li ul {
-    display:none;
+    /*display:none;*/
     position:absolute;
     top:1.2em;
     left:0;

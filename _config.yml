@@ -1,5 +1,7 @@
 description: mmp 210 class website
 baseurl: /mmp210
+layouts_dir: jeks/_layouts
+includes_dir: jeks/_includes
 # Exclude these files from your production _site
 exclude:
   - README.md
