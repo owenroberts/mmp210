@@ -25,15 +25,20 @@ Go to [Home](index.html)
 	- Use the shape and color functions
 	- Be creative, try to show us something about yourself through drawing and design
 
+<!-- 
+ html + github?  css seems pointless
+
+ -->
+
 ## Week 2
 **Statements, operators & variables**
 
 - [GitHub Publishing](notes/github)
 - [JavaScript statements, operators & variables](notes/variables)
-	- [Self portrait with variables](examples/selfportrait_var/)
-- [p5: color, stroke, fill](week2/p5.html)
-	- [Color example](https://owenbmcc.github.io/classwork210/color/)
-	- [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/)
+	- [Self portrait with variables](examples/{{site.semester}}/selfportrait_var/)
+- [p5: color, stroke, fill](notes/color)
+	- [Color example](examples/{{site.semester}}/color/)
+- [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/)
 - [Code academy review](http://www.codecademy.com/courses/getting-started-v2)
 - **Assignment 2**
 	- Using p5, create a design that uses variables as the arguments for the drawing functions.
@@ -42,14 +47,14 @@ Go to [Home](index.html)
 	- You can draw whatever you like, but if you are having trouble deciding what to draw, try choosing something from an activity you like, maybe an instrument like drums, a soccer or basket ball, a skateboard or anything else that represents something you like to do.
 	- Variables are useful for reusing information.  Think of ways to manipulate variables to use the same data repetitively.
 
-```
-// don't use hardcoded values
-fill(0);
+<!-- 
+better assignments using color and variables
+- make a color scheme with variables
+- add colors to self portrait with variables
+- replace hardcoded number in self portrait with variables
+- 
 
-// make a variable first
-var c = color(255,0,255);
-fill(c); // this uses the variable 'c'
-```
+ -->
 
 ## Week 3
 **Debugging**
