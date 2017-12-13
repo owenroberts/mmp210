@@ -20,7 +20,7 @@ Go to [Home](index.html)
 		- Image
 		- Stylesheet
 		- Menu, with links
-- **Assignment 1**
+- **Assignment 1: Self Portrait**
 	- Draw a self-portrait using p5
 	- Use the shape and color functions
 	- Be creative, try to show us something about yourself through drawing and design
@@ -35,17 +35,15 @@ Go to [Home](index.html)
 
 - [GitHub Publishing](notes/github)
 - [JavaScript statements, operators & variables](notes/variables)
-	- [Self portrait with variables](examples/{{site.semester}}/selfportrait_var/)
 - [p5: color, stroke, fill](notes/color)
 	- [Color example](examples/{{site.semester}}/color/)
+	- [Self portrait with variables](examples/{{site.semester}}/selfportrait_var/)
 - [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/)
 - [Code academy review](http://www.codecademy.com/courses/getting-started-v2)
-- **Assignment 2**
-	- Using p5, create a design that uses variables as the arguments for the drawing functions.
-	- Drawing functions include fill(), stroke(), rect(), line(), ellipse(), triangle() etc...
-	- There should be at least 5 colors and 5 shapes.
-	- You can draw whatever you like, but if you are having trouble deciding what to draw, try choosing something from an activity you like, maybe an instrument like drums, a soccer or basket ball, a skateboard or anything else that represents something you like to do.
-	- Variables are useful for reusing information.  Think of ways to manipulate variables to use the same data repetitively.
+- **Assignment 2: Self Portrait with Variables**
+	- Rewrite your self portrait drawing using variables where appropriate.
+	- Any time a value is reused, like a color, size or position, it should be replaced with a variable as we demonstrated in class example.
+	- Also think of ways that variables can be updated with operators like `+`, `-`, `*` and `/`
 
 <!-- 
 better assignments using color and variables

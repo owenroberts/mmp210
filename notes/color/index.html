@@ -1,8 +1,7 @@
 ---
 layout: slides
-title: MMP 210
+title: color, stroke, fill & variables
 week: 2
-dek: p5 - color, stroke, fill
 ---
 
 <!--  color rgb and name and hex -->
@@ -131,5 +130,81 @@ rect(275, 175, eyeSize, eyeSize);</code></pre>
 </div>
 
 <div class="slide">
-	<p>See if you can update your self portrait with variables!</p>
+	<h2>Updating variables</h2>
+	<p>Variables can be updated using operators, so they change throughout the program.</p>
+	<p>In this example, we can change the blue value of a color as we use it in the sketch.</p>
+	<pre><code>function setup() { 
+	createCanvas(300, 200);
+	noStroke();
+	background(220);
+	
+	var blue = 0;
+	
+	fill(200, 50, blue);
+	ellipse(blue,100,50);
+}</code></pre>
+
+<div class="slide">
+	<p>Notice how the <code>blue</code> variable is being use for the blue color in <code>fill</code> and the <code>x</code> position in <code>ellipse</code>.  The name of the variable does not influence the way the variable behaves.  It simply represents a piece of data, in this case a number.</p>
+	<p>Let's repeat this code but we'll change the <code>blue</code> value by incremementing it.</p>
+	<pre><code>	blue += 51;
+	fill(200, 50, blue);
+	ellipse(blue,100,50);
+	
+	blue += 51;
+	fill(200, 50, blue);
+	ellipse(blue,100,50);
+	
+	blue += 51;
+	fill(200, 50, blue);
+	ellipse(blue,100,50);
+
+	blue += 51;
+	fill(200, 50, blue);
+	ellipse(blue,100,50);
+	
+	blue += 51;
+	fill(200, 50, blue);
+	ellipse(blue,100,50);
+</code></pre>
 </div>
+
+<div class="slide">
+	<p>What other values could be made into variables?  What numbers are repeated?</p>
+	<img src="variables.png" alt="">
+	<p>Any number that is used over and over can be turned into a variable.  This makes the code more efficient and easier to change.</p>
+</div>
+
+<div class="slide">
+	<pre><code>var blue = 0; // blue color value and x position
+var blueUpdate = 51; // change to blue color
+var red = 200; // red color value
+var green = 50; // green color value
+var y = 100; // y value of ellipse
+var sz = 50; // size of ellipse
+
+fill(red, green, blue);
+ellipse(blue,y,sz);
+
+blue += blueUpdate;
+fill(red, green, blue);
+ellipse(blue,y,sz);
+
+blue += blueUpdate;
+fill(red, green, blue);
+ellipse(blue,y,sz);
+
+blue += blueUpdate;
+fill(red, green, blue);
+ellipse(blue,y,sz);
+
+blue += blueUpdate;
+fill(red, green, blue);
+ellipse(blue,y,sz);
+
+blue += blueUpdate;
+fill(red, green, blue);
+ellipse(blue,y,sz);</code></pre>
+</div>
+
+
