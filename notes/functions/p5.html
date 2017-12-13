@@ -1,8 +1,7 @@
 ---
 layout: slides
-title: MMP 210
+title: Defining a function
 week: 9
-dek: Defining a function
 ---
 
 <div class="slide">
@@ -27,6 +26,7 @@ function drawTwoCircles(x, y, w, h) {
 </div>
 
 <div class="slide">
+	<h2>Window function</h2>
 	<p>Drawing two circles instead of one isn't all that useful, but if we wanted to draw something complex like a window, it could become more useful.</p>
 	<p>Let's take one of our windows from last week's sketch and turn it into it's own function.</p>
 </div>
@@ -68,7 +68,7 @@ function drawTwoCircles(x, y, w, h) {
 </div>
 
 <div class="slide">
-    <p>Now a separate <code>drawWindow</code> function:</p>
+    <p>Now a separate <code>drawWindow</code> (can't use <code>window</code> because it's already a global JS object for the browser window) function:</p>
     <pre><code>function setup() {
 	createCanvas(640, 480);
 	background("white");
@@ -102,6 +102,7 @@ function drawWindow(x, y, w, h, m) {
 </div>
 
 <div class="slide">
+	<h2>Loops with functions</h2>
     <p>Let's add a for loop:</p>
     <pre><code>function setup() {
 	createCanvas(640, 480);

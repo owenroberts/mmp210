@@ -110,7 +110,7 @@ Go to [Home](index.html)
 ## Week 8
 **Midterm**
 - [Generating patterns](notes/pattern)
-	- [Loop example](examples/{{site.semester}}/loops/)
+	- [Class example](examples/{{site.semester}}/pattern/)
 - **Midterm: Generative design**
 	- Create a concept for a product that will have a generative pattern design
 	- Choose a theme that will inform your design
@@ -129,16 +129,21 @@ Go to [Home](index.html)
 ## Week 9
 **Functions**
 - Present Midterms
-- [JavaScript functions](week9/js-functions.html)
-- [p5: Defining a function](week9/p5-functions.html)
+- [JavaScript functions](notes/functions)
+- [p5: Defining a function](notes/functions/p5.html)
+	- [Class example](examples/{{site.semester}}/functions)
 - **In class**
 	- Rewrite your window drawing as a defined function.
 	- Use it to draw multiple windows with different origin and size.
 
 ## Week 10
 **Media**
-- [Image & video](week10/media.html)
-- [Sound library](week10/sound.html)
+- [Image & video](notes/media)
+	- [Image example](examples/{{site.semester}}/image)
+	- [Video example](examples/{{site.semester}}/video)
+	- [3d example](examples/{{site.semester}}/3d)
+- [Sound library](notes/sound)
+	- [Sound example](examples/{{site.semester}}/audio)
 - **Final Project**
 	- The final project will be an interactive media player
 	- This week do some research on existing projects and think about what you want to make
@@ -154,7 +159,8 @@ Go to [Home](index.html)
 
 ## Week 11
 **Arrays**
-- [Arrays](week11/)
+- [Arrays](notes/array)
+	- [Class example](examples/{{site.semester}}/spaceships)
 - [Review Arrays](https://www.khanacademy.org/computing/computer-programming/programming/arrays/p/intro-to-arrays)
 - **In class**
 	- Write a spaceship function (or a car, or a animal, or anything else that moves)
@@ -179,12 +185,16 @@ Go to [Home](index.html)
 ## Week 12
 **Interaction**
 - Present Final idea
-- [Interaction](week12/interaction.html)
+- [Interaction](notes/interaction_2)
+	- [Class example](examples/{{site.semester}}/interaction_2)
 - Begin work on Final
 
 ## Week 13
 **Objects**
-- [Objects](week13/objects.html)
+- [Objects](notes/objects)
+	- [Spaceship objects](examples/{{site.semester}}/spaceship_objects)
+	- [Sound button object](examples/{{site.semester}}/sound_button)
+	- [Image object](examples/{{site.semester}}/image_objects)
 - Continue work on final
 
 <!-- 

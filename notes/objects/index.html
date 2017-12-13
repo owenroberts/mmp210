@@ -1,8 +1,7 @@
 ---
 layout: slides
-title: MMP 210
+title: JavaScript Objects
 week: 12
-dek: JavaScript Objects
 ---
 <div class="slide">
 	<p>Although we haven't talked about them specifically, we have been using objects all semester.  In fact, basically everything in JavaScript is an object, including arrays, functions, and anything that has methods or properties.</p>
@@ -51,6 +50,7 @@ dek: JavaScript Objects
 </div> -->
 
 <div class="slide">
+	<h2>Constructor</h2>
 	<p>Objects can be declared in several ways.  One is using the function keyword with object notation.  In this case the name of the function is capitalized.  This doesn't have a functional purpose, but it is a visual cue that we are creating an object rather than a function.</p>
 	<pre><code><c></c>function Train() {
 	this.color = "blue";
@@ -78,6 +78,7 @@ dek: JavaScript Objects
 
 
 <div class="slide">
+	<h2>Arguments</h2>
 	<p>Like function, objects can take arguments.</p>
 	<pre><code><c></c>function Train(color, distance, origin, destination) {
 	this.color = color;
@@ -90,6 +91,7 @@ dek: JavaScript Objects
 </div>
 
 <div class="slide">
+	<h2>Methods</h2>
 	<p>Objects can also have functions, called methods, that are tied to the object:</p>
 	<pre><code><c></c>njTransit.printStatus = function() {
 	console.log("This train runs from " + this.origin + " to " + this.destination);
@@ -97,6 +99,7 @@ dek: JavaScript Objects
 </div>
 
 <div class="slide">
+	<h2>Spaceship object</h2>
 	<p>When we covered Arrays we made a fleet of spaceships by adding a bunch of arrays to track different aspects of the spaceship.  This was good for reducing the number of variables we needed to keep track of the size, position and color of each ship in our fleet, but the more things we change, the more variables we have to create.</p>
 	<p>A better way to organize this information is by adding a spaceship object, a single block of code that keeps track of it's own x, y, size and color values and can be added to an array.</p>
 </div>
@@ -125,6 +128,7 @@ this.update = function() {
 </div>
 
 <div class="slide">
+	<h2>Circle objects</h2>
 	<p>In this example, we will use objects to create circles based on the color data in an image:</p>
 	<pre><code>function Circle(x, y, c) {
 	this.x = x;
