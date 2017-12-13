@@ -93,23 +93,23 @@ function setup() {
 <div class="slide">
 	<p>We can improve this program using variables.  My self portrait uses two hardcoded values for colors: <code>"yellow"</code> and <code>"orange"</code>.  If I want to change the color of any of the parts of the face I need to rewrite this.  If I use a variable instead, I can change all of the shapes using each color and change them all at the same time.</p>
 	<pre><code>var base = "yellow";
-var parts = "orange";
+var details = "orange";
 
 // head
 fill(base);
 ellipse(300, 300, 300, 300);
 
 // eyes
-fill(parts);
+fill(details);
 rect(175, 175, 50, 50);
 rect(275, 175, 50, 50);
 
 // mouth
-fill(parts);
+fill(details);
 triangle(175, 400, 325, 425, 345, 380);
 
 // nose
-stroke(parts);
+stroke(details);
 strokeWeight(6);
 line(250, 245, 200, 350);
 
@@ -117,14 +117,14 @@ line(250, 245, 200, 350);
 fill(base);
 arc(450, 280, 70, 90, PI+1, HALF_PI+1);</code></pre>
 	<p>Now I can change the whole drawing by changing one line: </p>
-	<pre><code>var parts = "green";</code></pre>
+	<pre><code>var details = "green";</code></pre>
 </div>
 
 <div class="slide">
 	<p>We can also do this with numbers.  Noticed I used the same size for the eyes width and height in my self portrait?  I can use one variable to save that value and adjust all of those dimensions at one time:</p>
 	<pre><code>// eyes
 var eyeSize = 50;
-fill(parts);
+fill(details);
 rect(175, 175, eyeSize, eyeSize);
 rect(275, 175, eyeSize, eyeSize);</code></pre>
 </div>

@@ -45,22 +45,13 @@ Go to [Home](index.html)
 	- Any time a value is reused, like a color, size or position, it should be replaced with a variable as we demonstrated in class example.
 	- Also think of ways that variables can be updated with operators like `+`, `-`, `*` and `/`
 
-<!-- 
-better assignments using color and variables
-- make a color scheme with variables
-- add colors to self portrait with variables
-- replace hardcoded number in self portrait with variables
-- 
-
- -->
-
 ## Week 3
 **Debugging**
-- [JavaScript debugging](week3/)
-- [p5: text](week3/p5.html)
-	- [Text Example](https://owenbmcc.github.io/classwork210/text/)
-- [Debugging challenge](week3/debug.zip)
-- **Assignment 3**
+- [JavaScript debugging](notes/debug)
+- [p5: text](notes/text)
+	- [Text Example](examples/{{site.semester}}/text/)
+- [Debugging challenge](notes/debug/debug.zip)
+- **Assignment 3: Logo**
 	- Make a logo design with your name
 	- Use text and other shapes
 	- Drawing and text functions must use variables
@@ -68,9 +59,10 @@ better assignments using color and variables
 
 ## Week 4
 **Interaction**
-- [p5 system variables](week4/p5.html)
-- [Interaction](week4/)
-- **Assignment 4**
+- [p5 system variables](notes/system_variables)
+- [Interaction](notes/interaction_1)
+	- [Class example](examples/{{site.semester}}/interaction/)
+- **Assignment 4: Interactive design**
 	- Create a simple interactive design
 	- Give the user an instruction using `text`
 		- For example: "Click to add shapes"
@@ -79,20 +71,22 @@ better assignments using color and variables
 
 ## Week 5
 **Logic**
-- [JavaScript comparison operators and conditionals](week5/js-logic.html)
-<!-- dealing with compound conditionals??? -->
-- [Drawing with logic](week5/p5-logic.html)
+- [JavaScript comparison operators and conditionals](notes/logic)
+- [Drawing with logic](notes/logic/p5.html)
+	- [Class example](examples/{{site.semester}}/logic/)
 - **In class**: [Code Academy: Control Flow](https://www.codecademy.com/courses/learn-javascript-control-flow/lessons/control-flow/exercises/control-flow-intro)
-- **Assignment 5**
+- **Assignment 5: Control Flow**
 	- Create a design that splits the screen in half or quadrants
 	- Create a user interaction that changes according to the quadrant
 	- Change could be color, shape or size
 
 ## Week 6
 **Animation**
-- [p5: animation, random, modulo](week6/animation.html)
-- [p5: push, pop, transform](week6/transform.html)
-- **Assignment 6**
+- [p5: animation, random, modulo](notes/animation)
+	- [Class example](examples/{{site.semester}}/animation/)
+- [p5: push, pop, transform](notes/transform)
+	- [Class example](examples/{{site.semester}}/transform/)
+- **Assignment 6: Animation**
 	- Add animation to your logo or another previous drawing (or a new drawing if you prefer)
 	- Use two different types of animation (size, color, position, shape, rotation, etc)
 - Inspiration
@@ -103,17 +97,20 @@ better assignments using color and variables
 
 ## Week 7
 **Loops**
-- [JavaScript for loops](week7/js-loops.html)
-- [p5: drawing with loops](week7/p5-loops.html)
+- [JavaScript for loops](notes/loops)
+- [p5: drawing with loops](notes/loops/p5.html)
+	- [Loop example](examples/{{site.semester}}/loops/)
+	- [Interactive loop example](examples/{{site.semester}}/loops_mouse/)
 - In class: [Code academy: for loops](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/0/1)
-- **Assignment 7**
+- **Assignment 7: Windows**
 	- Draw the a grid of windows like the front of a city building.  
 	- Each window should be at least 5 shapes.  
 	- Use your apartment building or [Windows of New York](http://windowsofnewyork.com/) for inspiration.
 
 ## Week 8
 **Midterm**
-- [Generating patterns](week8/index.html)
+- [Generating patterns](notes/pattern)
+	- [Loop example](examples/{{site.semester}}/loops/)
 - **Midterm: Generative design**
 	- Create a concept for a product that will have a generative pattern design
 	- Choose a theme that will inform your design
