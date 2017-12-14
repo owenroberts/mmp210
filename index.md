@@ -1,6 +1,6 @@
 ---
 layout: main
-title: MMP 210 - Home
+title: Home
 dek: Class info, notes and schedule
 ---
 This is the class page of MMP 210 at BMCC.
