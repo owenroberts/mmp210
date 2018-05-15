@@ -2,8 +2,8 @@ description: mmp 210 class website
 class: MMP 210
 semester: f17
 baseurl: /mmp210
-layouts_dir: jeks/_layouts
-includes_dir: jeks/_includes
+layouts_dir: slides/_jeks/layouts
+includes_dir: slides/_jeks/includes
 # Exclude these files from your production _site
 exclude:
   - README.md

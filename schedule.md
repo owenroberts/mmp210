@@ -6,8 +6,7 @@ dek: Schedule with class notes & assignments
 
 Go to [Home](index.html)
 
-## Week 1
-**Intro to JavaScript, p5.js**
+## Week 1 **Intro / Shape**
 
 - [HTML](notes/html) & [CSS](notes/css) Review
 	- [Class example](examples/{{site.semester}}/review/)
@@ -25,13 +24,7 @@ Go to [Home](index.html)
 	- Use the shape and color functions
 	- Be creative, try to show us something about yourself through drawing and design
 
-<!-- 
- html + github?  css seems pointless
-
- -->
-
-## Week 2
-**Statements, operators & variables**
+## Week 2 **Color**
 
 - [GitHub Publishing](notes/github)
 - [JavaScript statements, operators & variables](notes/variables)
@@ -45,8 +38,7 @@ Go to [Home](index.html)
 	- Any time a value is reused, like a color, size or position, it should be replaced with a variable as we demonstrated in class example.
 	- Also think of ways that variables can be updated with operators like `+`, `-`, `*` and `/`
 
-## Week 3
-**Debugging**
+## Week 3 **Text**
 - [JavaScript debugging](notes/debug)
 - [p5: text](notes/text)
 	- [Text Example](examples/{{site.semester}}/text/)
@@ -57,8 +49,7 @@ Go to [Home](index.html)
 	- Drawing and text functions must use variables
 
 
-## Week 4
-**Interaction**
+## Week 4 **Interaction 1**
 - [p5 system variables](notes/system_variables)
 - [Interaction](notes/interaction_1)
 	- [Class example](examples/{{site.semester}}/interaction/)
@@ -69,8 +60,7 @@ Go to [Home](index.html)
 	- Change color, position or size of shapes
 
 
-## Week 5
-**Logic**
+## Week 5 **Logic**
 - [JavaScript comparison operators and conditionals](notes/logic)
 - [Drawing with logic](notes/logic/p5.html)
 	- [Class example](examples/{{site.semester}}/logic/)
@@ -80,8 +70,7 @@ Go to [Home](index.html)
 	- Create a user interaction that changes according to the quadrant
 	- Change could be color, shape or size
 
-## Week 6
-**Animation**
+## Week 6 **Animation**
 - [p5: animation, random, modulo](notes/animation)
 	- [Class example](examples/{{site.semester}}/animation/)
 - [p5: push, pop, transform](notes/transform)
@@ -95,8 +84,7 @@ Go to [Home](index.html)
 
 
 
-## Week 7
-**Loops**
+## Week 7 **Loops**
 - [JavaScript for loops](notes/loops)
 - [p5: drawing with loops](notes/loops/p5.html)
 	- [Loop example](examples/{{site.semester}}/loops/)
@@ -107,27 +95,24 @@ Go to [Home](index.html)
 	- Each window should be at least 5 shapes.  
 	- Use your apartment building or [Windows of New York](http://windowsofnewyork.com/) for inspiration.
 
-## Week 8
-**Midterm**
+## Week 8 **Pattern**
 - [Generating patterns](notes/pattern)
 	- [Class example](examples/{{site.semester}}/pattern/)
-- **Midterm: Generative design**
-	- Create a concept for a product that will have a generative pattern design
-	- Choose a theme that will inform your design
-	- Create a sketch that generates new patterns based on a theme, a new pattern each time the user clicks
-	- Use `saveCanvas` to save images
-	- The sketch must use variables, a for loop, colors, and shapes
-	- Use a series of decisions (if, else) or randomly generated values to change the pattern
-	- Write a short, 3-4 sentence description of the project, for example: *I'm designing a pattern for socks.  My theme is Spring and I'm using a polka dot pattern.  I chose different shades of green for the background to represent  the new leaves on the trees.  I also chose pinks and purples for foreground shapes to represent flowers.*
-	- Inspiration
-		- [Generative landscapes](https://generativelandscapes.wordpress.com/2014/08/15/complex-pattern-from-simple-arcs-example-3-6/)
-		- [Libs Elliott: Generated quilt design](http://themakersnation.com/maker-spotlight-libs-elliott/)
-		- [Generative Patterns Google Image Search](https://www.google.com/search?q=generative+patterns&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiA-OPl3fbWAhWD6iYKHTihD7EQ_AUICigB&biw=1897&bih=984#imgrc=_)
 
+## Midterm **Generative design**
+- Create a concept for a product that will have a generative pattern design
+- Choose a theme that will inform your design
+- Create a sketch that generates new patterns based on a theme, a new pattern each time the user clicks
+- Use `saveCanvas` to save images
+- The sketch must use variables, a for loop, colors, and shapes
+- Use a series of decisions (if, else) or randomly generated values to change the pattern
+- Write a short, 3-4 sentence description of the project, for example: *I'm designing a pattern for socks.  My theme is Spring and I'm using a polka dot pattern.  I chose different shades of green for the background to represent  the new leaves on the trees.  I also chose pinks and purples for foreground shapes to represent flowers.*
+- Inspiration
+	- [Generative landscapes](https://generativelandscapes.wordpress.com/2014/08/15/complex-pattern-from-simple-arcs-example-3-6/)
+	- [Libs Elliott: Generated quilt design](http://themakersnation.com/maker-spotlight-libs-elliott/)
+	- [Generative Patterns Google Image Search](https://www.google.com/search?q=generative+patterns&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiA-OPl3fbWAhWD6iYKHTihD7EQ_AUICigB&biw=1897&bih=984#imgrc=_)
 
-
-## Week 9
-**Functions**
+## Week 9 **Functions**
 - Present Midterms
 - [JavaScript functions](notes/functions)
 - [p5: Defining a function](notes/functions/p5.html)
@@ -136,8 +121,7 @@ Go to [Home](index.html)
 	- Rewrite your window drawing as a defined function.
 	- Use it to draw multiple windows with different origin and size.
 
-## Week 10
-**Media**
+## Week 10 **Media**
 - [Image & video](notes/media)
 	- [Image example](examples/{{site.semester}}/image)
 	- [Video example](examples/{{site.semester}}/video)
@@ -157,8 +141,7 @@ Go to [Home](index.html)
 		- <http://uxdesignercoding.tumblr.com/post/143328882704/for-this-week-i-have-worked-on-data-visualization>
 		- <http://www.typotopo.com/typemenot/index.html>
 
-## Week 11
-**Arrays**
+## Week 11 **Arrays**
 - [Arrays](notes/array)
 	- [Class example](examples/{{site.semester}}/spaceships)
 - [Review Arrays](https://www.khanacademy.org/computing/computer-programming/programming/arrays/p/intro-to-arrays)
@@ -182,15 +165,13 @@ Go to [Home](index.html)
 	- <http://paper-io.com/>
 	- <https://quickdraw.withgoogle.com/#>
 
-## Week 12
-**Interaction**
+## Week 12 **Interaction 2**
 - Present Final idea
 - [Interaction](notes/interaction_2)
 	- [Class example](examples/{{site.semester}}/interaction_2)
 - Begin work on Final
 
-## Week 13
-**Objects**
+## Week 13 **Objects**
 - [Objects](notes/objects)
 	- [Spaceship objects](examples/{{site.semester}}/spaceship_objects)
 	- [Sound button object](examples/{{site.semester}}/sound_button)
