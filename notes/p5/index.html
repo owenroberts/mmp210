@@ -21,12 +21,11 @@ week: 1
 <!-- what is p5? -->
 <div class="slide">
 	<h2>p5</h2>
-	<p>One such library is <a href="http://p5js.org/" target="blank">p5</a> which we will use in this class to learn some programming basics.</p>
-	<p>p5 is a JavaScript library inspired by the design, code and philosophy of <a href="https://processing.org/" target="blank">Processing</a>, a Java based library designed starting in 2001 in order to be a language friedly to artists and educators learning how to use programming in an artistic context.</p>
+	<p><a href="http://p5js.org/" target="blank">p5</a> is a JavaScript library inspired by the design, code and philosophy of <a href="https://processing.org/" target="blank">Processing</a>, a Java based library designed starting in 2001 in order to be a language friedly to artists and educators learning how to use programming in an artistic context.</p>
 </div>
 
 <div class="slide">
-	<p>Like Processing, p5 is developed with idea of drawing in mind.  Programs are referred to as <em>sketches</em> and basic drawing tools like shape and color form the basis of the language.</p>
+	<p>Like Processing, <note>p5</note> was developed with idea of drawing in mind.  Programs are referred to as <em>sketches</em> and basic drawing tools like shape and color form the basis of the language.</p>
 	<p>Since it's origin, many other functionalities have been added to this set to incorporate things like interaction, audio and video.</p>
 </div>
 
@@ -52,7 +51,7 @@ week: 1
 &lt;body id="home"&gt;
 	&lt;h1&gt;Self Portrait&lt;/h1&gt;
 	&lt;ul&gt;
-		&lt;li class="link"&gt;&lt;a href="../index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="link"&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
 	&lt;/ul&gt;
 	&lt;script src="p5.min.js"&gt;&lt;/script&gt;
 	&lt;script src="sketch.js"&gt;&lt;/script&gt;
@@ -81,7 +80,7 @@ week: 1
 	<h2>First sketch</h2>
 	<p>Okay, let's get started.  Here's the beginning of our program:</p>
 	<div class="ex">function setup() {
-	createCanvas(640, 460);
+	createCanvas(640, 360);
 }</div>
 	<p>Every <code>p5</code> sketch starts this way.  The <code>setup</code> function is used to setup our drawing and initialize some basics.  It runs <em>once</em> when our program starts.  A function is simply a series of commands or actions we want the program to take.  Functions have names so we can call them.  When we call a function, the program runs the lines of code contained inside.</p>
 </div>
@@ -93,7 +92,11 @@ week: 1
 
 <div class="slide">
 	<p>Here's the next part of the self portrait:</p>
-	<div class="ex"> // self portrait
+	<div class="ex" data-preview>// self portrait
+function setup() {
+	createCanvas(640, 360);
+}
+
 function draw() {
 	background("white");
 	noStroke();
@@ -103,12 +106,12 @@ function draw() {
 	rect(100, 100, 200, 250);
 	
 	// eyes
-	fill(180, 50, 250, 200);
+	fill("blue");
 	ellipse(150, 200, 50, 100);
 	ellipse(250, 200, 40, 80);
 	
 	// ears
-	fill(200);
+	fill("yellow");
 	ellipse(150, 200, 40);
 	ellipse(250, 200, 30);
 	
@@ -120,6 +123,29 @@ function draw() {
 
 <div class="slide">
 	<p>The <code>draw</code> function is where all of our drawing code will go.  This function runs over and over again for as long as the program is open.  So all of that code is being executed about 60 times a second, or however fast your browser is running.</p>
-	<p>The rest of the code in this section is using the p5 <a href="https://p5js.org/reference/#group-Color" target="blank">Color</a> and <a href="https://p5js.org/reference/#group-Shape" target="blank">Shape</a> functions to draw a self portrait.</p>
+</div>
+
+<div class="slide">
+	<h2>Shapes</h2>
+	<p>In our sketch we are using default <a href="https://p5js.org/reference/#group-Shape" target="blank">shape</a> functions defined by <note>p5</note>, including <code>ellipse</code> and <code>rect</code>.</p>
+	<p>These lines are functions.  Eventually you will write your own functions but for now we're going to learn about them using the <note>p5</note> defined functions.</p>
+</div>
+
+<div class="slide">
+	<pre><code>ellipse(150, 200, 50, 100);</code></pre>
+	<p>A function is a series of instructions for our program.  It's sort of like a mini program within the larger program.  A function has a name that describes what it does, such as <code>ellipse</code> which renders or draws an ellipse on the canvas.</p>
+	<p>A function is called using the <code>()</code> at the end.  These are the special characters that lets the program know to call the function or make it do whatever it is written to do.</p>
+	<p>Inside the <code>()</code> are <note>arguments</note> which we can change to change the outcome of the function.  For an <code>ellipse</code> we use the arguments to determine the x and y position of the ellipse on the canvas, as well as the width and height.</p>
+	<p>The order of arguments is important.  For ellipse it is <code>(x, y, width, height)</code>.</p>
+	<p>You can also make a circle (an ellipse with the same width and height, by using three arguments: <code>(x, y, size)</code>.</p>
+</div>
+
+<div class="slide">
+	<pre><code>rect(100, 100, 200, 250);</code></pre>
+	<p>The order of the <code>rect</code> arguments is also <code>(x, y, width, height)</code>.</p>
+</div>
+
+<div class="slide">
+	<p>The <code>fill</code> and <code>stroke</code> functions set the <a href="https://p5js.org/reference/#group-Color" target="blank">color</a>. We'll cover these functions in depth next week.</p>
 	<p>Try playing around with these functions and arguments to change the drawing and create your own self portrait.  We'll go over the functions in further detail next week.</p>
 </div>
