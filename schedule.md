@@ -8,11 +8,9 @@ Go to [Home](index.html)
 
 ## Week 1 **Intro / Shape**
 
-- [HTML](notes/html) & [CSS](notes/css) Review
-	- [Class example](examples/{{site.semester}}/review/)
-- [Intro to p5](notes/p5)
-<!-- address comments -->
-	- [Self Portrait example](examples/{{site.semester}}/selfportrait)
+- [HTML](notes/html) & [CSS](notes/css) Review ~ [Class example](examples/{{site.semester}}/review/){:target="blank"}
+- [JavaScript Intro](notes/javascript)
+- [Intro to p5](notes/p5) ~ [Self Portrait example](examples/{{site.semester}}/selfportrait){:target="blank"}
 - In class assignment
 	- Create a simple web site to use as the portfolio page for your work this semester.
 	- Your site should have at least one of each:
@@ -23,6 +21,19 @@ Go to [Home](index.html)
 	- Draw a self-portrait using p5
 	- Use the shape and color functions
 	- Be creative, try to show us something about yourself through drawing and design
+
+<!-- 
+	possible week 1,2 sequence
+	1: html/css, html css webpage, github
+	2: javascript, p5, self portrait
+
+	1: html/css, javascript, webpage
+	2: p5, github, self portrait
+
+	need to update HTML and CSS notes
+
+	comments
+ -->
 
 ## Week 2 **Color**
 
