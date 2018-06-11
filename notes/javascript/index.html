@@ -5,9 +5,9 @@ week: 1
 ---
 
 <div class="slide">
-	<p>JavaScript is a programming language, created in 1995, specifically designed to work with websites, meaning browsers and web pages built with HTML and CSS.</p>
+	<p>JavaScript is a programming language, created in 1995, specifically designed to work with websites, or HTML and CSS based web pages hosted in web browsers.</p>
 	<p>HTML, CSS and JavaScript are the core technologies that every web page is built with.</p>
-	<p>For more on history and workings of JavaScript I highly recommend <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript" target="blank">What is JavaScript?</a> on MDN, as well as the <a href="https://www.youtube.com/watch?v=RO1Wnu-xKoY" target="blank">Crockford on JavaScript</a> lecture series by Douglas Crockford, one of the architects of the language.</p>
+	<p>For more on history and workings of JavaScript I recommend <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript" target="blank">What is JavaScript?</a> on MDN, as well as the <a href="https://www.youtube.com/watch?v=RO1Wnu-xKoY" target="blank">Crockford on JavaScript</a> lecture series by Douglas Crockford, one of the architects of the language.</p>
 </div>
 
 <div class="slide">
@@ -22,8 +22,8 @@ week: 1
 
 <div class="slide">
 	<p>Now that we've cleared that up, let's talk about what JavaScript is.</p>
-	<p>JavaScript is the scripting language packaged with all web browsers.  It adds functionality to sites that isn't covered by HTML and CSS.</p>
-	<p>We reviewed HTML and CSS, and I'm going to assume everyone is familiar with what a web browser, but in case that's not the case, let's pause for a moment and talk about what a web browser is.</p>
+	<p>JavaScript is the scripting language packaged with all web browsers.  It adds functionality to web sites to allow things that can't be done with static HTML and CSS such as animation, interaction and other time based possibilities.</p>
+	<p>We reviewed HTML and CSS, and I'm going to assume everyone is familiar with what a web browser,  let's pause for a moment and discuss what we know about web browsers.</p>
 </div>
 
 <div class="slide">
@@ -32,7 +32,7 @@ week: 1
 </div>
 
 <div class="slide">
-	<p>For this class I will be using the Google Chrome browser.  To open the console in Chrome, you can use the shorcut <em>Command + Alt + J</em> on Mac or <em>Control + Shift + J</em> or use the toolbar menu and go to <em>View > Developer > JavaScript Console</em>.</p>
+	<p>For this class I will be using the Google Chrome browser.  To open the console in Chrome, you can use the shortcut <em>Command + Alt + J</em> on Mac or <em>Control + Shift + J</em> for Windows or use the tool bar menu and go to <em>View > Developer > JavaScript Console</em>.</p>
 	<div class="key">CAj</div> on Mac
 	<div class="key">VSj</div> on Windows
 	<p>If you're on another browser you can either Google how to open the console or switch to Chrome.</p>
@@ -41,7 +41,7 @@ week: 1
 <div class="slide">
 	<p>The console is an awesome tool for developers.  We can type JavaScript code directly into the console and it will immediately be evaluated.  Try something simple just to see it work.</p>
 	<p>Type an expression into the console and then hit <span class="key">R</span> <code>(Enter)</code> to see it be evaluated.</p>
-	<pre><code><c></c> 2 + 2
+	<pre><code><c></c>2 + 2
 // 4</code></pre>
 	<p>So JavaScript can do basic arithmetic.  Cool.</p>
 </div>
@@ -59,18 +59,156 @@ week: 1
 		https://www.youtube.com/watch?v=mqpY5kEtA2Y // tain
 	 -->
 	<p><code>2 + 2</code> is a simple JavaScript expression.  JavaScript interprets the expression and returns a result.  This is a very simple version of everything that happens in a computer program.  The programmer asks the computer to evaluate a series of expressions and statements and the computer returns a result.</p>
-	<p>Programming languages are sort of like Google Translates for people and computers.  It translates the idea we want into something the computer can understand.</p>
+	<!-- <p>Programming languages are sort of like Google Translates for people and computers.  It translates the idea we want into something the computer can understand.</p> -->
 </div>
 
-<!--  more arithmetic expressions -->
-<!--  equality expressions -->
-<!--  Math.random() ? -->
-<!--  Math.floor 6-sided die -->
-<!--  skip variables -->
-<!--  built in values and properties -->
-<!-- numbers strings booleans ? -->
+<div class="slide">
+	<div class="utube">
+		<iframe src="https://www.youtube.com/embed/mqpY5kEtA2Y?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+</div>
 
+<div class="slide">
+	<p>Let's look at some more arithmetic expressions.</p>
+	<pre><code><c></c>1 - 1
+// 0
+<c></c>2 * 5
+// 10
+<c></c>12 / 4
+// 3</code></pre>
+</div>
 
+<div class="slide">
+	<p>Expressions can also be grouped using parentheses.</p>
+	<pre><code><c></c>2 + 2 * 5
+// 12
+<c></c>(2 + 2) * 5
+// 20</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Errors</h2>
+	<p>If you ask JavaScript to evaluate an expression it doesn't understand, it will return an error.</p>
+	<pre><code><c></c>2 2
+<span class="error">Uncaught SyntaxError: Unexpected number</span></code></pre>
+	<p>Here, the JavaScript compiler is telling you that it didn't expect a number, because we forgot to add an arithmetic operator between the first and seconds values.</p>
+</div>
+
+<div class="slide">
+	<p>Notice that the error isn't very specific.  It didn't say, <em>"You forgot the plus sign, idiot."</em>  JavaScript doesn't actually know what we intended to write.  There's lots of different signs that could have gone there.</p>
+	<p>JavaScript will only understand expressions written in the format it expects.  Unlike other humans, it can't guess what a programmer "meant" when they mistyped something.  So it will give us an error that attempts to explain the issue.</p>
+</div>
+
+<div class="slide">
+	<h2>Boolean expressions</h2>
+	<p>Something that we often need to do in a program is make a decision based on different values.  To do this, we can use boolean expressions, which evaluate whether a statement is <code>true</code> or <code>false</code>.</p>
+	<p>The <code>==</code> operator is used to evaluate a boolean statement.</p>
+	<pre><code><c></c>1 == 1
+// true
+<c></c>2 + 2 == 4
+// true
+<c></c>2 + 2 == 5
+// false
+</code></pre>
+</div>
+
+<div class="slide">
+	<p>We can also compare the relative values of numbers using <code>&lt;</code>, less than, and <code>&gt;</code>, greater than.</p>
+	<pre><code><c></c>3 < 4
+// true
+<c></c>99 > 100
+// false</code></pre>
+</div>
+
+<div class="slide">
+	<p>We can also use <code><=</code>, less than or equal to and <code>>=</code>, greater than or equal to.</p>
+	<pre><code><c></c>0 <= 1
+// true
+<c></c>1 <= 1
+// true
+<c></c>0 >= 1
+// false
+<c></c>1 >= 0
+// true</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Integers and Floats</h2>
+	<p>The numbers we have been using so far are all whole numbers, or integers, numbers that do not have a decimal point value.</p>
+	<p>JavaScript also uses floats, or numbers with decimal points.</p>
+	<pre><code><c></c>3 / 4
+// 0.75</code></pre>
+</div>
+
+<div class="slide">
+	<p>However, JavaScript considers both integers and floats to be numbers.  They are not separate types.</p>
+	<pre><code><c></c>typeof 1
+// "number"
+<c></c>typeof 0.5
+// "number"</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Data Types</h2>
+	<p>So far we have seen two types of data in JavaScript, <code>numbers</code> and <code>booleans</code>.</p>
+	<p>The third primitive data type is the <code>string</code>.  A string is a series of characters.  It's kind of like a word or a sentence.</p>  
+	<p>In JavaScript, single or double quotation marks are used to contain a string.</p>
+	<pre><code><c></c>"I am a string."
+<c></c>'me too.'
+<c></c>typeof "I'm a string"</code></pre>
+	<p>We'll talk more about strings and other data types in later lessons.</p>
+</div>
+
+<div class="slide">
+	<h2>Environment objects and properties</h2>
+	<p>JavaScript has some nice built-in values that are set up for us to use and interact with the environment we're working with.  In this case the environment is the Chrome browser.</p>
+	<pre><code><c></c>navigator
+<c></c>navigator.userAgent
+<c></c>window
+<c></c>window.innerWidth
+<c></c>document
+<c></c>document.body</code></pre>
+</div>
+
+<div class="slide">
+	<p>These objects or global properties can be really useful.  There's a <code>Math</code> object that can do some cool math for us.</p>
+	<p>If you have a float that you want to be an integer, you can round down using <code>Math.floor()</code>.  You can also round up with <code>.ceil()</code>.</p>
+	<pre><code><c></c>Math.floor(7.25)
+// 7</code></pre>
+	<p>We can also generate random numbers using <code>Math.random()</code>.  It will generate a number between 0 and 1.</p>
+	<pre><code><c></c>Math.random()
+// 0.something</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Wrapping up</h2>
+	<p>We've covered some basics but there's still a lot left to learn.  But let's do something cool before we finish.  Using JavaScript, we will generate a random background color for this web page.</p>
+	<p>First let's get a random number.</p>
+	<pre><code>Math.random()</code></pre>
+</div>
+
+<div class="slide">
+	<p>Now we need to turn it into something that could be a color.  From CSS, we know that any three or six digit number with a <code>#</code> at the beginning will be converted into a color.  Something like <code>#917</code>.</p>
+	<p>We can make our random number a three digit number by multiplying by 1000.  (This works most of the time).</p>
+	<pre><code><c></c>Math.random() * 1000</code></pre>
+</div>
+
+<div class="slide">
+	<p>But that decimal point will be a problem, so let's chop it off with <code>Math.floor</code>.</p>
+	<pre><code><c></c>Math.floor(Math.random() * 1000)</code></pre>
+</div>
+
+<div class="slide">
+	<p>Now we need to add a <code>#</code> in front to make it a CSS value.</p>
+	<pre><code><c></c>'#' + Math.floor(Math.random() * 1000))</code></pre>
+	<p>Cool, now we need to assign that to the background color.  We'll cover this in more detail soon, but we can do this pretty easily by referencing the CSS style of the body of the document object.</p>
+	<pre><code><c></c>document.body.style.backgroundColor = '#' + Math.floor(Math.random() * 1000)</code></pre>
+	<p>Try evaluating this statement a few times to see the color change.</p>
+</div>
+
+<div class="slide">
+	<p>There are some limitations to this code, but we'll learn a lot more about JavaScript and how to make even more interesting effects, drawings and animations, building on these ideas throughout the semester.</p>
+</div>
 <!-- 
 
 	http://2ality.com/2012/09/expressions-vs-statements.html

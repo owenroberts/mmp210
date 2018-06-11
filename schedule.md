@@ -24,8 +24,8 @@ Go to [Home](index.html)
 
 <!-- 
 	possible week 1,2 sequence
-	1: html/css, html css webpage, github
-	2: javascript, p5, self portrait
+	1: html/css, html css webpage, javascript github
+	2: p5, shape, self portrait
 
 	1: html/css, javascript, webpage
 	2: p5, github, self portrait
