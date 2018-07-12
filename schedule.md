@@ -6,69 +6,59 @@ dek: Schedule with class notes & assignments
 
 Go to [Home](index.html)
 
-## Week 1 **Intro / Shape**
+## Week 1 **Intro**
 
-- [HTML](notes/html) & [CSS](notes/css) Review ~ [Class example](examples/{{site.semester}}/review/){:target="blank"}
-- [JavaScript Intro](notes/javascript)
-- [Intro to p5](notes/p5) ~ [Self Portrait example](examples/{{site.semester}}/selfportrait){:target="blank"}
-- In class assignment
-	- Create a simple web site to use as the portfolio page for your work this semester.
+- [HTML](notes/html) & [CSS](notes/css) Review 
+- [GitHub Publishing](notes/github)
+- **Assignment 1: Portolfio web page**
+	- Create a simple web site to use as the portfolio page for your work this semester
+	- Publish the site on Github Pages
 	- Your site should have at least one of each:
 		- Image
 		- Stylesheet
 		- Menu, with links
-- **Assignment 1: Self Portrait**
+	- Submit URL to published site
+
+
+## Week 2 **Shape & Color**
+
+- [JavaScript Intro](notes/javascript)
+- [Intro to p5](notes/p5) ~ [Self Portrait example](examples/{{site.semester}}/selfportrait){:target="blank"}
+- [p5: Color](notes/color)
+- [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/)
+- **Assignment 2: Self Portrait**
 	- Draw a self-portrait using p5
 	- Use the shape and color functions
-	- Be creative, try to show us something about yourself through drawing and design
+	- Add something unique to you
 
-<!-- 
-	possible week 1,2 sequence
-	1: html/css, html css webpage, javascript github
-	2: p5, shape, self portrait
-
-	1: html/css, javascript, webpage
-	2: p5, github, self portrait
-
-	need to update HTML and CSS notes
-
-	comments
- -->
-
-## Week 2 **Color**
-
-- [GitHub Publishing](notes/github)
-- [JavaScript statements, operators & variables](notes/variables)
-- [p5: color, stroke, fill](notes/color)
-	- [Color example](examples/{{site.semester}}/color/)
-	- [Self portrait with variables](examples/{{site.semester}}/selfportrait_var/)
-- [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/)
-- [Code academy review](http://www.codecademy.com/courses/getting-started-v2)
-- **Assignment 2: Self Portrait with Variables**
-	- Rewrite your self portrait drawing using variables where appropriate.
-	- Any time a value is reused, like a color, size or position, it should be replaced with a variable as we demonstrated in class example.
-	- Also think of ways that variables can be updated with operators like `+`, `-`, `*` and `/`
-
-## Week 3 **Text**
+## Week 3 **Variables**
+- [JavaScript statements & operators](notes/javascript/statements.html)
+- [Variables](notes/variables/)
+- [Code Academy: Variables](https://www.codecademy.com/courses/learn-javascript-introduction/lessons/variables/exercises/intro-variables){:target="blank"}
 - [JavaScript debugging](notes/debug)
-- [p5: text](notes/text)
-	- [Text Example](examples/{{site.semester}}/text/)
 - [Debugging challenge](notes/debug/debug.zip)
-- **Assignment 3: Logo**
-	- Make a logo design with your name
-	- Use text and other shapes
-	- Drawing and text functions must use variables
-
+- **Assignment 3: Self Portrait with Variables**
+	- Rewrite your self portrait drawing using variables where appropriate.
+	- Variables should clearly state what they are being used for.
+	- Variables should be used for the size, position or color of shapes.  One variable should not be used to represent two different aspects.
+	- There should be no hard coded numbers or strings inside of the drawing functions.
 
 ## Week 4 **Interaction 1**
 - [p5 system variables](notes/system_variables)
 - [Interaction](notes/interaction_1)
-	- [Class example](examples/{{site.semester}}/interaction/)
-- **Assignment 4: Interactive design**
+- **Assignment 4: Interactive Self Portrait**
 	- Create a simple interactive design
 	- Give the user an instruction using `text`
 		- For example: "Click to add shapes"
 	- Change color, position or size of shapes
+
+## Week 5 **Text**
+- [p5: text](notes/text)
+	- [Text Example](examples/{{site.semester}}/text/)
+- **Assignment 3: Logo**
+	- Make a logo design with your name
+	- Use text and other shapes
+	- Drawing and text functions must use variables
 
 
 ## Week 5 **Logic**

@@ -1,7 +1,7 @@
 ---
 layout: slides
 title: 	p5.js
-week: 1
+week: 2
 ---
 
 <!-- HTML canvas -->
@@ -119,31 +119,42 @@ function draw() {
 </div>
 
 <div class="slide">
+	<h2>p5 Reference</h2>
+	<p>The <a href="https://p5js.org/reference/" target="blank">p5 Reference</a> page has a list of all the functions and properties with links to examples and descriptions.</p>
+	<p>This type of resource is know as <note>documentation</note>.  Documentation is an essential resource for learning any programming language.  Reading and using documentation is an important skill for a developer to work on.</p>
+	<p>Click on the <em>shape</em> link in the reference page and choose a <em>2D primitive</em> and read the reference page.  These are what we'll be covering first.</p>
+</div>
+
+<div class="slide">
 	<h2>Shapes</h2>
 	<p>In our sketch we are using default <a href="https://p5js.org/reference/#group-Shape" target="blank">shape</a> functions defined by <note>p5</note>, including <code>ellipse</code> and <code>rect</code>.</p>
 	<p>These lines are functions.  Eventually you will write your own functions but for now we're going to learn about them using the <note>p5</note> defined functions.</p>
+	<p>In p5, there are default shapes with different qualities.  Shapes are defined by the position in the canvas, the size of the shape and the type of shape.</p>
 </div>
 
 <div class="slide">
-	<pre><code>ellipse(150, 200, 50, 100);</code></pre>
-	<p>A function is a series of instructions for our program.  It's sort of like a mini program within the larger program.  A function has a name that describes what it does, such as <code>ellipse</code> which renders or draws an ellipse on the canvas.</p>
+	<h2>Rect</h2>
+	<pre><code>rect(100, 100, 200, 250);</code></pre>
+	<p>The order of the <code>rect</code> arguments is also <code>(x, y, width, height)</code>.</p>
 </div>
 
+
+
 <div class="slide">
+	<p><note>Note:</note> In these examples I am omitting the <code>draw</code> function because the drawing only needs to be rendered once.  We'll talk more about this when we cover interactivity.</p>
 	<div class="ex" data-preview>function setup() {
 	createCanvas(200, 200);
-}
-
-function draw() {
-	background(127);
-	ellipse(100, 100, 100, 100);
+	background(220);
+	rect(50, 50, 100, 100);
 }</div>
 </div>
 
 <div class="slide">
 	<p>A function is called using the <code>()</code> at the end.  These are the special characters that lets the program know to call the function or make it do whatever it is written to do.</p>
 	<p>Inside the <code>()</code> are <note>arguments</note> which we can change to change the outcome of the function.  For an <code>ellipse</code> we use the arguments to determine the x and y position of the ellipse on the canvas, as well as the width and height.</p>
+	<p>In these example, all of the arguments are numerical values like <code>100</code> or <code>200</code>.</p>
 </div>
+
 
 <div class="slide">
 	<p>The order of arguments is important.  For ellipse it is <code>(x, y, width, height)</code>.</p>
@@ -151,22 +162,82 @@ function draw() {
 </div>
 
 <div class="slide">
-	<pre><code>rect(100, 100, 200, 250);</code></pre>
-	<p>The order of the <code>rect</code> arguments is also <code>(x, y, width, height)</code>.</p>
+	<h2>Ellipse & Arc</h2>
+	<pre><code>ellipse(150, 200, 50, 100);</code></pre>
+	<p>A function is a series of instructions for our program.  It's sort of like a mini program within the larger program.  A function has a name that describes what it does, such as <code>ellipse</code> which renders or draws an ellipse on the canvas.</p>
 </div>
 
 <div class="slide">
 	<div class="ex" data-preview>function setup() {
 	createCanvas(200, 200);
-}
+	background(220);
+	ellipse(100, 100, 100, 100);
+}</div>
+</div>
 
-function draw() {
-	background(127);
-	rect(50, 50, 100, 100);
+
+<div class="slide">
+	<pre><code>arc(150, 200, 50, 100, 0, PI);</code></pre>
+	<p><code>arc</code> is like an <code>ellipse</code> that has a starting and ending point, like a pie.  It also uses the Math constant, <code>PI</code>, as a measurement for the start and end point.</p>
+	<p>The starting point <code>0</code> is at 3 o'clock on a clock face.  <code>PI</code> is halfway around at 9 o'clock and <code>PI * 2</code> or <code>TWO_PI</code> brings us back to the beginning.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(200, 200);
+	background(220);
+	arc(100, 100, 100, 100, 0, PI);
 }</div>
 </div>
 
 <div class="slide">
+	<h2>Point, line, triangle, quad</h2>
+	<p><code>rect</code>, <code>ellipse</code> and <code>arc</code> use an xy coordinate to determine the position and then add a width and height to determine the size of the shape.</p>
+	<p>These shapes use a series of points and fill lines between the points.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(200, 200);
+	background(220);
+	point(100, 10); // one xy coordinate
+	line(20, 20, 180, 20); // two xy coordinates
+	// after 2 points a fill is added
+	triangle(40, 40, 100, 100, 160, 40); // three xy coordinates
+	quad(60, 120, 140, 120, 180, 180, 20, 180); // four xy coordinates
+}</div>
+</div>
+
+<div class="slide">
+	<h2>Comments</h2>
+	<p>In the previous example, I added some notes into my code using <em>comments</em>.  In programming, comments are sections of the script that are not read by the compiler or interpreter.  They are used for developers to write notes to other developers explaining what the code is doing in plain English.</p>
+	<p>Comments can also be used to remove sections of code temporarily to test a program.</p>
+</div>
+
+<div class="slide">
+	<p>In JavaScript, there are two types of comments:</p>
+	<pre><code>// single line </code></pre>
+	<p>Single lines comments are used to explain one line of code or create sections of code.</p>
+	<pre><code>// face
+rect(10, 10, 10, 10);
+ellipse(10, 10, 20); // left eye</code></pre>
+</div>
+
+<div class="slide">
+	<pre><code>/*
+	multi-line
+*/</code></pre>
+	<p>Multi-line comments are for blocks of comments to explain an entire file or large section of code.</p>
+	<pre><code>/*
+	Self Portrait
+	by Wayne Gretzky
+	version 1.0
+	Jan 1 1999
+*/</code></pre>
+</div>
+
+
+<!-- <div class="slide">
 	<p>The <code>fill</code> and <code>stroke</code> functions set the <a href="https://p5js.org/reference/#group-Color" target="blank">color</a>. We'll cover these functions in depth next week.</p>
 	<p>Try playing around with these functions and arguments to change the drawing and create your own self portrait.  We'll go over the functions in further detail next week.</p>
-</div>
+</div> -->
