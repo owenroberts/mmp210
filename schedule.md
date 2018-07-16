@@ -47,10 +47,10 @@ Go to [Home](index.html)
 - [p5 system variables](notes/system_variables)
 - [Interaction](notes/interaction_1)
 - **Assignment 4: Interactive Self Portrait**
-	- Create a simple interactive design
-	- Give the user an instruction using `text`
-		- For example: "Click to add shapes"
-	- Change color, position or size of shapes
+	- Choose part of your self portrait to animate with interaction
+	- Animate size, position or color, or a combination
+	- Use the `map` function
+	- Add an instruction for the user in the HTML using a paragraph tag
 
 ## Week 5 **Text**
 - [p5: text](notes/text)

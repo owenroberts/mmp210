@@ -37,6 +37,72 @@ function draw() {
 	<h2>Static system variables</h2>
 	<p>Some basic variables will stay the same throughout the lifetime of your sketch</p>
 	<p><code>width</code> and <code>height</code> are static variables that are set to the width and height of the sketch, which is <code>100 x 100</code> by default or whatever is set in <code>createCanvas</code>.</p>
+	<p>Try changing the values in <code>createCanvas</code> to see the canvas change sizes.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(200, 200);
+	background(220);
+}</div>
+</div>
+
+<div class="slide">
+	<p>Whatever arguments are used for <code>createCanvas</code> also become the values of <code>width</code> and <code>height</code>.</p>
+	<p>Those values can be used to draw shapes relative to the size of the canvas.  Try changing the values in <code>createCanvas</code> again and see the ellipse shape change as well.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(200, 200);
+	background(220);
+	ellipse(width/2, height/2, width);
+}</div>
+</div>
+
+<div class="slide">
+	<p>The ellipse is drawn in the middle of the canvas and fills up the width of the canvas.  The x position is calculated by dividing width in half, while the y position is calculated by dividing height in half.  The size of the ellipse is the same as the width of the canvas.</p>
+	<p>Let's rewrite this example using variables to make it clear what we're doing.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(200, 200);
+	background(220);
+	var x = width/2;
+	var y = height/2;
+	var d = width; // diameter
+	ellipse(x, y, d);
+}</div>
+</div>
+
+<div class="slide">
+	<p>Even though the variables are not necessary for the code to work, it makes it clear that we are defining the x position of the ellipse based on the width of the canvas, and likewise with y position and diameter of the circle.</p>
+	<p>This example uses rectangles to make a checker pattern.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(200, 200);
+	background(220);
+	noStroke();
+	fill('plum');
+	
+	var x = 0;
+	var y = 0;
+	var w = width/2;  // width
+	var h = height/2; // height
+	rect(x, y, w, h);
+
+	x = width/2;
+	y = height/2;
+	rect(x, y, w, h);
+}</div>
+</div>
+
+
+<div class="slide">
+	<p>I'm setting x and y to start and then changing them for the second rectangle.  The width and height variables stay the same.  I can redefine my x and y variables or width and height as many times as I need to.</p>
 	<p>Let's use <code>width</code> and <code>height</code> to draw a simple grid.</p>
 </div>
 
@@ -46,8 +112,20 @@ function draw() {
 	background("white");
 	stroke("plum");
 	strokeWeight(2);
-	line(width/2, 0, width/2, height);
-	line(0, height/2, width, height/2);
+
+	// line down the middle of the canvas from top to bottom
+	var x1 = width/2;
+	var y1 = 0;
+	var x2 = width/2;
+	var y2 = height;
+	line(x1, y1, x2, y2);
+
+	// line across the middle of the canvas from left to right
+	x1 = 0;
+	y1 = height/2;
+	x2 = width;
+	y2 = height/2;
+	line(x1, y1, x2, y2);
 }</div>
 </div>
 
@@ -63,10 +141,12 @@ function draw() {
 	fill("plum");
 
 	// draw line between the mouse position and origin point
-	line(mouseX, mouseY, 0, 0);
+	var x = mouseX;
+	var y = mouseY;
+	line(x, y, 0, 0);
 
 	// draw circle at mouse position
-	ellipse(mouseX, mouseY, 40);
+	ellipse(x, y, 40);
 }</div>
 </div>
 
@@ -82,12 +162,19 @@ function draw() {
 	strokeWeight(2);
 	fill("plum");
 
+	// draw ellipse at previous mouse position
+	var x = pmouseX;
+	var y = pmouseY;
+	var s = 40; // size
+	ellipse(x, y, 40);
+	
 	// draw line between current and previous mouse position
 	line(mouseX, mouseY, pmouseX, pmouseY);
-
-	// draw an ellipse at each position
-	ellipse(pmouseX, pmouseY, 40);
-	ellipse(mouseX, mouseY, 20);
+	
+	// draw ellipse at current mouse position
+	x = mouseX;
+	y = mouseY;
+	ellipse(x, y, s/2); // half the size
 }</div>
 </div>
 
@@ -100,7 +187,10 @@ function draw() {
 	background(220);
 
 	// using frameCount as the ellipse size
-	ellipse(width/2, height/2, frameCount);
+	var x = width/2;
+	var y = height/2;
+	var s = frameCount; // size
+	ellipse(x, y, s);
 }</div>
 </div>
 
