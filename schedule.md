@@ -23,7 +23,7 @@ Go to [Home](index.html)
 ## Week 2 **Shape & Color**
 
 - [JavaScript Intro](notes/javascript)
-- [Intro to p5](notes/p5) ~ [Self Portrait example](examples/{{site.semester}}/selfportrait){:target="blank"}
+- [Intro to p5](notes/p5)
 - [p5: Color](notes/color)
 - [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/)
 - **Assignment 2: Self Portrait**
@@ -34,7 +34,6 @@ Go to [Home](index.html)
 ## Week 3 **Variables**
 - [JavaScript statements & operators](notes/javascript/statements.html)
 - [Variables](notes/variables/)
-- [Code Academy: Variables](https://www.codecademy.com/courses/learn-javascript-introduction/lessons/variables/exercises/intro-variables){:target="blank"}
 - [JavaScript debugging](notes/debug)
 - [Debugging challenge](notes/debug/debug.zip)
 - **Assignment 3: Self Portrait with Variables**
@@ -54,7 +53,7 @@ Go to [Home](index.html)
 
 ## Week 5 **Text**
 - [p5: text](notes/text)
-	- [Text Example](examples/{{site.semester}}/text/)
+- [Code Academy: Variables](https://www.codecademy.com/courses/learn-javascript-introduction/lessons/variables/exercises/intro-variables){:target="blank"}
 - **Assignment 3: Logo**
 	- Make a logo design with your name
 	- Use text and other shapes

@@ -79,9 +79,13 @@ function keyPressed() {
 </div>
 
 <div class="slide">
-	<h2>Adding a drawing</h2>
+	<h2>Position</h2>
 	<p>We can extend the interactive drawing to apply to more shapes or combinations of shapes.</p>
 	<p>Using the self portrait drawing as a basis, if I want to move the whole thing, I need to add offsets to the shapes so they move relative to the same point.</p>
+</div>
+
+<div class="slide">
+	<iframe class="sketch" src="position" width="600" height="400" frameborder="0"></iframe>
 </div>
 
 <div class="slide">
@@ -187,6 +191,11 @@ function mousePressed() {
 </div>
 
 <div class="slide">
+	<iframe class="sketch" src="size" width="600" height="400" frameborder="0"></iframe>
+</div>
+
+
+<div class="slide">
 	<div class="ex" data-preview>var s = 10;
 
 function draw(){
@@ -242,6 +251,10 @@ function mousePressed() {
 
 <div class="slide">
 	<div class="ex" data-preview>// self portrait
+function setup() {
+    createCanvas(400, 400);
+}
+
 function draw() {
 	background(220);
 	rectMode(CENTER);

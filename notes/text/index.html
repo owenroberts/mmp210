@@ -1,28 +1,28 @@
 ---
 layout: slides
 title: p5 text
-week: 3
+week: 5
 ---
 <div class="slide">
-	<p>We can add text to our sketches with the <a href="http://p5js.org/reference/#/p5/text" target="blank">text()</a> function of <code>p5</code>.</p>
+	<p>The <a href="http://p5js.org/reference/#/p5/text" target="blank">text()</a> function defined by <code>p5</code> renders strings of text.</p>
 	<p><code>text(string, x, y)</code> requires at least 3 arguments:</p>
 	<ul>
 		<li><code>string</code>: the text to display</li>
 		<li><code>x</code>: x-coordinate of text</li>
 		<li><code>y</code>: y-coordinate of text</li>
 	</ul>
+	<p>Simple example:</p>
 </div>
 <div class="slide">
-	<p>A simple example:</p>
-	<pre><code>function setup() {
-	createCanvas(640, 480);
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
 	background("white");
 	text("MMP 210", 20, 20);	
-}</code></pre>
+}</div>
 </div>
 
 <div class="slide">
-	<h2>Let's review strings</h2>
+	<h2>Strings review</h2>
 	<p>A <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="blank">string</a> is a datatype comprised of a "string" of characters.  Characters can be alphabetic, numeric and special characters.  Strings can be made of English characters as well as characters from other supported languages. Some examples:</p>
 	<pre><code><c></c>var str1 = "Hello world.";
 <c></c>var str2 = "你好，世界";
@@ -33,7 +33,8 @@ week: 3
 </div>
 
 <div class="slide">
-	<p>Strings have a bunch of <code>methods</code> and <code>properties</code> that can be used to manipulate them.</p>
+	<p>Strings have <code>methods</code> and <code>properties</code> used to manipulate them.</p>
+	<p>We'll talk more about <code>methods</code> and <code>properties</code> generally later in the semester, but for now, a <code>method</code> is a <code>function</code> associated with one object or variable, and a <code>property</code> is like a variable also associated with an object.  The difference is basically the come after a dot at the end of a variable name.</p>
 	<pre><code><c></c>var str = "Hello world";
 <c></c>console.log(str.length);
 <c></c>console.log(str[0]);
@@ -61,47 +62,196 @@ week: 3
 <div class="slide">
 	<h2>Styling strings with p5</h2>
 	<p>p5 uses the the <code>stroke</code> and <code>fill</code> colors like other shapes, but also uses <code>textSize()</code>, <code>textStyle()</code> and <code>textFont()</code> to change the style of our text.</p>
-	<pre><code>function setup() {
-	createCanvas(640, 480);
-	background("white");
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	var canvas = createCanvas(640, 360);
+	canvas.drawingContext.miterLimit = 2; // fix for stroke edges
+	background(254);
 
 	text("MMP 210", 20, 20);
 
 	textSize(100);
-	text("Week 7", 20, 150);
+	text("Week 7", 20, 100);
 
+	fill('plum');
 	textStyle(ITALIC);
-	text("p5 Text", 20, 300);
+	text("p5 Text", 100, 200);
 
-	textFont("Georgia");
-	text("MMP 210", 220, 20);
-}</code></pre>
+
+	stroke('darkblue');
+	strokeWeight(10);
+	textFont("menlo");
+	text("MMP 210", 200, 300);
+}</div>
 </div>
 
 <div class="slide">
 	<p>p5 can also use other default HTML fonts, anything that is <a href="http://www.cssfontstack.com/" target="blank">browser supported</a>.</p>
-
-	<pre><code>function setup() {
-	createCanvas(640, 480);
-	background("white");
-
-	textFont("Monaco");
-	text("MMP 210", 20, 20);
-}</code></pre>
 </div>
 
 <div class="slide">
-	<p>Paragraph styles are set with <code>textWidth()</code> and <code>textAlign()</code>.</p>
-	<pre><code>function setup() {
-	createCanvas(640, 480);
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
 	background("white");
-
-	textWidth(640);
-	textAlign(CENTER);
-
-	var paragraph = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse earum quod exercitationem vero, temporibus veritatis in ea voluptates dolore doloremque amet sint, doloribus blanditiis maiores enim qui fuga. Adipisci, quaerat?"
-
-	text(paragraph, 640/2, 20);
-}</code></pre>
+	textSize(100);
+	textFont("Comic Sans MS");
+	text("MMP 210", 20, 200);
+}</div>
 </div>
 
+<div class="slide">
+	<h2>Layout and alignment</h2>
+	<p>A rectangle to contain the text can be specified with the optional 4th and 5th arguments for width and height.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
+	background("white");
+
+	var paragraph = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse earum quod exercitationem vero, temporibus veritatis in ea voluptates dolore doloremque amet sint, doloribus blanditiis maiores enim qui fuga. Adipisci, quaerat?";
+
+	text(paragraph, 20, 20, 200, 100);
+}</div>
+</div>
+
+<div class="slide">
+	<p>Paragraph styles are set with <code>textAlign()</code>, which uses the first argument for horizontal alignment and an optional second argument for vertical alignment.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
+	textSize(40);
+	textFont('Comic Sans MS');
+	background(220);
+	
+	var str = "banana";
+	var x = 160;
+	var y = 40;
+
+	// default is textAlign(LEFT);
+	text(str, x, y);
+	stroke('red');
+	strokeWeight(2);
+	line(x, y - 20, x, y);
+	y += 100;
+	
+	textAlign(CENTER);
+	noStroke();
+	text(str, x, y);
+	stroke('red');
+	strokeWeight(2);
+	line(x, y - 20, x, y);
+	y += 100;
+	
+	textAlign(RIGHT);
+	noStroke();
+	text(str, x, y);
+	stroke('red');
+	strokeWeight(2);
+	line(x, y - 20, x, y);
+	y += 100;
+}</div>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
+	textSize(40);
+	textFont('Comic Sans MS');
+	background(220);
+	
+	var str = "banana";
+	var w = textWidth(str);
+	var x = 160;
+	var y = 40;
+
+	// default is textAlign(LEFT, BOTTOM);
+	text(str, x, y);
+	stroke('red');
+	strokeWeight(2);
+	line(x, y, x + w, y);
+	y += 100;
+	
+	textAlign(LEFT, CENTER);
+	noStroke();
+	text(str, x, y);
+	stroke('red');
+	strokeWeight(2);
+	line(x, y, x + w, y);
+	y += 100;
+	
+	textAlign(LEFT, TOP);
+	noStroke();
+	text(str, x, y);
+	stroke('red');
+	strokeWeight(2);
+	line(x, y, x + w, y);
+}</div>
+</div>
+
+
+<div class="slide">
+	<p>Text leading is the distance between lines in a paragraph, controlled by textLeading function.</p>
+</div>
+
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
+	background("white");
+	textSize(20);
+
+	var paragraph = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse earum quod exercitationem vero, temporibus veritatis in ea voluptates dolore doloremque amet sint, doloribus blanditiis maiores enim qui fuga. Adipisci, quaerat?";
+
+	textLeading(10);
+
+	text(paragraph, 20, 20, 400, 400);
+}</div>
+</div>
+
+<div class="slide">
+	<h2>Interacting with text</h2>
+	<p>How might we make the previous example interactive?</p>
+	<p>Remember to make this interactive we need to substitute hard coded values with numbers.</p>
+	<p>This is a simple one because the there's an obvious hard coded value, the <code>textLeading(10)</code> argument.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function draw() {
+	background("white");
+	
+	var paragraph = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse earum quod exercitationem vero, temporibus veritatis in ea voluptates dolore doloremque amet sint, doloribus blanditiis maiores enim qui fuga. Adipisci, quaerat?";
+
+	var s = mouseX;
+	textSize(s);
+
+	var leadingSize = mouseY;	
+	textLeading(leadingSize);
+
+	text(paragraph, 20, 20, 400, 400);
+}</div>
+</div>
+
+<div class="slide">
+	<p>We can also interact with the data within a string.</p>
+	<p>This example changes the number of characters displayed using a little math, the <code>length</code> property and the <code>substring</code> function.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function draw() {
+	background("white");
+	textSize(100);
+	textFont('Comic Sans MS');
+	textAlign(LEFT, CENTER);
+	
+	var str = "banana";
+	var length = str.length; // number of characters in the string
+	var n = map(mouseX, 0, width, 0, length); // map position of x to number of characters
+
+	text(str.substring(0, n), 20, height/2);
+}</div>
+</div>
