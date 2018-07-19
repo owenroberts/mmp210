@@ -54,18 +54,17 @@ Go to [Home](index.html)
 ## Week 5 **Text**
 - [p5: text](notes/text)
 - [Code Academy: Variables](https://www.codecademy.com/courses/learn-javascript-introduction/lessons/variables/exercises/intro-variables){:target="blank"}
-- **Assignment 3: Logo**
+- **Assignment 5: Logo**
 	- Make a logo design with your name
-	- Use text and other shapes
+	- Use text with other shape functions
 	- Drawing and text functions must use variables
 
 
-## Week 5 **Logic**
+## Week 6 **Logic**
 - [JavaScript comparison operators and conditionals](notes/logic)
 - [Drawing with logic](notes/logic/p5.html)
-	- [Class example](examples/{{site.semester}}/logic/)
-- **In class**: [Code Academy: Control Flow](https://www.codecademy.com/courses/learn-javascript-control-flow/lessons/control-flow/exercises/control-flow-intro)
-- **Assignment 5: Control Flow**
+- [Code Academy: Control Flow](https://www.codecademy.com/courses/learn-javascript-control-flow/lessons/control-flow/exercises/control-flow-intro){:target="blank"}
+- **Assignment 5: Interactive Logo**
 	- Create a design that splits the screen in half or quadrants
 	- Create a user interaction that changes according to the quadrant
 	- Change could be color, shape or size
@@ -81,7 +80,6 @@ Go to [Home](index.html)
 - Inspiration
 	- [Animated name logos](http://www.flamingtext.com/Animated-Logos)
 	- [Animated logos](http://www.howdesign.com/featured/animated-logos/)
-
 
 
 ## Week 7 **Loops**

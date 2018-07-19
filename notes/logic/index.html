@@ -1,57 +1,33 @@
 ---
 layout: slides
-title: MMP 210
-week: 5
-dek: JavaScript comparison operators & conditionals
+title: Logic
+week: 6
 ---
 
 <div class="slide">
-	<h2>Comparison operators</h2>
-	<p>Using comparison operators, we can test the values of variables to detect if they are equivalent.</p>
+	<h2>Making decisions</h2>
+	<p>When designing a program, there are many pointer where the program needs to do one thing or another based on the user input or some other condition.</p>
+	<p>Computer make decisions using a similar process that we do, by creating conditions to simplify a question.</p>
 </div>
+
 <div class="slide">
-	<pre><code><c></c>var x = 1;
-<c></c>var y = 0;
-<c></c>var z = "1";
-<c></c>var a = 5;
-
-<c></c>x == y;
-<c></c>x != y;
-<c></c>x == z;
-
-<c></c>x === z;
-<c></c>x !== z;
-
-<c></c>x > y;
-<c></c>x < y;
-<c></c>x >= z;
-<c></c>x <= a;</code></pre>
+	<p>For example, think of how you decided to wear the outfit you are wearing now.  Lot's of decisions when into it, but most decision can be boiled down into binary options.</p>
+	<p>Is it cold outside?  Then I will wear a jacket.</p>
 </div>
+
 <div class="slide">
-	<ul>
-		<li><code>==</code> two values are the same</li>
-		<li><code>!=</code> two values are <strong>not</strong> the same</li>
-		<li><code>></code> value 1 is greater than value 2</li>
-		<li><code><</code> value 1 is less than value 2</li>
-		<li><code>>=</code> value 1 is greater than or equal to value 2</li>
-		<li><code><=</code> value 1 is less than or equal to value 2</li>
-		<li><code>===</code> two values are the same and same type</li>
-		<li><code>!==</code> two values are <strong>not</strong> the same or <strong>not</strong> the same type</li>
-	</ul>
-</div>
-<div class="slide">
-	<p>We can compare strings as well as numbers.</p>
-	<pre><code><c></c>var x = "hello";
-<c></c>var y = "world";
-<c></c>x == y;
-<c></c>x != y;</code></pre>
+	<p>In programming, those decisions are referred as conditional statements.  A <note>conditional statement</note> evaluates a condition to be either <code>true</code> or <code>false</code> and then performs actions based on the outcome.</p>
+	<p>JavaScript and other programming languages use a type of data called a <note>boolean</note> to represent binary values as <code>true</code> or <code>false</code>.</p>
 </div>
 
 <div class="slide">
 	<h2>Booleans</h2>
 	<p>A <code>boolean</code> is a datatype that can be either <code>true</code> or <code>false</code>.</p>
 	<p>In JavaScript other values will evaluate to <code>false</code>, such as <code>0</code>, <code>""</code> (empty string), <code>NaN</code>, <code>null</code>, and <code>undefined</code>.</p>  
-	<p>Other values default to <code>true</code>, such as <code>"Hello World"</code>, <code>1</code>, <code>99</code>, or <code>-99</code>.  Try evaluating some booleans in the console with this syntax:</p>
+	<p>Other values default to <code>true</code>, such as <code>"Hello World"</code>, <code>1</code>, <code>99</code>, or <code>-99</code>.  Try evaluating some booleans in the console.</p>
+</div>
+
+<div class="slide">
 	<pre><code><c></c>Boolean(true);
 <c></c>Boolean(false);
 <c></c>Boolean("");
@@ -60,40 +36,81 @@ dek: JavaScript comparison operators & conditionals
 <c></c>Boolean(4);</code></pre>
 </div>
 
-
-
 <div class="slide">
-	<h2>Conditionals</h2>
-	<p>Using booleans, we can make decision in our program with conditional statements starting with the keyword <code>if</code>:</p>
-	<pre><code><c></c>var answer = "hello world";
-<c></c>if ("hello world" == answer) {
-	console.log("Correct!");
-}
-<c></c>var response = 10;
-<c></c>if (response != answer) {
-	console.log("That's incorrect.");
-}</code></pre>
+	<h2>if</h2>
+	<p><code>if</code> is the key word used in JavaScript to begin a conditional statement.</p>
+	<p>Just like in the example, we say if something is true (if the weather is cold) then do something (wear a jacket).</p>
+	<p>Let's look at a simple example.</p>
+	<p>Remember <code>mouseX</code> and <code>mouseY</code> from the interaction lesson?  p5 has another system variable, <code>mouseIsPressed</code>.  It also tells us some information about the user interaction with the computer.  In this case, it is simply whether or not the user is pressing a button on the mouse. </p>
 </div>
 
 <div class="slide">
-	<p>We can evaluate statements using numbers and strings as well:</p>
-	<pre><code><c></c>var x = 0;
-<c></c>var y = 1;
-<c></c>if (x == y) { 
-	console.log("x is equal to y"); 
-}
-<c></c>if (x < y) { 
-	console.log("x is less than y"); 
-}</code></pre>
+	<div class="ex" data-preview>function draw() {
+	background('black');
+	if (mouseIsPressed) {
+		background('plum');
+	}
+	textSize(20);
+	fill(255);
+	text('mouseIsPressed = ' + mouseIsPressed, 20, 40);
+}</div>
+</div>
 
-	<pre><code><c></c>var a = "hello";
-<c></c>var b = "world";
-<c></c>if (a.length == b.length) { 
-	console.log("hello and world have the same number of characters"); 
-}
-<c></c>if (a == b) { 
-	console.log("hello and world are the same string"); 
-}</code></pre>
+<div class="slide">
+	<p>This example uses a conditional statement to evaluate whether the user is pressing a mouse button.</p>
+	<p>If the user is pressing a mouse button, the background is changed to <code>'plum'</code>.</p>
+</div>
+
+
+<div class="slide">
+	<h2>Comparison operators</h2>
+	<p>In some cases, we need to figure out conditions that are not provided by simple boolean values like <code>mouseIsPressed</code>.</p>
+	<p>In these cases, we can use comparison operators to evaluate a condition.</p>
+	<p>The result of a comparison will always be <code>true</code> or <code>false</code>.</p>
+</div>
+
+<div class="slide">
+	<table>
+		<tr>
+			<th>operator</th>
+			<th>condition</th>
+		</tr>
+		<tr><td><code>==</code></td>	<td>two values are the same</td></tr>
+		<tr><td><code>!=</code></td>	<td>two values are <strong>not</strong> the same</td></tr>
+		<tr><td><code>></code></td>	<td>value 1 is greater than value 2</td></tr>
+		<tr><td><code><</code></td>	<td>value 1 is less than value 2</td></tr>
+		<tr><td><code>>=</code></td>	<td>value 1 is greater than or equal to value 2</td></tr>
+		<tr><td><code><=</code></td>	<td>value 1 is less than or equal to value 2</td></tr>
+		<tr><td><code>===</code></td>	<td>two values are the same and same type</td></tr>
+		<tr><td><code>!==</code></td>	<td>two values are <strong>not</strong> the same or <strong>not</strong> the same type</td></tr>
+	</table>
+</div>
+
+
+<div class="slide">
+	<p>In the following example, the conditional statement compares the current position of the mouse on the x axis to the middle point on the x axis, or <code>width / 2</code>.</p>
+	<p>Depending on where the mouse is, this condition will result in different code being called and a different shape being drawn.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function draw() {
+	background(220);
+
+	if (mouseX > width / 2) {
+		ellipse(width/2, height/2, 100);
+	}
+  	
+	stroke('white'); // display center line
+	line(width / 2, 0, width / 2, height);
+		
+ 	fill(0); 	// display mouse value
+	noStroke();
+	textSize(20);
+	textFont('menlo');
+	text('mouseX: ' + mouseX, 20, 40);
+	text('width/2: ' + width/2, 20, 60);
+	text(mouseX + ' > '+width/2+': ' +(mouseX > width/2), 20, 80);
+}</div>
 </div>
 
 <div class="slide">
