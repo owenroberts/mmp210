@@ -1,6 +1,6 @@
 ---
 layout: slides
-title: Logic
+title: Conditional logic
 week: 6
 ---
 
@@ -12,7 +12,7 @@ week: 6
 
 <div class="slide">
 	<p>For example, think of how you decided to wear the outfit you are wearing now.  Lot's of decisions when into it, but most decision can be boiled down into binary options.</p>
-	<p>Is it cold outside?  Then I will wear a jacket.</p>
+	<blockquote>Is it cold outside?  Then I will wear a jacket.</blockquote>
 </div>
 
 <div class="slide">
@@ -107,35 +107,115 @@ week: 6
 	noStroke();
 	textSize(20);
 	textFont('menlo');
-	text('mouseX: ' + mouseX, 20, 40);
+	text('mouseX: ' + round(mouseX), 20, 40);
 	text('width/2: ' + width/2, 20, 60);
-	text(mouseX + ' > '+width/2+': ' +(mouseX > width/2), 20, 80);
+	text(round(mouseX) + ' > '+width/2+': ' +(mouseX > width/2), 20, 80);
 }</div>
 </div>
 
 <div class="slide">
 	<h2>else</h2>
 	<p>We can use <code>else</code> to tell our program what to do if the conditional is false:</p>
-	<pre><code><c></c>if (a == b) { 
-	console.log("hello and world are the same string"); 
-} else {
-	console.log("hello and world are NOT the same string")
-}</code></pre>
 </div>
 
+<div class="slide">
+	<div class="ex" data-preview>function draw() {
+	background(220);
+	rectMode(CENTER);
+
+	if (mouseX > width / 2) {
+		ellipse(width/2, height/2, 100);
+	} else {
+		rect(width/2, height/2, 100, 100);
+	}
+  	
+	stroke('white'); // display center line
+	line(width / 2, 0, width / 2, height);
+		
+ 	fill(0); 	// display mouse value
+	noStroke(); textSize(20); textFont('menlo');
+	text(round(mouseX) + ' > '+width/2+': ' +(mouseX > width/2), 20, 40);
+}</div>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function draw() {
+	if (mouseIsPressed) {
+		background('plum');
+	} else {
+		background('lightblue');
+	}
+}</div>
+</div>
 
 <div class="slide">
 	<h2>else if</h2>
 	<p><code>else if</code> is to test further conditions that are not covered by a simple <code>else</code>.</p>
-	<pre><code><c></c>if (x == y) {
-	console.log("The values are equal.");
-} else if (x < y) {
-	console.log(x + " is less than " + y);
-} else {
-	console.log(x + " is greater than " + y);
-}</code></pre>
+	<blockquote>If it's snowing, I will wear a heavy coat.  If it's raining, I will where a rain coat.  Otherwise I will wear a jacket.</blockquote>
+	<p>The next example shows a sketch that divides the vertical space into three parts and draw an ellipse in the section where the mouse is, creating a system like a stop light.</p>
 </div>
 
+<div class="slide">
+	<div class="ex" data-preview>function draw() {
+	background(220);
+	rectMode(CENTER);
+	noStroke();
+
+	if (mouseY < 120) {
+		ellipse(width/2, 60, 120);
+	} else if (mouseY < 240) {
+		ellipse(width/2, 180, 120);
+	} else {
+		ellipse(width/2, 300, 120);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>Can we rewrite the above example using variables?</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function draw() {
+	background(220);
+	rectMode(CENTER);
+	noStroke();
+
+	var row = height/3; // the height of each row
+
+	if (mouseY < row) {
+		ellipse(width/2, 60, 120);
+	} else if (mouseY < row * 2) {
+		ellipse(width/2, row + row/2, row);
+	} else {
+		ellipse(width/2, row * 2 + row/2, row);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<h2>if statements with no brackets</h2>
+	<p>Sometimes you will see if statements that don't have curly brackets.  This will work in the case where there is only one line following the if statenment conditional.</p>
+	<p>This is fine to do while writing code, but if you decide to expand the if statement you will need to add curly braces, so it rarely saves that much time.  Using curly brackets in all cases is recommended.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>if (true)
+	alert('this works');</div>
+	<div class="ex" data-preview>// this is a problem
+if (false)
+	alert('this will not run');
+	alert('this will, but maybe does not look that way');</div>
+	<div class="ex" data-preview>if (false)
+	alert('this will not run');
+else
+	alert('this also works');</div>
+</div>
+
+
+<!-- if statement inside of if statements -->
+
+<!-- quadrants -->
 
 <div class="slide">
 	<h2>Logical operators - AND and OR</h2>

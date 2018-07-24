@@ -61,7 +61,7 @@ Go to [Home](index.html)
 
 
 ## Week 6 **Logic**
-- [JavaScript comparison operators and conditionals](notes/logic)
+- [Conditional logic](notes/logic)
 - [Drawing with logic](notes/logic/p5.html)
 - [Code Academy: Control Flow](https://www.codecademy.com/courses/learn-javascript-control-flow/lessons/control-flow/exercises/control-flow-intro){:target="blank"}
 - **Assignment 5: Interactive Logo**
