@@ -202,38 +202,74 @@ week: 6
 <div class="slide">
 	<div class="ex" data-preview>if (true)
 	alert('this works');</div>
-	<div class="ex" data-preview>// this is a problem
-if (false)
-	alert('this will not run');
-	alert('this will, but maybe does not look that way');</div>
+
 	<div class="ex" data-preview>if (false)
 	alert('this will not run');
 else
 	alert('this also works');</div>
+
+	<div class="ex" data-preview>// this is a problem
+if (false)
+	alert('this will not run');
+	alert('this will, but maybe does not look that way');</div>
 </div>
 
 
 <!-- if statement inside of if statements -->
+<div class="slide">
+	<h2>Nested conditional statements</h2>
+	<p><code>if</code> statements can be placed inside of each other.  There is no limit to the number or structure of if statements used in a program.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function draw() {
+	background(220);
+	rectMode(CENTER);
+
+	if (mouseIsPressed) {
+		if (mouseX > width/2) {
+			ellipse(width/2, height/2, 200);
+		} else {
+			rect(width/2, height/2, 200, 200);
+		}
+	}	
+}</div>
+</div>
 
 <!-- quadrants -->
 
 <div class="slide">
-	<h2>Logical operators - AND and OR</h2>
-	<p>There are a number of logical statements that help us evaluate more complex statements.  We can use <code>&&</code> and <code>||</code> to add statements to our condition.  <code>&&</code> requires all statements to evaluate true, reading left to right.  <code>||</code> requires one of the statements on either side to be true.</p>
-	</div>
-	<div class="slide">
-    <pre><code><c></c>true && false
-<c></c>7 == "7" && NaN != 1
-<c></c>false || true
-<c></c>7 === "7" || 1 == 1 && !(false)</code></pre>
-	<p>We can also uses parathesis <code>()</code> to nest logic rules.</p>
-	<pre><code><c></c>( true && true || false ) && true</code></pre>
+	<h2>AND and OR</h2>
+	<p>In the above example, we need a nested if statement to decide first if the mouse is pressed and then the position of the mouse.</p>
+	<p>Logical conditions can be combined in one statement using the && (AND) and || (OR) operators.  AND operators require both conditions to be true, while OR operators will be true if either condition is true.</p>
 </div>
-	<div class="slide">
-	<pre><code><c></c>var min = 100;
-<c></c>var max = 500;
-<c></c>var x = 200;
-<c></c>if (x > min && x < max) {
-	console.log("x is in range");
-}</code></pre>
+
+<div class="slide">
+	<div class="ex" data-preview>function draw() {
+	background(220);
+	rectMode(CENTER);
+
+	// AND
+	if (mouseIsPressed && mouseX > width/2) {
+		ellipse(width/2, height/2, 200);
+	}	
+}</div>
 </div>
+
+<div class="slide">
+	<div class="ex" data-preview>function draw() {
+	background(220);
+
+	// OR
+	if (mouseY > height/2 || mouseX > width/2) {
+		ellipse(width/2, height/2, 200);
+	}	
+}</div>
+</div>
+
+<!-- 
+	
+	https://medium.com/@jonathanabrams/single-line-if-statements-2565c62ff492
+	https://creative-coding.decontextualize.com/interaction/
+	
+ -->

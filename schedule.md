@@ -67,16 +67,16 @@ Go to [Home](index.html)
 - **Assignment 5: Interactive Logo**
 	- Create a design that splits the screen in half or quadrants
 	- Create a user interaction that changes according to the quadrant
-	- Change could be color, shape or size
+	- Change the logo shapes, size, color or position
 
-## Week 6 **Animation**
-- [p5: animation, random, modulo](notes/animation)
-	- [Class example](examples/{{site.semester}}/animation/)
-- [p5: push, pop, transform](notes/transform)
-	- [Class example](examples/{{site.semester}}/transform/)
+## Week 7 **Animation**
+- [Animation](notes/animation)
+- [Transformation](notes/transform)
 - **Assignment 6: Animation**
-	- Add animation to your logo or another previous drawing (or a new drawing if you prefer)
-	- Use two different types of animation (size, color, position, shape, rotation, etc)
+	- Add animation to the logo design
+	- Combine two type of animation in one sketch
+		- One from first category: size, position or color
+		- One from second category: translate, rotate, shear or scale
 - Inspiration
 	- [Animated name logos](http://www.flamingtext.com/Animated-Logos)
 	- [Animated logos](http://www.howdesign.com/featured/animated-logos/)
