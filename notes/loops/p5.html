@@ -1,125 +1,176 @@
 ---
 layout: slides
-title: MMP 210
+title: Drawing with Loops
 week: 7
-dek: p5 - drawing with loops
 ---
 
 <div class="slide">
-	<p>In p5, we can use loop to draw many more shapes and colors with much less code.  Let's look at a few of our old examples, reworked using loops.</p>
+	<p>In p5, we can use loop to draw many more shapes and colors with much less code.  We can use loops to repeat similar tasks.  First we'll look at rewriting a simple sketch using a loop.</p>
 </div>
 
 
 <div class="slide">
-	<h2>Ten circles, hard coded</h2>
-	<pre><code>function setup() { 
+	<div class="ex" data-preview>// draw 5 circles in a line
+function setup() { 
 	createCanvas(640, 360);
+	background(220);
+
+	// five cicle functions with arguments
 	ellipse(50, height/2, 40);
 	ellipse(100, height/2, 40);
 	ellipse(150, height/2, 40);
 	ellipse(200, height/2, 40);
 	ellipse(250, height/2, 40);
-	ellipse(300, height/2, 40);
-	ellipse(350, height/2, 40);
-	ellipse(400, height/2, 40);
-	ellipse(450, height/2, 40);
-	ellipse(500, height/2, 40);
-}</code></pre>
+}</div>
 </div>
+
 <div class="slide">
-	<h2>Ten cicles with a variable</h2>
-	<pre><code>var x = 50;
-var space = 50;
+	<div class="ex" data-preview>// adding a variable
 function setup() { 
 	createCanvas(640, 360);
+	background(220);
+
+	// the first circle starts at 50
+	var x = 50;
 	ellipse(x, height/2, 40);
-	x += space;
+	
+	// no i can just change x instead of doing math in my head
+	x += 50;
 	ellipse(x, height/2, 40);
-	x += space;
+
+	// but i have to do it three more times
+	x += 50;
 	ellipse(x, height/2, 40);
-	x += space;
+	x += 50;
 	ellipse(x, height/2, 40);
-	x += space;
+	x += 50;
 	ellipse(x, height/2, 40);
-	x += space;
-	ellipse(x, height/2, 40);
-	x += space;
-	ellipse(x, height/2, 40);
-	x += space;
-	ellipse(x, height/2, 40);
-	x += space;
-	ellipse(x, height/2, 40);
-	x += space;
-	ellipse(x, height/2, 40);
-}</code></pre>
+
+	// this is actually more code!
+}</div>
 </div>
+
+
 <div class="slide">
-	<h2>Ten circles with a loop!</h2>
-	<pre><code>var space = 50;
+	<div class="ex" data-preview>// let's add a loop
 function setup() { 
   	createCanvas(640, 360);
-	for (var x = 50; x < width; x += space) {
+  	background(220);
+
+  	// var x = 50 becomes the initial condition
+  	// x < width is as long as the x value is inside the canvas
+  	// x + 50 increment with each loop
+
+	for (var x = 50; x < width; x += 50) {
 		ellipse(x, height/2, 40);
 	}
-}</code></pre>
+
+	// even more circles with 3 lines of code
+}</div>
 </div>
+
 <div class="slide">
-	<h2>Ten self portraits</h2>
-	<pre><code>var space = 50;
-function setup() { 
+	<h2>Patterns</h2>
+	<p>Using a loop unlocks a lot new possiblities.  The same code that we used to draw one self portrait can now be used to draw 10 self portraits, only adding a couple of lines of code.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() { 
 	createCanvas(640, 360);
+	background(220);
 	rectMode(CENTER);
-	for (var x = 50; x < width; x += space) {
+
+	for (var x = 50; x < width; x += 50) {
 		ellipse(x, height/2, 40);
 		ellipse(x - 10, height/2 - 10, 10);
 		ellipse(x + 10, height/2 - 10, 10);
 		rect(x, height/2 + 10, 30, 10, 5);
 	}
-}</code></pre>
+}</div>
 </div>
+
+<!-- 
+	if using loop show interactions for interactive midterm
+	or show grid stuff for pattern midterm
+ -->
+
 <div class="slide">
-	<h2>A column grid</h2>
-	<pre><code>var column = 40;
-function setup() { 
+	<h2>Interaction</h2>
+	<p>Logic and interaction can be used to change the drawings at each point in the loop.</p>
+
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() { 
 	createCanvas(640, 360);
 	rectMode(CENTER);
-	for (var x = 0; x <= width; x += space) {
+}
+function draw() {
+	background(220);
+
+	for (var x = 50; x < width; x += 50) {
+
+		if (mouseX < x) {
+			fill('plum');
+		} else {
+			fill('gold');
+		}
+
+		ellipse(x, height/2, 40);
+		ellipse(x - 10, height/2 - 10, 10);
+		ellipse(x + 10, height/2 - 10, 10);
+		rect(x, height/2 + 10, 30, 10, 5);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<h2>Grid</h2>
+	<p>The previous example shows a row of self portrait drawings divided into columns.</p>
+	<p>We can take this a step further by creating a full grid using columns and rows.</p>
+	<p>Programming make it easy to do the math to create a grid with a number of rows and columns.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() { 
+	createCanvas(640, 360);
+	background(220);
+
+	// set the number of columns
+	var columnNumber = 40;
+
+	// divide the canvas by that number to get each column width
+	var columnWidth = width / columnNumber;
+
+	// draw a line at each column
+	for (var x = 0; x <= width; x += columnWidth) {
 		line(x, 0, x, height);
 	}
-}</code></pre>
+}</div>
 </div>
+
+
 <div class="slide">
-	<h2>Columns and rows</h2>
-	<pre><code>var column = 40;
-var row = 20;
-function setup() { 
+	<div class="ex" data-preview>function setup() { 
 	createCanvas(640, 360);
-	rectMode(CENTER);
-	for (var x = 0; x <= width; x += column) {
+	background(220);
+
+	var columnNumber = 40;
+	var columnWidth = width / columnNumber;
+
+	// same for rows
+	var rowNumber = 20;
+	var rowHeight = height / rowNumber;
+
+	// loop across canvas width
+	// then loop again over height
+
+	for (var x = 0; x <= width; x += columnWidth) {
 		line(x, 0, x, height);
-		for (var y = 0; y <= height; y += row) {
+		for (var y = 0; y <= height; y += rowHeight) {
 			line(0, y, width, y);
 		}
 	}
-}</code></pre>
+}</div>
 </div>
-<div class="slide">
-	<h2>Interactive loop</h2>
-	<pre><code>function setup() { 
-	createCanvas(640, 360);
-	noStroke();
-} 
 
-function draw() { 
-	var sz = 10;
-	for (var x = 0; x < width; x += sz) {
-			//line(x, 0, x, height);
-		if (mouseX > x) {
-			fill(mouseX-x);
-		} else {
-			fill(x-mouseX);
-		}
-		rect(x,0,sz, height);
-	}
-}</code></pre>
-</div>

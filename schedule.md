@@ -82,20 +82,17 @@ Go to [Home](index.html)
 	- [Animated logos](http://www.howdesign.com/featured/animated-logos/)
 
 
-## Week 7 **Loops**
-- [JavaScript for loops](notes/loops)
-- [p5: drawing with loops](notes/loops/p5.html)
-	- [Loop example](examples/{{site.semester}}/loops/)
-	- [Interactive loop example](examples/{{site.semester}}/loops_mouse/)
+## Week 8 **Loops**
+- [Loops](notes/loops)
+- [Drawing with loops](notes/loops/p5.html)
 - In class: [Code academy: for loops](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/0/1)
 - **Assignment 7: Windows**
 	- Draw the a grid of windows like the front of a city building.  
 	- Each window should be at least 5 shapes.  
 	- Use your apartment building or [Windows of New York](http://windowsofnewyork.com/) for inspiration.
 
-## Week 8 **Pattern**
+## Week 9 **Pattern**
 - [Generating patterns](notes/pattern)
-	- [Class example](examples/{{site.semester}}/pattern/)
 
 ## Midterm **Generative design**
 - Create a concept for a product that will have a generative pattern design
@@ -109,6 +106,14 @@ Go to [Home](index.html)
 	- [Generative landscapes](https://generativelandscapes.wordpress.com/2014/08/15/complex-pattern-from-simple-arcs-example-3-6/)
 	- [Libs Elliott: Generated quilt design](http://themakersnation.com/maker-spotlight-libs-elliott/)
 	- [Generative Patterns Google Image Search](https://www.google.com/search?q=generative+patterns&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiA-OPl3fbWAhWD6iYKHTihD7EQ_AUICigB&biw=1897&bih=984#imgrc=_)
+
+<!-- 
+
+	10: Intro PComp/Circuits
+	11: Digial input/output
+	12: Analog input/output
+
+ -->
 
 ## Week 9 **Functions**
 - Present Midterms
