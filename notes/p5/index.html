@@ -64,28 +64,103 @@ week: 2
 	<p class="label"><a href="https://processing.org/tutorials/drawing/" target="blank">https://processing.org/tutorials/drawing/</a></p>
 </div>
 
-
 <div class="slide">
 	<h2>First sketch</h2>
 	<p>Okay, let's get started.  Here's the beginning of our program:</p>
-	<div class="ex">function setup() {
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
 	createCanvas(640, 360);
+}
+
+function draw() {
+	background(220);
+	ellipse(320, 180, 100);
 }</div>
 </div>
 
 <div class="slide">
-	<h2>Functions</h2>
-	<p>Every <code>p5</code> sketch starts this way.  The <code>setup</code> function is used to setup our drawing and initialize some basics.  It runs <em>once</em> when our program starts.</p>
-	A <code>function</code> is simply a series of commands or actions we want the program to perform.  Functions have names so we can invoke or call them.  When we call a function, the program runs the lines of code contained inside.</p>
+	<p>Let's get some observations about what might be happening here and then go over the code.</p>
 </div>
 
 <div class="slide">
+	<h2>Functions</h2>
+	<p>Every <code>p5</code> sketch has two main functions.  The <code>setup</code> function is used to setup our drawing and initialize some basics.  It runs <em>once</em> when our program starts.</p>
+	<p>Let's do a quick aside to explain functions in JavaScript, because we're going to be using a them today and for the rest of the semester.  Basically everything in JavaScript and p5 uses functions.</p>
+</div>
+
+<div class="slide">
+	<p>A <code>function</code> is simply a series of commands or actions we want the program to perform.  Functions have names so we can invoke or call them.  When we call a function, the program runs the lines of code contained inside.</p>
+	<p>A function is sort of like a mini-program inside of the main program.</p>
+	<p>Functions are used to describe a task that you may want to do more than once, so it can be repeated.</p>
+	<p>A function is sort of like a recipe for a peanut butter and jelly sandwich.  There are a steps that can be followed to make the sandwich that are pretty much the same every time, but might have some variation depending on what ingredients you have available.</p>
+</div>
+
+<div class="slide">
+	<h2>Function declaration</h2>
+	<p>Creating a function is like declaring a variable with slightly different syntax.  There are a few ways to do it, but the way we will mostly be doing it looks like this:</p>
+	<pre><code>function foo() {
+	var fruit = "banana";
+	console.log(fruit);
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>To make that function run, it must be called or <note>invoked</note>.  Invoking a function is done by writing the function name again with parentheses.</p>
+	<pre><code>foo();</code></pre>
+	<p>Once defined, the function can be called as many times as needed for the program.</p>
+</div>
+
+<div class="slide">
+	<h2>Arguments</h2>
+	<p>Functions use arguments to change the outcome.  An argument might be like a special ingredient in our sandwich.</p>
+	<pre><code>function sandwich(fruit) {
+	console.log("A peanut butter, jelly and " + fruit + " sandwich.");
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>The result of the function depends on the value argument added.  The argument is added in the parentheses when the function is invoked.</p>
+	<pre><code>sandwich("banana");
+sandwich("apple");
+sandwich("ketchup");</code></pre>
+</div>
+
+
+<div class="slide">
+	<h2>createCanvas</h2>
+	<p>Back to our p5 sketch.</p>
 	<p>The <code>createCanvas</code> function creates a new <code>&lt;canvas&gt;</code> element on the HTML page where our drawing code will be rendered.</p>
 	<p>The two numbers, <code>(640, 640)</code> in parentheses are <em>arguments</em>.  Some functions, like <code>createCanvas</code> take arguments, which have an effect on the way the function behaves.  In this case, the numbers determines the <code>width</code> and <code>height</code> of our drawing in pixel dimensions.</p>
 </div>
 
 <div class="slide">
-	<p>Here's the next part of the self portrait:</p>
+	<p>Here's our basic sketch again.  Try changing the arguments to <code>createCanvas</code> to see how the sketch is changed.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
+}
+
+function draw() {
+	background(220);
+	ellipse(320, 180, 100);
+}</div>
+</div>
+
+<div class="slide">
+	<p>Now try changing the arguments in the other functions.  What happens?  Can you guess what each value represents?</p>
+</div>
+
+<div class="slide">
+	<p>Now let's continue.  The following is a basic self portrait example.</p>
+	<p>In p5, <code>setup</code> is called once when the program starts.</p>
+	<p>The <code>draw</code> function is where all of our drawing code will go.  This function runs over and over again for as long as the program is open.  So all of that code is being executed about 60 times a second, or however fast your browser is running.</p>
+</div>
+
+<div class="slide">
 	<div class="ex" data-preview>// self portrait
 function setup() {
 	createCanvas(640, 360);
@@ -115,9 +190,8 @@ function draw() {
 }</div>
 </div>
 
-
 <div class="slide">
-	<p>The <code>draw</code> function is where all of our drawing code will go.  This function runs over and over again for as long as the program is open.  So all of that code is being executed about 60 times a second, or however fast your browser is running.</p>
+	<p>There's a few more functions in here.  You may be able to guess what they do based on their names.  We'll look through and talk about all of them.</p>
 </div>
 
 <div class="slide">
@@ -140,8 +214,6 @@ function draw() {
 	<p>The order of the <code>rect</code> arguments is also <code>(x, y, width, height)</code>.</p>
 </div>
 
-
-
 <div class="slide">
 	<p><note>Note:</note> In these examples I am omitting the <code>draw</code> function because the drawing only needs to be rendered once.  We'll talk more about this when we cover interactivity.</p>
 	<div class="ex" data-preview>function setup() {
@@ -159,7 +231,7 @@ function draw() {
 
 
 <div class="slide">
-	<p>The order of arguments is important.  For ellipse it is <code>(x, y, width, height)</code>.</p>
+	<p>The arguments need to be written in the specified order.  For ellipse it is <code>(x, y, width, height)</code>.</p>
 	<p>You can also make a circle (an ellipse with the same width and height), by using three arguments: <code>(x, y, size)</code>.</p>
 </div>
 

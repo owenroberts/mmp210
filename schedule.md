@@ -21,10 +21,9 @@ Go to [Home](index.html)
 
 
 ## Week 2 **Shape & Color**
-
 - [JavaScript Intro](notes/javascript)
-- [Intro to p5](notes/p5)
-- [p5: Color](notes/color)
+- [Shapes and Functions](notes/p5)
+- [Color Functions and Values](notes/color)
 - [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/)
 - **Assignment 2: Self Portrait**
 	- Draw a self-portrait using p5
@@ -43,7 +42,7 @@ Go to [Home](index.html)
 	- There should be no hard coded numbers or strings inside of the drawing functions.
 
 ## Week 4 **Interaction 1**
-- [p5 system variables](notes/system_variables)
+- [System variables](notes/system_variables)
 - [Interaction](notes/interaction_1)
 - **Assignment 4: Interactive Self Portrait**
 	- Choose part of your self portrait to animate with interaction
@@ -51,14 +50,14 @@ Go to [Home](index.html)
 	- Use the `map` function
 	- Add an instruction for the user in the HTML using a paragraph tag
 
-## Week 5 **Text**
-- [p5: text](notes/text)
+## Week 5 **Text & Image**
+- [Text](notes/text)
+- [Image](notes/image)
 - [Code Academy: Variables](https://www.codecademy.com/courses/learn-javascript-introduction/lessons/variables/exercises/intro-variables){:target="blank"}
 - **Assignment 5: Logo**
 	- Make a logo design with your name
 	- Use text with other shape functions
 	- Drawing and text functions must use variables
-
 
 ## Week 6 **Logic**
 - [Conditional logic](notes/logic)
@@ -109,28 +108,20 @@ Go to [Home](index.html)
 
 <!-- 
 
+	ommitted assignments
+	draw window function
+
+
 	10: Intro PComp/Circuits
 	11: Digial input/output
 	12: Analog input/output
 
  -->
 
-## Week 9 **Functions**
-- Present Midterms
-- [JavaScript functions](notes/functions)
-- [p5: Defining a function](notes/functions/p5.html)
-	- [Class example](examples/{{site.semester}}/functions)
-- **In class**
-	- Rewrite your window drawing as a defined function.
-	- Use it to draw multiple windows with different origin and size.
 
 ## Week 10 **Media**
 - [Image & video](notes/media)
-	- [Image example](examples/{{site.semester}}/image)
-	- [Video example](examples/{{site.semester}}/video)
-	- [3d example](examples/{{site.semester}}/3d)
 - [Sound library](notes/sound)
-	- [Sound example](examples/{{site.semester}}/audio)
 - **Final Project**
 	- The final project will be an interactive media player
 	- This week do some research on existing projects and think about what you want to make
@@ -146,7 +137,6 @@ Go to [Home](index.html)
 
 ## Week 11 **Arrays**
 - [Arrays](notes/array)
-	- [Class example](examples/{{site.semester}}/spaceships)
 - [Review Arrays](https://www.khanacademy.org/computing/computer-programming/programming/arrays/p/intro-to-arrays)
 - **In class**
 	- Write a spaceship function (or a car, or a animal, or anything else that moves)
@@ -171,7 +161,6 @@ Go to [Home](index.html)
 ## Week 12 **Interaction 2**
 - Present Final idea
 - [Interaction](notes/interaction_2)
-	- [Class example](examples/{{site.semester}}/interaction_2)
 - Begin work on Final
 
 ## Week 13 **Objects**
