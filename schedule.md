@@ -119,35 +119,37 @@ Go to [Home](index.html)
  -->
 
 
-## Week 10 **Media**
+## Week **Media**
 - [Image & video](notes/media)
 - [Sound library](notes/sound)
-- **Final Project**
-	- The final project will be an interactive media player
-	- This week do some research on existing projects and think about what you want to make
-	- Next week we will make a final pitch
-	- Some examples
-		- <https://nvioli.github.io/>
-		- <https://fcjou.github.io/fish-piano/>
-		- <http://share.framerjs.com/4ie4c9u5jodh/>
-		- <https://www.jdjohnsonmedia.com/session5/index.html>
-		- <https://www.jdjohnsonmedia.com/session9/index.html>
-		- <http://uxdesignercoding.tumblr.com/post/143328882704/for-this-week-i-have-worked-on-data-visualization>
-		- <http://www.typotopo.com/typemenot/index.html>
 
-## Week 11 **Arrays**
+## Week **Interaction 2**
+- [Interaction](notes/interaction_2)
+
+## Week **Objects**
+- [Objects](notes/objects)
+- [Spaceships](notes/objects/p5.html)
+
+## Week **Arrays**
 - [Arrays](notes/array)
-- [Review Arrays](https://www.khanacademy.org/computing/computer-programming/programming/arrays/p/intro-to-arrays)
+- [Khan Academy: Arrays](https://www.khanacademy.org/computing/computer-programming/programming/arrays/p/intro-to-arrays){:target="blank"}
 - **In class**
 	- Write a spaceship function (or a car, or a animal, or anything else that moves)
 	- Animate the spaceship in space and color
-- **Assignment: Final project pitch**
-	- 3-5 sentence "pitch" for final project
-	- 1 sketch or "mood board" with visual references
-	- Must use some type of media, sound, image or video
-	- Must be interactive
-	- Could be a game, interactive visualization, animation or combination
-- More inspiration
+
+
+
+## Final **Project**
+- The final project will be an interactive media player
+- This week do some research on existing projects and think about what you want to make
+- Next week we will make a final pitch
+## **Project pitch**
+- 3-5 sentence "pitch" for final project
+- 1 sketch or "mood board" with visual references
+- Must use some type of media, sound, image or video
+- Must be interactive
+- Could be a game, interactive visualization, animation or combination
+- Final Inspiration
 	- <http://www.newrafael.com/websites>
 	- <https://the-internet.click/>
 	- <http://superpixelquest.com/>
@@ -157,18 +159,14 @@ Go to [Home](index.html)
 	- <http://agar.io/>
 	- <http://paper-io.com/>
 	- <https://quickdraw.withgoogle.com/#>
+	- <https://nvioli.github.io/>
+	- <https://fcjou.github.io/fish-piano/>
+	- <http://share.framerjs.com/4ie4c9u5jodh/>
+	- <https://www.jdjohnsonmedia.com/session5/index.html>
+	- <https://www.jdjohnsonmedia.com/session9/index.html>
+	- <http://uxdesignercoding.tumblr.com/post/143328882704/for-this-week-i-have-worked-on-data-visualization>
+	- <http://www.typotopo.com/typemenot/index.html>
 
-## Week 12 **Interaction 2**
-- Present Final idea
-- [Interaction](notes/interaction_2)
-- Begin work on Final
-
-## Week 13 **Objects**
-- [Objects](notes/objects)
-	- [Spaceship objects](examples/{{site.semester}}/spaceship_objects)
-	- [Sound button object](examples/{{site.semester}}/sound_button)
-	- [Image object](examples/{{site.semester}}/image_objects)
-- Continue work on final
 
 <!-- 
 ## Week 10
