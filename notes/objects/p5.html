@@ -1,0 +1,229 @@
+---
+layout: slides
+title: Objects
+week: 12
+---
+
+<div class="slide">
+	<p>Objects have a lot of advantages when designing an interactive artwork, game or any piece of software.</p>
+	<p>We're going to build a spaceship to use in a theoretical game we are creating.</p>
+	<p>We'll start by creating a spaceship object, and then assigning properties and methods we need to make it fly across the screen and interact with the user.</p>
+	<p>Finally, we'll use our spaceship object to make multiple spaceships.</p>
+</div>
+
+
+<div class="slide">
+	<h2>Constructor</h2>
+	<p>Let's start with the spaceship constructor.</p>
+	<div class="ex">function Spaceship() {
+
+}</div>
+	<p>What do we need to know about the spaceship in order to draw it on the canvas and make it move across the screen?</p>
+	<p>To start, we need to know how to draw it.  For that we need to know the x positition, the y position and what shape functions to use to draw it.  Let's make something simple.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function Spaceship() {
+	this.x = random(width);
+	this.y = random(height);
+}
+
+var s;
+
+function setup() {
+	createCanvas(640, 360);
+	s = new Spaceship();
+}
+
+function draw() {
+	background(220);
+	rect(s.x, s.x, 100, 50);
+}</div>
+</div>
+
+<div class="slide">
+	<h2>Properties</h2>
+	<p>This spaceship is extremely simple.  It only knows it's on x and y position, which are assigned randomly when the spaceship is contructed.</p>
+	<p>The <code>s</code> variable is used to store a reference to the spaceship once it is constructed.  The <code>x</code> and <code>y</code> values are referenced using dot notation in the drawing function.</p>
+	<p>Let's add values for the size of the spaceship.</p>
+</div>
+
+
+<div class="slide">
+	<div class="ex" data-preview>function Spaceship() {
+	this.x = random(width);
+	this.y = random(height);
+	this.w = random(100, 200);
+	this.h = random(50, 100);
+}
+
+var s;
+
+function setup() {
+	createCanvas(640, 360);
+	s = new Spaceship();
+}
+
+function draw() {
+	background(220);
+	rect(s.x, s.y, s.w, s.h);
+}</div>
+</div>
+
+<div class="slide">
+	<h2>Display</h2>
+	<p>Now let's make the spaceship draw itself.  That way we can make more complex drawing code and keep our draw function just as simple.</p>
+	<p>Instead of adding drawing functions for the spaceship, we can just ask the spaceship to draw itself using it's new <code>display</code> method.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function Spaceship() {
+	this.x = random(width);
+	this.y = random(height);
+	this.w = random(100, 200);
+	this.h = random(50, 100);
+	this.display = function() {
+		rect(s.x, s.y, s.w, s.h);
+		ellipse(s.x + s.w, s.y + s.h/2, s.h * 2);
+	};
+}
+
+var s;
+
+function setup() {
+	createCanvas(640, 360);
+	s = new Spaceship();
+}
+
+function draw() {
+	background(220);
+	s.display();
+}</div>
+</div>
+
+<div class="slide">
+	<h2>Move</h2>
+	<p>This spaceship still isn't particularly interesting, so let's add a method that moves the spaceship.</p>
+	<p>Like the <code>display</code> method, we want the spaceship to be able to update itself, so we will just call <code>s.move()</code> in the <code>draw</code> function, and let the spaceship take care of the rest on it's own.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function Spaceship() {
+	this.x = random(width);
+	this.y = random(height);
+	this.w = random(100, 200);
+	this.h = random(50, 100);
+	this.display = function() {
+		rect(s.x, s.y, s.w, s.h);
+		ellipse(s.x + s.w, s.y + s.h/2, s.h * 2);
+	};
+	this.move = function() {
+		this.x += 10;
+	};
+}
+
+var s;
+
+function setup() {
+	createCanvas(640, 360);
+	s = new Spaceship();
+}
+
+function draw() {
+	background(220);
+	s.display();
+	s.move();
+}</div>
+</div>
+
+<div class="slide">
+	<p>That's pretty cool, but we can make it better.</p> 
+	<p>Let's add some variability to the speed of the spaceship and also wrap it back when it goes off the screen.</p>
+</div>
+
+
+<div class="slide">
+	<div class="ex" data-preview>function Spaceship() {
+	this.x = random(width);
+	this.y = random(height);
+	this.w = random(100, 200);
+	this.h = random(50, 100);
+	this.speed = random(5, 10);
+	this.display = function() {
+		rect(s.x, s.y, s.w, s.h);
+		ellipse(s.x + s.w, s.y + s.h/2, s.h * 2);
+	};
+	this.move = function() {
+		this.x += this.speed;
+		if (this.x > width) {
+			this.x = -this.w;
+		}
+	};
+}
+
+var s;
+
+function setup() {
+	createCanvas(640, 360);
+	s = new Spaceship();
+}
+
+function draw() {
+	background(220);
+	s.display();
+	s.move();
+}</div>
+</div>
+
+<div class="slide">
+	<h2>Collision</h2>
+	<p>The last thing to add is making the spaceship interactive.  In the last lesson, we learned how to make a button with the <code>mousePressed</code> function and collision detection code.</p>
+	<p>We can apply that to our spaceship using another method.</p>
+	<p>Let's add a fill and then change it if the user clicks the spaceship.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function Spaceship() {
+	this.x = random(width);
+	this.y = random(height);
+	this.w = random(100, 200);
+	this.h = random(50, 100);
+	this.speed = random(5, 10);
+	this.fill = "plum";
+	this.display = function() {
+		fill(this.fill);
+		noStroke();
+		rect(s.x, s.y, s.w, s.h);
+		ellipse(s.x + s.w, s.y + s.h/2, s.h * 2);
+	};
+	this.move = function() {
+		this.x += this.speed;
+		if (this.x > width) {
+			this.x = -this.w;
+		}
+	};
+	this.collide = function(x, y) {
+		if (x > this.x && x < this.x + this.w && y > this.y && y < this.y + this.h) {
+			this.fill = "red";
+		}
+	};
+}
+
+var s;
+
+function setup() {
+	createCanvas(640, 360);
+	s = new Spaceship();
+}
+
+function draw() {
+	background(220);
+	s.display();
+	s.move();
+}
+
+function mousePressed() {
+	s.collide(mouseX, mouseY);
+}</div>
+</div>
+

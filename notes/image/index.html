@@ -1,0 +1,146 @@
+---
+layout: slides
+title: Image
+week: 5
+---
+
+<div class="slide">
+	<p>In p5, an <a href="https://p5js.org/reference/#group-Image" target="blank">image</a> must be loaded into memory before it is displayed on the page.</p>
+	<p>In order to be sure that the image data is loaded before the program tries to use it, a new function is used, called <code>preload</code>.</p>
+	<p><code>preload</code> actually happens before the <code>start</code> function, and it makes the program wait until it is done loading data before <code>start</code> is invoked.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var img;
+
+function preload() {
+	img = loadImage("cat.png");
+}
+
+function setup() {
+    createCanvas(640, 480);
+}
+
+function draw(){
+	image(img, 0, 0);
+}</div>
+</div>
+
+<div class="slide">
+	<h2>Server origin</h2>
+	<p>The way that media is loaded in browsers is a big part of why we use Brackets and the Live Server Preview feature for this class.</p>
+	<p>If you try opening a sketch with an image loaded into it by just opening the file in a browser, you will get a Cross Origin error and the sketch will not run.  When you open a file directly in the browser, you know because the URL will look something like this:</p>
+	<pre><code>file:///Users/oroberts/Desktop/mmp210/examples/image/index.html</code></pre>
+	<p>And the sketch will be stuck loading.  If you open the console, you may see an error like this:</p>
+	<pre style="white-space: pre-wrap;"><code style="color: red">Access to Image at 'file:///Users/oroberts/Desktop/mmp210/examples/image/imgs/cat.png' from origin 'null' has been blocked by CORS policy: Invalid response. Origin 'null' is therefore not allowed access.</code></pre>
+</div>
+
+<div class="slide">
+	<p>By default, Chrome and some browsers will block files being loaded into a webpage from different origins.  This is a security measure to prevent attacks from front end scripts.</p>
+	<p>Using the Live Server Preview creates a local server in the folder of our project to imitate serving the documents of our project from a remote server.  That why the URL looks like this:</p>
+	<pre><code>http://127.0.0.1:54808/examples/image/index.html</code></pre>
+	<p>That server address is a local address on your computer.</p>
+	<p>This local server allows us to use external media like images, sounds and video.</p>
+</div>
+
+<div class="slide">
+	<h2>Image arguments</h2>
+	<p>The first argument of the <code>image()</code> function is the variable referencing the image data.  The second and third are the x and y coordinate where the image will be drawn.</p>
+	<p>Those values can be used to make the image change position interactively.</p>
+</div>
+
+
+<div class="slide">
+	<div class="ex" data-preview>var img;
+
+function preload() {
+	img = loadImage("cat.png");
+}
+
+function setup() {
+    createCanvas(640, 480);
+}
+
+function draw(){
+	image(img, mouseX, mouseY);
+}</div>
+</div>
+
+
+<div class="slide">
+	<p>We can add two more arguments for width and height.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var img;
+
+function preload() {
+	img = loadImage("cat.png");
+}
+
+function setup() {
+    createCanvas(640, 480);
+}
+
+function draw(){
+	background(220);
+	image(img, 0, 0, mouseX, mouseY);
+	image(img, mouseX, mouseY, 50, 50);
+}</div>
+</div>
+
+<div class="slide">
+	<h2>Tint</h2>
+	<p>The <code>tint()</code> function can be used to change the color and add transparency.</p>
+	<pre><code>image(img, 0, 0, 100, 100);
+tint(255, 127);
+image(img, 0, 0, mouseX, mouseY);</code></pre>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var img;
+
+function preload() {
+	img = loadImage("cat.png");
+}
+
+function setup() {
+    createCanvas(640, 480);
+}
+
+function draw(){
+	background(220);
+	tint(255, 0, 255);
+	image(img, 0, 0, width, height);
+	tint(0, 255, 255, 127);
+	image(img, 0, 0, mouseX, mouseY);
+}</div>
+</div>
+
+
+<div class="slide">
+	<h2>Get pixel color</h2>
+	<p>We can also get the color of the image at specific pixels using the <code>.get</code> method.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var img;
+
+function preload() {
+	img = loadImage("cat.png");
+}
+
+function setup() {
+    createCanvas(640, 480);
+}
+
+function draw() {
+	background(220);
+	noStroke();
+	image(img, 0, 0, width, height);
+	
+	var c = get(mouseX, mouseY);
+	fill(c);
+	ellipse(mouseX, mouseY, 50);
+}</div>
+</div>

@@ -1,145 +1,107 @@
 ---
 layout: slides
-title: MMP 210
-week: 5
-dek: p5 Logic
+title: Drawing with logic
+week: 6
 ---
 
 <div class="slide">
-	<p>Let's start where we left off with system variables.</p>
-	<pre><code>function setup() {
-	createCanvas(640, 480);
+	<p>Using conditionals and enviroment variables we can create a simple drawing program.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
+	background(250);
 }
-
 function draw() {
-	strokeWeight(4);
-	stroke("blue");
 
-	/* if mouse is on right half of canvas
-	 else mouse on left half of canvas */
+	noStroke();
+	
 	if (mouseX > width/2) {
 		fill("lightblue");
 	} else {
-		fill("pink");
+		fill("plum");
 	}
 
-	ellipse(mouseX, mouseY, 40, 40);
-}</code></pre>
-</div>
-
-<div class="slide">
-	<h2>Quadrants</h2>
-	<p>In the next example we will divide the canvas into quadrants:</p>
-	<pre><code>/* initialize red green and blue all to zero */
-var r = g = b = 0;
-function setup() {
-	createCanvas(640, 360);
-}
-
-function draw() {
-	background(r, g, b);
-	
-	/* draw lines for quadrants */
-	strokeWeight(1);
-	stroke("white");
-	line(width/2, 0, width/2, height);
-	line(0, height/2, width, height/2);
-
-	/* if mouse is on right half, else left */
-	if (mouseX > width/2) {
-		r += 1;
-	} else {
-		r -= 1;
-	}
-	
-	/* if mouse on left half, else right */
-	if (mouseX < width/2) {
-		g += 1;
-	} else {
-		g -= 1;
-	}
-	/* could i combine previous two 
-	if/else statments? */
-
-	/* if mouse is on bottom half of canvas
-	else top half */
-	if (mouseY > height/2) {
-		b += 1;
-	} else {
-		b -= 1;
-	}
-}</code></pre>
-</div>
-
-<div class="slide">
-	<h2>mouseIsPressed system var</h2>
-	<pre><code>function setup() { 
-  createCanvas(400, 400);
-} 
-
-function draw() { 
-	/* mouseIsPressed is true when mouse is pressed
-	and false when no mouse button is pressed */
 	if (mouseIsPressed) {
-		background("lightgreen");
-	} else {
-		background("lightblue");
+		ellipse(mouseX, mouseY, 40);
 	}
-}</code></pre>
+	
+}</div>
 </div>
 
 <div class="slide">
-	<h2>A boolean toggle</h2>
-	<pre><code>/* global clicked toggle */
-var clicked = false;
-function setup() { 
-	createCanvas(400, 400);
-} 
+	<p>Let's change our "paintbrush" of the drawing by mapping the change in mouse movement.</p>
+</div>
 
-function draw() { 
-	if (clicked) {
-		background("lightgreen");
-	} else {
-		background("lightblue");
-	}
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
+	background(250);
 }
+function draw() {
 
-function mouseClicked() {
-	/* on click, flip the toggle
-	set it to the opposite of current value */
-	clicked = !clicked;
-}</code></pre>
-</div>
-
-
-<div class="slide">
-	<h2>frameCount and size</h2>
-	<pre><code>/* global size for ellipse */
-var sz = 100;
-function setup() { 
-  createCanvas(400, 400);
-} 
-
-function draw() { 
-	ellipse(width/2, height/2, sz);
-
-	/* between frame 30 and 60 increase sz
-		between frame 120 and 180 decrease sz */
-	if (frameCount > 30 && frameCount < 60) {
-		sz++;
-	} else if (frameCount > 120 && frameCount < 180) {
-		sz--;
+	noStroke();
+	
+	if (mouseX > width/2) {
+		fill("lightblue");
+	} else {
+		fill("plum");
 	}
-}</code></pre>
+
+	if (mouseIsPressed) {
+		// bigger difference in mouse position means bigger size
+		var s = mouseX - pmouseX; 
+		ellipse(mouseX, mouseY, s);
+	}
+	
+}</div>
 </div>
 
 <div class="slide">
 	<h2>Compound conditionals</h2>
-	<pre><code>function setup() {
+	<p>In the next example we will divide the canvas into quadrants.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>/* initialize red green and blue all to zero */
+function setup() {
 	createCanvas(640, 360);
+	background(250);
 }
 
 function draw() {
+	/* draw lines for quadrants */
+	strokeWeight(1); stroke("white");
+	line(width/2, 0, width/2, height);
+	line(0, height/2, width, height/2);
+	noStroke();
+
+
+	if (mouseX < width/2 && mouseY < height/2) {
+		// top left
+		fill('plum');
+	} else if (mouseX > width/2 && mouseY < height/2) {
+		// top right
+		fill('lightblue');
+	} else if (mouseX < width/2 && mouseY > height/2) {
+		// bottom left
+		fill('gold');
+	} else {
+		// bottom right
+		fill('lightgreen');	
+	}
+
+	if (mouseIsPressed) {
+		var s = (mouseX - pmouseX) + (mouseY - pmouseY); 
+		ellipse(mouseX, mouseY, s);
+	}
+}</div>
+</div>
+
+
+<div class="slide">
+	<div class="ex" data-preview>function draw() {
 	background("black");
 	
 	/* draw quandrant lines */
@@ -161,5 +123,107 @@ function draw() {
 	} else {
 		rect(0, 0, width/2, height/2);
 	}
-}</code></pre>
+}</div>
+</div>
+
+<div class="slide">
+	<h2>State change</h2>
+	<p>Using conditionals a drawing can be updated using user input.</p>
+	<p>The following examples use the self portrait example from the interaction lesson, adding state changes rather than change that occur over a range of time or space.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>
+var mouthSize = 10; // starting value for mouthSize
+function draw() {
+	background(220);
+	rectMode(CENTER);
+	
+	var x = width/2;
+	var y = height/2;
+	var s = 200; // size
+	var o = 50; // offset
+
+	noStroke();
+	fill("plum");
+	ellipse(x, y, s); // face
+
+	fill("yellow");
+	ellipse(x - o, y, 25); // right eye
+	ellipse(x + o, y, 25); // left eye
+
+	fill('plum');
+	stroke("#ffddff");
+	strokeWeight(4);
+
+	
+	if (mouseIsPressed) {
+		mouthSize = 50;
+	} else {
+		mouthSize = 10;
+	}
+
+	rect(x, y + o, s/2, mouthSize, 10); // mouth	
+}</div>
+</div>
+
+<div class="slide">
+	<p>In the next example, the self portrait has four different expressions in the different quadrants.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function draw() {
+	background(220);
+	rectMode(CENTER);
+	
+	var x = width/2;
+	var y = height/2;
+	var s = 200; // size
+	var o = 50; // offset
+	
+	// default expression
+	var mouthWidth = 100;
+	var mouthHeight = 10;
+	var eyeWidth = 25;
+	var eyeHeight = 25;
+	
+	if (mouseIsPressed) {
+		if (mouseX < width/2 && mouseY < height/2) {
+			// surprised expression
+			mouthHeight = 10;
+			eyeWidth = 50;
+			eyeHeight = 50;
+		} else if (mouseX > width/2 && mouseY < height/2) {
+			// angry
+			mouthHeight = 5;
+			eyeWidth = 50;
+			eyeHeight = 10;
+		} else if (mouseX < width/2 && mouseY > height/2) {
+			// sad
+			mouthWidth = 20;
+			eyeWidth = 50;
+			eyeHeight = 50;
+		} else {
+			// scared   
+			mouthHeight = 50;
+			eyeWidth = 100;
+			eyeHeight = 100;
+		}
+	}
+
+
+	noStroke();
+	fill("plum");
+	ellipse(x, y, s); // face
+
+	fill("yellow");
+	ellipse(x - o, y, eyeWidth, eyeHeight); // right eye
+	ellipse(x + o, y, eyeWidth, eyeHeight); // left eye
+
+	fill('plum');
+	stroke("#ffddff");
+	strokeWeight(4);
+	
+	rect(x, y + o, mouthWidth, mouthHeight, 10); // mouth	
+}</div>
 </div>

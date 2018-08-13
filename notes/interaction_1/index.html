@@ -1,130 +1,284 @@
 ---
 layout: slides
-title: MMP 210
+title: Interaction
 week: 4
-dek: Interaction
 ---
 
 <div class="slide">
 	<p>One of the essential components of computer based art is the possibility for interaction.</p>
-	<p>Interactive design gives the user the ability to influence the design.  Sometimes the changes are small, sometimes they are large -- the artist has the ability to control how much the user can change.</p>
+	<p>Interactive design gives the user the ability to change the design.  Sometimes the changes are small, sometimes they are large -- the artist has the ability to control how much the user can change.</p>
 	<p>In JavaScript, we use <em>events</em> to detect when a user interacts with a program.  We can detect things like mouse movement, mouse clicks, key board inputs and change in orientation or touches in mobile devices.  Today we'll start with some simple interactions.</p>
 </div>
 
 <div class="slide">
 	<h2>Drawing a line</h2>
 	<p>We looked at the system variables <code>mouseX</code> and <code>mouseY</code>, which track the position of the mouse, as well as <code>pmouseX</code> and <code>pmouseY</code> that tracks the previous position.  We can use these simple values to create a drawing program.</p>
-	<pre><code>function setup() { 
-  createCanvas(400, 400);
-	 background(220);
-} 
-function draw() { 
-	line(mouseX, mouseY, pmouseX, pmouseY);
-}</code></pre>
 </div>
 
 <div class="slide">
-	<h2>background</h2>
-	<p>Notice that the <code>background</code> function appears in the <code>setup</code> function.  The reason the line segments persist in the program is that we are not continuously redrawing the background, which would cover the older line segments.</p>
-	<p>We can overwrite the drawing by introducing the <code>background</code> with the <code>mousePressed</code> event.</p>
-	<pre><code>function mousePressed() {
-	background(200);
-}</code></pre>
-	<p>See how this changes if <code>alpha</code> is added: <code>background(200, 127);</code></p>
-</div>
-
-<div class="slide">
-	<h2>Key press</h2>
-	<p>Let's look at another example where we can add shapes to the screen and clear them with a key press:</p>
-	<pre><code>function setup() { 
+	<div class="ex" data-preview>function setup() { 
 	createCanvas(400, 400);
 	background(220);
 } 
-function mousePressed() { 
-	ellipse(mouseX, mouseY, mouseX/20 + mouseY/10);
-}
-function keyPressed() {
-	background(200, 200);
-}</code></pre>
+function draw() { 
+	line(mouseX, mouseY, pmouseX, pmouseY);
+}</div>
 </div>
 
 <div class="slide">
-	<h2>Adding a drawing</h2>
-	<p>We can extend the interactive drawing to apply to more shapes or combinations of shapes:</p>
-	<pre><code>function setup() { 
-  	createCanvas(400, 400);
-  	rectMode(CENTER);
+	<h2>mousePressed</h2>
+	<p>Notice that the <code>background</code> function appears in the <code>setup</code> function.  The reason the line segments persist in the program is that we are not continuously redrawing the background, which would cover the older line segments.</p>
+	<p>We can overwrite the drawing by introducing the <code>background</code> with the <code>mousePressed</code> event.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() { 
+	createCanvas(400, 400);
+	background(220);
+} 
+function draw() { 
+	line(mouseX, mouseY, pmouseX, pmouseY);
+}
+function mousePressed() {
+	background(220); 
+	/* try removing the first background
+		and adding this to see how it changes */
+	// background(220, 127); 
+}</div>
+</div>
+
+<div class="slide">
+	<p>Like <code>setup</code> and <code>draw</code>, <code>mousePressed</code> is a function that is invoke by the p5 library but defined by us.  The code we place inside the brackets after <code>mousePressed()</code> is run whenever either mouse button is pressed.</p>
+</div>
+
+
+<div class="slide">
+	<h2>mouseDragged & keyPressed</h2>
+	<p><code>mouseDragged</code> also detects a mouse button press, but continues exectuting until the mouse button is released.</p>
+	<p><code>keyPressed</code> executes whenever any key is pressed.</p>
+	<p>Let's look at another example where we can add shapes to the screen and clear them with a key press.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() { 
+	createCanvas(400, 400);
+	background(220);
+	noStroke();
+} 
+
+function mouseDragged() {
+	var x = mouseX;
+	var y = mouseY;
+	var s = mouseX / 20 + mouseY / 20; // size
+	ellipse(x, y, s);
+}
+
+function keyPressed() {
+	background(200, 200);
+}</div>
+</div>
+
+<div class="slide">
+	<h2>Position</h2>
+	<p>We can extend the interactive drawing to apply to more shapes or combinations of shapes.</p>
+	<p>Using the self portrait drawing as a basis, if I want to move the whole thing, I need to add offsets to the shapes so they move relative to the same point.</p>
+</div>
+
+<div class="slide">
+	<iframe class="sketch" src="position" width="600" height="400" frameborder="0"></iframe>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() { 
+	createCanvas(400, 400);
+	rectMode(CENTER);
 } 
 function draw() { 
 	background(200, 25);
-	ellipse(mouseX, mouseY, 100);
-	ellipse(mouseX - 20, mouseY - 20, 20);
-	ellipse(mouseX + 20, mouseY - 20, 20);
 	
-	rect(mouseX, mouseY + 20, 60, 20, 10);
-}</code></pre>
+	var x = mouseX;
+	var y = mouseY;
+	var offset = 20;
+
+	noStroke();
+	ellipse(x, y, 100); // face
+
+	stroke(0);
+	ellipse(x - offset, y - offset, 20); // right eye
+	ellipse(x + offset, y - offset, 20); // left eye
+	rect(x, y + offset, 60, 20, 10); // mouth
+}</div>
 </div>
 
 <div class="slide">
 	<h2>Color</h2>
-	<p>We can make other aspects of the design interactive beside position:</p>
-	<pre><code>function setup(){
-	createCanvas(255, 255);
-}
-function draw(){
-	background("black");
-	fill(
-		0, //red
-		mouseX, //green
-		mouseY //blue
-	);
-	ellipse(width/2, height/2, width/2);
-}</code></pre>
+	<p>So far we have made the shapes position interactive.  Using the same principle, we can make the color interactive.</p>
 </div>
 
 <div class="slide">
-	<p>We can save the color value as well:</p>
-	<pre><code>var r, g, b;
-function setup(){
+	<div class="ex" data-preview>function setup(){
 	createCanvas(255, 255);
 }
 function draw(){
-	background("black");
+	background(0);
+	var r = 0; // red;
+	var g = mouseX; // green
+	var b = mouseY; // blue
 	fill(r, g, b);
-	ellipse(width/2, height/2, width/2);
+
+	var x = width/2;
+	var y = height/2;
+	var s = width/2;
+	ellipse(x, y, s);
+}</div>
+</div>
+
+<div class="slide">
+	<p>Notice in the previous example the canvas width and height are both <code>255</code>.  Remember the RGB color scale?  All the values are <code>0 - 255</code>.</p>
+	<p>If the canvas is made larger we end up with values that can't be used as color values, anything above 255 will just be read as 255.</p>
+	<p>However, we can use the <code>map</code> function to take one range, mouse position, and map it to another range, color value.</p>
+</div>
+
+<div class="slide">
+	<iframe class="sketch" src="map" width="600" height="400" frameborder="0"></iframe>
+</div>
+
+<div class="slide">
+	<p>Let's look at that example again, using <code>map</code>.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function draw(){
+	background(0);
+	var r = 0; // red;
+	var g = map(mouseX, 0, width, 0, 255); // green
+	var b = map(mouseY, 0, height, 0, 255); // blue
+	fill(r, g, b);
+
+	var x = width/2;
+	var y = height/2;
+	var s = width/2;
+	ellipse(x, y, s);
+}</div>
+</div>
+
+<div class="slide">
+	<p>In the previous examples, the color is always changing, but what if we wanted to save a color?</p>
+	<p>Using global variables, we can save red, green and blue values.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var r = 255, g = 255, b = 255; // initialize rgb globally
+function draw() {
+	background(0);
+	fill(r, g, b);
+	
+	var x = width/2;
+	var y = height/2;
+	var s = width/2;
+	ellipse(x, y, s);
 }
 function mousePressed() {
-	r = mouseX;
-	g = mouseY;
-	b = (mouseX + mouseY) / 2;
-}</code></pre>
+	r = map(mouseX, 0, width, 0, 255); // red
+	g = map(mouseY, 0, height, 255, 0); // green
+	b = map((mouseX + mouseY) / 2, 0, width + height, 0, 255); // blue
+}</div>
 </div>
 
 <div class="slide">
 	<h2>Size</h2>
-	<p>Change the size:</p>
-	<pre><code>var sz = 10;
-function setup(){
-	createCanvas(255, 255);
-}
-function draw(){
-	background("black");
-	fill("white");
-	ellipse(width/2, height/2, sz);
-}
-function mousePressed() {
-	sz += 10;
-}</code></pre>
+	<p>Of course, we can also interact with the size of shapes.  Position, size and color are the three attributes of shapes that we can change using interaction.</p>
 </div>
 
 <div class="slide">
-	<p>Another size example:</p>
-	<pre><code>function setup(){
-	createCanvas(255, 255);
-}
+	<iframe class="sketch" src="size" width="600" height="400" frameborder="0"></iframe>
+</div>
+
+
+<div class="slide">
+	<div class="ex" data-preview>var s = 10;
+
 function draw(){
-	background("black");
-	fill("white");
-	ellipse(width/2, height/2, width - mouseX);
-}</code></pre>
+	background(0);
+	fill(255);
+
+	var x = width/2;
+	var y = height/2;
+	ellipse(x, y, s);
+}
+
+function mousePressed() {
+	s += 10;
+}</div>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function draw(){
+	background(0);
+	fill(255);
+	noStroke();
+
+	var s = width - mouseX; // reverses the direction
+
+	var x = width/2;
+	var y = height/2;
+	ellipse(x, y, s);
+
+	// uncomment to visualize these values
+	// visualize();
+	function visualize() {
+		fill('plum');
+		text(width + ' - ' + mouseX + ' = ' + (width - mouseX), mouseX, 20);
+		text('width - mouseX', mouseX, 40);
+		stroke('plum');
+		line(x - s/2, y, x + s/2, y);
+		text(s, x, y - 10);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<h2>Meaningful interaction</h2>
+	<p>These techniques show how to make things move when you click or move the mouse, but they're kind of arbirtrary.  Good interaction should be meaningful for the user.  That can be a lot of different things, it can be informative, challenging, fun or any number of experiences.</p>
+	<p>The key to meaningful interaction is interacting with the drawing in a way that relates to a theme or action.</p>
+	<p>For a very simple example, I will make my self portrait talk.</p>
+</div>
+
+<div class="slide">
+	<p>In a previous class, I made a self portrait using variables.  Now we'll see those variables come in handy.</p>
+	<p>Using a simple event, I will make the self portrait talk.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>// self portrait
+function setup() {
+    createCanvas(400, 400);
+}
+
+function draw() {
+	background(220);
+	rectMode(CENTER);
+	
+	var x = width/2;
+	var y = height/2;
+	var s = 200; // size
+	var o = 50; // offset
+
+	noStroke();
+	fill("plum");
+	ellipse(x, y, s); // face
+
+	fill("yellow");
+	ellipse(x - o, y, 25); // right eye
+	ellipse(x + o, y, 25); // left eye
+
+	fill('plum');
+	stroke("#ffddff");
+	strokeWeight(4);
+
+	var mouthSize = map(mouseX, 0, width, 5, 200); // move mouth with mouse x
+	mouthSize = max(0, mouthSize); // prevents negative value error
+
+	rect(x, y + o, s/2, mouthSize, 10); // mouth	
+}</div>
 </div>

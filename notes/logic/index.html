@@ -1,57 +1,33 @@
 ---
 layout: slides
-title: MMP 210
-week: 5
-dek: JavaScript comparison operators & conditionals
+title: Conditional logic
+week: 6
 ---
 
 <div class="slide">
-	<h2>Comparison operators</h2>
-	<p>Using comparison operators, we can test the values of variables to detect if they are equivalent.</p>
+	<h2>Making decisions</h2>
+	<p>When designing a program, there are many pointer where the program needs to do one thing or another based on the user input or some other condition.</p>
+	<p>Computer make decisions using a similar process that we do, by creating conditions to simplify a question.</p>
 </div>
+
 <div class="slide">
-	<pre><code><c></c>var x = 1;
-<c></c>var y = 0;
-<c></c>var z = "1";
-<c></c>var a = 5;
-
-<c></c>x == y;
-<c></c>x != y;
-<c></c>x == z;
-
-<c></c>x === z;
-<c></c>x !== z;
-
-<c></c>x > y;
-<c></c>x < y;
-<c></c>x >= z;
-<c></c>x <= a;</code></pre>
+	<p>For example, think of how you decided to wear the outfit you are wearing now.  Lot's of decisions when into it, but most decision can be boiled down into binary options.</p>
+	<blockquote>Is it cold outside?  Then I will wear a jacket.</blockquote>
 </div>
+
 <div class="slide">
-	<ul>
-		<li><code>==</code> two values are the same</li>
-		<li><code>!=</code> two values are <strong>not</strong> the same</li>
-		<li><code>></code> value 1 is greater than value 2</li>
-		<li><code><</code> value 1 is less than value 2</li>
-		<li><code>>=</code> value 1 is greater than or equal to value 2</li>
-		<li><code><=</code> value 1 is less than or equal to value 2</li>
-		<li><code>===</code> two values are the same and same type</li>
-		<li><code>!==</code> two values are <strong>not</strong> the same or <strong>not</strong> the same type</li>
-	</ul>
-</div>
-<div class="slide">
-	<p>We can compare strings as well as numbers.</p>
-	<pre><code><c></c>var x = "hello";
-<c></c>var y = "world";
-<c></c>x == y;
-<c></c>x != y;</code></pre>
+	<p>In programming, those decisions are referred as conditional statements.  A <note>conditional statement</note> evaluates a condition to be either <code>true</code> or <code>false</code> and then performs actions based on the outcome.</p>
+	<p>JavaScript and other programming languages use a type of data called a <note>boolean</note> to represent binary values as <code>true</code> or <code>false</code>.</p>
 </div>
 
 <div class="slide">
 	<h2>Booleans</h2>
 	<p>A <code>boolean</code> is a datatype that can be either <code>true</code> or <code>false</code>.</p>
 	<p>In JavaScript other values will evaluate to <code>false</code>, such as <code>0</code>, <code>""</code> (empty string), <code>NaN</code>, <code>null</code>, and <code>undefined</code>.</p>  
-	<p>Other values default to <code>true</code>, such as <code>"Hello World"</code>, <code>1</code>, <code>99</code>, or <code>-99</code>.  Try evaluating some booleans in the console with this syntax:</p>
+	<p>Other values default to <code>true</code>, such as <code>"Hello World"</code>, <code>1</code>, <code>99</code>, or <code>-99</code>.  Try evaluating some booleans in the console.</p>
+</div>
+
+<div class="slide">
 	<pre><code><c></c>Boolean(true);
 <c></c>Boolean(false);
 <c></c>Boolean("");
@@ -60,83 +36,240 @@ dek: JavaScript comparison operators & conditionals
 <c></c>Boolean(4);</code></pre>
 </div>
 
-
-
 <div class="slide">
-	<h2>Conditionals</h2>
-	<p>Using booleans, we can make decision in our program with conditional statements starting with the keyword <code>if</code>:</p>
-	<pre><code><c></c>var answer = "hello world";
-<c></c>if ("hello world" == answer) {
-	console.log("Correct!");
-}
-<c></c>var response = 10;
-<c></c>if (response != answer) {
-	console.log("That's incorrect.");
-}</code></pre>
+	<h2>if</h2>
+	<p><code>if</code> is the key word used in JavaScript to begin a conditional statement.</p>
+	<p>Just like in the example, we say if something is true (if the weather is cold) then do something (wear a jacket).</p>
+	<p>Let's look at a simple example.</p>
+	<p>Remember <code>mouseX</code> and <code>mouseY</code> from the interaction lesson?  p5 has another system variable, <code>mouseIsPressed</code>.  It also tells us some information about the user interaction with the computer.  In this case, it is simply whether or not the user is pressing a button on the mouse. </p>
 </div>
 
 <div class="slide">
-	<p>We can evaluate statements using numbers and strings as well:</p>
-	<pre><code><c></c>var x = 0;
-<c></c>var y = 1;
-<c></c>if (x == y) { 
-	console.log("x is equal to y"); 
-}
-<c></c>if (x < y) { 
-	console.log("x is less than y"); 
-}</code></pre>
+	<div class="ex" data-preview>function draw() {
+	background('black');
+	if (mouseIsPressed) {
+		background('plum');
+	}
+	textSize(20);
+	fill(255);
+	text('mouseIsPressed = ' + mouseIsPressed, 20, 40);
+}</div>
+</div>
 
-	<pre><code><c></c>var a = "hello";
-<c></c>var b = "world";
-<c></c>if (a.length == b.length) { 
-	console.log("hello and world have the same number of characters"); 
-}
-<c></c>if (a == b) { 
-	console.log("hello and world are the same string"); 
-}</code></pre>
+<div class="slide">
+	<p>This example uses a conditional statement to evaluate whether the user is pressing a mouse button.</p>
+	<p>If the user is pressing a mouse button, the background is changed to <code>'plum'</code>.</p>
+</div>
+
+
+<div class="slide">
+	<h2>Comparison operators</h2>
+	<p>In some cases, we need to figure out conditions that are not provided by simple boolean values like <code>mouseIsPressed</code>.</p>
+	<p>In these cases, we can use comparison operators to evaluate a condition.</p>
+	<p>The result of a comparison will always be <code>true</code> or <code>false</code>.</p>
+</div>
+
+<div class="slide">
+	<table>
+		<tr>
+			<th>operator</th>
+			<th>condition</th>
+		</tr>
+		<tr><td><code>==</code></td>	<td>two values are the same</td></tr>
+		<tr><td><code>!=</code></td>	<td>two values are <strong>not</strong> the same</td></tr>
+		<tr><td><code>></code></td>	<td>value 1 is greater than value 2</td></tr>
+		<tr><td><code><</code></td>	<td>value 1 is less than value 2</td></tr>
+		<tr><td><code>>=</code></td>	<td>value 1 is greater than or equal to value 2</td></tr>
+		<tr><td><code><=</code></td>	<td>value 1 is less than or equal to value 2</td></tr>
+		<tr><td><code>===</code></td>	<td>two values are the same and same type</td></tr>
+		<tr><td><code>!==</code></td>	<td>two values are <strong>not</strong> the same or <strong>not</strong> the same type</td></tr>
+	</table>
+</div>
+
+
+<div class="slide">
+	<p>In the following example, the conditional statement compares the current position of the mouse on the x axis to the middle point on the x axis, or <code>width / 2</code>.</p>
+	<p>Depending on where the mouse is, this condition will result in different code being called and a different shape being drawn.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function draw() {
+	background(220);
+
+	if (mouseX > width / 2) {
+		ellipse(width/2, height/2, 100);
+	}
+  	
+	stroke('white'); // display center line
+	line(width / 2, 0, width / 2, height);
+		
+ 	fill(0); 	// display mouse value
+	noStroke();
+	textSize(20);
+	textFont('menlo');
+	text('mouseX: ' + round(mouseX), 20, 40);
+	text('width/2: ' + width/2, 20, 60);
+	text(round(mouseX) + ' > '+width/2+': ' +(mouseX > width/2), 20, 80);
+}</div>
 </div>
 
 <div class="slide">
 	<h2>else</h2>
 	<p>We can use <code>else</code> to tell our program what to do if the conditional is false:</p>
-	<pre><code><c></c>if (a == b) { 
-	console.log("hello and world are the same string"); 
-} else {
-	console.log("hello and world are NOT the same string")
-}</code></pre>
 </div>
 
+<div class="slide">
+	<div class="ex" data-preview>function draw() {
+	background(220);
+	rectMode(CENTER);
+
+	if (mouseX > width / 2) {
+		ellipse(width/2, height/2, 100);
+	} else {
+		rect(width/2, height/2, 100, 100);
+	}
+  	
+	stroke('white'); // display center line
+	line(width / 2, 0, width / 2, height);
+		
+ 	fill(0); 	// display mouse value
+	noStroke(); textSize(20); textFont('menlo');
+	text(round(mouseX) + ' > '+width/2+': ' +(mouseX > width/2), 20, 40);
+}</div>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function draw() {
+	if (mouseIsPressed) {
+		background('plum');
+	} else {
+		background('lightblue');
+	}
+}</div>
+</div>
 
 <div class="slide">
 	<h2>else if</h2>
 	<p><code>else if</code> is to test further conditions that are not covered by a simple <code>else</code>.</p>
-	<pre><code><c></c>if (x == y) {
-	console.log("The values are equal.");
-} else if (x < y) {
-	console.log(x + " is less than " + y);
-} else {
-	console.log(x + " is greater than " + y);
-}</code></pre>
+	<blockquote>If it's snowing, I will wear a heavy coat.  If it's raining, I will where a rain coat.  Otherwise I will wear a jacket.</blockquote>
+	<p>The next example shows a sketch that divides the vertical space into three parts and draw an ellipse in the section where the mouse is, creating a system like a stop light.</p>
 </div>
-
 
 <div class="slide">
-	<h2>Logical operators - AND and OR</h2>
-	<p>There are a number of logical statements that help us evaluate more complex statements.  We can use <code>&&</code> and <code>||</code> to add statements to our condition.  <code>&&</code> requires all statements to evaluate true, reading left to right.  <code>||</code> requires one of the statements on either side to be true.</p>
-	</div>
-	<div class="slide">
-    <pre><code><c></c>true && false
-<c></c>7 == "7" && NaN != 1
-<c></c>false || true
-<c></c>7 === "7" || 1 == 1 && !(false)</code></pre>
-	<p>We can also uses parathesis <code>()</code> to nest logic rules.</p>
-	<pre><code><c></c>( true && true || false ) && true</code></pre>
+	<div class="ex" data-preview>function draw() {
+	background(220);
+	rectMode(CENTER);
+	noStroke();
+
+	if (mouseY < 120) {
+		ellipse(width/2, 60, 120);
+	} else if (mouseY < 240) {
+		ellipse(width/2, 180, 120);
+	} else {
+		ellipse(width/2, 300, 120);
+	}
+}</div>
 </div>
-	<div class="slide">
-	<pre><code><c></c>var min = 100;
-<c></c>var max = 500;
-<c></c>var x = 200;
-<c></c>if (x > min && x < max) {
-	console.log("x is in range");
-}</code></pre>
+
+<div class="slide">
+	<p>Can we rewrite the above example using variables?</p>
 </div>
+
+<div class="slide">
+	<div class="ex" data-preview>function draw() {
+	background(220);
+	rectMode(CENTER);
+	noStroke();
+
+	var row = height/3; // the height of each row
+
+	if (mouseY < row) {
+		ellipse(width/2, 60, 120);
+	} else if (mouseY < row * 2) {
+		ellipse(width/2, row + row/2, row);
+	} else {
+		ellipse(width/2, row * 2 + row/2, row);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<h2>if statements with no brackets</h2>
+	<p>Sometimes you will see if statements that don't have curly brackets.  This will work in the case where there is only one line following the if statenment conditional.</p>
+	<p>This is fine to do while writing code, but if you decide to expand the if statement you will need to add curly braces, so it rarely saves that much time.  Using curly brackets in all cases is recommended.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>if (true)
+	alert('this works');</div>
+
+	<div class="ex" data-preview>if (false)
+	alert('this will not run');
+else
+	alert('this also works');</div>
+
+	<div class="ex" data-preview>// this is a problem
+if (false)
+	alert('this will not run');
+	alert('this will, but maybe does not look that way');</div>
+</div>
+
+
+<!-- if statement inside of if statements -->
+<div class="slide">
+	<h2>Nested conditional statements</h2>
+	<p><code>if</code> statements can be placed inside of each other.  There is no limit to the number or structure of if statements used in a program.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function draw() {
+	background(220);
+	rectMode(CENTER);
+
+	if (mouseIsPressed) {
+		if (mouseX > width/2) {
+			ellipse(width/2, height/2, 200);
+		} else {
+			rect(width/2, height/2, 200, 200);
+		}
+	}	
+}</div>
+</div>
+
+<!-- quadrants -->
+
+<div class="slide">
+	<h2>AND and OR</h2>
+	<p>In the above example, we need a nested if statement to decide first if the mouse is pressed and then the position of the mouse.</p>
+	<p>Logical conditions can be combined in one statement using the && (AND) and || (OR) operators.  AND operators require both conditions to be true, while OR operators will be true if either condition is true.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function draw() {
+	background(220);
+	rectMode(CENTER);
+
+	// AND
+	if (mouseIsPressed && mouseX > width/2) {
+		ellipse(width/2, height/2, 200);
+	}	
+}</div>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function draw() {
+	background(220);
+
+	// OR
+	if (mouseY > height/2 || mouseX > width/2) {
+		ellipse(width/2, height/2, 200);
+	}	
+}</div>
+</div>
+
+<!-- 
+	
+	https://medium.com/@jonathanabrams/single-line-if-statements-2565c62ff492
+	https://creative-coding.decontextualize.com/interaction/
+	
+ -->

@@ -1,139 +1,297 @@
 ---
 layout: slides
-title: MMP 210
-week: 6
-dek: p5 - animation, random, modulo
+title: Animation
+week: 7
 ---
 
 <div class="slide">
-	<p>We're going to be using the <code>draw()</code> function to create motion and animation.  This time we're going to be adding new techniques beyond the system variables we used in week 4.</p>
+	<p>In the lesson on interaction, we learned how to move shapes, change their size and change their color, reacting to user input.  These changes can also be automated without user input, or animated.</p>
+	<p>Let's start with a simple shape.</p>
 </div>
 
 <div class="slide">
-	<p>Let's start with a simple shape:</p>
-	<pre><code>function setup() {
-	createCanvas(640, 480);
-}
+	<div class="ex" data-preview>function draw() {
+	background(220);
+	ellipse(100, 100, 100);
+}</div>
+</div>
+
+<div class="slide">
+	<!-- <div data-src="ellipsemove.json"></div> -->
+	<p>If we want to animate the shape across the screen, we need to change the point where it's being drawn from over time.</p>
+	<p>It's easy to change the point by using a mouse click or mapping it to the mouse position, but how can we change it without the mouse?</p>
+	<p>To start, we need a variable to use for the shape position.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var x = 100;
 function draw() {
-	ellipse(100, 100, 20, 20);
-}</code></pre>
+	background(220);
+	ellipse(100, 100, 100);
+}</div>
 </div>
 
 <div class="slide">
-	<div data-src="ellipsemove.json"></div>
-	<p>If we want to animate the shape across the screen, we need to change the point where it's being drawn from.</p>
+	<p>Now all we have to do is increment the variable.</p>
 </div>
 
 <div class="slide">
-	<p>So let's create a variable:</p>
-	<pre><code>var x = 10;
-function setup() {
-	createCanvas(640, 360);
-}
+	<div class="ex" data-preview>var x = 100;
 function draw() {
-	ellipse(x, 100, 50);
-}</code></pre>
+	background(220);
+	ellipse(x, 100, 100);
+	x++;
+}</div>
 </div>
 
 <div class="slide">
-	<p>And then increment it:</p>
-	<pre><code>x++;</code></pre>
+	<p>Why does it look like the circle is moving?</p>
+	<p>Hint: take out the background and see what happens.</p>
+	<p>How would I make it go faster?</p>
 </div>
+
+<div class="slide">
+	<div class="ex" data-preview>var x = 100;
+function draw() {
+	background(220);
+	ellipse(x, 100, 100);
+	x += 5;
+}</div>
+</div>
+
 
 <div class="slide">
 	<p>That's cool, but our circle is flying off the screen!</p>
-	<p>Let's use a conditional statement to set it back to the beginning:</p>
-	<pre><code>if (x >= width) {
-    x = 0;
-}</code></pre>
+	<p>Let's use a conditional statement to make it loop back to the beginning.</p>
 </div>
 
 <div class="slide">
-	<p>Can we make it go faster?</p>
-	<pre><code>x += 10;</code></pre>
+	<div class="ex" data-preview>var x = 100;
+function draw() {
+	background(220);
+	ellipse(x, 100, 100);
+	x += 2;
+	if (x > width) {
+		x = 0;
+	}
+}</div>
 </div>
 
 <div class="slide">
-	<p>Let's move on the y axis too:</p>
-	<pre><code>var y = 10;
-if (y >= height) {
-	y = 0;
-}</code></pre>
+	<p>Why does the circle suddenly disappear on the right side?  How could we change the conditional to make sure the circle gets all the way off the screen?</p>
+	<p>Can we also change the y position?</p>
 </div>
 
 <div class="slide">
-	<p>How do we make the ellipse move back across the canvas?  Last week we looked at a <a href="https://owenroberts.github.io/mmp210/week5/p5-logic.html#a-boolean-toggle" target="blank">boolean toggle</a>.  We can use a similar structure here, except we will toggle the direction of the ellipse.</p>
-	<p>First we will create a `speed` variable to save the speed of the ellipse:</p>
-	<pre><code>var speed = 2;
-x += speed;</code></pre>
+	<div class="ex" data-preview>var x = 100;
+var y = 100;
+function draw() {
+	background(220);
+	ellipse(x, y, 100);
+	x += 2;
+	y += 2;
+	if (x > width) {
+		x = 0;
+	}
+	if (y > height) {
+		y = 0;
+	}
+}</div>
 </div>
 
 <div class="slide">
-	<p>Next, instead of resetting <code>x</code>  back to <code>0</code> let's reverse the direction.</p>
-	<pre><code>if (x >= width) {
-	speed *= -1;
-}</code></pre>
-	<p>Uh oh, that only works in one direction.  We need to update our condition:</p>
-		<pre><code>if (x >= width || x <= 0) {
-	speed *= -1;
-}</code></pre>
-	<p>Cool.  So what do we need to implement this on the <code>y</code> axis?</p>
+	<p>Why does the circle loop on the y axis before the x axis?</p>
+	<p>Let's try animating the size too.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var x = 100;
+var y = 100;
+var s = 100; // size
+function draw() {
+	background(220);
+	ellipse(x, y, s);
+	x += 2;
+	y += 2;
+	s += 2;
+	if (x > width) {
+		x = 0;
+	}
+	if (y > height) {
+		y = 0;
+	}
+}</div>
 </div>
 
 
 <div class="slide">
-	<h2>Add randomness</h2>
-	<p>We can also add some randomness to the movement using the <a href="http://p5js.org/examples/examples/Math_Random.php" target="blank">p5 function</a>: <code>random</code></p>
-	<pre><code>var r = random(0,2);
-if (x < width) {
-	x += speed * r;
-}
-</code></pre>
-	<p>Try increasing the range of random <code>(0,2)</code> and see what happens.</p>
+	<h2>Speed</h2>
+	<p>Instead of looping around the canvs, what if we want the circle to bounce back and forth like a ball?</p>
+	<p>So far we have been using a hard coded number to change the values of x and y.</p>
+	<p>What if we used a variable instead?  We could then update that variable given certain conditins, like reaching the end of the canvas.</p>
+	<p>We'll start with a speed variable.</p>
 </div>
 
 <div class="slide">
-	<h2>Animating color</h2>
-	<p>Or we could use <code>random</code> to animate the color:</p>
-	 <pre><code>var r = random(0,255);
-var g = random(0,255);
-var b = random(0,255);
-fill(r, g, b); </code></pre>
+	<div class="ex" data-preview>var x = 100;
+var speed = 5;
+function draw() {
+	background(220);
+	ellipse(x, 100, 100);
+	x += speed;
+	if (x > width) {
+		x = 0;
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>In the above sketch, we can change the <code>speed</code> value to change how fast x moves.</p>
+	<p>Next, we can reverse the speed instead of resetting x.</p>
+	<p>There are two conditions that we want to check for, if the x position gets to the right side of the canvas, or back to the left.  We can use a compound conditional here.</p>
+	<p>Then we will use simple math to make speed the opposite value.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var x = 100;
+var speed = 5;
+function draw() {
+	background(220);
+	ellipse(x, 100, 100);
+	x += speed;
+	if (x > width || x < 0) {
+		speed *= -1;
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>This only works because speed is a variable that can be changed or updated during the lifetime of the program.</p>
+	<p>Try adding a speed variable for y to make the ball bounce off all four sides of the canvas.</p>
+</div>
+
+
+<div class="slide">
+	<h2>Randomness</h2>
+	<p>The previous examples all have smooth movement.  If we want to create more natural or unpredictable animation, to add a lifelike quality, one way to achieve that is to introduce randomness into the sketch.</p>
+	<p>The <a href="http://p5js.org/examples/examples/Math_Random.php" target="blank">random</a> function in p5 let's us generate random numbers.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var x = 100;
+var y = 100;
+function draw() {
+	background(220);
+	ellipse(x, y, 100);
+	x += random(-5, 5);
+	y += random(-5, 5);
+}</div>
+</div>
+
+<div class="slide">
+	<p>The <code>random</code> function takes one or two arguments, used to create a range.  With two arguments, the smaller number will be the minimum, such as the <code>-5</code> above, and the larger will be the maximum value of the number generated.  With one argument, <code>0</code> will be one end of the range, the other end will be the argument added.</p>
+	<p>Try playing with the arguments in the above example to see how the random behavior changes.</p>
+	<p>What if the x values have a range of 0 to 5?  What about -5 to 0?</p>
+</div>
+
+<div class="slide">
+	<h2>Color</h2>
+	<p>Changing color over time also requires using variables to represent color values.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var r = 0;
+var c = 1; // change
+function draw() {
+	background(220);
+	fill(r, 0, 100);
+	noStroke();
+	ellipse(width/2, height/2, 200);
+	r += c;
+	if (r > 255 || r < 0) {
+		c *= -1;
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>Using <code>random</code> to generate color.</p>
+</div>
+<div class="slide">
+	<div class="ex" data-preview>function draw() {
+	background(220);
+	var r = random(255);
+	var g = random(255);
+	var b = random(255);
+	fill(r, g, b);
+	noStroke();
+	ellipse(width/2, height/2, 200);
+}</div>
 </div>
 
 <div class="slide">
 	<p>That's cool, but it's a little crazy.  What if we wanted to change the color only once every 30 frames?</p>
-	<p>JavaScript has a mathematical operator called <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_()" target="blank">modulo</a> <code>%</code> which gives the remainder of a division of two values.  Let's look at some examples in the console:</p>
+</div>
+
+<div class="slide">
+	<h2>Modulo</h2>
+	<p>JavaScript includes a mathematical operator called <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_()" target="blank">modulo</a> <code>%</code> which gives the remainder of a division of two values.  Let's look at some examples in the console:</p>
 	<pre><code><c></c>10 % 9;
 <c></c>5 % 4;
 <c></c>2 % 1;
 <c></c>1 % 2;
 <c></c>30 % 3;
-<c></c>31 % 3;
-<c></c>for (var i = 0; i < 20; i++) {
-	console.log(i % 5);
-}</code></pre>
+<c></c>31 % 3;</code></pre>
 </div>
+
 <div class="slide">
-	<p>Notice that when we count up using modulo, we repeat the same count, even though i keeps going up.</p>
+	<p>Because of this behavior, modulo is useful for counting a repeated range.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(300, 100);
+	textSize(20);
+	textFont('menlo');
+	frameRate(2);
+}
+function draw() {
+	background(220);
+	
+	text('frameCount', 10, 40);
+	text('frameCount % 10', 10, 80);
+	text(frameCount, 240, 40);
+	text(frameCount % 10, 240, 80);
+}</div>
+</div>
+
+<div class="slide">
+	<p>Notice that when we count up using modulo, we repeat the same count, even though <code>i</code> keeps going up.</p>
 	<p>We can use that with the <code>frameCount</code> in p5 to tell how many time we've gone a certain number of frames.</p>
+	<p>We need to make our color values global, and then change them whenever the frameCount remainder of 30 is 0 (this will happen at 30, 60, 90, 120...)</p>
 </div>
+
 <div class="slide">
-		<p>We need to make our color values global, and then change them whenever the frameCount remainder of 30 is 0 (this will happen at 30, 60, 90, 120...)</p>
-		<pre><code>var x = 10;
-var y = 10;
-var r = random(0,255);
-var g = random(0,255);
-var b = random(0,255);
+		
+	<div class="ex" data-preview>var r, g, b;
+function setup() {
+	createCanvas(640, 360);
+	r = random(0,255);
+	g = random(0,255);
+	b = random(0,255);
+	background(220);
+	noStroke();
+}
 
 function draw() {
-	if (frameCount % 30 == 0) {
+	if (frameCount % 30 === 0) {
 		r = random(0,255);
 		g = random(0,255);
 		b = random(0,255);
 	}
 	fill(r, g, b);
-}</code></pre>
+	ellipse(width/2, height/2, 200);
+}</div>
 </div>
 
 <div class="slide">

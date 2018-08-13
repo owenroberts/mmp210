@@ -9,57 +9,101 @@ week: 3
 	<h2>What is debugging?</h2>
 	<p>The term "computer bug" was coined by <a href="https://en.wikipedia.org/wiki/Grace_Hopper" target="blank">Grace Hopper</a> in 1946, when she discovered that a computer program running on the Mark II machine had a moth trapped in an eletrical relay.  The moth was trapped and preserved in the log book.</p>
 	<p>Generally, a bug is an error or flaw in a computer program that causes the execution to fail.</p>
-	<p>In JavaScript there are fewer fatal errors.  The language is very forgiving of type errors and other things that would cause classical languages to fail.  However, JavaScript programs can fail, and when they do it can be difficult to understand why, in part because other elements of the HTML page, and even other JavaScripts scripts can continue to execture.  The web page will still load, so we need to use debugging tools like the Chrome Developer console to find these errors.</p>
 </div>
 
 <div class="slide">
-	<p>Go ahead and open the console now:</p>
+	<p>In JavaScript there are fewer fatal errors.  The language is very forgiving of type errors and other things that would cause classical languages to fail.</p>
+	<p>However, JavaScript programs can fail, and when they do it can be difficult to understand why, in part because other elements of the HTML page, and even other JavaScripts scripts can continue to execture.  The web page will still load, so we need to use debugging tools like the Chrome Developer console to find these errors.</p>
+</div>
+
+<div class="slide">
+	<div class="utube">
+		<iframe src="https://www.youtube.com/embed/_Nua3Cjdik0?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div><!-- debuggin anim _Nua3Cjdik0 -->
+</div>
+
+<div class="slide">
+	<h2>The Console</h2>
+	<p>Open the console now:</p>
 	<p><strong class="karla">View > Developer > JavaScript Console</strong></p>
+	<p>Mac:</p>
 	<p><span class="key">CAj</span></p>
+	<p>Windows:</p>
+	<p><span class="key">VSj</span></p>
 </div>
 
 <div class="slide">
-	<p>It's pretty easy to create an error.  Try typing this:</p>
+	<p>It's easy to create an error.  Try typing this:</p>
 	<pre><code><c></c>x + 1</code></pre>
 	<p>You will see some red text like this:</p>
-	<pre><code class="nohighlight"><c></c><span style="color:red;">Uncaught ReferenceError: x is not defined at:1:1</span></code></pre>
+	<pre><code class="nohighlight"><span style="color:red;">Uncaught ReferenceError: x is not defined at:1:1</span></code></pre>
 	<p>We haven't initalized <code>x</code> with a string or number value, so we can't add a number to it.</p>
 </div>
 
 <!-- general approach -->
 <div class="slide">
 	<h2>How to debug</h2>
-	<p><code>0.</code> All programmers encounter bugs in their code and many will spend more time debugging then writing new code.  It is a good idea to develop strategies for debugging as you learn programming to save time.</p>
+
+	<p>All programmers encounter bugs in their code and many will spend more time debugging then writing new code.  It is a good idea to develop strategies for debugging as you learn programming to save time.</p>
+	<p>Finding a bug requires a different mindset than writing a program.  Instead of writing what you want the computer to do, you need to go back through your code and figure out where it stopped doing what you thought it would.  <note>Don't be upset!</note>  Everyone gets bugs.  If your program suddenly stops rendering, don't get mad and say <em>"It's just not doing anything."</em>  Take a step back, maybe go for a quick drink of water or walk around the block, and then look at your code with fresh eyes.</p>
 </div>
 
 <div class="slide">
-	<p><code>1.</code> Make sure you are <note>editing the right file</note>.  Try closing Brackets (or your text editor) and reopening to make sure the file you are editing is the same one you are viewing in your browser.</p>
+	<p><code>0. Ask yourself:</code></p>
+	<p>What did I expect to happen?</p>
+	<p>What happened instead?</p>
 </div>
 
 <div class="slide">	
-	<p><code>2.</code> Bugs can be <note>technical</note> problems with your code, like a typo or misspelled method.  But they can also be <note>conceptual gaps</note> between what you expect a program to do and how it actually performs.  They can also be a combination of the two things.  The first thing to do is <note>identify which type</note> of bug you are facing.</p>
+	<p><code>1. Check the console for error messages.</code></p>
+	<p>Bugs can be <note>technical</note> problems with your code, like a typo or misspelled method.  But they can also be <note>conceptual gaps</note> between what you expect a program to do and how it actually performs.  They can also be a combination of the two things.  The first thing to do is <note>identify which type</note> of problem you are facing.</p>
+</div>
+
+<div class="slide">	
+	<p>Read the error and find the line in your sketch where the error happened.</p>
+	<p>Does the error make sense?  What is it asking you to change?</p>
 </div>
 
 <div class="slide">
-	<p><code>3.</code> Finding a bug requires a different mindset than writing a program.  Instead of writing what you want the computer to do, you need to go back through your code and figure out where it stopped doing what you thought it would.  <note>Don't be upset!</note>  Everyone gets bugs.  If your program suddenly stops rendering, don't get mad and say "it's just not doing anything."  Take a step back, maybe go for a quick drink of water or walk around the block, and then look at your code with fresh eyes.</p>
+	<p><code>2. If there's no error, test parts of your program.</code></p>
+	<p>If something is not running, add a <code>console.log()</code> before and after to see what happens.  Test all of your variables in different parts of your program to make sure they are logging what you expect.</p>
+	<p>Log variables.  Does that create an error or maybe log an <code>undefined</code>?</p>
+	<p>Log anything that you can think to log.</p>
 </div>
 
 <div class="slide">	
-	<p><code>4.</code> <note>Don't delete you code!</note>  You will need to add some new lines of code to figure out what's behaving incorrectly.  Don't undo everything or trash your file.  You might lose some useful work.</p>
+	<p><code>3. Research.</code></p>
+	<p>When you log errors that you don't understand, try searching the same error on Google or <a href="http://stackoverflow.com" target="blank">Stack Overflow</a>.  Remember that some parts of your program are not universal.  If you error is <code style="color:red;">mySpecialVariable is not defined</code> you won't find other examples with the exact same variable names.</p>
+</div>
+
+<div class="slide">	
+	<p><code>4. Ask a friend.</code></p>
+	<p>Once you have tried to figure out the problem on your own, ask a friend sitting near you, a tutor, or me.  Sometimes someone who has never read your program before will immediately spot obvious problems that you have missed beacuse you've been staring at it for too long.</p>
+</div>
+
+<div class="slide">	
+	<p><code>5. Take a break.</code></p>
+	<p>I can't tell you how many times I've spent like 3 hours debugging something late into the night while getting increasingly frustrated only to give up, go to bed, and wake up and immediately know what I was overlooking, or sit down and figure it out in five minutes.</p>
+	<p>Like many things in life, programming is best done when your mind is fresh.</p>
 </div>
 
 <div class="slide">
-	<p><code>5.</code> If something is not running, add a <code>console.log()</code> before and after to see what happens.  Test all of your variables in different parts of your program to make sure they are logging what you expect.</p>
+	<h2>Some more guidelines</h2>
+	<p><note>Don't delete you code!</note>  You will need to add some new lines of code to figure out what's behaving incorrectly.  Don't undo everything or trash your file.  You might lose some useful work.</p>
+	<p>Make sure you are <note>editing the right file</note>.  Try closing Brackets (or your text editor) and reopening to make sure the file you are editing is the same one you are viewing in your browser.</p>
 </div>
 
 <div class="slide">	
-	<p><code>6.</code> You should have the <note>JavaScript Console</note> open basically all of the time when you are working on a project.  When your code throws error, remember to look at the line number and read through the JavaScript function stack to find where the error originated.</p>
+	<p>You should have the <note>JavaScript Console</note> open basically all of the time when you are working on a project.</p>
+	<p>When your code throws error, remember to look at the line number and read through the JavaScript function stack to find where the error originated.</p>
 	<img src="callstack.png">
-</div>
+	
+</div>	
 
-<div class="slide">	
-	<p><code>7.</code> When you log errors that you don't understand, try searching the same error on Google or <a href="http://stackoverflow.com" target="blank">Stack Overflow</a>.  Remember that some parts of your program are not universal.  If you error is <code style="color:red;">mySpecialVariable is not defined</code> you won't find other examples with the exact same variable names.</p>
-</div>
+
+
+
+
 
 <!-- using console.log -->
 <div class="slide">

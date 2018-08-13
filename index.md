@@ -1,8 +1,8 @@
 ---
 layout: main
-title: Home
-dek: Class info, notes and schedule
+title: Multimedia Programming 1
 ---
+
 This is the class page of MMP 210 at BMCC.
 
 The class notes, schedule and assignments are all found here.

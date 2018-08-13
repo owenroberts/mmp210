@@ -60,12 +60,19 @@ week: 1
 	<pre><code>&lt;div class="content"&gt;&lt;/div&gt;</code></pre>
 	<p>Classes can be applied to multiple elements in a layout and multiple classes can be applied to one element:</p>
 	<pre><code>&lt;div class="content post active"&gt;&lt;/div&gt;
-	&lt;div class="content post"&gt;&lt;/div&gt;
-	&lt;div class="content post"&gt;&lt;/div&gt;</code></pre>
+&lt;div class="content post"&gt;&lt;/div&gt;
+&lt;div class="content post"&gt;&lt;/div&gt;</code></pre>
+</div>
+
+<div class="slide">
 	<pre><code>.content {
-	background-color:lightgray;
-	font-size:1em;
-	width:40px;
+	background-color: lightgray;
+	font-size: 1em;
+	width: 40px;
+}
+
+.active {
+	border: 1px solid blue;
 }</code></pre>
 </div>
 
@@ -73,18 +80,18 @@ week: 1
 	<h2>Id</h2>
 	<p>IDs can only be used once, on one element:</p>
 	<pre><code>&lt;div id="header"&gt;&lt;/div&gt;
-	&lt;div id="main"&gt;&lt;/div&gt;</code></pre>
+&lt;div id="main"&gt;&lt;/div&gt;</code></pre>
 	<p>Classes and IDs can be contained in the same div:</p>
 	<pre><code>&lt;div id="header" class="content"&gt;&lt;/div&gt;
-	&lt;div id="main" class="content post"&gt;&lt;/div&gt;</code></pre>
+&lt;div id="main" class="content post"&gt;&lt;/div&gt;</code></pre>
 </div>
 
 <div class="slide">
-	<p>In CSS, rules for classes use a period or full stop <code>.</code> while IDS use the hashtag <code>#</code>.</p>
+	<p>In CSS, rules for classes use a period or full stop <code>.</code> while IDs use the hashtag <code>#</code>.</p>
 	<pre><code>#header {
-	background-color:gray;
-	font-size:2em;
-	height:60px;
+	background-color: gray;
+	font-size: 2em;
+	height: 60px;
 }</code></pre>
 
 </div>
@@ -101,13 +108,13 @@ week: 1
 <div class="slide">
 	<p>Can be styled with the following rules:</p>
 	<pre><code>ul {
-	width:200px;
-	height:20px;
-	list-style:none;
+	width: 200px;
+	height: 20px;
+	list-style: none;
 }
 
 ul li {
-	display:inline;
+	display: inline;
 }
 
 ul li a {
@@ -115,7 +122,7 @@ ul li a {
 }
 
 ul li a:hover {
-	color:darkblue;
+	color: darkblue;
 }</code></pre>
 </div>
 
@@ -135,16 +142,27 @@ ul li a:hover {
 </div>
 
 <div class="slide">
-	<p>All block HTML elements can be assigned properties for their <code>border</code>, <code>padding</code> and <code>margin</code>, as well as <code>width</code> and <code>height</code> to describe the dimensions of the content.  (If width and height are not used, the content box will fit the content).  The border can be assigned a color.  The padding takes on the color of the background of the element.  The margin is transparent.  These properties can be assigned values in increments of <strong>pixels</strong>, such as <code>border-width:10px;</code> or <strong>em</strong>, a unit equal to the font-size of the element, such as <code>margin:1em;</code> or <strong>percentages</strong>, based on the width of the element  such as <code>padding: 5%;</code></p>
+	<p>All block HTML elements can be assigned properties for their <code>border</code>, <code>padding</code> and <code>margin</code>, as well as <code>width</code> and <code>height</code> to describe the dimensions of the content.</p>
+	<p>The padding area has the color of the background of the element.</p>  
+	<p>The margin area is transparent. </p>
 </div>
+
 <div class="slide">
-	<p>The <code>width</code> and <code>height</code> of each block element can also be set in <code>px</code>, <code>em</code> or <code>%</code>.  HTML elements without width or height properties will expand to fit the content inside of them.</p>
-	<p>The above example shows this rule (highlighted by Google Chrome Inspect Element):</p>
-	<pre><code>p {
-	border:10px solid transparent;
-	margin:10px;
-	padding:10px;
-}</code></pre>
+	<h2>Units</h2>
+	<p>Measurement properties in CSS can use several different units.</p>
+	<p>Pixels are absolute units, referring to the exact number of pixels of the device screen.</p>
+	<pre><code>border-width: 10px;</code></pre>
+</div>
+
+<div class="slide">
+	<p>The <code>em</code> unit is relative to the base font-size of the document.  If the document font-size is 14px, 1em is 14px.</p>
+	<pre><code>margin-top: 1em;</code></pre>
+
+	<p>Percentage units refer to the percentage of the containing element, typically the body or document window width.</p>
+	<pre><code>width: 50%;</code></pre>
+
+	<p>The <code>width</code> and <code>height</code> of each block element can also be set in <code>px</code>, <code>em</code> or <code>%</code>.</p>
+	<p>HTML elements without width or height properties will expand to fit the content inside of them.</p>
 </div>
 
 <div class="slide">

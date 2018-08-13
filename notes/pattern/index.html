@@ -18,21 +18,27 @@ week: 8
 <div class="slide">
 	<h2>Draw 1000 rectangles</h2>
 	<p>Okay, our task is to draw 1000 rectangles that are all different colors and different sizes.  Let's start by drawing one rectangle.</p>
-	<pre><code>function setup() {
-	createCanvas(640, 640);
-	background("white");
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
+	background(220);
 	rect(0, 0, 50, 50);
-}</code></pre>
+}</div>
 </div>
 
 <div class="slide">
 	<p>Let's add a for loop to draw 1000.</p>
-	<pre><code>function setup() {
-	createCanvas(640, 640);
-	background("white");
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
+	background(220);
 
 	var numberOfRects = 1000;
-	var w = width/numberOfRects;
+	var w = width / numberOfRects;
 
 	var x = 0;
 
@@ -40,19 +46,22 @@ week: 8
 		rect(x, 0, w, w);
 		x += w;
 	}
-}</code></pre>
+}</div>
 </div>
 
 <div class="slide">
 	<h2>Change the color</h2>
 	<p>Kinda hard to see huh?  Maybe if we make each one a different color?</p>
-	<p>Let's grab the color randomization code from <a href="../week6/animation.html#add-randomness" target="blank">week 6</a>:</p>
-	<pre><code>function setup() {
-	createCanvas(640, 640);
+	<p>Let's grab the color randomization code from <a href="../animation/#randomness" target="blank">week 7</a>:</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
 	background("white");
 	
 	var numberOfRects = 1000;
-	var w = width/numberOfRects;
+	var w = width / numberOfRects;
 	
 	var x = 0;
 	
@@ -66,24 +75,27 @@ week: 8
 		rect(x, 0, w, w);
 		x += w;
 	}
-}</code></pre>
+}</div>
 </div>
 
 <div class="slide">
 	<h2>Make a grid</h2>
 	<p>Still pretty hard to see huh?  Let's draw them vertically and horizontally, then maybe we can see them more easily.</p>
 	<p>Start by using x in the for loop we already have:</p>
-	<pre><code>function setup() {
-	createCanvas(640, 640);
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
 	background("white");
 	
 	var numberOfRects = 1000;
-	var w = width/numberOfRects;
+	var w = width / numberOfRects;
 	
 	for (var x = 0; x < width; x += w) {
 		rect(x, 0, w, w);
 	}
-}</code></pre>
+}</div>
 </div>
 
 <div class="slide">
@@ -96,50 +108,53 @@ week: 8
 	<p>Let's round up to 32, a nice even numbers, which will give us 1024 squares (<a href="http://superuser.com/questions/358031/why-does-everything-in-computing-work-with-a-base-number-of-2-to-the-power-of-x" target="blank">a power of 2</a>).</p>
 </div>
 <div class="slide">
-	<pre><code>function setup() {
-	createCanvas(640, 640);
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
 	background("white");
 	
 	var numberOfRects = 1000;
 	var columns = Math.ceil(Math.sqrt(numberOfRects));
 	var rows = columns;
-	var w = width/columns;
-	var h = height/rows;
+	var w = width / columns;
+	var h = height / rows;
 	
 	for (var x = 0; x < width; x += w) {
 		for (var y = 0; y < height; y += h) {
 			rect(x, y, w, w);
 		}
 	}
-}</code></pre>
+}</div>
 </div>
 
 <div class="slide">
 	<h2>Simplified grid</h2>
 	<p>Okay, okay, a simpler way of doing this is just deciding how many rows and columns we want to begin with.  Since we've already determined we can draw > 1000 squares with 32 columns and 32 rows, let's stick with that.  But we could change it later.</p>
-	<pre><code>function setup() {
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
 	createCanvas(640, 640);
 	background("white");
 	
 	var columns = 32;
 	var rows = 32;
-	var w = width/columns;
-	var h = height/rows;
+	var w = width / columns;
+	var h = height / rows;
 	
 	for (var x = 0; x < width; x += w) {
 		for (var y = 0; y < height; y += h) {
 			rect(x, y, w, w);
 		}
 	}
-}</code></pre>
+}</div>
 </div>
 
 
 <div class="slide">
 	<p>The important part is what happens after we decide on the number of columns.</p>
 	<p>Because columns go across the sketch and rows go up and down, we can get the right width for our rectangles by dividing total width by the number of columns.  Likewise, we can get the right number of rows by dividing the total height by number of rows.</p>
-	<pre><code>var w = width/columns;
-var h = height/rows;</code></pre>
+	<pre><code>var w = width / columns;
+var h = height / rows;</code></pre>
 </div>
 
 <div class="slide">
@@ -153,10 +168,13 @@ var h = height/rows;</code></pre>
 </div>
 
 <div class="slide">
+	<h2>Random Colors</h2>
 	<p>This template should work for any grid based design you want to draw.  Okay, let's bring the color back in.</p>
-	<p>Start with random:</p>
-	<pre><code>function setup() {
-	createCanvas(640, 640);
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
 	background("white");
 	noStroke();
 	
@@ -174,122 +192,141 @@ var h = height/rows;</code></pre>
 			rect(x, y, w, w);
 		}
 	}
-}</code></pre>
+}</div>
 </div>
 
 <div class="slide">
 	<h2>Color palettes</h2>
-	<p>You can then play with the range of colors to get different palettes.  If you want mostly green, put in less red and less blue, and more green:</p>
-	<pre><code>var r = random(0,100);
-var g = random(100,255);
-var b = random(0,100);
-fill(r, g, b);</code></pre>
+	<p>Adjust the range of random colors to get different palettes.  If you want mostly green, put in less red and less blue, and more green:</p>
 </div>
 
-
 <div class="slide">
-	<p>Maybe we want to get more red as we go from top to bottom?  Multiply the red value by the y:</p>
-	<pre><code>var r = random(0,1);
-var g = random(100,200);
-var b = random(0,20);
-fill(r * y, g, b);</code></pre>
-	<p><note>Notice</note> the range for red is much smaller: (0,1).  This is because y is going to go all the way up to 640, so if we leave it at 100, we'll go over the 255 cap for red too quickly.</p>
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
+	noStroke();
+	
+	var columns = 32;
+	var rows = 32;
+	var w = width/columns;
+	var h = height/rows;
+	
+	for (var x = 0; x < width; x += w) {
+		for (var y = 0; y < height; y += h) {
+			var r = random(0,100);
+			var g = random(100,255);
+			var b = random(0,100);
+			fill(r, g, b);
+			rect(x, y, w, w);
+		}
+	}
+}</div>
 </div>
 
+<div class="slide">
+	<p>Color can also be mapped to the space of the grid.</p>
+</div>
 
 <div class="slide">
-	<p>Or more blue from left to right?  Multiply blue by x:</p>
-	<pre><code>var r = random(0,50);
-var g = random(100,255);
-var b = random(0,1);
-fill(r, g, b * x);</code></pre>
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
+	background(220);
+	noStroke();
+	
+	var columns = 32;
+	var rows = 32;
+	var w = width/columns;
+	var h = height/rows;
+	
+	for (var x = 0; x < width; x += w) {
+		for (var y = 0; y < height; y += h) {
+			var r = map(y, 0, height, 0,255);
+			var g = random(100,200);
+			var b = random(0,20);
+			fill(r, g, b);
+			rect(x, y, w, w);
+		}
+	}
+}</div>
 </div>
 
 <div class="slide">
 	<h2>Size variation</h2>
-	<p>What if we vary the size?</p>
-	<pre><code>var randomSize = random(-10, 10);
-rect(x, y, w + randomSize, w + randomSize);</code></pre>
-	<p>Okay, that's a very different effect, because we are drawing rectangles from the upper left hand side positions.  Try changing the rectMode:</p>
-	<pre><code>rectMode(CENTER);</code></pre>
+	<p>We can also vary the size of each shape in the gird to get a different effect.</p>
 </div>
 
 <div class="slide">
-	<p>Let's try some other shapes to see what other kinds of patterns we can make.  We can easily replace the rect() functions with an ellipse() or other drawing function (or your own function like the spaceship or window).</p>
-	<pre><code>ellipse(x, y, w + randomSize, w + randomSize);</code></pre>
-	<p>I'm also going to reduce the number of columns so we can see more detail.</p>
-	<pre><code>var columns = 12;
-var rows = 12;</code></pre>
-</div>
-
-<div class="slide">
-	<p>My ellipses are not drawing in the middle so let's scoot them over a bit:</p>
-	<pre><code>ellipse(x + w/2, y + h/2, w + randomSize, w + randomSize);</code></pre>
-</div>
-
-<div class="slide">
-	<p>Let's say I wanted to add a little flower in the middle for a spring theme?  I can use logic to determine when I'm drawing in a certain set of rows and columns and then change my color range:</p>
-	<pre><code>var r = random(0,50);
-var g = random(100,200);
-var b = random(0,50);
-
-if (x > w*3 && x < w*7 && y > h*3 && y < h*7) {
-	fill(r * 10, g/10, b * 10);
-} else {
-	fill(r, g, b);
-}</code></pre>
-</div>
-
-<div class="slide">
-	<p>Okay, we're going to go in a new direction for our last example.  Let's say we want to choose between two basic shapes?  We can randomly pick a shape using a value.  In this example we'll randomly fill the page with rects and ellipses.</p>
-	<pre><code>if (shape) {
-	rect(x, y, w + randomSize, w + randomSize);
-} else {
-	ellipse(x + w/2, y + h/2, w + randomSize, w + randomSize);
-}</code></pre>
-</div>
-
-<div class="slide">
-	<h2>Choosing shapes</h2>
-	<p>Okay, what about four different shapes?  Let's try four different kind of arcs:</p>
-	<pre><code>function setup() {
-	createCanvas(640, 640);
-	background("white");
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
+	background(220);
+	rectMode(CENTER)
+	noStroke();
 	
-	var columns = 12;
-	var rows = 12;
+	var columns = 32;
+	var rows = 16;
 	var w = width/columns;
 	var h = height/rows;
 	
-	noFill();
-	strokeWeight(2);
-	rectMode(CENTER);
+	for (var x = 0; x < width; x += w) {
+		for (var y = 0; y < height; y += h) {
+			var r = map(y, 0, height, 0,255);
+			var g = random(100,200);
+			var b = random(0,20);
+			fill(r, g, b);
+			var s = random(-10, 10); // random s
+			rect(x, y, w + s, w + s);
+		}
+	}
+}</div>
+</div>
+
+
+<div class="slide">
+	<h2>Choosing shapes</h2>
+	<p>We can also use random and logic to change the shape function.</p>
+	<p><code>random(1)</code> will be a value between <code>0</code> and <code>1</code>.  Half the time it will be greater than <code>0.5</code>.</p>
+	<pre><code>if (random(1) > 0.5) {
+	rect(x, y, w, w);
+} else {
+	ellipse(x, y, w);
+}</code></pre>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
+	background(220);
+	rectMode(CENTER)
+	noStroke();
+	
+	var columns = 32;
+	var rows = 16;
+	var w = width/columns;
+	var h = height/rows;
 	
 	for (var x = 0; x < width; x += w) {
 		for (var y = 0; y < height; y += h) {
-		
-			var r = random(0,50);
+			var r = map(y, 0, height, 0,255);
 			var g = random(100,200);
-			var b = random(0,50);
-		
-			if (x > w*3 && x < w*7 && y > h*3 && y < h*7) {
-				stroke(r * 10, g/10, b * 10);
+			var b = random(0,20);
+			fill(r, g, b);
+			var s = random(-10, 10); // random s
+
+			if (random(1) > 0.5) {
+				ellipse(x, y, w + s);
 			} else {
-				 stroke(r, g, b);
-			}
-			
-			var shape = Math.floor(random(0, 4));
-		
-			if (shape == 0) {
-				arc(x, y, w*2, w*2, 0, HALF_PI);
-			} else if (shape == 1) {
-				arc(x + w, y, w*2, w*2, HALF_PI, PI);
-			} else if (shape == 2) {
-				arc(x + w, y + h, w*2, w*2, PI, PI + HALF_PI);
-			} else if (shape == 3) {
-				arc(x, y + h, w*2, w*2, PI + HALF_PI, 0);
+				rect(x, y, w + s, w + s);
 			}
 		}
 	}
-}</code></pre>
+
+	// let's save an image
+	save();
+}</div>
 </div>
+<div class="slide">
+	<p>How can the effects be combined to create a meaningful composition?</p>
+</div>
+
+<!--  
+	demo spring example
+ -->

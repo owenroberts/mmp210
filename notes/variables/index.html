@@ -1,129 +1,110 @@
 ---
 layout: slides
-title: MMP 210
-week: 2
-dek: JavaScript statements, operators & variables
+title: Variables
+week: 3
 ---
+
 <div class="slide">
-	<p>Let's start by opening the JavaScript console (in Google Chrome).</p>
-	<div class="key">CAj</div>
-	<p>We're going to add a series of commands and see what happens.</p>
+	<p>Variables are placeholders in the computers memory that we give a nickname and store some data in.</p>
+	<p>If we assign a variable called <code>faceSize</code> the number <code>50</code> we can later use it to draw a face and that value will be used.</p>
+	<p>We can change the value later.  That's why it is known as a variable.</p>
 </div>
 
 <div class="slide">
-	<h2>Syntax basics</h2>
-	<p>A simple statment.</p>
-	<pre><code><c></c>var s = "hello world";</code></pre>
-	<p>We can ignore <code>whitespace</code> (except for inside the quotation marks).</p>
-	<pre><code><c></c>var x =         " hello world ! ";</code></pre>
-	<p>The <code>=</code> sign is for assigning values.</p>
-	<blockquote>x "gets" 10</blockquote>
+	<p>Variables are kind of like names for people.</p>
+	<p>Imagine a story involving three of your friends.  It might go something like this: Jerry and Jenny went to the park one day and met their friend Nick.</p>
+	<p>This story would make sense to you if you know who Jerry, Jenny and Nick are.  It wouldn't make as much sense if you didn't know them.</p>
 </div>
 
 <div class="slide">
-	<p>But wait, what is that <code>var</code> thing, and what are those functions??</p>
-</div>
-<div class="slide">
-	<h2>Variables</h2>
-	<p>In Javascript, most variables are declared as <code>var</code> regardless of what type of information they hold.</p>  
-<!-- 	<p>Soon we will discuss datatypes as they relate to JavaScript.  JavaScript only works with a few basic variable types: numbers, strings and booleans, along with arrays and objects and functions, which can all be declared with <code>var</code>. </p> -->
-<!-- 	<p>Variables in JavaScript are more easily converted into each other.  This is called type coercion and we'll talk about that more next week as well.</p>
-	<p>For now, let's write some variables and then keep going.</p>
- -->
-	<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var" target="blank">var on MDN</a></p>
+	<p>We use names to make it easy to refer to people.  I wouldn't have to specify which student I was calling on by using their CUNY id.  That would be too hard to memorize.  It would also be difficult to call on students based on what seat their sitting in.  Third row from the back, 3 seats down is not an easy way to call on someone.</p>
+	<p>Variables, like names, make it easier to understand what's happening in our code.</p>
+	<p>The value <code>50</code> could be used for anything.  But the variable <code>faceSize</code> is pretty clear in terms of what it should be used for in the sketch.</p>
 </div>
 
 <div class="slide">
-	<p>Creating a variable requires two steps: <em>declaration</em> and <em>assignment</em>.</p>
-	<pre><code>// declaration
-<c></c>var a;
-<c></c>console.log(a); // undefined
-
-// assignment
-<c></c>a = 10;
-<c></c>console.log(a); // 10</code></pre>
+	<h2>Using variables</h2>
+	<p>In the last class we drew a self portrait, using <note>hardcoded</note> values.  A hardcoded value is a number or string written directly into the program.  It will not change unless you rewrite it.  Let's take a look at that program:</p>
 </div>
 
 <div class="slide">
-	<p>A variables can be <em>initialized</em> by declaring <em>and</em> assigning in one statement:</p>
-	<pre><code>// initialize
-<c></c> var a = "Hello world!";</code></pre>
+	<div class="ex" data-preview>// self portrait 
+function setup() {
+	createCanvas(200, 200);
+	background(220);
+	
+	noStroke();
+	fill("plum");
+	ellipse(100, 100, 100); // face
+
+	fill("yellow");
+	ellipse(75, 100, 25); // right eye
+	ellipse(125, 100, 25); // left eye
+
+	noFill();
+	stroke("#ffddff");
+	strokeWeight(4);
+	rect(75, 125, 50, 10, 10); // mouth	
+}</div>
 </div>
 
 <div class="slide">
-	<h2>Numbers and Strings</h2>
-	<p>JavaScript has several basic data types, including <em>Numbers</em> and <em>Strings</em>.</p>
-	<p>Numbers can represent any numerical value:</p>
-	<pre><code><c></c>10;
-<c></c>10.5;
-<c></c>0.1 + 0.2;
-<c></c>1 / 0 // Infinity</code></pre>
-	<p>Because variables can be set to different types, you can check in a value is a Number.  If not, you will get the error type <code>NaN</code> or "Not a Number".</p>
-	<pre><code><c></c>var a = "ten";
-<c></c>Number(a); // NaN
-<c></c>typeof a; // "string"</code></pre>
+	<p>We can improve this program using variables. Notice I used the same size for the eyes width in my self portrait?  I can use one variable to save that value and adjust both eyes at one time:</p>
+	<pre><code>var eyeSize = 25;
+ellipse(75, 100, eyeSize); // right eye
+ellipse(125, 100, eyeSize); // left eye</code></pre>
+</div> 
+
+<div class="slide">
+	<p>This improves the program in a couple of ways.</p>
+	<p>First, it's easier to update.  If I want the eyes larger, I change one variable, which is easy to identify, and assign it to a different number.</p>
+	<p>Second, it's much easier to read.  I know that the eyeSize is the third argument in each ellipse function, so I can guess that it's drawing the eyes.</p>
+	<p>Third, it will make the values easier to change or update, which we will start doing next week.</p>
 </div>
 
 <div class="slide">
-	<p>Strings are "strings" of characters.  They usually store messages, names or other text that needs to be rendered in a program.  They can also store data.</p>
-	<pre><code><c></c>var s = "Hello"
-<c></c>var name = "Jerry";
-<c></c>s + " " + name;</code></pre>
+	<p>We can also do this with colors, or string values.  My self portrait uses hardcoded values for colors: <code>"plum"</code>, <code>"yellow"</code> and <code>"#ffddff"</code>.  If I want to change the color of any of the parts of the face I need to rewrite this.  If I use a variable instead, I can change all of the shapes using each color and change them all at the same time.</p>
+	<p>If I want to add to the eyes using the same color as the face this will be useful.</p>
 </div>
 
 <div class="slide">
-	<p>Once a variables is declared, the value can be assigned or changed using an <strong>operator</strong>.</p>
-	<pre><code><c></c>var a = 0;
-<c></c>a = 10;
-<c></c>a = 10 + 20;
-<c></c>a = "ten plus twenty";</code></pre>
+	<div class="ex" data-preview>// self portrait 
+function setup() {
+	createCanvas(200, 200);
+	background(220);
+
+	var eyeSize = 25;
+	var faceColor = "plum";
+	
+	noStroke();
+	fill(faceColor);
+	ellipse(100, 100, 100); // face
+
+	fill("yellow");
+	ellipse(75, 100, eyeSize); // right eye
+	ellipse(125, 100, eyeSize); // left eye
+
+	fill(faceColor);
+	ellipse(75, 100, eyeSize / 2); // right pupil
+	ellipse(125, 100, eyeSize / 2); // left pupil
+
+	noFill();
+	stroke("#ffddff");
+	strokeWeight(4);
+	rect(75, 125, 50, 10, 10); // mouth	
+}</div>
 </div>
 
 <div class="slide">
-	<h2>Operators</h2>
-	<p>Add and subtract</p>
-	<pre><code class="javascript"><c></c>var x = 10;
-<c></c>var y = 20;
-<c></c>x + y;
-<c></c>x - 5;
-<c></c>x - y + 5;
-// use parentheses for order of operations
-<c></c>x - (y + 5); </code></pre>
+	<p>Keep in mind that the string <code>"plum"</code> has to have quotation marks around it because it is hard data.  <code>faceColor</code> does not have quotation marks because it's a variable.</p>
+	<p>JavaScript understands a few different types of text.</p>
+	<ul>
+		<li><note>keywords</note> are words like <code>function</code> and <code>var</code> that are defined by the language.</li>
+		<li><note>variables names</note> are words for functions and variables that we create in our code like <code>faceSize</code> and <code>faceColor</code>.</li>
+		<li><note>hard data</note> are numbers and words that represent values like <code>0</code> or a string like <code>"hello world"</code>.</li>
+	</ul>
 </div>
 
 <div class="slide">
-	<p>Multiply and divide</p>
-	<pre><code><c></c>2 * 2;
-<c></c>2 / 3;</code></pre>
-</div>
-
-<div class="slide">
-	<p>Concatenation</p>
-	<pre><code><c></c>var h = "hello";
-<c></c>var w = "world";
-<c></c>x + w;
-<c></c>"hello" + "world";
-<c></c>"hello " + "world";</code></pre>
-</div>
-
-<div class="slide">
-	<p>Increment, decrement</p>
-	<pre><code><c></c>var x = 0;
-<c></c>x++;
-<c></c>x += 10;
-<!-- <c></c>var y = ++x;
-<c></c>var z = x++; -->
-<c></c>x--;
-<c></c>x -= 5;</code></pre>
-</div>
-
-<div class="slide">
-	<p>Addition vs. concatenation</p>
-	<pre><code><c></c>var x = 1;
-<c></c>var y = "7";
-<c></c>x + y;
-<c></c>typeof x + y;
-<c></c>y + x;
-<c></c>x + +y;
-<c></c>x + Number(y);</code></pre>
+	<p>Notice I also used <code>eyeSize / 2</code> for the size of both pupils.  Now they are relative to the size of the eyes.  I can update both eyes and pupils by changing one color.</p>
 </div>
