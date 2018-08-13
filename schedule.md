@@ -7,7 +7,6 @@ dek: Schedule with class notes & assignments
 Go to [Home](index.html)
 
 ## Week 1 **Intro**
-
 - [HTML](notes/html) & [CSS](notes/css) Review 
 - [GitHub Publishing](notes/github)
 - **Assignment 1: Portolfio web page**
@@ -18,7 +17,6 @@ Go to [Home](index.html)
 		- Stylesheet
 		- Menu, with links
 	- Submit URL to published site
-
 
 ## Week 2 **Shape & Color**
 - [JavaScript Intro](notes/javascript)
@@ -133,9 +131,6 @@ Go to [Home](index.html)
 ## Week **Arrays**
 - [Arrays](notes/array)
 - [Khan Academy: Arrays](https://www.khanacademy.org/computing/computer-programming/programming/arrays/p/intro-to-arrays){:target="blank"}
-- **In class**
-	- Write a spaceship function (or a car, or a animal, or anything else that moves)
-	- Animate the spaceship in space and color
 
 
 

@@ -74,6 +74,7 @@ function draw() {
 	<h2>Display</h2>
 	<p>Now let's make the spaceship draw itself.  That way we can make more complex drawing code and keep our draw function just as simple.</p>
 	<p>Instead of adding drawing functions for the spaceship, we can just ask the spaceship to draw itself using it's new <code>display</code> method.</p>
+	<p>The <code>s.x</code> will be changed to <code>this.x</code> because <code>this</code> refers to the spaceship itself.</p>
 </div>
 
 <div class="slide">
@@ -83,8 +84,8 @@ function draw() {
 	this.w = random(100, 200);
 	this.h = random(50, 100);
 	this.display = function() {
-		rect(s.x, s.y, s.w, s.h);
-		ellipse(s.x + s.w, s.y + s.h/2, s.h * 2);
+		rect(this.x, this.y, this.w, this.h);
+		ellipse(this.x + this.w, this.y + this.h/2, this.h * 2);
 	};
 }
 
@@ -114,8 +115,8 @@ function draw() {
 	this.w = random(100, 200);
 	this.h = random(50, 100);
 	this.display = function() {
-		rect(s.x, s.y, s.w, s.h);
-		ellipse(s.x + s.w, s.y + s.h/2, s.h * 2);
+		rect(this.x, this.y, this.w, this.h);
+		ellipse(this.x + this.w, this.y + this.h/2, this.h * 2);
 	};
 	this.move = function() {
 		this.x += 10;
@@ -150,8 +151,8 @@ function draw() {
 	this.h = random(50, 100);
 	this.speed = random(5, 10);
 	this.display = function() {
-		rect(s.x, s.y, s.w, s.h);
-		ellipse(s.x + s.w, s.y + s.h/2, s.h * 2);
+		rect(this.x, this.y, this.w, this.h);
+		ellipse(this.x + this.w, this.y + this.h/2, this.h * 2);
 	};
 	this.move = function() {
 		this.x += this.speed;
@@ -177,7 +178,7 @@ function draw() {
 
 <div class="slide">
 	<h2>Collision</h2>
-	<p>The last thing to add is making the spaceship interactive.  In the last lesson, we learned how to make a button with the <code>mousePressed</code> function and collision detection code.</p>
+	<p>In the last lesson, we learned how to make a button with the <code>mousePressed</code> function and collision detection code.</p>
 	<p>We can apply that to our spaceship using another method.</p>
 	<p>Let's add a fill and then change it if the user clicks the spaceship.</p>
 </div>
@@ -193,8 +194,8 @@ function draw() {
 	this.display = function() {
 		fill(this.fill);
 		noStroke();
-		rect(s.x, s.y, s.w, s.h);
-		ellipse(s.x + s.w, s.y + s.h/2, s.h * 2);
+		rect(this.x, this.y, this.w, this.h);
+		ellipse(this.x + this.w, this.y + this.h/2, this.h * 2);
 	};
 	this.move = function() {
 		this.x += this.speed;
@@ -227,3 +228,63 @@ function mousePressed() {
 }</div>
 </div>
 
+<div class="slide">
+	<h2>Arguments</h2>
+	<p>If we want to make multiple spaceships using the <code>Spaceship</code> constructor we may want to distinguish them by adding something unique.</p>
+	<p>Let's add an argument to create spaceships with a specific color.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function Spaceship(color) {
+	this.x = random(width);
+	this.y = random(height);
+	this.w = random(100, 200);
+	this.h = random(50, 100);
+	this.speed = random(5, 10);
+	this.fill = color;
+	this.display = function() {
+		fill(this.fill);
+		noStroke();
+		rect(this.x, this.y, this.w, this.h);
+		ellipse(this.x + this.w, this.y + this.h/2, this.h * 2);
+	};
+	this.move = function() {
+		this.x += this.speed;
+		if (this.x > width) {
+			this.x = -this.w;
+		}
+	};
+	this.collide = function(x, y) {
+		if (x > this.x && x < this.x + this.w && y > this.y && y < this.y + this.h) {
+			this.fill = "red";
+		}
+	};
+}
+
+var blueShip;
+var greenShip;
+var pinkShip;
+
+function setup() {
+	createCanvas(640, 360);
+	blueShip = new Spaceship("lightblue");
+	greenShip = new Spaceship("lightgreen");
+	pinkShip = new Spaceship("pink");
+}
+
+function draw() {
+	background(220);
+	blueShip.display();
+	greenShip.display();
+	pinkShip.display();
+	blueShip.move();
+	greenShip.move();
+	pinkShip.move();
+}
+
+function mousePressed() {
+	blueShip.collide(mouseX, mouseY);
+	greenShip.collide(mouseX, mouseY);
+	pinkShip.collide(mouseX, mouseY);
+}</div>
+</div>
