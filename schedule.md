@@ -116,13 +116,9 @@ Go to [Home](index.html)
 
  -->
 
-
-## Week **Media**
-- [Image & video](notes/media)
-- [Sound library](notes/sound)
-
 ## Week **Interaction 2**
 - [Interaction](notes/interaction_2)
+- [Sound](notes/sound)
 
 ## Week **Objects**
 - [Objects](notes/objects)
@@ -131,8 +127,6 @@ Go to [Home](index.html)
 ## Week **Arrays**
 - [Arrays](notes/array)
 - [Khan Academy: Arrays](https://www.khanacademy.org/computing/computer-programming/programming/arrays/p/intro-to-arrays){:target="blank"}
-
-
 
 ## Final **Project**
 - The final project will be an interactive media player
