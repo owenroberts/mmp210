@@ -8,23 +8,20 @@ week: 4
 	<h2>setup and draw</h2>
 	<p>Before we look at system variables, let's review <code>setup</code> and <code>draw</code>, because we'll need them in our lesson.</p>
 	<p><a href="http://p5js.org/reference/#/p5/setup" target="blank">setup</a> is called <strong>once</strong> when the page loads, and defines some initial variables and does other things we only want to do once, like loading image data, or perhaps setting the background color.</p>
-	<p><a href="http://p5js.org/reference/#/p5/draw" target="blank">draw</a> after <code>setup</code> is done, <code>draw</code> will loop continuously (unless <code>noLoop</code> is called) until the browser window is closed.  Every line inside of the <code>draw</code> function will be called in order everytime it runs, by default at 60 FPS (frames-per-second).</p>
+	<p>After <code>setup</code> is done, <a href="http://p5js.org/reference/#/p5/draw" target="blank">draw</a> will loop continuously (unless <code>noLoop</code> is called) until the browser window is closed.  Every line inside of the <code>draw</code> function will be called in order everytime it runs, by default at 60 FPS (frames-per-second).</p>
 </div>
 
 <div class="slide">
-	<div class="ex" data-preview>var x = 1;
-function setup() {
+	<div class="ex" data-preview>function setup() {
     createCanvas(400, 400);
     background(255);
-
     fill('plum');
     rect(150, 150, 100, 100); // only gets drawn once
 }
 function draw() {
 // 	background(255); // remove comment
-	x++;
-	fill('white');
-	ellipse(x, 200, 100);
+	fill(255);
+	ellipse(frameCount, 200, 100);
 }</div>
 </div>
 

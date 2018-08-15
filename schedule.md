@@ -4,8 +4,6 @@ title: Schedule
 dek: Schedule with class notes & assignments
 ---
 
-Go to [Home](index.html)
-
 ## Week 1 **Intro**
 - [HTML](notes/html) & [CSS](notes/css) Review 
 - [GitHub Publishing](notes/github)
@@ -18,15 +16,24 @@ Go to [Home](index.html)
 		- Menu, with links
 	- Submit URL to published site
 
+## Project 1 **Self Portrait**
+- Over the next three weeks you will make a self portrait, starting with a simple drawing and ending with an interactive artwork using variables.
+- One version due each week.  The three versions include a hard coded drawing, a static drawing with variables, an interactive version.
+- We will give feedback in class.  Part of the evaluation is writing down feedback and using it to make changes to the self portrait.  It could be as simple as changing a color or moving a line.
+- Each version should have it's own URL added to the GitHub Pages home page and submitted via Blackboard.
+- Giving feedback is part of the assignment.
+
 ## Week 2 **Shape & Color**
 - [JavaScript Intro](notes/javascript)
 - [Shapes and Functions](notes/p5)
 - [Color Functions and Values](notes/color)
 - [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/)
 - **Assignment 2: Self Portrait**
-	- Draw a self-portrait using p5
+	- Draw a self portrait in a p5 sketch
 	- Use the shape and color functions
 	- Add something unique to you
+	- Doesn't necessarily have to have a face/body, could be abstract
+
 
 ## Week 3 **Variables**
 - [JavaScript statements & operators](notes/javascript/statements.html)
@@ -34,52 +41,107 @@ Go to [Home](index.html)
 - [JavaScript debugging](notes/debug)
 - [Debugging challenge](notes/debug/debug.zip)
 - **Assignment 3: Self Portrait with Variables**
-	- Rewrite your self portrait drawing using variables where appropriate.
-	- Variables should clearly state what they are being used for.
-	- Variables should be used for the size, position or color of shapes.  One variable should not be used to represent two different aspects.
-	- There should be no hard coded numbers or strings inside of the drawing functions.
+	- All hard coded numbers and strings in shape and color functions replaced with variables
+	- Variable names describe what they are used for
+	- Update drawing based on class feedback
 
 ## Week 4 **Interaction 1**
 - [System variables](notes/system_variables)
 - [Interaction](notes/interaction_1)
 - **Assignment 4: Interactive Self Portrait**
+	- Final changes based on class feedback
 	- Choose part of your self portrait to animate with interaction
-	- Animate size, position or color, or a combination
-	- Use the `map` function
-	- Add an instruction for the user in the HTML using a paragraph tag
+		- size, position or color, or a combination
+	- Use the `map` function at least once
+	- Add instructions for the user in the HTML using a paragraph tag
+	- Update drawing based on class feedback
+
+## Project 2 **Meme/Logo**
+- The next three weeks will be dedicated to the second project.  You have a choice to create a logo for youself or a fictional client or to make a "meme", meaning a humorous combination of image and text (must be appropriate for class).
+- This project will also have three versions: rough draft, simple interaction, and final animation.
+- Feedback in class.
+- Each version has its own URL.
 
 ## Week 5 **Text & Image**
 - [Text](notes/text)
 - [Image](notes/image)
 - [Code Academy: Variables](https://www.codecademy.com/courses/learn-javascript-introduction/lessons/variables/exercises/intro-variables){:target="blank"}
-- **Assignment 5: Logo**
-	- Make a logo design with your name
-	- Use text with other shape functions
-	- Drawing and text functions must use variables
+- **Assignment 5: Meme/Logo**
+	- Rough draft of logo or meme
+	- Can be hard coded, extra credit for using variables
 
 ## Week 6 **Logic**
 - [Conditional logic](notes/logic)
 - [Drawing with logic](notes/logic/p5.html)
 - [Code Academy: Control Flow](https://www.codecademy.com/courses/learn-javascript-control-flow/lessons/control-flow/exercises/control-flow-intro){:target="blank"}
-- **Assignment 5: Interactive Logo**
-	- Create a design that splits the screen in half or quadrants
-	- Create a user interaction that changes according to the quadrant
-	- Change the logo shapes, size, color or position
+- **Assignment 6: Interactive Meme/Logo**
+	- Divide the canvas into four quadrants using if/else statements
+	- Each quadrant changes the design when the user hovers mouse over it
+	- Use variables to change parameters for the shape and color functions
 
 ## Week 7 **Animation**
 - [Animation](notes/animation)
 - [Transformation](notes/transform)
-- **Assignment 8: Animation**
-	- Add animation to the logo design
-	- Combine two type of animation in one sketch
+- **Assignment 7: Animation**
+	- Add animation to the Meme/Logo design
+	- Choose what type of animation to use
 		- One from first category: size, position or color
 		- One from second category: translate, rotate, shear or scale
+	- Extra credit: Combine animation from first and second category
 - Inspiration
 	- [Animated name logos](http://www.flamingtext.com/Animated-Logos)
 	- [Animated logos](http://www.howdesign.com/featured/animated-logos/)
 
+## Week 8 **Intro to Physical Computing**
+- [Introduction to Physical Computing](https://mea211blog.wordpress.com/introduction_physcomp/){:target="blank"}
+- [Using a Microcontroller](https://mea211blog.wordpress.com/using-a-microcontroller/){:target="blank"}
+- [Programming an Arduino](https://mea211blog.wordpress.com/programming-the-arduino/){:target="blank"}
+- [Building a Circuit](https://mea211blog.wordpress.com/building-a-circuit/){:target="blank"}
+- **In Class Assignment**
+	- Work with a partner
+	- Read through each tutorial
+	- Document your progress
+	- Include a short video of the blinking light circuit
+	- Submit documentation via YouTube
 
-## Week 8 **Loops**
+## Week 9 **Digital I/O**
+- [Digital Input/Output](https://mea211blog.wordpress.com/digital-input-and-output/){:target="blank"}
+- **In Class Assignment**
+	- Work on tutorial with a partner
+	- Document using a switch with Arduino
+
+## Week 10 **Analog I/O**
+- [Analog Input/Output](https://mea211blog.wordpress.com/analog-input-and-output/){:target="blank"}
+- **In Class Assignment**
+	- Work on tutorial with a partner
+	- Document analog input with Arduino
+
+## Week 11 **p5 + Arduino**
+- Connect Arduino with p5
+- **In Class Assignment**
+	- Finish setting up arduino sensor with p5 sketch
+	- Document working project
+
+## Week 12 **Interaction 2**
+- [Interaction](notes/interaction_2)
+- [Sound](notes/sound)
+
+## **Final Project**
+- Interactive animation using a physical interface
+- Choose a sensor to connect to p5 through Arduino
+- Design animation using interaction with the sensor
+- Optional: Work with a partner
+
+## **Final Proposal**
+- Pitch with slides
+- Explain the plan for the final
+- How sensor will be used
+- How input will change the graphics/sketch
+- Work in progress design or mood board
+
+<!-- 
+
+## Week **Loops**
 - [Loops](notes/loops)
 - [Drawing with loops](notes/loops/p5.html)
 - In class: [Code academy: for loops](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/0/1)
@@ -88,7 +150,7 @@ Go to [Home](index.html)
 	- Each window should be at least 5 shapes.  
 	- Use your apartment building or [Windows of New York](http://windowsofnewyork.com/) for inspiration.
 
-## Week 9 **Pattern**
+## Week **Pattern**
 - [Generating patterns](notes/pattern)
 
 ## Midterm **Generative design**
@@ -104,28 +166,14 @@ Go to [Home](index.html)
 	- [Libs Elliott: Generated quilt design](http://themakersnation.com/maker-spotlight-libs-elliott/)
 	- [Generative Patterns Google Image Search](https://www.google.com/search?q=generative+patterns&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiA-OPl3fbWAhWD6iYKHTihD7EQ_AUICigB&biw=1897&bih=984#imgrc=_)
 
-<!-- 
-
-	ommitted assignments
-	draw window function
-
-
-	10: Intro PComp/Circuits
-	11: Digial input/output
-	12: Analog input/output
-
- -->
-
-## Week **Interaction 2**
-- [Interaction](notes/interaction_2)
-- [Sound](notes/sound)
-
 ## Week **Objects**
 - [Objects](notes/objects)
 - [Spaceships](notes/objects/p5.html)
 
 ## Week **Arrays**
 - [Arrays](notes/array)
+- [Spaceship Array](notes/array/p5.html)
+- [Array & Random](notes/array/random.html)
 - [Khan Academy: Arrays](https://www.khanacademy.org/computing/computer-programming/programming/arrays/p/intro-to-arrays){:target="blank"}
 
 ## Final **Project**
@@ -157,7 +205,7 @@ Go to [Home](index.html)
 	- <http://www.typotopo.com/typemenot/index.html>
 
 
-<!-- 
+
 ## Week 10
 - Midterm Presentatio
 - [Interaction](week9/)
@@ -171,3 +219,14 @@ Go to [Home](index.html)
 -->
 
 
+<!-- 
+
+	ommitted assignments
+	draw window function
+
+
+	10: Intro PComp/Circuits
+	11: Digial input/output
+	12: Analog input/output
+
+ -->

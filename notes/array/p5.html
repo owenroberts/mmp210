@@ -1,0 +1,121 @@
+---
+layout: slides
+title: Spaceship Array
+week: 11
+---
+
+<div class="slide">
+	<p>In the lesson on objects we created spaceships with the spaceship object and added them to the canvas.</p>
+	<p>What if we wanted to make 20 spaceships?  It wouldn't be very convenient to write 20 variables and then update all of them, would it?</p>
+	<p>Using an array, we can add spaceships to and then loop over each item in the array to display and update the movement with just a few lines of code.</p>
+	<p>First let's just add spaceships to the array whenever a user clicks.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>// create an empty array to add spaceships
+var spaceships = [];
+
+function draw() {
+	background(220);
+	
+	// loop over spaceships to display and move them
+	for (var i = 0; i < spaceships.length; i++) {
+		spaceships[i].display();
+		spaceships[i].move();
+	}
+}
+
+function mousePressed() {
+	var s = new Spaceship(mouseX, mouseY);
+	spaceships.push(s);
+}
+
+function Spaceship(x, y) {
+	this.x = x;
+	this.y = y;
+	this.w = random(50, 100);
+	this.h = random(25, 50);
+	this.speed = random(5, 10);
+	this.fill = random(['plum', 'gold', 'lightblue', 'lightgreen']);
+	this.display = function() {
+		fill(this.fill);
+		noStroke();
+		rect(this.x, this.y, this.w, this.h);
+		ellipse(this.x + this.w, this.y + this.h/2, this.h * 2);
+	};
+	this.move = function() {
+		this.x += this.speed;
+		if (this.x > width) {
+			this.x = -this.w;
+		}
+	};
+}</div>
+</div>
+
+<div class="slide">
+	<p>Notice the arguments of this spaceship are updated.  Instead of a color, it take an <code>x</code> and <code>y</code> position from the position of the mouse.</p>
+	<p>The colors are randomized using another array.</p>
+	<pre><code>this.fill = random(['plum', 'gold', 'lightblue', 'lightgreen']);</code></pre>
+	<p>The p5 <code>random</code> function can also return a random element from an array.</p>
+</div>
+
+<div class="slide">
+	<p>In the next example, a loop is used in <code>setup</code> to add spaceships at the beginning of the program.</p>
+	<p>A loop is used again in <code>mousePressed</code> with the collide function to remove spaceships the user clicks on.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>// create an empty array to add spaceships
+var spaceships = [];
+
+function setup() {
+	createCanvas(640, 360);
+	for (var i = 0; i < 20; i++) {
+		var s = new Spaceship();
+		spaceships.push(s);
+	}
+}
+
+function draw() {
+	background(220);
+	
+	for (var i = 0; i < spaceships.length; i++) {
+		spaceships[i].display();
+		spaceships[i].move();
+	}
+}
+
+function mousePressed() {
+	for (var i = 0; i < spaceships.length; i++) {
+		if (spaceships[i].collide(mouseX, mouseY)) {
+			spaceships.splice(i, 1);
+		}
+	}
+}
+
+function Spaceship() {
+	this.x = random(width);
+	this.y = random(height);
+	this.w = random(50, 100);
+	this.h = random(25, 50);
+	this.speed = random(5, 10);
+	this.fill = random(['plum', 'gold', 'lightblue', 'lightgreen']);
+	this.display = function() {
+		fill(this.fill);
+		noStroke();
+		rect(this.x, this.y, this.w, this.h);
+		ellipse(this.x + this.w, this.y + this.h/2, this.h * 2);
+	};
+	this.move = function() {
+		this.x += this.speed;
+		if (this.x > width) {
+			this.x = -this.w;
+		}
+	};
+	this.collide = function(x, y) {
+		if (x > this.x && x < this.x + this.w && y > this.y && y < this.y + this.h) {
+			return true;
+		}
+	};
+}</div>
+</div>

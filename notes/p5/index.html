@@ -59,7 +59,8 @@ week: 2
 
 <!-- cartesian vs screen coordinates -->
 <div class="slide">
-	<h2>Cartesian coordinate system vs p5 coordinate system</h2>
+	<h2>Coordinate system</h2>
+	<p>Cartesian coordinate system vs p5 coordinate system</p>
 	<img src="coordinate_system.png" />
 	<p class="label"><a href="https://processing.org/tutorials/drawing/" target="blank">https://processing.org/tutorials/drawing/</a></p>
 </div>
@@ -81,7 +82,7 @@ function draw() {
 </div>
 
 <div class="slide">
-	<p>Let's get some observations about what might be happening here and then go over the code.</p>
+	<p>Let's talk about some observations about what might be happening here and then go over the code.</p>
 </div>
 
 <div class="slide">
@@ -223,6 +224,7 @@ function draw() {
 }</div>
 </div>
 
+
 <div class="slide">
 	<p>A function is called using the <code>()</code> at the end.  These are the special characters that lets the program know to call the function or make it do whatever it is written to do.</p>
 	<p>Inside the <code>()</code> are <note>arguments</note> which we can change to change the outcome of the function.  For an <code>ellipse</code> we use the arguments to determine the x and y position of the ellipse on the canvas, as well as the width and height.</p>
@@ -263,6 +265,28 @@ function draw() {
 	arc(100, 100, 100, 100, 0, PI);
 }</div>
 </div>
+
+<div class="slide">
+	<h2>rectMode</h2>
+	<p>By default, a rectangle will be drawn from the top left corner, while the ellipse and arc are drawn from the center.</p>
+	<p>Using <code>rectMode</code> the rectangle can be changed to draw from the center.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(400, 200);
+	background(220);
+
+	// default
+	ellipse(50, 50, 50);
+	rect(50, 50, 100, 100);
+
+	rectMode(CENTER);
+	rect(300, 50, 100, 100);
+	ellipse(300, 50, 50);
+}</div>
+</div>
+
 
 <div class="slide">
 	<h2>Point, line, triangle, quad</h2>

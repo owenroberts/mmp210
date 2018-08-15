@@ -255,9 +255,9 @@ function draw() {
 	textFont('menlo');
 	frameRate(2);
 }
+
 function draw() {
 	background(220);
-	
 	text('frameCount', 10, 40);
 	text('frameCount % 10', 10, 80);
 	text(frameCount, 240, 40);
@@ -272,18 +272,18 @@ function draw() {
 </div>
 
 <div class="slide">
-		
 	<div class="ex" data-preview>var r, g, b;
 function setup() {
 	createCanvas(640, 360);
 	r = random(0,255);
 	g = random(0,255);
 	b = random(0,255);
-	background(220);
+	
 	noStroke();
 }
 
 function draw() {
+	background(220);
 	if (frameCount % 30 === 0) {
 		r = random(0,255);
 		g = random(0,255);
@@ -291,6 +291,32 @@ function draw() {
 	}
 	fill(r, g, b);
 	ellipse(width/2, height/2, 200);
+}</div>
+</div>
+
+<div class="slide">
+	<p>Let's visualize <code>frameCount</code>.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 200);
+	textFont('menlo');
+	textSize(20);
+}
+
+function draw() {
+	background(220);
+
+	text('frameCount', 10, 40);
+	rect(frameCount, 50, 50, 40);
+	text(frameCount, frameCount, 80);
+
+	var mod = 30;
+
+	text('frameCount % ' + mod, 10, 120);
+	rect(frameCount % mod, 130, 50, 40);
+	text(frameCount % mod, frameCount % mod, 160);
 }</div>
 </div>
 

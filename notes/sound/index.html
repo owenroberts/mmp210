@@ -1,7 +1,7 @@
 ---
 layout: slides
 title: Sound
-week: 10
+week: 12
 ---
 
 <script src="p5.sound.js"></script>
@@ -43,7 +43,10 @@ function draw() {
 	background('black');
 }
 function mousePressed() {
-	explosion.play();
+	if (mouseX > 0 && mouseX < width && 
+		mouseY > 0 && mouseY < height) {
+		explosion.play();
+	}
 }</div>
 </div>
 
@@ -94,24 +97,26 @@ function draw() {
 	}
 }
 function mousePressed() {
-	if (music.isPlaying()) {
-		music.stop();
-	} else {
-		music.play();
+	if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
+		if (music.isPlaying()) {
+			music.stop();
+		} else {
+			music.play();
+		}
 	}
 }</div>
 </div>
 
 <div class="slide">
-	<p>The volume of the sound can be changed with <a href="https://p5js.org/reference/#/p5.SoundFile/setVolume">.setVolume()</a>.  Let's <a href="https://p5js.org/reference/#/p5/map">map</a> the height of our <code>rect</code> to the volume.</p>
+	<p>The volume of the sound can be changed with <a href="https://p5js.org/reference/#/p5.SoundFile/setVolume">setVolume</a>.  Let's <a href="https://p5js.org/reference/#/p5/map">map</a> the height of our <code>canvas</code> to the volume.</p>
 	<pre><code>var vol = map(mouseY, 0, height, 1, 0);
-	music.setVolume(vol);</code></pre>
+music.setVolume(vol);</code></pre>
 </div>
 
 <div class="slide">
-	<p>We can also pan the stereo field of the track using <a href="https://p5js.org/reference/#/p5.SoundFile/pan">.pan()</a>.  Let's map pan to x:</p>
-	<pre><code>var p = map(mouseX, 0, width, -1, 1);
-music.pan(p);</code></pre>
+	<p>We can also pan the stereo field of the track using <a href="https://p5js.org/reference/#/p5.SoundFile/pan">pan</a>.  Let's map pan to x:</p>
+	<pre><code>var pan = map(mouseX, 0, width, -1, 1);
+music.pan(pan);</code></pre>
 </div>
 
 <div class="slide">
@@ -120,7 +125,8 @@ music.pan(p);</code></pre>
 music.rate(rate);</code></pre>
 </div>
 
-<div class="ex" data-preview>var music;
+<div class="slide">
+	<div class="ex" data-preview>var music;
 function preload() {
 	music = loadSound('background.mp3');
 }
@@ -152,10 +158,13 @@ function draw() {
 	ellipse(mouseX, mouseY, 20);
 }
 function mousePressed() {
-	if (music.isPlaying()) {
-		music.stop();
-	} else {
-		music.play();
+	if (mouseX > 0 && mouseX < width && 
+		mouseY > 0 && mouseY < height) {
+		if (music.isPlaying()) {
+			music.stop();
+		} else {
+			music.play();
+		}
 	}
 }</div>
 </div>
