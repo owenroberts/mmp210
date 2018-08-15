@@ -1,0 +1,49 @@
+---
+layout: slides
+title: Array & Random
+week: 11
+---
+
+<script src="p5.sound.js"></script>
+
+<div class="slide">
+	<p>In previous lessons, we've used the <code>random</code> function to generate random numbers.</p>
+	<p>Given an array as an argument, <code>random</code> can also be used to choose a random element from an array.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>// choose a random fruit
+function setup() {
+	var fruit = ["banana", "apple", "orange"];
+	console.log(random(fruit));
+}</div>
+</div>
+
+<div class="slide">
+	<p>In the following example we can use random with an array of sounds to play random sounds.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var sounds = [];
+var r, g, b;
+function preload() {
+	sounds.push(loadSound('ex0.wav'));
+	sounds.push(loadSound('ex1.wav'));
+	sounds.push(loadSound('ex2.wav'));
+	sounds.push(loadSound('ex3.wav'));
+}
+function draw(){
+	background(0);
+	fill(r, g, b);
+	ellipse(width/2, height/2, 200, 200);
+}
+function mousePressed() {
+    var d = dist(mouseX, mouseY, width/2, height/2);
+	if (d < 100) {
+		r = random(0, 255);
+		g = random(0, 255);
+		b = random(0, 255);
+		random(sounds).play();
+	}
+}</div>
+</div>

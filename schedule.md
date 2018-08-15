@@ -4,106 +4,160 @@ title: Schedule
 dek: Schedule with class notes & assignments
 ---
 
-Go to [Home](index.html)
-
-## Week 1 **Intro / Shape**
-
-- [HTML](notes/html) & [CSS](notes/css) Review
-	- [Class example](examples/{{site.semester}}/review/)
-- [Intro to p5](notes/p5)
-<!-- address comments -->
-	- [Self Portrait example](examples/{{site.semester}}/selfportrait)
-- In class assignment
-	- Create a simple web site to use as the portfolio page for your work this semester.
+## Week 1 **Intro**
+- [HTML](notes/html) & [CSS](notes/css) Review 
+- [GitHub Publishing](notes/github)
+- **Assignment 1: Portolfio web page**
+	- Create a simple web site to use as the portfolio page for your work this semester
+	- Publish the site on Github Pages
 	- Your site should have at least one of each:
 		- Image
 		- Stylesheet
 		- Menu, with links
-- **Assignment 1: Self Portrait**
-	- Draw a self-portrait using p5
-	- Use the shape and color functions
-	- Be creative, try to show us something about yourself through drawing and design
+	- Submit URL to published site
 
-## Week 2 **Color**
+## Project 1 **Self Portrait**
+- Over the next three weeks you will make a self portrait, starting with a simple drawing and ending with an interactive artwork using variables.
+- One version due each week.  The three versions include a hard coded drawing, a static drawing with variables, an interactive version.
+- We will give feedback in class.  Part of the evaluation is writing down feedback and using it to make changes to the self portrait.  It could be as simple as changing a color or moving a line.
+- Each version should have it's own URL added to the GitHub Pages home page and submitted via Blackboard.
+- Giving feedback is part of the assignment.
 
-- [GitHub Publishing](notes/github)
-- [JavaScript statements, operators & variables](notes/variables)
-- [p5: color, stroke, fill](notes/color)
-	- [Color example](examples/{{site.semester}}/color/)
-	- [Self portrait with variables](examples/{{site.semester}}/selfportrait_var/)
+## Week 2 **Shape & Color**
+- [JavaScript Intro](notes/javascript)
+- [Shapes and Functions](notes/p5)
+- [Color Functions and Values](notes/color)
 - [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/)
-- [Code academy review](http://www.codecademy.com/courses/getting-started-v2)
-- **Assignment 2: Self Portrait with Variables**
-	- Rewrite your self portrait drawing using variables where appropriate.
-	- Any time a value is reused, like a color, size or position, it should be replaced with a variable as we demonstrated in class example.
-	- Also think of ways that variables can be updated with operators like `+`, `-`, `*` and `/`
+- **Assignment 2: Self Portrait**
+	- Draw a self portrait in a p5 sketch
+	- Use the shape and color functions
+	- Add something unique to you
+	- Doesn't necessarily have to have a face/body, could be abstract
 
-## Week 3 **Text**
+
+## Week 3 **Variables**
+- [JavaScript statements & operators](notes/javascript/statements.html)
+- [Variables](notes/variables/)
 - [JavaScript debugging](notes/debug)
-- [p5: text](notes/text)
-	- [Text Example](examples/{{site.semester}}/text/)
 - [Debugging challenge](notes/debug/debug.zip)
-- **Assignment 3: Logo**
-	- Make a logo design with your name
-	- Use text and other shapes
-	- Drawing and text functions must use variables
-
+- **Assignment 3: Self Portrait with Variables**
+	- All hard coded numbers and strings in shape and color functions replaced with variables
+	- Variable names describe what they are used for
+	- Update drawing based on class feedback
 
 ## Week 4 **Interaction 1**
-- [p5 system variables](notes/system_variables)
+- [System variables](notes/system_variables)
 - [Interaction](notes/interaction_1)
-	- [Class example](examples/{{site.semester}}/interaction/)
-- **Assignment 4: Interactive design**
-	- Create a simple interactive design
-	- Give the user an instruction using `text`
-		- For example: "Click to add shapes"
-	- Change color, position or size of shapes
+- **Assignment 4: Interactive Self Portrait**
+	- Final changes based on class feedback
+	- Choose part of your self portrait to animate with interaction
+		- size, position or color, or a combination
+	- Use the `map` function at least once
+	- Add instructions for the user in the HTML using a paragraph tag
+	- Update drawing based on class feedback
 
+## Project 2 **Meme/Logo**
+- The next three weeks will be dedicated to the second project.  You have a choice to create a logo for youself or a fictional client or to make a "meme", meaning a humorous combination of image and text (must be appropriate for class).
+- This project will also have three versions: rough draft, simple interaction, and final animation.
+- Feedback in class.
+- Each version has its own URL.
 
-## Week 5 **Logic**
-- [JavaScript comparison operators and conditionals](notes/logic)
+## Week 5 **Text & Image**
+- [Text](notes/text)
+- [Image](notes/image)
+- [Code Academy: Variables](https://www.codecademy.com/courses/learn-javascript-introduction/lessons/variables/exercises/intro-variables){:target="blank"}
+- **Assignment 5: Meme/Logo**
+	- Rough draft of logo or meme
+	- Can be hard coded, extra credit for using variables
+
+## Week 6 **Logic**
+- [Conditional logic](notes/logic)
 - [Drawing with logic](notes/logic/p5.html)
-	- [Class example](examples/{{site.semester}}/logic/)
-- **In class**: [Code Academy: Control Flow](https://www.codecademy.com/courses/learn-javascript-control-flow/lessons/control-flow/exercises/control-flow-intro)
-- **Assignment 5: Control Flow**
-	- Create a design that splits the screen in half or quadrants
-	- Create a user interaction that changes according to the quadrant
-	- Change could be color, shape or size
+- [Code Academy: Control Flow](https://www.codecademy.com/courses/learn-javascript-control-flow/lessons/control-flow/exercises/control-flow-intro){:target="blank"}
+- **Assignment 6: Interactive Meme/Logo**
+	- Divide the canvas into four quadrants using if/else statements
+	- Each quadrant changes the design when the user hovers mouse over it
+	- Use variables to change parameters for the shape and color functions
 
-## Week 6 **Animation**
-- [p5: animation, random, modulo](notes/animation)
-	- [Class example](examples/{{site.semester}}/animation/)
-- [p5: push, pop, transform](notes/transform)
-	- [Class example](examples/{{site.semester}}/transform/)
-- **Assignment 6: Animation**
-	- Add animation to your logo or another previous drawing (or a new drawing if you prefer)
-	- Use two different types of animation (size, color, position, shape, rotation, etc)
+## Week 7 **Animation**
+- [Animation](notes/animation)
+- [Transformation](notes/transform)
+- **Assignment 7: Animation**
+	- Add animation to the Meme/Logo design
+	- Choose what type of animation to use
+		- One from first category: size, position or color
+		- One from second category: translate, rotate, shear or scale
+	- Extra credit: Combine animation from first and second category
 - Inspiration
 	- [Animated name logos](http://www.flamingtext.com/Animated-Logos)
 	- [Animated logos](http://www.howdesign.com/featured/animated-logos/)
 
+## Week 8 **Intro to Physical Computing**
+- [Introduction to Physical Computing](https://mea211blog.wordpress.com/introduction_physcomp/){:target="blank"}
+- [Using a Microcontroller](https://mea211blog.wordpress.com/using-a-microcontroller/){:target="blank"}
+- [Programming an Arduino](https://mea211blog.wordpress.com/programming-the-arduino/){:target="blank"}
+- [Building a Circuit](https://mea211blog.wordpress.com/building-a-circuit/){:target="blank"}
+- **In Class Assignment**
+	- Work with a partner
+	- Read through each tutorial
+	- Document your progress
+	- Include a short video of the blinking light circuit
+	- Submit documentation via YouTube
 
+## Week 9 **Digital I/O**
+- [Digital Input/Output](https://mea211blog.wordpress.com/digital-input-and-output/){:target="blank"}
+- **In Class Assignment**
+	- Work on tutorial with a partner
+	- Document using a switch with Arduino
 
-## Week 7 **Loops**
-- [JavaScript for loops](notes/loops)
-- [p5: drawing with loops](notes/loops/p5.html)
-	- [Loop example](examples/{{site.semester}}/loops/)
-	- [Interactive loop example](examples/{{site.semester}}/loops_mouse/)
+## Week 10 **Analog I/O**
+- [Analog Input/Output](https://mea211blog.wordpress.com/analog-input-and-output/){:target="blank"}
+- **In Class Assignment**
+	- Work on tutorial with a partner
+	- Document analog input with Arduino
+
+## Week 11 **p5 + Arduino**
+- Connect Arduino with p5
+- **In Class Assignment**
+	- Finish setting up arduino sensor with p5 sketch
+	- Document working project
+
+## Week 12 **Interaction 2**
+- [Interaction](notes/interaction_2)
+- [Sound](notes/sound)
+
+## **Final Project**
+- Interactive animation using a physical interface
+- Choose a sensor to connect to p5 through Arduino
+- Design animation using interaction with the sensor
+- Optional: Work with a partner
+
+## **Final Proposal**
+- Pitch with slides
+- Explain the plan for the final
+- How sensor will be used
+- How input will change the graphics/sketch
+- Work in progress design or mood board
+
+<!-- 
+
+## Week **Loops**
+- [Loops](notes/loops)
+- [Drawing with loops](notes/loops/p5.html)
 - In class: [Code academy: for loops](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/0/1)
-- **Assignment 7: Windows**
+- **Assignment 8: Windows**
 	- Draw the a grid of windows like the front of a city building.  
 	- Each window should be at least 5 shapes.  
 	- Use your apartment building or [Windows of New York](http://windowsofnewyork.com/) for inspiration.
 
-## Week 8 **Pattern**
+## Week **Pattern**
 - [Generating patterns](notes/pattern)
-	- [Class example](examples/{{site.semester}}/pattern/)
 
 ## Midterm **Generative design**
 - Create a concept for a product that will have a generative pattern design
 - Choose a theme that will inform your design
 - Create a sketch that generates new patterns based on a theme, a new pattern each time the user clicks
-- Use `saveCanvas` to save images
+- Use `save` to save images and choose 3 to print and present to the class
 - The sketch must use variables, a for loop, colors, and shapes
 - Use a series of decisions (if, else) or randomly generated values to change the pattern
 - Write a short, 3-4 sentence description of the project, for example: *I'm designing a pattern for socks.  My theme is Spring and I'm using a polka dot pattern.  I chose different shades of green for the background to represent  the new leaves on the trees.  I also chose pinks and purples for foreground shapes to represent flowers.*
@@ -112,49 +166,27 @@ Go to [Home](index.html)
 	- [Libs Elliott: Generated quilt design](http://themakersnation.com/maker-spotlight-libs-elliott/)
 	- [Generative Patterns Google Image Search](https://www.google.com/search?q=generative+patterns&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiA-OPl3fbWAhWD6iYKHTihD7EQ_AUICigB&biw=1897&bih=984#imgrc=_)
 
-## Week 9 **Functions**
-- Present Midterms
-- [JavaScript functions](notes/functions)
-- [p5: Defining a function](notes/functions/p5.html)
-	- [Class example](examples/{{site.semester}}/functions)
-- **In class**
-	- Rewrite your window drawing as a defined function.
-	- Use it to draw multiple windows with different origin and size.
+## Week **Objects**
+- [Objects](notes/objects)
+- [Spaceships](notes/objects/p5.html)
 
-## Week 10 **Media**
-- [Image & video](notes/media)
-	- [Image example](examples/{{site.semester}}/image)
-	- [Video example](examples/{{site.semester}}/video)
-	- [3d example](examples/{{site.semester}}/3d)
-- [Sound library](notes/sound)
-	- [Sound example](examples/{{site.semester}}/audio)
-- **Final Project**
-	- The final project will be an interactive media player
-	- This week do some research on existing projects and think about what you want to make
-	- Next week we will make a final pitch
-	- Some examples
-		- <https://nvioli.github.io/>
-		- <https://fcjou.github.io/fish-piano/>
-		- <http://share.framerjs.com/4ie4c9u5jodh/>
-		- <https://www.jdjohnsonmedia.com/session5/index.html>
-		- <https://www.jdjohnsonmedia.com/session9/index.html>
-		- <http://uxdesignercoding.tumblr.com/post/143328882704/for-this-week-i-have-worked-on-data-visualization>
-		- <http://www.typotopo.com/typemenot/index.html>
-
-## Week 11 **Arrays**
+## Week **Arrays**
 - [Arrays](notes/array)
-	- [Class example](examples/{{site.semester}}/spaceships)
-- [Review Arrays](https://www.khanacademy.org/computing/computer-programming/programming/arrays/p/intro-to-arrays)
-- **In class**
-	- Write a spaceship function (or a car, or a animal, or anything else that moves)
-	- Animate the spaceship in space and color
-- **Assignment: Final project pitch**
-	- 3-5 sentence "pitch" for final project
-	- 1 sketch or "mood board" with visual references
-	- Must use some type of media, sound, image or video
-	- Must be interactive
-	- Could be a game, interactive visualization, animation or combination
-- More inspiration
+- [Spaceship Array](notes/array/p5.html)
+- [Array & Random](notes/array/random.html)
+- [Khan Academy: Arrays](https://www.khanacademy.org/computing/computer-programming/programming/arrays/p/intro-to-arrays){:target="blank"}
+
+## Final **Project**
+- The final project will be an interactive media player
+- This week do some research on existing projects and think about what you want to make
+- Next week we will make a final pitch
+## **Project pitch**
+- 3-5 sentence "pitch" for final project
+- 1 sketch or "mood board" with visual references
+- Must use some type of media, sound, image or video
+- Must be interactive
+- Could be a game, interactive visualization, animation or combination
+- Final Inspiration
 	- <http://www.newrafael.com/websites>
 	- <https://the-internet.click/>
 	- <http://superpixelquest.com/>
@@ -164,21 +196,16 @@ Go to [Home](index.html)
 	- <http://agar.io/>
 	- <http://paper-io.com/>
 	- <https://quickdraw.withgoogle.com/#>
+	- <https://nvioli.github.io/>
+	- <https://fcjou.github.io/fish-piano/>
+	- <http://share.framerjs.com/4ie4c9u5jodh/>
+	- <https://www.jdjohnsonmedia.com/session5/index.html>
+	- <https://www.jdjohnsonmedia.com/session9/index.html>
+	- <http://uxdesignercoding.tumblr.com/post/143328882704/for-this-week-i-have-worked-on-data-visualization>
+	- <http://www.typotopo.com/typemenot/index.html>
 
-## Week 12 **Interaction 2**
-- Present Final idea
-- [Interaction](notes/interaction_2)
-	- [Class example](examples/{{site.semester}}/interaction_2)
-- Begin work on Final
 
-## Week 13 **Objects**
-- [Objects](notes/objects)
-	- [Spaceship objects](examples/{{site.semester}}/spaceship_objects)
-	- [Sound button object](examples/{{site.semester}}/sound_button)
-	- [Image object](examples/{{site.semester}}/image_objects)
-- Continue work on final
 
-<!-- 
 ## Week 10
 - Midterm Presentatio
 - [Interaction](week9/)
@@ -192,3 +219,14 @@ Go to [Home](index.html)
 -->
 
 
+<!-- 
+
+	ommitted assignments
+	draw window function
+
+
+	10: Intro PComp/Circuits
+	11: Digial input/output
+	12: Analog input/output
+
+ -->

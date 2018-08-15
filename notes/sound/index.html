@@ -1,12 +1,13 @@
 ---
 layout: slides
-title: p5 sound
-week: 10
+title: Sound
+week: 12
 ---
 
+<script src="p5.sound.js"></script>
+
 <div class="slide">
-	<h2>Sound library</h2>
-	<p>To use sound in p5 we need to add a library like we did with the DOM library in <a href="../week9/">week 9</a>.  The <a href="https://p5js.org/reference/#/libraries/p5.sound" target="blank">sound library</a> is explained here.  You can <a href="https://raw.githubusercontent.com/processing/p5.js-sound/master/lib/p5.sound.js" target="blank">download it here</a>.</p>
+	<p>To use sound in p5 we need to add the <a href="https://p5js.org/reference/#/libraries/p5.sound" target="blank">sound library</a>.  <a href="https://raw.githubusercontent.com/processing/p5.js-sound/master/lib/p5.sound.js" target="blank">Download it here</a>.</p>
 </div>
 
 <div class="slide">
@@ -14,143 +15,160 @@ week: 10
 	<pre><code>&lt;script src="p5.min.js"&gt;&lt;/script&gt;
 &lt;script src="p5.sound.js"&gt;&lt;/script&gt;
 &lt;script src="sketch.js"&gt;&lt;/script&gt;</code></pre>
+	<p>Now we can load a sound file and play it in a p5 sketch.</p>
 </div>
 
 <div class="slide">
-	<p>Let's get started by loading a sound and playing it.</p>
-	<p>We can use the screen saver code we wrote but add a sound whenever the ball hits a wall.  We can also use an array to play multiple sounds.  We'll start with one.  To make sounds, there's lot of options.  One of my favorite tools is <a href="https://jfxr.frozenfractal.com/" target="blank">jfxr</a>, which is a web application ported from <a href="http://drpetter.se/project_sfxr.html" target="blank">sfxr</a>, a program designed to generate 8-bit style sound effects.  There a version for Apple called <a href="http://thirdcog.eu/apps/cfxr" target="blank">cfxr</a> if you want to download the software.</p>
-<!-- </div>
+	<p>Getting or creating sounds can be done in many ways.</p>
+	<p><a href="https://freesound.org/" target="blank">Freesound.org</a> is a great resource for sound recordings available under the Creative Commons license.</p>
+	<p><a href="http://freemusicarchive.org/" target="blank">Free Music Archive</a> is a great resource for musical recordings in many genres, many using the Creative Commons license.</p>
+	<p>One of my favorite tools is <a href="https://jfxr.frozenfractal.com/" target="blank">jfxr</a>, which is a web application ported from <a href="http://drpetter.se/project_sfxr.html" target="blank">sfxr</a>, a program designed to generate 8-bit style sound effects.  There a version for Apple called <a href="http://thirdcog.eu/apps/cfxr" target="blank">cfxr</a> if you want to download the software.</p>
+</div>
 
-<div class="slide"> -->
+<div class="slide">
 	<p>Once you have generated a sound you like, add it to the folder with <code>sketch.js</code> and <code>index.html</code>.</p>
-	<!-- <img src="sound-file.png" alt=""> -->
 </div>
 
 <div class="slide">
-	<h2>Pre load</h2>
-	<p>The sound needs to be preloaded:</p>
-	<pre><code>var explosion;
+	<p>Like images, the sound file should be preloaded.</p>
+	<p>Here's a simple sketch to play a sound.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var explosion;
 function preload() {
-	 explosion = loadSound('Explosion5.wav');
-}</code></pre>
-</div>
-
-<div class="slide">
-	<p>Let's set up a simple sketch:</p>
-	<pre><code>function setup() { 
-	createCanvas(400,200);
+	 explosion = loadSound('explosion.wav');
 }
 function draw() {
 	background('black');
-}</code></pre>
-</div>
-
-<div class="slide">
-	<h2>Play</h2>
-	<p>And then play sound on <code>mousePressed()</code> just to test:</p>
-	<pre><code>function mousePressed() {
-	explosion.play();
-}</code></pre>
-</div>
-
-<div class="slide">
-	
-	<p>Let's make our screensaver example again and add an explosion when it hits a wall:</p>
-	<pre><code>// screen saver
-var x = 10;
-var y = 10;
-var xupdate = 2;
-var yupdate = 1;
-
-function setup() { 
-	createCanvas(640, 480);
 }
-
-function draw() {
-   	background(200);
-    ellipse(x, y, 50);
-    x += xupdate;
-	y += yupdate;
-    if (x > width || x <= 0) {
-		xupdate *= -1;
-    }
-	if (y > height || y <= 0) {
-		yupdate *= -1;
+function mousePressed() {
+	if (mouseX > 0 && mouseX < width && 
+		mouseY > 0 && mouseY < height) {
+		explosion.play();
 	}
-}</code></pre>
+}</div>
 </div>
 
 <div class="slide">
-	<p>From here all we do is add the sound code each time we detect hitting a wall with the compound if statements:</p>
-	<pre><code>if (x > width || x <= 0) {
-	xupdate *= -1;
-	explosion.play();
-}
-if (y > height || y <= 0) {
-	yupdate *= -1;
-	explosion.play();
-}</code></pre>
+	<h2>Sound button</h2>
+	<p>Let's combine playing the sound with the button interaction.</p>
 </div>
 
-<!--  add this to arrays ...  -->
-<!-- <div class="slide">
-	<p>Let's add some variety by making a few more sounds, saving them in an array, and then randomly playing them.</p>
-	<pre><code>var explosions = [];
+<div class="slide">
+	<div class="ex" data-preview>var explosion;
+var r, g, b;
 function preload() {
-	explosions.push( loadSound('Explosion5.wav') );
-	explosions.push( loadSound('Explosion20.wav') );
-	explosions.push( loadSound('Explosion21.wav') );
-	explosions.push( loadSound('Explosion32.wav') );
-}</code></pre>
-</div> 
-
-<div class="slide">
-	<p>Update the code to play the explosion with a random selection from the array:</p>
-	<pre><code>explosions[floor(random(0,explosions.length))].play();</code></pre>
-	<p>This line is a little long so let's break it down.</p>
+	 explosion = loadSound('explosion.wav');
+}
+function draw(){
+	background(0);
+	fill(r, g, b);
+	ellipse(width/2, height/2, 200, 200);
+}
+function mousePressed() {
+    var d = dist(mouseX, mouseY, width/2, height/2);
+	if (d < 100) {
+		r = random(0, 255);
+		g = random(0, 255);
+		b = random(0, 255);
+		explosion.play();
+	}
+}</div>
 </div>
 
-<div class="slide">
-	<p>First off, we're just using the <code>explosions</code> array and playing one of the sounds by choosing an index and then using the <code>.play()</code> method.</p>
-	<pre><code>explosions[0].play();</code></pre>
-	<p>But we want the index to be random, so we're getting a random number between 0 and the number of explosions sounds that are in the array:</p>
-	<pre><code>random(0, explosions.length)</code></pre>
-	<p>But that random number could be a floating point number like <code>1.33</code> or <code>2.134152</code> so we use <code>floor()</code> to round it off to the lower whole number.  Basically we just chop off the decimal point to give us something we can use as the index for an array:</p>
-	<pre><code>floor(random(0, explosions.length))</code></pre>
-	<p>So then we stick that into the index for the array:</p>
-	<pre><code>explosions[floor(random(0, explosions.length))]</code></pre>
 
-</div>
--->
 
 <div class="slide">
 	<h2>Manipulating sound</h2>
 	<p>Let's add some background music and play with a few parameters to see other things we can do with the p5 sound library.  First I'll <a href="http://freemusicarchive.org/genre/Classical/" target="blank">download a track</a> from the Free Music Archive and load it in my sketch.</p>
-	<pre><code class="javascript">var bkgMusic;
+	<div class="ex" data-preview>var music;
 function preload() {
-	bkgMusic = loadSound('music.mp3');
+	music = loadSound('background.mp3');
 }
-function setup() { 
-	bkgMusic.play();
-}</code></pre>
+function setup() {
+	createCanvas(640, 360);
+}
+function draw() {
+	if (music.isPlaying()) {
+		background(255);
+	} else {
+		background(0);
+	}
+}
+function mousePressed() {
+	if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
+		if (music.isPlaying()) {
+			music.stop();
+		} else {
+			music.play();
+		}
+	}
+}</div>
 </div>
 
 <div class="slide">
-	<p>One thing we can change is the overall volume of the track, using <a href="https://p5js.org/reference/#/p5.SoundFile/setVolume">.setVolume()</a>.  Let's <a href="https://p5js.org/reference/#/p5/map">map</a> the height of our <code>rect</code> to the volume.</p>
-	<pre><code>function draw() {
-	var vol = map(y, 0, height, 1, 0);
-	bkgMusic.setVolume(vol);
-}</code></pre>
+	<p>The volume of the sound can be changed with <a href="https://p5js.org/reference/#/p5.SoundFile/setVolume">setVolume</a>.  Let's <a href="https://p5js.org/reference/#/p5/map">map</a> the height of our <code>canvas</code> to the volume.</p>
+	<pre><code>var vol = map(mouseY, 0, height, 1, 0);
+music.setVolume(vol);</code></pre>
 </div>
 
 <div class="slide">
-	<p>We can also pan the stereo field of the track using <a href="https://p5js.org/reference/#/p5.SoundFile/pan">.pan()</a>.  Let's map pan to x:</p>
-	<pre><code>var p = map(x, 0, width, -1, 1);
-bkgMusic.pan(p);</code></pre>
+	<p>We can also pan the stereo field of the track using <a href="https://p5js.org/reference/#/p5.SoundFile/pan">pan</a>.  Let's map pan to x:</p>
+	<pre><code>var pan = map(mouseX, 0, width, -1, 1);
+music.pan(pan);</code></pre>
 </div>
 
 <div class="slide">
-	<p>There's a ton of stuff we could do with this sound file, so let's just try one more.  This time we'll map playback <a href="https://p5js.org/reference/#/p5.SoundFile/rate">rate</a> of the track to the mouse position.</p>
+	<p>We can also change the rate of playback.  This time we'll map playback <a href="https://p5js.org/reference/#/p5.SoundFile/rate">rate</a> of the track to the mouse position.</p>
 	<pre><code>var rate = map(mouseX, 0, width, 0.5, 4);
-bkgMusic.rate(rate);</code></pre>
+music.rate(rate);</code></pre>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var music;
+function preload() {
+	music = loadSound('background.mp3');
+}
+function setup() {
+	createCanvas(640, 360);
+}
+function draw() {
+	if (music.isPlaying()) {
+		background(255);
+	} else {
+		background(0);
+	}
+	
+	var vol = map(mouseY, 0, height, 1, 0);
+	vol = constrain(vol, 0, 1);
+	music.setVolume(vol);
+	
+	var pan = map(mouseX, 0, width, -1, 1);
+	pan = constrain(pan, -1, 1);
+	music.pan(pan);
+
+	var rate = map(mouseX, 0, width, 0.25, 2);
+	rate = constrain(rate, 0.25, 2);
+	// music.rate(rate);
+
+	stroke('blue');
+	line(0, mouseY, width, mouseY);
+	line(mouseX, 0, mouseX, height);
+	ellipse(mouseX, mouseY, 20);
+}
+function mousePressed() {
+	if (mouseX > 0 && mouseX < width && 
+		mouseY > 0 && mouseY < height) {
+		if (music.isPlaying()) {
+			music.stop();
+		} else {
+			music.play();
+		}
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>This is just a small sample of everything that can be done with the sound file.</p>
 </div>

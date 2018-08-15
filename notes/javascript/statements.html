@@ -1,0 +1,135 @@
+---
+layout: slides
+title: JavaScript basics
+week: 3
+---
+<div class="slide">
+	<p>We're going to start by covering some of the nitty gritty of JavaScript syntax.</p>
+	<p>Let's do this in the JavaScript console.  In Chrome for Mac:</p>
+	<div class="key">CAj</div>
+	<p>Or Windows:</p>
+	<div class="key">VSj</div>
+</div>
+
+<div class="slide">
+	<h2>Syntax basics</h2>
+	<p>The following is a simple statement that declares and initializes a variable.</p>
+	<pre><code><c></c>var sentence = "Hello world";</code></pre>
+	
+	<p>Each part of our statement should be separated by one space.  In JavaScript, extra white space is ignored.</p>
+	<pre><code><c></c>var sentence      =         "Hello world.";</code></pre>
+	<p>Extra white spaces are not ignore if they are part of a string value.</p>
+	<pre><code><c></c>var sentence = "Hello                      world.";</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Assignment operator</h2>
+	<p>The <code>=</code> sign is for assigning values.</p>
+	<p>Unlike in math, it does not mean that two values are the same.  It simply asks the program to store a value somewhere in the memory the computer and give that piece of memory a nickname.</p>
+	<p>When I say "gets" I mean the <code>=</code> assignment operator.</p>
+	<p>So this is what that statement would sound like:</p>
+	<blockquote>A variable called sentence <em>gets</em> the value "Hello world."</blockquote>
+</div>
+
+<div class="slide">
+	<h2>Variables</h2>
+	<p>In Javascript, variables are declared using <code>var</code> regardless of what type of information they hold.</p>  
+	<p>Type <code>sentence</code> in the console again and it will return the value, <code>"Hello world."</code></p>
+	<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var" target="blank">var on MDN</a></p>
+</div>
+
+<div class="slide">
+	<h2>Declaration and Assignment</h2>
+	<p>Creating a variable requires two steps: <em>declaration</em> and <em>assignment</em>.</p>
+	<pre><code>// declaration
+<c></c>var a;
+// undefined
+
+// assignment
+<c></c>a = 10;
+// 10</code></pre>
+</div>
+
+<div class="slide">
+	<p>A variables can be <em>initialized</em> by declaring <em>and</em> assigning in one statement:</p>
+	<pre><code>// initialize
+<c></c> var a = 10;</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Numbers and Strings</h2>
+	<p>JavaScript has several basic data types, including <em>Numbers</em> and <em>Strings</em>.</p>
+	<p>Numbers can represent any numerical value:</p>
+	<pre><code><c></c>10;
+<c></c>10.5;
+<c></c>0.1 + 0.2;
+<c></c>1 / 0 // Infinity</code></pre>
+	<p>Because variables can be set to different types, you can check in a value is a Number.  If not, you will get the error type <code>NaN</code> or "Not a Number".</p>
+	<pre><code><c></c>var a = "ten";
+<c></c>Number(a); // NaN
+<c></c>typeof a; // "string"</code></pre>
+</div>
+
+<div class="slide">
+	<p>Strings are "strings" of characters.  They usually store messages, names or other text that needs to be rendered in a program.  They can also store data.</p>
+	<pre><code><c></c>var s = "Hello"
+<c></c>var name = "Jerry";
+<c></c>s + " " + name;</code></pre>
+</div>
+
+<div class="slide">
+	<p>Once a variables is declared, the value can be assigned or changed using an <strong>operator</strong>.</p>
+	<pre><code><c></c>var a = 0;
+<c></c>a = 10;
+<c></c>a = 10 + 20;
+<c></c>a = "ten plus twenty";</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Operators</h2>
+	<p>Add and subtract</p>
+	<pre><code class="javascript"><c></c>var x = 10;
+<c></c>var y = 20;
+<c></c>x + y;
+<c></c>x - 5;
+<c></c>x - y + 5;
+// use parentheses for order of operations
+<c></c>x - (y + 5); </code></pre>
+</div>
+
+<div class="slide">
+	<p>Multiply and divide</p>
+	<pre><code><c></c>2 * 2;
+<c></c>2 / 3;</code></pre>
+</div>
+
+<div class="slide">
+	<p>Concatenation</p>
+	<pre><code><c></c>var h = "hello";
+<c></c>var w = "world";
+<c></c>x + w;
+<c></c>"hello" + "world";
+<c></c>"hello " + "world";</code></pre>
+</div>
+
+<div class="slide">
+	<p>Increment, decrement</p>
+	<pre><code><c></c>var x = 0;
+<c></c>x++;
+<c></c>x += 10;
+<!-- <c></c>var y = ++x;
+<c></c>var z = x++; -->
+<c></c>x--;
+<c></c>x -= 5;</code></pre>
+</div>
+
+<div class="slide">
+	<p>Addition vs. concatenation</p>
+	<pre><code><c></c>var x = 1;
+<c></c>var y = "7";
+<c></c>x + y;
+<c></c>typeof x + y;
+<c></c>y + x;
+<c></c>x + +y;
+<c></c>x + Number(y);</code></pre>
+</div>

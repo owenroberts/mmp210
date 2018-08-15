@@ -1,8 +1,9 @@
 ---
 layout: slides
-title: JavaScript Objects
+title: Objects
 week: 12
 ---
+
 <div class="slide">
 	<p>Although we haven't talked about them specifically, we have been using objects all semester.  In fact, basically everything in JavaScript is an object, including arrays, functions, and anything that has methods or properties.</p>
 	<p>JavaScript is based on an object oriented programming design.  This means the language is organized around objects and data rather than logic and actions.</p>
@@ -10,208 +11,94 @@ week: 12
 </div>
 
 <div class="slide">
-	<p>In a key value pair, the key is a string and the value can be any JavaScript value, a number, string, array, function or another object.  Single values like numbers, strings and booleans are called properties, while functions are called methods.</p>
-	<p>For emple, with an array object, <code>.length</code> is a property and <code>.push()</code> is a method.  An array is an object that contains key values for each of the elements in the array as well as other methods and properties.</p>
+	<p>Simply put, and object is a collection of properties and methods associated with one, well, object.</p>
+	<p>Properties and methods are assigned with key value pairs.</p>
 </div>
 
 <div class="slide">
-	<p>When we covered functions, I used cars as an example, so this time I'll use trains.</p>
-	<p>(But you can use virtually any real world object as an example for a JavaScript object.)</p>
+	<h2>Key, value pairs</h2>
+	<p>In a key value pair, the key is a string and the value can be any JavaScript value, a number, string, array, function or another object.</p>
+	<table class="code">
+		<tr>
+			<th>key</th>
+			<th>value</th>
+		</tr>
+		<tr>
+			<td>color</td>
+			<td>"blue"</td>
+		</tr>
+		<tr>
+			<td>speed</td>
+			<td>60</td>
+		</tr>
+		<tr>
+			<td>isOnTime</td>
+			<td>true</td>
+		</tr>
+	</table>
+	<p>Single values like numbers, strings and booleans are called <note>properties</note>, while functions are called <note>methods</note>.</p>
+</div>
+
+<div class="slide">
+	<h2>Train Object</h2>
+	<img src="train.jpg" alt="">
+</div>
+
+<div class="slide">
+	<p>Almost any object in the real world can be used as a metaphor for a JavaScript object.  Let's use trains.</p>
 	<p>Like objects in the real world, JavaScript objects have properties and methods, or qualities and actions.</p>
-	<p>A train has many properties, such as color, speed, number of passengers, distance traveled, origin and ending locations, etc.</p>
-	<p>It also has actions, it moves on tracks, it honks it's horn, it carries passengers.</p>
-	<p>Let's create a JavaScript version of a train:</p>
-</div>
-
-<!--  previous example probably too complicated to introduce different ways to do it, lets do it as functin declaration like examples -->
-
-<!-- <div class="slide">
-	<pre><code><c></c>var train = {};</code></pre>
-	<p>Objects can be declared with curly brackets.</p>
-	<pre><code><c></c>train.color = "blue";
-<c></c>train.speed = 100;
-<c></c>train.numberOfPassengers = 400;
-<c></c>train.distance = 25;
-<c></c>train.origin = "New York";
-<c></c>train.destination = "Boston";
-<c></c>console.log(train);</code></pre>
 </div>
 
 <div class="slide">
-	<p>Another way to create a train is using object notation:</p>
-	<pre><code><c></c>var train = {
-	speed: 60,
-	numberOfPassengers: 500,
-	distance: 100,
-	origin: "Seattle",
-	destination: "San Francisco"
-};
-<c></c>console.log(train);</code></pre>
-</div> -->
+	<p>Trains all have one basic blueprint.  This is like the object.</p>
+	<p>A train has many properties, such as color, speed, number of passengers, distance traveled, origin and ending locations, etc.</p>
+	<p>It also has actions, like functions, it moves on tracks, it honks it's horn, it carries passengers.</p>
+</div>
 
 <div class="slide">
 	<h2>Constructor</h2>
 	<p>Objects can be declared in several ways.  One is using the function keyword with object notation.  In this case the name of the function is capitalized.  This doesn't have a functional purpose, but it is a visual cue that we are creating an object rather than a function.</p>
-	<pre><code><c></c>function Train() {
+	<p>This is a train <code>constructor</code> which is like a blueprint for a default train.  We can build trains based on this model and then modify their properties.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>// constructor
+function Train() {
 	this.color = "blue";
 	this.speed = 100;
 	this.numberOfPassengers = 400;
 	this.distance = 25;
 	this.origin = "New York";
 	this.destination = "Boston";
-}</code></pre>
-</div>
+	this.getDuration = function() {
+		return this.distance / this.speed;
+	};
+}
 
-<div class="slide">
-	<p>You can then reference the properties and methods of that train using dot notation:</p>
-	<pre><code><c></c>console.log(train.speed);
-<c></c>console.log(train.speed / train.distance );</code></pre>
-</div>
+// create a train
+var mta = new Train();
+console.log(mta);
+console.log('duration', mta.getDuration());
 
-<div class="slide">
-	<p>This is a train <code>constructor</code> which is like a blueprint for a default train.  We can build trains based on this model and then modify their properties.</p>
-	<pre><code><c></c>var mta = new Train();
-<c></c>mta.color = "red";
-<c></c>mta.distance = 100;
-<c></c>console.log(mta);</code></pre>
+// update train properties
+mta.color = "red";
+mta.distance = 100;
+console.log(mta);</div>
 </div>
-
 
 <div class="slide">
 	<h2>Arguments</h2>
 	<p>Like function, objects can take arguments.</p>
-	<pre><code><c></c>function Train(color, distance, origin, destination) {
+	<p>Arguments can be used to add variations to the objects when they are <note>instantiated</note> (created).</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function Train(color, distance, origin, destination) {
 	this.color = color;
 	this.distance = distance;
 	this.origin = origin;
 	this.destination = destination;
 }
-<c></c>var njTransit = new Train("orange", 200, "Penn Station", "Trenton");
-<c></c>console.log(njTransit);</code></pre>
-</div>
-
-<div class="slide">
-	<h2>Methods</h2>
-	<p>Objects can also have functions, called methods, that are tied to the object:</p>
-	<pre><code><c></c>njTransit.printStatus = function() {
-	console.log("This train runs from " + this.origin + " to " + this.destination);
-}</code></pre>
-</div>
-
-<div class="slide">
-	<h2>Spaceship object</h2>
-	<p>When we covered Arrays we made a fleet of spaceships by adding a bunch of arrays to track different aspects of the spaceship.  This was good for reducing the number of variables we needed to keep track of the size, position and color of each ship in our fleet, but the more things we change, the more variables we have to create.</p>
-	<p>A better way to organize this information is by adding a spaceship object, a single block of code that keeps track of it's own x, y, size and color values and can be added to an array.</p>
-</div>
-        
-<div class="slide">
-	<p>So, instead of several arrays, we can use one array of spaceships:</p>
-	<pre><code>var spaceships = [];</code></pre>
-	<p>And then define a spaceship objects with each of the properties we used before:</p>
-	<pre><code>function Spaceship() {
-	this.x = random( 0, width/4 );
-	this.y = random( 0, height );
-	this.speed = random(1, 3);
-	this.size = random(10, 40);
-}</code></pre>
-	</div>
-
-<div class="slide">
-	<p>We will also add methods to the spaceship objects to draw it's shapes and update them:</p>
-	<pre><code>this.draw = function() {
-	// all of the shapes we need for the spaceship
-}
-this.update = function() {
-	if (this.x < width) this.x += this.speed;
-	else this.x = 0;
-}</code></pre>
-</div>
-
-<div class="slide">
-	<h2>Circle objects</h2>
-	<p>In this example, we will use objects to create circles based on the color data in an image:</p>
-	<pre><code>function Circle(x, y, c) {
-	this.x = x;
-	this.y = y;
-	this.c = c;
-	this.display = function() {
-		fill(this.c);
-		ellipse(this.x, this.y, w, w);
-	}
-}</code></pre>
-	<p>Our Cirlce function is very simple, it just needs a color and position and a function to draw itself.  This doesn't seem that useful but it will make it much easier for us to generate new circles.</p>
-</div>
-
-<div class="slide">
-	<p>The rest of our sketch makes an array that we can fill with circles based on the color of the image using the <code>image.get()</code> method.</p>
-	<pre><code>var img;
-var circles = [];
-var w = 20;
-var r = 50;
-function setup(){
-	img = loadImage("cat.jpg");
-	createCanvas(640, 480);
-	noStroke();
-}
-
-function draw(){
-	background("black");
-	image(img, 0, 0);
-	for (var i = 0; i < circles.length; i++) {
-		circles[i].display();	
-	}
-}
-
-function mouseDragged() {
-	var x = mouseX + random(-r, r);
-	var y = mouseY + random(-r, r);
-	var imgcolor = img.get(x, y);
-	circles.push( new Circle(x, y, imgcolor) );
-}</code></pre>
-</div>
-
-<div class="slide">
-	<p>Moving from this example, we can make a slightly more self aware Circle that can tell if it is being clicked.  This is basically a button, but it's the building block for creating collision detection needed for games.</p>
-	<pre><code>function Circle(x,y,c) {
-	this.x = x;
-	this.y = y;
-	this.size = random(20, 60);
-	this.color = color(random(0,255),random(0,255), random(0,255));
-	this.alive = true;
-	this.display = function() {
-		if (this.alive) {
-			fill(this.color);
-			ellipse(this.x, this.y, this.size);
-		}
-	}
-	this.collide = function(newX, newY) {
-		if (dist(this.x,this.y,newX,newY) < this.size) {
-			this.alive = false;
-		}
-	}
-}</code></pre>
-</div>
-
-<div class="slide">
-	<p>Now we need to use <code>setup</code>, <code>draw</code> and <code>mousePressed</code> to create, display and detect if circles are being clicked on.</p>
-	<pre><code>var circles = [];
-function setup() { 
-  createCanvas(400, 400);
-	noStroke();
-	for (var i = 0; i < 20; i++) {
-		circles.push( new Circle(random(0, width), random(0,height)) );
-		
-	}
-} 
-function draw() { 
-  background(220);
-	for (var i = 0; i < circles.length; i++) {
-		circles[i].display();
-	}
-}
-function mousePressed() {
-	for (var i = 0; i < circles.length; i++) {
-		circles[i].collide(mouseX, mouseY);
-	}
-}</code></pre>
+var njTransit = new Train("orange", 200, "Penn Station", "Trenton");
+console.log(njTransit);</div>
 </div>

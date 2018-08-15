@@ -1,210 +1,208 @@
 ---
 layout: slides
-title: color, stroke, fill & variables
+title: Color
 week: 2
 ---
 
-<!--  color rgb and name and hex -->
 <div class="slide">
-	<p>By default, the <a href="http://p5js.org/reference/#/p5/color" target="blank">color()</a> function will take either 1 argument for grayscale or 3 arguments for rgb.</p>
-	<pre><code class="javascript">var gray = color(100); // gray
-var pink = color(255, 0, 200); // pink</code></pre>
+	<h2>Stroke & Fill</h2>
+	<p>In p5, color can be applied to shapes primarily using two functions: <code>fill</code> and <code>stroke</code>.</p>
+	<p>Fill applies color to the inside of the shape.  Stroke is applied as the color of the outline of the shape.</p>
+	<p>This is similar to how shapes are created in Adobe Illustrator.</p>
+	<p>Let's add some color to a simple self-portrait.</p>
 </div>
 
 <div class="slide">
-	<p>We can also use conventional HTML color names and HEX values.</p>
-	<pre><code class="javascript">var blue = color("blue"); // blue
-var red = color("#ff0000"); // red</code></pre>
-</div>
+	<div class="ex" data-preview>// self portrait 
+function setup() {
+	createCanvas(200, 200);
+	background(220);
 
-<!--  fill & no fill -->
-<div class="slide">
-	<p>The <a href="http://p5js.org/reference/#/p5/fill" target="blank">fill()</a> function sets the color of the fill for all drawable elements like shapes and lines.</p>
-	<pre><code>fill(51);
-rect(25, 25, 100, 100);</code></pre>
-</div>
-
-<div class="slide">
-	<p>Color values saved in variables can also be used as colors.</p>
-	<pre><code>fill(pink);
-rect(125, 25, 100, 100);</code></pre>			
-</div>
-
-<div class="slide">
-	<p>The function <a href="http://p5js.org/reference/#/p5/noFill" target="blank">noFill()</a> turns the fill off.</p>
-	<pre><code>noFill();
-rect(150, 50, 100, 100);</code></pre>			
-</div>
-
-<!--  stroke, stroke weight & no stroke -->
-<div class="slide">
-	<p>The <a href="http://p5js.org/reference/#/p5/stroke" target="blank">stroke()</a> function works in a similar way, but changes the stroke of the drawable element.</p>
-	<pre><code>stroke(blue);
-triangle(50, 50, 50, 100, 100, 50);</code></pre>
-</div>
-
-<div class="slide">
-	<p>The function <a href="http://p5js.org/reference/#/p5/noStroke" target="blank">noStroke()</a> turns the stroke off (remember to turn the fill back on or you won't see anything!).</p>
-	<pre><code>noStroke();
-fill(red);
-ellipse(200, 200, 60, 60);</code></pre>			
-</div>
-
-<!--  background -->
-<div class="slide">
-	<p>The <a href="http://p5js.org/reference/#/p5/background" target="blank">background()</a> function sets the color of the canvas element, and can use grayscale, rgb or HTML values, just like stroke and fill.</p>
-	<pre><code>var green = color(0, 190, 120);
-background(green);</code></pre>
-	<p>Make sure to draw you background before drawing anything else.</p>
-</div>
-
-<div class="slide">
-	<h2>Using variables</h2>
-	<p>In the last class we drew a self portrait, using <note>hardcoded</note> values.  A hardcoded value is a number or string written directly into the program.  It will not change unless you rewrite it.  Let's take a look at that program:</p>
-	<pre><code>// self portrait
-function setup() { 
-	createCanvas(640, 480);
-	background("black");
-	noStroke();
+	// defaults
+	stroke('black');
+	fill('white');
 	
-	// head
-	fill("yellow");
-	ellipse(300, 300, 300, 300);
-	
-	// eyes
-	fill("orange");
-	rect(175, 175, 50, 50);
-	rect(275, 175, 50, 50);
-	
-	// mouth
-	fill("orange");
-	triangle(175, 400, 325, 425, 345, 380);
-	
-	// nose
-	stroke("orange");
-	strokeWeight(6);
-	line(250, 245, 200, 350);
-
-	// ear
-	fill("yellow");
-	arc(450, 280, 70, 90, PI+1, HALF_PI+1);
-}</code></pre>
-</div>
-<div class="slide">
-	<p>We can improve this program using variables.  My self portrait uses two hardcoded values for colors: <code>"yellow"</code> and <code>"orange"</code>.  If I want to change the color of any of the parts of the face I need to rewrite this.  If I use a variable instead, I can change all of the shapes using each color and change them all at the same time.</p>
-	<pre><code>var base = "yellow";
-var details = "orange";
-
-// head
-fill(base);
-ellipse(300, 300, 300, 300);
-
-// eyes
-fill(details);
-rect(175, 175, 50, 50);
-rect(275, 175, 50, 50);
-
-// mouth
-fill(details);
-triangle(175, 400, 325, 425, 345, 380);
-
-// nose
-stroke(details);
-strokeWeight(6);
-line(250, 245, 200, 350);
-
-// ear
-fill(base);
-arc(450, 280, 70, 90, PI+1, HALF_PI+1);</code></pre>
-	<p>Now I can change the whole drawing by changing one line: </p>
-	<pre><code>var details = "green";</code></pre>
+	ellipse(100, 100, 100); // face
+	ellipse(75, 100, 25); // right eye
+	ellipse(125, 100, 25); // left eye
+	rect(75, 125, 50, 10, 10); // mouth	
+}</div>
 </div>
 
 <div class="slide">
-	<p>We can also do this with numbers.  Noticed I used the same size for the eyes width and height in my self portrait?  I can use one variable to save that value and adjust all of those dimensions at one time:</p>
-	<pre><code>// eyes
-var eyeSize = 50;
-fill(details);
-rect(175, 175, eyeSize, eyeSize);
-rect(275, 175, eyeSize, eyeSize);</code></pre>
+	<h2>HTML Named Values</h2>
+	<p>p5 is built on JavaScript, a web based programming language, used to interact with HTML and CSS.  Because of this, and the way the HTML Canvas API works, p5 can use HTML Named Colors as color values.</p>
+	<p><a href="https://htmlcolorcodes.com/color-names/" target="blank">HTML Color Names</a></p>
+	<p>Any color that works in HTML can be used in p5, but in p5 the syntax is slightly different.</p>
 </div>
 
 <div class="slide">
-	<h2>Updating variables</h2>
-	<p>Variables can be updated using operators, so they change throughout the program.</p>
-	<p>In this example, we can change the blue value of a color as we use it in the sketch.</p>
-	<pre><code>function setup() { 
-	createCanvas(300, 200);
-	noStroke();
+	<p>A CSS color rule:</p>
+	<pre><code>body { color: blue; }</code></pre>
+	<p>A p5 color:</p>
+	<pre><code>fill("blue");</code></pre>
+	<p>In JavaScript, the HTML color name is treated like a <code>string</code>, which is a string of characters bound by quotation marks.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>// self portrait 
+function setup() {
+	createCanvas(200, 200);
 	background(220);
 	
-	var blue = 0;
-	
-	fill(200, 50, blue);
-	ellipse(blue,100,50);
-}</code></pre>
+	fill("plum");
+	ellipse(100, 100, 100); // face
 
-<div class="slide">
-	<p>Notice how the <code>blue</code> variable is being use for the blue color in <code>fill</code> and the <code>x</code> position in <code>ellipse</code>.  The name of the variable does not influence the way the variable behaves.  It simply represents a piece of data, in this case a number.</p>
-	<p>Let's repeat this code but we'll change the <code>blue</code> value by incremementing it.</p>
-	<pre><code>	blue += 51;
-	fill(200, 50, blue);
-	ellipse(blue,100,50);
-	
-	blue += 51;
-	fill(200, 50, blue);
-	ellipse(blue,100,50);
-	
-	blue += 51;
-	fill(200, 50, blue);
-	ellipse(blue,100,50);
+	fill("yellow");
+	ellipse(75, 100, 25); // right eye
+	ellipse(125, 100, 25); // left eye
 
-	blue += 51;
-	fill(200, 50, blue);
-	ellipse(blue,100,50);
-	
-	blue += 51;
-	fill(200, 50, blue);
-	ellipse(blue,100,50);
-</code></pre>
+	fill("lightgreen");
+	rect(75, 125, 50, 10, 10); // mouth	
+}</div>
 </div>
 
 <div class="slide">
-	<p>What other values could be made into variables?  What numbers are repeated?</p>
-	<img src="variables.png" alt="">
-	<p>Any number that is used over and over can be turned into a variable.  This makes the code more efficient and easier to change.</p>
+	<h2>noStroke & noFill</h2>
+	<p>In some cases you may not want to see a stroke or fill on your shapes.  The stroke can be removed with the <code>noStroke</code> function, and likewise the fill is removed with <code>noFill</code>.</p>
+	<p>Both can be brought back later in the program just by setting the <code>stroke</code> or <code>fill</code> to a new color.</p>
+</div>
+	
+<div class="slide">
+	<div class="ex" data-preview>// self portrait 
+function setup() {
+	createCanvas(200, 200);
+	background(220);
+	
+	noStroke();
+	fill("plum");
+	ellipse(100, 100, 100); // face
+
+	fill("yellow");
+	ellipse(75, 100, 25); // right eye
+	ellipse(125, 100, 25); // left eye
+
+	stroke("lightgreen");
+	noFill();
+	rect(75, 125, 50, 10, 10); // mouth	
+}</div>
 </div>
 
 <div class="slide">
-	<pre><code>var blue = 0; // blue color value and x position
-var blueUpdate = 51; // change to blue color
-var red = 200; // red color value
-var green = 50; // green color value
-var y = 100; // y value of ellipse
-var sz = 50; // size of ellipse
-
-fill(red, green, blue);
-ellipse(blue,y,sz);
-
-blue += blueUpdate;
-fill(red, green, blue);
-ellipse(blue,y,sz);
-
-blue += blueUpdate;
-fill(red, green, blue);
-ellipse(blue,y,sz);
-
-blue += blueUpdate;
-fill(red, green, blue);
-ellipse(blue,y,sz);
-
-blue += blueUpdate;
-fill(red, green, blue);
-ellipse(blue,y,sz);
-
-blue += blueUpdate;
-fill(red, green, blue);
-ellipse(blue,y,sz);</code></pre>
+	<h2>strokeWeight</h2>
+	<p>The stroke of the mouth is pretty hard to see now.  The thickness of the stroke is 1 pixel by default, but that can be changed with the <code>strokeWeight</code> function.</p>
 </div>
 
+<div class="slide">
+	<div class="ex" data-preview>// self portrait 
+function setup() {
+	createCanvas(200, 200);
+	background(220);
+	
+	noStroke();
+	fill("plum");
+	ellipse(100, 100, 100); // face
 
+	fill("yellow");
+	ellipse(75, 100, 25); // right eye
+	ellipse(125, 100, 25); // left eye
+
+	noFill();
+	stroke("lightgreen");
+	strokeWeight(4);
+	rect(75, 125, 50, 10, 10); // mouth	
+}</div>
+</div>
+
+<div class="slide">
+	<h2>HTML HEX values</h2>
+	<p>Like the HTML color names p5 also uses HEX values like <code>#ffddff</code> as color values.</p>
+	<p>These are also strings, so they need to be formatted with quotation marks <code>"#ffddff"</code></p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>// self portrait 
+function setup() {
+	createCanvas(200, 200);
+	background(220);
+	
+	noStroke();
+	fill("plum");
+	ellipse(100, 100, 100); // face
+
+	fill("yellow");
+	ellipse(75, 100, 25); // right eye
+	ellipse(125, 100, 25); // left eye
+
+	noFill();
+	stroke("#ffddff");
+	strokeWeight(4);
+	rect(75, 125, 50, 10, 10); // mouth	
+}</div>
+</div>
+
+<div class="slide">
+	<h2>Grayscale values</h2>
+	<p>p5 also uses numerical values as arguments to represent color in several modes.</p>
+	<p>One numerical value in the range from <code>0</code> to <code>255</code> will create a grayscale color, with <code>0</code> representing black, <code>255</code> white, and everything else a shade of gray.</p>
+	<p>The <code>background</code> function in our examples uses the value <code>220</code> which is a light gray.  Try changing it to <code>0</code> or <code>255</code> or something in between.</p>
+</div>
+
+<div class="slide">
+	<h2>RGB Values</h2>
+	<p>Using numerical values, the color functions can mix levels of red, green and blue together to create all of the possible colors for the computer screen.</p>
+	<p>The order is always red, green, blue.</p>
+	<p>This is useful for doing programmatic things with color, which we will explore in later classes.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>// self portrait 
+function setup() {
+	createCanvas(200, 200);
+	background(220);
+	
+	noStroke();
+	fill(0, 0, 255); // all blue
+	ellipse(100, 100, 100); // face
+
+	fill(0, 255, 0); // all green
+	ellipse(75, 100, 25); // right eye
+
+	fill(255, 0, 0); // all red
+	ellipse(125, 100, 25); // left eye
+
+	noFill();
+	stroke(100, 200, 200); // rgb mixed together
+	strokeWeight(4);
+	rect(75, 125, 50, 10, 10); // mouth	
+}</div>
+</div>
+
+<div class="slide">
+	<h2>Transparency</h2>
+	<p>Adding a fourth argument to RGB will control the transparency or alpha level of the color.</p>
+	<p>This makes colors that show through to what is behind them.</p>
+</div>
+
+<div class="slide">
+	<div class="slide">
+	<div class="ex" data-preview>// self portrait 
+function setup() {
+	createCanvas(200, 200);
+	background(220);
+	
+	noStroke();
+	fill(0, 0, 255); // all blue
+	ellipse(100, 100, 100); // face
+
+	fill(0, 255, 0, 127); // half transparent
+	ellipse(50, 100, 50); // right eye
+	ellipse(150, 100, 50); // left eye
+
+	noFill();
+	stroke(100, 200, 200); // rgb mixed together
+	strokeWeight(4);
+	rect(75, 125, 50, 10, 10); // mouth	
+}</div>
+</div>
+</div>
