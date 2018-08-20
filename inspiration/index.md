@@ -23,3 +23,18 @@ title: Interactive Art
 - <http://www.typotopo.com/typemenot/index.html>{:target="blank"}
 - <https://patatap.com/>{:target="blank"}
 - <https://musiclab.chromeexperiments.com/Oscillators/>{:target="blank"}
+
+<!-- 
+https://www.enhance.computer/
+
+
+videos
+
+funny hacking scene from "castle" // https://www.youtube.com/watch?v=K7Hn1rPQouU 
+social network - kind fucked up // https://www.youtube.com/watch?v=BPazh2kDdvA
+tim berners lee - 25th aniversary of internet // https://www.youtube.com/watch?v=loi6PYaRqHA
+	- better production interview // https://www.youtube.com/watch?v=eNzx3PjJ_MA
+2001 // https://www.youtube.com/watch?v=qDrDUmuUBTo
+
+
+ -->

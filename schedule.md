@@ -54,7 +54,6 @@ dek: Schedule with class notes & assignments
 		- size, position or color, or a combination
 	- Use the `map` function at least once
 	- Add instructions for the user in the HTML using a paragraph tag
-	- Update drawing based on class feedback
 
 ## Project 2 **Meme/Logo**
 - The next three weeks will be dedicated to the second project.  You have a choice to create a logo for youself or a fictional client or to make a "meme", meaning a humorous combination of image and text (must be appropriate for class).
