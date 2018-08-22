@@ -101,7 +101,7 @@ dek: Schedule with class notes & assignments
 	- Read through each tutorial
 	- Document your progress
 	- Include a short video of the blinking light circuit
-	- Submit documentation via YouTube
+	- Submit video via direct upload to Blackboard or link to YouTube video
 
 ## Week 9 **Digital I/O**
 - [Digital Input/Output](https://mea211blog.wordpress.com/digital-input-and-output/){:target="blank"}
