@@ -5,15 +5,22 @@ week: 1
 ---
 
 <div class="slide">
-	<h2>Elements, tags, attributes and content</h2>
-	<img src="element.png" >
-	<p>HTML can be broken down into these four components.</p>
-	<p>Elements are the basic structure of an HTML document.</p>
+	<p><note>Hypertext Markup Language (HTML)</note> is the standard markup language for creating web pages and web applications.</p>
+	<p>HTML documents are made up of HTML Elements which describe the structure, layout and type of content contained within them.</p>
 </div>
 
 <div class="slide">
-	<p>Like other markup languages, HTML angle brackets <code>< ></code> to divide content and tags. Tags tell the browser what to do with the content.  Some elements have an open tag and closing tag.</p>
-	<p>The content always goes in between the tag.  This can include text, other forms of media and other HTML elements.</p>
+	<h2>Elements</h2>
+	<img src="element.png" >
+	<p>HTML can be broken down into four components.</p>
+</div>
+
+<div class="slide">
+	<p>Like other markup languages, HTML uses angle brackets <code>&lt;tag&gt;</code> to divide a page into tags.</p>
+	<p>Tags describe the type of content that is added.</p>
+	<p>Most elements have an open tag and closing tag.</p>
+	<pre><code>&lt;tag&gt;content&lt;/tag&gt;</code></pre>
+	<p>The content always goes in between the tag.  This can include text, and other HTML elements.</p>
 </div>
 
 <div class="slide">
@@ -26,10 +33,11 @@ week: 1
 	<p>The basic structural tags of HTML include <code>doctype, html, head</code> and <code>body</code></p>
 	<p><code>doctype</code> tells the browser what type of document it is reading.</p>
 	<p><code>html</code> is a wrapper for the all of the content in the document.</p>
-	<p><code>head</code> contains information that is invisible to the user, such as meta information about the page, links to style sheets and scripting, and other functionality.</p>
+	
 </div>
 
 <div class="slide">
+	<p><code>head</code> contains information that is invisible to the user, such as meta information about the page, links to style sheets and scripting, and other functionality.</p>
 	<p><code>body</code> contains all of the content and structure that goes on the page.</p>
 	<p><code>div</code> is a basic element that stand for division.  It is used as a neutral building block for position and creating hierarchy with a page.</p>
 </div>
@@ -39,6 +47,9 @@ week: 1
 	<p>Tags for text include:</p>
 	<p><code>h1, h2, h3, h4, h5, h6</code> are headings, such as the title of these slides, the higher the number the smaller the font and weight</p>
 	<p><code>p</code> is the paragraph tag, which is used to organize most text</p>
+</div>
+
+<div class="slide">
 	<p><code>em, strong</code> are style tags, emphasis for <em>italics</em> and strong for <strong>bold</strong>.</p>
 	<p><code>ul, ol, li</code> are used to create lists such as this one.  <code>ul</code> is unordered list, which makes a list with bullets.  <code>ol</code> is ordered, for numbers.  <code>li</code> is a list item.  They are useful for navigation menus.</p>
 </div>
@@ -46,6 +57,9 @@ week: 1
 <div class="slide">
 	<h2>Hyperlinks</h2>
 	<p><code>a</code> is the anchor tag, for hypertext links.  It requires the <code>href</code> attribute to hold the location or URL of the link.  It also 	takes the <code>target</code> attribute to determine where to open the link, such as <code>"blank"</code> for a new window.</p>
+</div>
+
+<div class="slide">
 	<p>External links are links to pages on other sites.</p>
 	<pre><code>&lt;a href="http://www.othersite.net"&gt;Other site&lt;/a&gt;</code></pre>
 	<p>Internal links are links to pages within the same site, server or domain, and use relative paths.</p>
@@ -71,4 +85,3 @@ week: 1
 		<li><a href="https://developer.mozilla.org/en/docs/Web/HTML/Element" target="blank">MDN Element Reference</a></li>
 	</ul>
 </div>
-

@@ -24,9 +24,9 @@ In addition to the above, the current version of this course focuses on creating
 - Email: oroberts AT bmcc DOT cuny  DOT edu
 - Office: S622J
 - Office extension: 8057
-<!-- - Office hours: Tuesday 1pm - 3pm, Thursday 2pm - 3pm, Wednesday afternoons by appointment -->
+- Office hours: Monday 2pm - 5pm, Wednesday afternoons by appointment
 - Class times: Tuesday & Thursday 2:00pm - 3:40pm
-- Fiterman 706
+- Chambers S608 
 
 ## Turning in assignments
 - Assignments turned in on Blackboard
@@ -38,9 +38,9 @@ In addition to the above, the current version of this course focuses on creating
 - In comments at the top of include a link to the resource
 
 ## Software
-- Text Editor: [Brackets](http://brackets.io/){target="blank"}
+- Text Editor: [Brackets](http://brackets.io/){:target="blank"}
 - Browser: Chrome
-- [GitHub](https://github.com/){target="blank"}
+- [GitHub](https://github.com/){:target="blank"}
 
 ## Computer Labs
 Computers are available for student usage in the locations listed on [http://www.bmcc.cuny.edu/it](http://www.bmcc.cuny.edu/it)
