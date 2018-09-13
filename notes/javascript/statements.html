@@ -1,10 +1,10 @@
 ---
 layout: slides
-title: JavaScript basics
+title: JavaScript Statements
 week: 3
 ---
 <div class="slide">
-	<p>We're going to start by covering some of the nitty gritty of JavaScript syntax.</p>
+	<p>Today we're going to review and talk about some of the nitty gritty of JavaScript syntax.</p>
 	<p>Let's do this in the JavaScript console.  In Chrome for Mac:</p>
 	<div class="key">CAj</div>
 	<p>Or Windows:</p>
@@ -15,11 +15,14 @@ week: 3
 	<h2>Syntax basics</h2>
 	<p>The following is a simple statement that declares and initializes a variable.</p>
 	<pre><code><c></c>var sentence = "Hello world";</code></pre>
-	
-	<p>Each part of our statement should be separated by one space.  In JavaScript, extra white space is ignored.</p>
+	<p>Each part of our statement should be separated by one space.</p>
+</div>
+
+<div class="slide">
+	<p>In JavaScript, extra white space is ignored.</p>
 	<pre><code><c></c>var sentence      =         "Hello world.";</code></pre>
 	<p>Extra white spaces are not ignore if they are part of a string value.</p>
-	<pre><code><c></c>var sentence = "Hello                      world.";</code></pre>
+	<pre><code><c></c>var sentence = "Hello   world.";</code></pre>
 </div>
 
 <div class="slide">
@@ -64,6 +67,9 @@ week: 3
 <c></c>10.5;
 <c></c>0.1 + 0.2;
 <c></c>1 / 0 // Infinity</code></pre>
+</div>
+
+<div class="slide">
 	<p>Because variables can be set to different types, you can check in a value is a Number.  If not, you will get the error type <code>NaN</code> or "Not a Number".</p>
 	<pre><code><c></c>var a = "ten";
 <c></c>Number(a); // NaN
