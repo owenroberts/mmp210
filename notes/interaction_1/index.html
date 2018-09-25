@@ -2,7 +2,6 @@
 layout: slides
 title: Interaction
 week: 4
-reveal: reveal
 ---
 
 <div class="slide">
@@ -127,9 +126,9 @@ function draw(){
 	var b = mouseY; // blue
 	fill(r, g, b);
 
-	var x = width/2;
-	var y = height/2;
-	var s = width/2;
+	var x = width / 2;
+	var y = height / 2;
+	var s = width / 2;
 	ellipse(x, y, s);
 }</div>
 </div>
@@ -137,7 +136,7 @@ function draw(){
 <div class="slide">
 	<p>Notice in the previous example the canvas width and height are both <code>255</code>.  Remember the RGB color scale?  All the values are <code>0 - 255</code>.</p>
 	<p>If the canvas is made larger we end up with values that can't be used as color values, anything above 255 will just be read as 255.</p>
-	<p>However, we can use the <code>map</code> function to take one range, mouse position, and map it to another range, color value.</p>
+	<p>We can use the <code>map</code> function to take one range, mouse position, and map it to another range, color value.</p>
 </div>
 
 <div class="slide">
@@ -156,9 +155,9 @@ function draw(){
 	var b = map(mouseY, 0, height, 0, 255); // blue
 	fill(r, g, b);
 
-	var x = width/2;
-	var y = height/2;
-	var s = width/2;
+	var x = width / 2;
+	var y = height / 2;
+	var s = width / 2;
 	ellipse(x, y, s);
 }</div>
 </div>
@@ -174,9 +173,9 @@ function draw() {
 	background(0);
 	fill(r, g, b);
 	
-	var x = width/2;
-	var y = height/2;
-	var s = width/2;
+	var x = width / 2;
+	var y = height / 2;
+	var s = width / 2;
 	ellipse(x, y, s);
 }
 function mousePressed() {
@@ -241,6 +240,9 @@ function mousePressed() {
 <div class="slide">
 	<h2>Meaningful interaction</h2>
 	<p>These techniques show how to make things move when you click or move the mouse, but they're kind of arbirtrary.  Good interaction should be meaningful for the user.  That can be a lot of different things, it can be informative, challenging, fun or any number of experiences.</p>
+</div>
+
+<div class="slide">
 	<p>The key to meaningful interaction is interacting with the drawing in a way that relates to a theme or action.</p>
 	<p>For a very simple example, I will make my self portrait talk.</p>
 </div>
