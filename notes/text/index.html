@@ -12,7 +12,6 @@ week: 5
 		<li><code>x</code>: x-coordinate of text</li>
 		<li><code>y</code>: y-coordinate of text</li>
 	</ul>
-	<p>Simple example:</p>
 </div>
 <div class="slide">
 	<div class="ex" data-preview>function setup() {
@@ -24,28 +23,37 @@ week: 5
 
 <div class="slide">
 	<h2>Strings review</h2>
-	<p>A <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="blank">string</a> is a datatype comprised of a "string" of characters.  Characters can be alphabetic, numeric and special characters.  Strings can be made of English characters as well as characters from other supported languages. Some examples:</p>
-	<pre><code><c></c>var str1 = "Hello world.";
-<c></c>var str2 = "你好，世界";
-<c></c>var str3 = "Strings can also include numbers like 100, punctuation like !~+:) and special characters like π or © or ∆";
-<c></c>text(str1, 20, 20);
-<c></c>text(str2, 20, 40);
-<c></c>text(str3, 20, 60);</code></pre>        
+	<p>A <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="blank">string</a> is a datatype comprised of a "string" of characters.  Characters can be alphabetic, numeric and special characters.  Strings can be made of English characters as well as characters from other supported languages.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(800, 100);
+	background(255);
+	var str1 = "Hello world.";
+	var str2 = "你好，世界";
+	var str3 = "Strings can also include numbers like 100, punctuation like ! and special characters like π or © or ∆ or ¯\_(ツ)_/¯";
+	text(str1, 20, 20);
+	text(str2, 20, 40);
+	text(str3, 20, 60);
+}</div>
 </div>
 
 <div class="slide">
 	<p>Strings have <code>methods</code> and <code>properties</code> used to manipulate them.</p>
 	<p>We'll talk more about <code>methods</code> and <code>properties</code> generally later in the semester, but for now, a <code>method</code> is a <code>function</code> associated with one object or variable, and a <code>property</code> is like a variable also associated with an object.  The difference is basically the come after a dot at the end of a variable name.</p>
-	<pre><code><c></c>var str = "Hello world";
-<c></c>console.log(str.length);
-<c></c>console.log(str[0]);
-<c></c>console.log(str.replace("Hello", "goodbye"));
+</div>
+
+<div class="slide">
+	<pre><code class="javascript"><c></c>var str = "Hello world";
+<c></c>str.length;
+<c></c>// 11
+<c></c>str[0];
+<c></c>// "H"
+<c></c>str.replace("Hello", "Goodbye");
+<c></c>// "Goodbye world"
 </code></pre>
-<!-- 
-<c></c>console.log(str[str.length - 1]);
-<c></c>console.log(str.charAt(str.length - 1));
-<c></c>console.log(str.charAt(0));
- -->
+
 </div>
 
 <div class="slide">
@@ -131,29 +139,29 @@ week: 5
 	
 	var str = "banana";
 	var x = 160;
-	var y = 40;
+	var y = 60;
 
 	// default is textAlign(LEFT);
 	text(str, x, y);
-	stroke('red');
+	stroke('blue');
 	strokeWeight(2);
-	line(x, y - 20, x, y);
+	line(x, y - 40, x, y + 20);
 	y += 100;
 	
 	textAlign(CENTER);
 	noStroke();
 	text(str, x, y);
-	stroke('red');
+	stroke('blue');
 	strokeWeight(2);
-	line(x, y - 20, x, y);
+	line(x, y - 40, x, y + 20);
 	y += 100;
 	
 	textAlign(RIGHT);
 	noStroke();
 	text(str, x, y);
-	stroke('red');
+	stroke('blue');
 	strokeWeight(2);
-	line(x, y - 20, x, y);
+	line(x, y - 40, x, y + 20);
 	y += 100;
 }</div>
 </div>
@@ -172,25 +180,25 @@ week: 5
 
 	// default is textAlign(LEFT, BOTTOM);
 	text(str, x, y);
-	stroke('red');
+	stroke('blue');
 	strokeWeight(2);
-	line(x, y, x + w, y);
+	line(x - 10, y, x + w + 10, y);
 	y += 100;
 	
 	textAlign(LEFT, CENTER);
 	noStroke();
 	text(str, x, y);
-	stroke('red');
+	stroke('blue');
 	strokeWeight(2);
-	line(x, y, x + w, y);
+	line(x - 10, y, x + w + 10, y);
 	y += 100;
 	
 	textAlign(LEFT, TOP);
 	noStroke();
 	text(str, x, y);
-	stroke('red');
+	stroke('blue');
 	strokeWeight(2);
-	line(x, y, x + w, y);
+	line(x - 10, y, x + w + 10, y);
 }</div>
 </div>
 
@@ -253,6 +261,7 @@ week: 5
 	var length = str.length; // number of characters in the string
 	var n = map(mouseX, 0, width, 0, length); // map position of x to number of characters
 
-	text(str.substring(0, n), 20, height/2);
+	var displayString = str.substring(0, n);
+	text(displayString, 20, height / 2);
 }</div>
 </div>
