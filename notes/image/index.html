@@ -31,6 +31,9 @@ function draw(){
 	<p>The way that media is loaded in browsers is a big part of why we use Brackets and the Live Server Preview feature for this class.</p>
 	<p>If you try opening a sketch with an image loaded into it by just opening the file in a browser, you will get a Cross Origin error and the sketch will not run.  When you open a file directly in the browser, you know because the URL will look something like this:</p>
 	<pre><code>file:///Users/oroberts/Desktop/mmp210/examples/image/index.html</code></pre>
+</div>
+
+<div class="slide">
 	<p>And the sketch will be stuck loading.  If you open the console, you may see an error like this:</p>
 	<pre style="white-space: pre-wrap;"><code style="color: red">Access to Image at 'file:///Users/oroberts/Desktop/mmp210/examples/image/imgs/cat.png' from origin 'null' has been blocked by CORS policy: Invalid response. Origin 'null' is therefore not allowed access.</code></pre>
 </div>
@@ -39,6 +42,9 @@ function draw(){
 	<p>By default, Chrome and some browsers will block files being loaded into a webpage from different origins.  This is a security measure to prevent attacks from front end scripts.</p>
 	<p>Using the Live Server Preview creates a local server in the folder of our project to imitate serving the documents of our project from a remote server.  That why the URL looks like this:</p>
 	<pre><code>http://127.0.0.1:54808/examples/image/index.html</code></pre>
+</div>
+
+<div class="slide">
 	<p>That server address is a local address on your computer.</p>
 	<p>This local server allows us to use external media like images, sounds and video.</p>
 </div>
