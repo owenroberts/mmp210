@@ -74,9 +74,9 @@ dek: Schedule with class notes & assignments
 - [Drawing with logic](notes/logic/p5.html)
 - [Code Academy: Control Flow](https://www.codecademy.com/courses/learn-javascript-control-flow/lessons/control-flow/exercises/control-flow-intro){:target="blank"}
 - **Assignment 6: Interactive Meme/Logo**
-	- Divide the canvas into four quadrants using if/else statements
+	- Divide the canvas into four parts using if/else statements
 	- Each quadrant changes the design when the user hovers mouse over it
-	- Use variables to change parameters for the shape and color functions
+	- Use variables to change parameters for the shape, color, image and/or text functions
 
 ## Week 7 **Animation**
 - [Animation](notes/animation)

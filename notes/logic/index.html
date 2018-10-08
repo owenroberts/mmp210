@@ -6,8 +6,8 @@ week: 6
 
 <div class="slide">
 	<h2>Making decisions</h2>
-	<p>When designing a program, there are many pointer where the program needs to do one thing or another based on the user input or some other condition.</p>
-	<p>Computer make decisions using a similar process that we do, by creating conditions to simplify a question.</p>
+	<p>When designing a program, there are many points where the program needs to do one thing or another based on the user input or some other condition.</p>
+	<p>Computers make decisions using a similar process that we do, by creating conditions to simplify a question.</p>
 </div>
 
 <div class="slide">
@@ -22,7 +22,7 @@ week: 6
 
 <div class="slide">
 	<h2>Booleans</h2>
-	<p>A <code>boolean</code> is a datatype that can be either <code>true</code> or <code>false</code>.</p>
+	<p>A <code>boolean</code> is a data type that can be either <code>true</code> or <code>false</code>.</p>
 	<p>In JavaScript other values will evaluate to <code>false</code>, such as <code>0</code>, <code>""</code> (empty string), <code>NaN</code>, <code>null</code>, and <code>undefined</code>.</p>  
 	<p>Other values default to <code>true</code>, such as <code>"Hello World"</code>, <code>1</code>, <code>99</code>, or <code>-99</code>.  Try evaluating some booleans in the console.</p>
 </div>
@@ -39,9 +39,12 @@ week: 6
 <div class="slide">
 	<h2>if</h2>
 	<p><code>if</code> is the key word used in JavaScript to begin a conditional statement.</p>
-	<p>Just like in the example, we say if something is true (if the weather is cold) then do something (wear a jacket).</p>
-	<p>Let's look at a simple example.</p>
-	<p>Remember <code>mouseX</code> and <code>mouseY</code> from the interaction lesson?  p5 has another system variable, <code>mouseIsPressed</code>.  It also tells us some information about the user interaction with the computer.  In this case, it is simply whether or not the user is pressing a button on the mouse. </p>
+	<p>Just like in the example, we say if something is true—<em>if the weather is cold</em>—then do something—<em>wear a jacket</em>.</p>
+</div>
+
+<div class="slide">
+	<p>Remember <code>mouseX</code> and <code>mouseY</code> from the interaction lesson? </p>
+	<p>p5 has another system variable, <code>mouseIsPressed</code>.  It also tells us some information about the user interaction with the computer.  In this case, it is simply whether or not the user is pressing a button on the mouse. </p>
 </div>
 
 <div class="slide">
@@ -152,12 +155,15 @@ week: 6
 	<h2>else if</h2>
 	<p><code>else if</code> is to test further conditions that are not covered by a simple <code>else</code>.</p>
 	<blockquote>If it's snowing, I will wear a heavy coat.  If it's raining, I will where a rain coat.  Otherwise I will wear a jacket.</blockquote>
+</div>
+
+<div class="slide">
 	<p>The next example shows a sketch that divides the vertical space into three parts and draw an ellipse in the section where the mouse is, creating a system like a stop light.</p>
 </div>
 
 <div class="slide">
 	<div class="ex" data-preview>function draw() {
-	background(220);
+	background(51);
 	rectMode(CENTER);
 	noStroke();
 
@@ -177,7 +183,7 @@ week: 6
 
 <div class="slide">
 	<div class="ex" data-preview>function draw() {
-	background(220);
+	background(51);
 	rectMode(CENTER);
 	noStroke();
 
@@ -196,7 +202,7 @@ week: 6
 <div class="slide">
 	<h2>if statements with no brackets</h2>
 	<p>Sometimes you will see if statements that don't have curly brackets.  This will work in the case where there is only one line following the if statenment conditional.</p>
-	<p>This is fine to do while writing code, but if you decide to expand the if statement you will need to add curly braces, so it rarely saves that much time.  Using curly brackets in all cases is recommended.</p>
+	<p>This is fine to do while writing code, but if you decide to expand the if statement you will need to add curly braces, so it rarely saves much time.  Using curly brackets in all cases is recommended.</p>
 </div>
 
 <div class="slide">

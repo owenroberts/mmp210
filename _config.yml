@@ -1,6 +1,6 @@
 description: mmp 210 class website
 class: MMP 210
-semester: f17
+semester: 18f
 baseurl: /mmp210
 layouts_dir: slides/_jeks/layouts
 includes_dir: slides/_jeks/includes

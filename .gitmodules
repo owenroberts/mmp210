@@ -1,6 +1,3 @@
 [submodule "slides"]
 	path = slides
 	url = https://github.com/owenroberts/slides.git
-[submodule "examples/f17"]
-	path = examples/f17
-	url = https://github.com/owenbmcc/classwork210.git
