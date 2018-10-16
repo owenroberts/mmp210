@@ -190,6 +190,9 @@ function draw() {
 
 <div class="slide">
 	<p>The <code>random</code> function takes one or two arguments, used to create a range.  With two arguments, the smaller number will be the minimum, such as the <code>-5</code> above, and the larger will be the maximum value of the number generated.  With one argument, <code>0</code> will be one end of the range, the other end will be the argument added.</p>
+</div>
+
+<div class="slide">
 	<p>Try playing with the arguments in the above example to see how the random behavior changes.</p>
 	<p>What if the x values have a range of 0 to 5?  What about -5 to 0?</p>
 </div>
@@ -235,7 +238,10 @@ function draw() {
 
 <div class="slide">
 	<h2>Modulo</h2>
-	<p>JavaScript includes a mathematical operator called <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_()" target="blank">modulo</a> <code>%</code> which gives the remainder of a division of two values.  Let's look at some examples in the console:</p>
+	<p>JavaScript includes a mathematical operator called <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_()" target="blank">modulo</a> <code>%</code> which gives the remainder of a division of two values.  Let's look at some examples in the console.</p>
+</div>
+
+<div class="slide">
 	<pre><code><c></c>10 % 9;
 <c></c>5 % 4;
 <c></c>2 % 1;
@@ -268,6 +274,9 @@ function draw() {
 <div class="slide">
 	<p>Notice that when we count up using modulo, we repeat the same count, even though <code>i</code> keeps going up.</p>
 	<p>We can use that with the <code>frameCount</code> in p5 to tell how many time we've gone a certain number of frames.</p>
+</div>
+
+<div class="slide">
 	<p>We need to make our color values global, and then change them whenever the frameCount remainder of 30 is 0 (this will happen at 30, 60, 90, 120...)</p>
 </div>
 
