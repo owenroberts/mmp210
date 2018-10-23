@@ -16,20 +16,20 @@ function draw() {
 	// drawing 
 	
 	if (mouseX < 100) {
-		fill(ga);
+		fill(pa);
 		rect(0, 0, 100, height);
 	}
 	if (mouseX > 300) {
-		fill(ga);
+		fill(pa);
 		rect(300, 0, width - 300, height);
 	}
 	
 	if (mouseY < 100) {
-		fill(ga);
+		fill(pa);
 		rect(0, 0, width, 100);
 	}
 	if (mouseY > 200) {
-		fill(ga);
+		fill(pa);
 		rect(0, 200, width, height - 200);
 	}
 	
