@@ -95,22 +95,21 @@ dek: Schedule with class notes & assignments
 - [Introduction to Physical Computing](https://mea211blog.wordpress.com/introduction_physcomp/){:target="blank"}
 - [Using a Microcontroller](https://mea211blog.wordpress.com/using-a-microcontroller/){:target="blank"}
 - [Programming an Arduino](https://mea211blog.wordpress.com/programming-the-arduino/){:target="blank"}
-- [Building a Circuit](https://mea211blog.wordpress.com/building-a-circuit/){:target="blank"}
 - **In Class Assignment**
+	- [Building a Circuit](https://mea211blog.wordpress.com/building-a-circuit/){:target="blank"}
 	- Work with a partner
-	- Read through each tutorial
 	- Document your progress
 	- Include a short video of the blinking light circuit
 	- Submit video via direct upload to Blackboard or link to YouTube video
-
-## Week 9 **Digital I/O**
-- [Digital Input/Output](https://mea211blog.wordpress.com/digital-input-and-output/){:target="blank"}
 - **In Class Assignment**
+	- [Digital Input/Output](https://mea211blog.wordpress.com/digital-input-and-output/){:target="blank"}
+	- [Add a speaker](http://arduinotogo.com/2016/10/08/chapter-5-add-a-speaker-and-adjust-the-code/){:target="blank"}
+	- [Add more buttons](http://arduinotogo.com/2016/10/08/chapter-5-add-2-more-buttons-and-adjust-the-code/){:target="blank"}
 	- Work on tutorial with a partner
-	- Document using a switch with Arduino
+	- Document each tutorial with a video
 
-## Week 10 **Analog I/O**
-- [Analog Input/Output](https://mea211blog.wordpress.com/analog-input-and-output/){:target="blank"}
+## Week 9 **Sensors**
+- [Analog I/O](https://mea211blog.wordpress.com/analog-input-and-output/){:target="blank"}
 - **In Class Assignment**
 	- Work on tutorial with a partner
 	- Document analog input with Arduino
