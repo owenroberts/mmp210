@@ -6,10 +6,10 @@
 </head>
 <body>
 	<script src="p5.min.js"></script>
-	<script src="p5.serialcontrol/libs/p5.serialport.js"></script>
+	<script src="p5.serialport.js"></script>
 	<script>
 		var serial;
-		var portName = "/dev/cu.usbmodem1431";
+		var portName = "COM4";
 		var inData;
 
 		function setup() {
@@ -49,7 +49,12 @@
 		}
 		 
 		function serialEvent() {
-			inData = Number(serial.read());
+            
+            var currentString = serial.readLine();  // read the incoming string
+  trim(currentString);                    // remove any trailing whitespace
+  if (!currentString) return;             // if the string is empty, do no more
+  console.log(currentString);             // println the string
+  inData = currentString;            // save it for the draw method
 		}
 		 
 		function serialError(err) {
