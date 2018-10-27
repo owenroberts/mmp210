@@ -116,7 +116,7 @@ dek: Schedule with class notes & assignments
 
 ## Week 11 **p5 + Arduino**
 - Connect Arduino with p5
-- [Download p5 serial for Windows](examples/arduino/p5.certialcontrol-win32-x64.zip){:target="blank"}
+- [Download p5 serial for Windows](examples/arduino/p5.serialcontrol-win32-x64.zip){:target="blank"}
 - [Download p5 serial for Mac](https://github.com/vanevery/p5.serialcontrol/releases/download/0.0.6/p5.serialcontrol-darwin-x64.zip){:target="blank"}
 - **In Class Assignment**
 	- Finish setting up arduino sensor with p5 sketch
