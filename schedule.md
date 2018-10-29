@@ -109,22 +109,33 @@ dek: Schedule with class notes & assignments
 	- Document each tutorial with a video
 
 ## Week 9 **Sensors**
-- [Analog I/O](https://mea211blog.wordpress.com/analog-input-and-output/){:target="blank"}
 - **In Class Assignment**
+	- [Analog I/O](https://mea211blog.wordpress.com/analog-input-and-output/){:target="blank"}
 	- Work on tutorial with a partner
 	- Document analog input with Arduino
+- **In Class Assignment**
+	- [Using the serial monitor](http://arduinotogo.com/2017/02/28/chapter-6-using-the-serial-monitor/)
+	- [Adding a speaker](http://arduinotogo.com/2017/02/28/chapter-6-adding-the-speaker/)
+	- [Adding photocell](http://arduinotogo.com/2017/02/28/chapter-6-adding-the-photocell/)
+	- Work on tutorial with a partner
+	- Document serial monitor, speaker and photocell
 
-## Week 11 **p5 + Arduino**
-- Connect Arduino with p5
+## Week 10 **p5 + Arduino**
+- [Connect Arduino with p5](notes/arduino)
+- Other sensors
 - [Download p5 serial for Windows](examples/arduino/p5.serialcontrol-win32-x64.zip){:target="blank"}
 - [Download p5 serial for Mac](https://github.com/vanevery/p5.serialcontrol/releases/download/0.0.6/p5.serialcontrol-darwin-x64.zip){:target="blank"}
 - **In Class Assignment**
 	- Finish setting up arduino sensor with p5 sketch
 	- Document working project
 
-## Week 12 **Interaction 2**
-- [Interaction](notes/interaction_2)
+## Week 11 **Functions**
+- [Interaction 2](notes/interaction_2)
+- [Functions](notes/functions)
+
+## Week 12 **Sound**
 - [Sound](notes/sound)
+- [Keyboard interaction](notes/keyboard)
 
 ## **Final Project**
 - Interactive animation using a physical interface
