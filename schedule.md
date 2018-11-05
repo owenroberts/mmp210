@@ -111,22 +111,24 @@ dek: Schedule with class notes & assignments
 ## Week 9 **Sensors**
 - **In Class Assignment**
 	- [Analog I/O](https://mea211blog.wordpress.com/analog-input-and-output/){:target="blank"}
-	- Work on tutorial with a partner
-	- Document analog input with Arduino
-- **In Class Assignment**
 	- [Using the serial monitor](http://arduinotogo.com/2017/02/28/chapter-6-using-the-serial-monitor/)
 	- [Adding a speaker](http://arduinotogo.com/2017/02/28/chapter-6-adding-the-speaker/)
 	- [Adding photocell](http://arduinotogo.com/2017/02/28/chapter-6-adding-the-photocell/)
 	- Work on tutorial with a partner
-	- Document serial monitor, speaker and photocell
+	- Document analog input with Arduino
+- **In Class Assignment**
+	- Choose a new sensor from the lab supplies
+	- Research the web to find a circuit and code to read the sensor
+	- Output the sensor reading using a LED or speaker
+	- Document the circuit
 
 ## Week 10 **p5 + Arduino**
 - [Connect Arduino with p5](notes/arduino)
-- Other sensors
 - [Download p5 serial for Windows](examples/arduino/p5.serialcontrol-win32-x64.zip){:target="blank"}
 - [Download p5 serial for Mac](https://github.com/vanevery/p5.serialcontrol/releases/download/0.0.6/p5.serialcontrol-darwin-x64.zip){:target="blank"}
 - **In Class Assignment**
 	- Finish setting up arduino sensor with p5 sketch
+	- Choose another sensor and create a sketch to use the sensor value to update a shape or color
 	- Document working project
 
 ## Week 11 **Functions**
