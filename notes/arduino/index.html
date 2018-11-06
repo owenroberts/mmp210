@@ -16,7 +16,7 @@ week: 10
 </div>
 
 <div class="slide">
-	<p>The sketch itself is pretty simple.</p>
+	<p>The code is pretty simple.</p>
 	<div class="ex" data-err>void setup() {
 	Serial.begin(9600); 
 }
@@ -30,6 +30,9 @@ void loop() {
 
 <div class="slide">
 	<p>Arduino code can be written in <note>C</note> or <note>C++</note>, which looks similar to JavaScript but has some differences.</p>
+	</div>
+
+<div class="slide">
 	<pre><code>void setup() { }</code></pre>
 	<p><code>void</code> is equivalent to the <code>function</code> keyword in Javascript.  <code>void</code> means the function does not return any type of value, which we'll talk about more when we talk about functions.</p>
 	<p><code>setup</code> is like the <code>setup</code> function in p5.  It runs once when the program starts to setup things that only need to happen once.</p>
@@ -54,6 +57,12 @@ void loop() {
 	<p><code>int</code> is the type of value, in this case an <note>integer</note> or whole number.</p>
 	<p><code>sensorValue</code> is a variable to store the current value of the sensor.</p>
 	<p><code>analogRead()</code> is a function to read the voltage from the Arduino pin and <code>A0</code> is the pin to read from.</p>
+</div>
+
+<div class="slide">
+	<pre><code>delay(10);</code></pre>
+	<p><code>delay</code> delays the loop by a number of milliseconds.  This helps stabilize the sensor reading.</p>
+	<p>Using <code>delay</code> is okay here because we have a very simple sketch, but anything more complex than this should use a timer instead.  <code>delay</code> actually pauses most of the functionality of the microchip, which would be bad if we were doing more than just reading a sensor value.</p>
 </div>
 
 <div class="slide">
@@ -102,6 +111,12 @@ var sensorValue;</div>
 </div>
 
 <div class="slide">
+	<h2>setup</h2>
+	<p>In <code>setup</code>, we create the <code>p5.SerialPort</code> object and then add a series of events to listen for all of the data coming from the serial port app.</p>
+	<p>Then open the port matching the port name in the app.</p>
+</div>
+
+<div class="slide">
 	<div class="ex">function setup() {
 	createCanvas(640, 360);
 
@@ -116,9 +131,10 @@ var sensorValue;</div>
 }</div>
 </div>
 
+
 <div class="slide">
-	<p>In <code>setup</code>, we create the <code>p5.SerialPort</code> object and then add a series of events to listen for all of the data coming from the serial port app.</p>
-	<p>Then open the port matching the port name in the app.</p>
+	<h2>Serial events</h2>
+	<p>These events simply log in the console the state of the serial port connection for the purposes of developer testing.  If you don't see these log messages in your console when you start the sketch than you may need to adjust the setup.</p>
 </div>
 
 <div class="slide">
@@ -135,9 +151,6 @@ function portClose() {
 } </div>
 </div>
 
-<div class="slide">
-	<p>These events simply log in the console the state of the serial port connection for the purposes of developer testing.  If you don't see these log messages in your console when you start the sketch than you may need to adjust the setup.</p>
-</div>
 
 <div class="slide">
 	<div class="ex">function serialEvent() {
@@ -152,6 +165,12 @@ function portClose() {
 
 <div class="slide">
 	<p>The <code>serialEvent</code> function is doing most of the work in reading the sensor value and storing it in the <code>sensorValue</code> variable to use in the sketch.</p>
+</div>
+
+<div class="slide">
+	<h2>draw</h2>
+	<p>This is a simple sketch that uses the sensor value to create a sunset.</p>
+	<p>The <code>sensorValue</code> is mapped to both the background color of the sketch and the position of the sun in the sky.</p>
 </div>
 
 <div class="slide">
@@ -173,7 +192,3 @@ function portClose() {
 }</div>
 </div>
 
-<div class="slide">
-	<p>This is a simple sketch that uses the sensor value to create a sunset.</p>
-	<p>The <code>sensorValue</code> is mapped to both the background color of the sketch and the position of the sun in the sky.</p>
-</div>
