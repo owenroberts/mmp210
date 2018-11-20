@@ -139,6 +139,10 @@ dek: Schedule with class notes & assignments
 - [Sound](notes/sound)
 - [Keyboard interaction](notes/keyboard)
 
+## Week 13 **Final Workshop**
+- Present Final Proposal
+- Work on Final Project
+
 ## **Final Project**
 - Interactive animation using a physical interface
 - Choose a sensor to connect to p5 through Arduino
