@@ -27,7 +27,7 @@ dek: Schedule with class notes & assignments
 - [JavaScript Intro](notes/javascript)
 - [Shapes and Functions](notes/p5)
 - [Color Functions and Values](notes/color)
-- [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/)
+- [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/){:target="blank"}
 - **Assignment 2: Self Portrait**
 	- Draw a self portrait in a p5 sketch
 	- Use the shape and color functions
@@ -150,7 +150,7 @@ dek: Schedule with class notes & assignments
 - Optional: Work with a partner
 
 ## **Final Proposal**
-- Pitch with slides
+- Pitch with presentation [Slides Template](examples/presentation){:target="blank"}
 - Explain the plan for the final
 - How sensor will be used
 - How input will change the graphics/sketch
