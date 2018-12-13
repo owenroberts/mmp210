@@ -1,0 +1,124 @@
+---
+layout: slides
+title: Keyboard Interaction
+week: 12
+---
+<script src="p5.sound.js"></script>
+
+<div class="slide">
+	<p>Like the mouse events we covered in our first lessons on interaction, we can also use events in JavaScript to detect user interaction with the keyboard.</p>
+	<p>We can detect whether the user has pressed a key down, released a key and determine which key was pressed, using p5 <strong>environment variables</strong> and boolean logic.</p>
+</div>
+
+<div class="slide">
+	<h2>keyIsPressed</h2>
+	<p>The following example will simply display whether or not a user is pressing any key on the keyboard using the <code>keyIsPressed</code> environment variable.</p>  
+	<p>This is a boolean value, a key is either being pressed or not, so <code>keyIsPressed</code> is either <code>true</code> or <code>false.</code></p>
+</div>
+
+
+<div class="slide">
+	<div class="ex" data-preview>function draw() {
+	background('white');
+	if (keyIsPressed) {
+		background("plum");
+	}
+
+	// display keyIsPressed value
+	textSize(40);
+	textAlign(CENTER, CENTER);
+	text(keyIsPressed, width/2, height/2);
+}</div>
+</div>
+
+<div class="slide">
+	<h2>key</h2>
+	<p>Once we have determined that a key is being pressed, we may need to know which key is being pressed.</p>
+	<p>The <code>key</code> variable saves the value of whichever key was most recently pressed, like the <code>mouseX</code> variable saves the most recent x position of the mouse.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function draw() {
+	background('white');
+	if (keyIsPressed) {
+		if (key == 'b') {
+			background("blue");
+		}
+		if (key == 'g') {
+			background('green');
+		}
+	}
+
+	// display key value
+	textSize(40);
+	textAlign(CENTER, CENTER);
+	text(key, width/2, height/2);
+}</div>
+</div>
+
+<div class="slide">
+	<p>Notice that this code has one <code>if</code> statement inside of another.  We are testing two different sets of conditions.</p>
+	<p>Be careful to make the curly brackets match here.  Use Beautify in Brackets if it doesn't look right.</p>
+</div>
+
+<div class="slide">
+	<h2>keyCode</h2>
+	<p><note>p5</note> doesn't have values for all of the keys.  To test for any key on the keyboard, we can use the ASCII value of the key which is stored by the <code>keyCode</code> variable.  Use <a href="http://keycode.info/" target="blank">keycode.info</a> to test which key is which <code>keyCode</code>.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function draw() {
+	background('white');
+	if (keyIsPressed) {
+		if (keyCode == 13) { // Enter key
+			background("blue");
+		}
+		if (keyCode == 32) { // Space bar
+			background('green');
+		}
+	}
+
+	// display key value
+	textSize(40);
+	textAlign(CENTER, CENTER);
+	text(keyCode, width/2, height/2);
+}</div>
+</div>
+
+<div class="slide">
+	<h2>keyPressed</h2>
+	<p>Like the <code>mousePressed</code> function, we can use <code>keyPressed</code> in cases where we just want to react to a key press with a function.</p>
+	<p>Since we covered sound earlier this week, let's use a key press to trigger a sound file.</p>
+	<p>This example will trigger a recording of chickens I found on <a href="https://freesound.org/people/SquaredGlasses/sounds/253649/" target="blank">FreeSound.org</a>.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var chickens;
+
+function preload() {
+	chickens = loadSound('chickens.mp3');
+}
+
+function setup() {
+	createCanvas(640, 200);
+}
+
+function draw() {
+	if (chickens.isPlaying()) {
+		background('yellow');
+	} else {
+		background(0)
+	}	
+}
+
+function keyPressed() {
+	if (keyCode == 32) { // Space bar
+		chickens.play();
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>There are other functions like <code>keyReleased</code> for other keyboard related events.</p>
+	<p>Make sure to check out the <note>p5</note> documentation for all the keyboard events: <a href="https://p5js.org/reference/#group-Events" target="blank">Events</a></p>
+</div>

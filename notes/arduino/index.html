@@ -1,0 +1,198 @@
+---
+layout: slides
+title: Arduino + p5
+week: 10
+---
+
+<div class="slide">
+	<p>Over the past two weeks we learned how to use an Arduino to read data from a sensor and then display the data as an output, using light from an LED or sound from a speaker.</p>
+	<p>This week we will learn how to connect the Arduino to a p5 sketch and use the input to interact with the art in a p5 sketch.</p>
+</div>
+
+<div class="slide">
+	<h2>Analog input</h2>
+	<p>First we'll set up the Arduino with a basic analog input sketch to read the values from a potentiometer and/or photocell.</p>
+	<p>To review, an analog sensor is one that can sense a range of values using varying amounts of voltage.  Unlike digital input, which is either on or off, analog values can vary from 0 to 1023.</p>
+</div>
+
+<div class="slide">
+	<p>The code is pretty simple.</p>
+	<div class="ex" data-err>void setup() {
+	Serial.begin(9600); 
+}
+
+void loop() {
+	int sensorValue = analogRead(A0);    
+	Serial.println(sensorValue);
+	delay(10);	
+}</div>
+</div>
+
+<div class="slide">
+	<p>Arduino code can be written in <note>C</note> or <note>C++</note>, which looks similar to JavaScript but has some differences.</p>
+	</div>
+
+<div class="slide">
+	<pre><code>void setup() { }</code></pre>
+	<p><code>void</code> is equivalent to the <code>function</code> keyword in Javascript.  <code>void</code> means the function does not return any type of value, which we'll talk about more when we talk about functions.</p>
+	<p><code>setup</code> is like the <code>setup</code> function in p5.  It runs once when the program starts to setup things that only need to happen once.</p>
+</div>
+
+<div class="slide">
+	<pre><code>void setup() {
+	Serial.begin(9600);
+}</code></pre>
+	<p><code>Serial.begin</code> starts the communication between the computer and the Arduino over the USB cable.</p>
+	<p><code>9600</code> is the <note>Baud rate</note> which is the rate at which information is transferred across the cable, in this case 9600 bits of information per second.  That's a lot of 0 and 1s.</p>
+</div>
+
+<div class="slide">
+	<p><code>void loop() { }</code> is the Arduino version of <code>function draw() { }</code> in p5.</p>
+	<p>The code in this function will run over and over as long as the Arduino is connected and running.</p>
+</div>
+
+<div class="slide">
+	<p>Inside the <code>loop</code> we read the sensor value and then print the value to the Serial monitor.</p>
+	<pre><code>int sensorValue = analogRead(A0);</code></pre>
+	<p><code>int</code> is the type of value, in this case an <note>integer</note> or whole number.</p>
+	<p><code>sensorValue</code> is a variable to store the current value of the sensor.</p>
+	<p><code>analogRead()</code> is a function to read the voltage from the Arduino pin and <code>A0</code> is the pin to read from.</p>
+</div>
+
+<div class="slide">
+	<pre><code>delay(10);</code></pre>
+	<p><code>delay</code> delays the loop by a number of milliseconds.  This helps stabilize the sensor reading.</p>
+	<p>Using <code>delay</code> is okay here because we have a very simple sketch, but anything more complex than this should use a timer instead.  <code>delay</code> actually pauses most of the functionality of the microchip, which would be bad if we were doing more than just reading a sensor value.</p>
+</div>
+
+<div class="slide">
+	<h2>Serial control app</h2>
+	<p>The Chrome browser cannot directly read values from the USB port on the computer, so we need to run another program to read the value and make it available to Chrome.</p>
+	<p>The <note>p5.serialcontrol</note> app was developed to make the connection between a p5 sketch and the Arduino.</p>
+</div>
+
+<div class="slide">
+	<p>Download the app for <a href="https://github.com/vanevery/p5.serialcontrol/releases/download/0.0.6/p5.serialcontrol-darwin-x64.zip" target="blank">Mac</a> or <a href="https://owenroberts.github.io/mmp210/examples/arduino/p5.serialcontrol-win32-x64.zip" target="blank">Windows</a>.</p>
+</div>
+
+<div class="slide">
+	<p>Once you have the app running, select the port where the Arduino is listed or the port that you suspect to be the Arduino (often it is COM3) and click the "Open" button.  That's it, just leave the app running in the background.</p>
+</div>
+
+<div class="slide">
+	<img src="serialcontrol.png">
+</div>
+
+<div class="slide">
+	<h2>p5.serialport.js</h2>
+	<p>We also need to add a new library to the HTML page for the p5 sketch, <note>p5.serialport.js</note>.</p>
+	<p>Download <a href="https://raw.githubusercontent.com/vanevery/p5.serialport/master/lib/p5.serialport.js" target="blank">p5.serialport.js</a> here and add a new <code>script</code> tag into <note>index.html</note>.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-lang="html" data-err>&lt;script src="p5.min.js"&gt;&lt;/script&gt;
+&lt;script src="p5.serialport.js"&gt;&lt;/script&gt;
+&lt;script src="sketch.js"&gt;&lt;/script&gt;</div>
+</div>
+
+<div class="slide">
+	<h2>sketch</h2>
+	<p>In the sketch, we need to add some code and some events to connect with the serial port.</p>
+</div>
+
+<div class="slide">
+	<p>First, some global variables.</p>
+	<div class="ex">var serial;
+var portName = "COM3";
+var sensorValue;</div>
+	<p><code>serial</code> will be used to create the <code>SerialPort</code> object.</p>
+	<p><code>portName</code> needs to match the port name in the <note>p5.serialcontrol</note> app.</p>
+	<p><code>sensorValue</code> will store the sensor value.</p>
+</div>
+
+<div class="slide">
+	<h2>setup</h2>
+	<p>In <code>setup</code>, we create the <code>p5.SerialPort</code> object and then add a series of events to listen for all of the data coming from the serial port app.</p>
+	<p>Then open the port matching the port name in the app.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">function setup() {
+	createCanvas(640, 360);
+
+	serial = new p5.SerialPort();
+	serial.on('connected', serverConnected);
+	serial.on('open', portOpen);
+	serial.on('data', serialEvent);
+	serial.on('error', serialError);
+	serial.on('close', portClose);
+	
+	serial.open(portName);
+}</div>
+</div>
+
+
+<div class="slide">
+	<h2>Serial events</h2>
+	<p>These events simply log in the console the state of the serial port connection for the purposes of developer testing.  If you don't see these log messages in your console when you start the sketch than you may need to adjust the setup.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">function serverConnected() {
+	console.log('connected to server.');
+}
+
+function portOpen() {
+	console.log('the serial port opened.')
+}
+
+function portClose() {
+	console.log('The serial port closed.');
+}
+    
+function serialError() {
+    console.log("error");
+}</div>
+</div>
+
+
+<div class="slide">
+	<div class="ex">function serialEvent() {
+	var currentString = serial.readLine(); // read the incoming string
+	trim(currentString); // remove any trailing whitespace
+	if (!currentString) {
+		return; // if the string is empty, do no more
+	}
+	sensorValue = currentString; // save it for the draw method
+}</div>
+</div>
+
+<div class="slide">
+	<p>The <code>serialEvent</code> function is doing most of the work in reading the sensor value and storing it in the <code>sensorValue</code> variable to use in the sketch.</p>
+</div>
+
+<div class="slide">
+	<h2>draw</h2>
+	<p>This is a simple sketch that uses the sensor value to create a sunset.</p>
+	<p>The <code>sensorValue</code> is mapped to both the background color of the sketch and the position of the sun in the sky.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">function draw() {
+	var c = map(sensorValue, 0, 1023, 0, 180);
+
+	// sky
+	background(c, c, c + 85);
+
+	// sun
+	var y = map(sensorValue, 0, 1023, height, 0);
+	fill('gold');
+	noStroke();
+	ellipse(width/2, y, 100);
+
+	// ground
+	fill(c, c + 75, c);
+	rect(0, height * 0.75, width, height * 0.25);
+}</div>
+</div>
+
