@@ -1,0 +1,42 @@
+/* css */
+
+/* global styles*/
+ul {
+	padding:0;
+}
+.link {
+	font-size: 2em;
+	padding: 0.25em 0;
+	margin-right: 0.5em;
+	display:inline;
+}
+a {
+	color: red;
+}
+a:hover {
+	color: deeppink;
+}
+li a {
+	color: skyblue;
+	transition: color 500ms;
+}
+
+img {
+	width: 100%;
+	transition: width 1s;
+}
+img:hover {
+	width:0;
+}
+
+/* home page */
+#home {
+	background-color:tan;
+	font-family: sans-serif;
+}
+
+#home a {
+	text-decoration: none;
+	border-top: 1px dotted blue;
+}
+
