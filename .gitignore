@@ -2,3 +2,4 @@
 .sass-cache/
 _site/
 examples/arduino/p5.serialcontrol
+.jekyll-cache/

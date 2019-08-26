@@ -9,18 +9,18 @@ The class notes, schedule and assignments are all found here.
 
 - [Schedule](schedule.html)
 <!-- - <a href="https://mmp210f17.slack.com/" target="blank">Slack channel</a> -->
-- [Class syllabus](https://docs.google.com/document/d/1104jzPbh1n87LgoU7MgAL487SrRkrflO7bivMNrsE3A/edit?usp=sharing){:target="blank"}
+- [Class syllabus](https://docs.google.com/document/d/1NXYi8daebqD7Ld4jrUxqn7_vQUorRw-K0M_w_SAcVDM/edit?usp=sharing){:target="blank"}
 - [Student Work](studentwork/)
 - [Examples](examples/)
 - [Inspiration](inspiration/)
-- [Public Pad](https://pad.riseup.net/p/mmp210){:target="blank"}
+- [Public Pad](pad)
 
 ## Class Description
 This course introduces the basic concepts of programming for multimedia. Students will learn the principles of object-oriented programming and how to create scripts for the manipulation of graphics, audio and text to construct a web-based multimedia presentation. 
 
 In addition to the above, the current version of this course focuses on creating interactive art and learning basic programming concepts using JavaScript along with the [p5 JavaScript library](https://p5js.org/){:target="blank"}.
 
-## Fall 2018
+## Fall 2019
 - Instructor: Owen Roberts
 - Email: oroberts AT bmcc DOT cuny  DOT edu
 - Office: S622J
