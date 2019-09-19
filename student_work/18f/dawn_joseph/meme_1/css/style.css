@@ -1,0 +1,48 @@
+canvas {
+    display: block;
+    margin: 0 auto;
+}
+
+body {
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+li {
+    list-style-type: none;
+    text-align: center;
+    
+}
+
+li a {
+    color: #5d3c59;
+    font-size: 200%;
+    text-decoration: none;  
+}
+
+button {
+    margin-top: 15px;
+    font-size: 90%;
+    border-radius: 5px;
+    background-color: silver;
+    font-weight: 500;
+}
+
+a:hover button {
+    background-color: white;
+}
+
+p {
+    text-align: center;
+    font-size: 35px;
+    color: aliceblue;
+}

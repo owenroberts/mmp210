@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400" rel="stylesheet">
+    <!-- ANIMSITION CSS -->
+    <link rel="stylesheet" href="../../css/animsition.min.css">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- FONTAWESOME CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/png" href="../../img/favicon.png">
+    <title>Jose Torralba | Midterm</title>
+</head>
+<body class="animsition">
+    <!-- NAVBAR -->
+    <div class="navigation">
+        <div class="navigation__logo">
+            <a href="../../index.html" class="navigation__logo--link animsition-link">Jose Torralba | MMP 210</a>
+        </div>
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a href="../../index.html#home" class="navigation__link animsition-link">Home</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="../../index.html#assignments" class="navigation__link animsition-link active-nav">Assignments</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="../../index.html#about" class="navigation__link animsition-link">About</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="navigation__toggle">
+            <i class="fas fa-bars navigation__toggle--icon" aria-hidden="true"></i>
+        </div>
+    </div>
+
+    <!-- ASSIGNMENT -->
+    <section class="assignment-section">
+        <div class="center-text">
+            <h1 class="assignment-heading">
+                Midterm: Generative Design
+            </h1>
+        </div>
+
+        <div id="sketch-holder">
+            <!-- Sketch goes in here -->
+        </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="center-text">
+            <h3 class="third-heading">
+                Want to keep in contact?
+            </h3>
+        </div>
+        <ul class="footer__social">
+            <li class="footer__media">
+                <a href="https://github.com/JoseTorralba" class="footer__link" target="_blank">
+                    <i class="fab fa-github footer__icon"></i>
+                </a>
+            </li>
+            <li class="footer__media">
+                <a href="https://www.linkedin.com/in/jose-torralba/" class="footer__link" target="_blank">
+                    <i class="fab fa-linkedin footer__icon"></i>
+                </a>
+            </li>
+            <li class="footer__media">
+                <a href="mailto:josetorralba.1215@gmail.com" class="footer__link">
+                    <i class="far fa-envelope footer__icon"></i> 
+                </a>
+            </li>
+            <li class="footer__media">
+                <a href="https://www.instagram.com/mexy.js/" class="footer__link" target="_blank">
+                    <i class="fab fa-instagram footer__icon"></i>
+                </a>
+            </li>
+        </ul>
+        <p class="footer__text">
+            &copy; 2018 Designed & Developed by 
+            <a href="https://josetorralba.github.io/Portfolio/" target="_blank" class="footer__text-link">Jose Torralba</a>
+        </p>
+    </footer>
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- ANIMSITION JS -->
+    <script src="../../js/animsition.min.js"></script>
+    <!-- MAIN JS -->
+    <script src="../../js/main.js"></script>
+    <!-- Sketch -->
+    <script src="../../js/p5.min.js"></script>
+    <script src="js/sketch.js"></script>
+    <script type="text/javascript">
+        window.onload = () => {
+            document.querySelector('#defaultCanvas0').removeAttribute('style');
+        }
+    </script>
+</body>
+</html>

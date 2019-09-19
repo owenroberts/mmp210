@@ -1,0 +1,99 @@
+body{
+ background-color: #F0F0F0;
+  font-family: 'Roboto', sans-serif;
+
+}
+h1{
+  font-family: 'Vidaloka', serif;
+  font-size: 7em;
+}
+#color{
+  color: red;
+}
+#about{
+  float: right;
+}
+h1{
+  text-align: center;
+  /* margin-top: 20am; */
+}
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.button {
+  width: 150px;
+  height: 45px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  }
+
+.button:hover {
+box-shadow: 0px 15px 20px rgb(190,190,190);
+
+  color: #fff;
+  transform: translateY(-7px);
+}
+/* code was taken from https://codepen.io/seme332/pen/reJOwo */
+.color{
+  color: #606060;
+}
+.color1{
+  color: 	#888888;
+}
+.color2{
+  color: #303030;
+}
+p{
+  width: 500px;
+
+}
+.row{
+  padding-top: 12em;
+margin: auto;
+}
+.column{
+  padding-left: 20em;
+
+}
+.around{
+  padding-top: 2em;
+}
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a{
+  color: black;
+}
+ul a:hover {
+    text-decoration: line-through;
+    color: #303030;
+}
+ul a{
+  font-family: 'Vidaloka', serif;
+  font-size: 7em;
+}
+ul{
+  text-align: center;
+
+}
+li{
+  color: #303030;
+}

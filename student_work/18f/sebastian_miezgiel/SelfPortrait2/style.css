@@ -1,0 +1,41 @@
+body {
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+}
+
+#container{
+    padding: 70px;
+    width:500px;
+}
+
+.link {
+    list-style: none;
+    color: green;
+}
+
+a {
+    display: block;
+    box-sizing: border-box; 
+    width: 130px; 
+    padding: 10px;
+    text-decoration: none;
+    text-align: center; 
+    background-color: #58595b; 
+    color:#ffffff;
+    float: left;
+}
+ul {
+    list-style: none;
+}
+
+img {
+    align-content: center;
+    width: 60%;
+}
