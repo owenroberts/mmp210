@@ -107,6 +107,15 @@ dek: Schedule with class notes & assignments
 	- [Add more buttons](http://arduinotogo.com/2016/10/08/chapter-5-add-2-more-buttons-and-adjust-the-code/){:target="blank"}
 	- Work on tutorial with a partner
 	- Document each tutorial with a video
+- **Resources**
+	- [Arduino Reference](https://www.arduino.cc/reference/en/){:target="_blank"}
+	- [How Electricity Works](https://www.youtube.com/watch?v=mc979OhitAg){:target="_blank"}
+
+<!-- 
+	arduino vids
+	https://www.youtube.com/watch?v=Iy7DY2UbHvM
+
+ -->
 
 ## Week 9 **Sensors**
 - **In Class Assignment**
@@ -122,6 +131,10 @@ dek: Schedule with class notes & assignments
 	- Output the sensor reading using a LED or speaker
 	- Document the circuit
 
+<!-- 
+https://vimeo.com/237203208 // serial output from arduino
+ -->
+
 ## Week 10 **p5 + Arduino**
 - [Connect Arduino with p5](notes/arduino)
 - [Download p5 serial for Windows](examples/arduino/p5.serialcontrol-win32-x64.zip){:target="blank"}
@@ -130,6 +143,11 @@ dek: Schedule with class notes & assignments
 	- Finish setting up arduino sensor with p5 sketch
 	- Choose another sensor and create a sketch to use the sensor value to update a shape or color
 	- Document working project
+
+<!-- 
+	https://github.com/sarahgp/p5bots
+	new serial port: https://github.com/p5-serial/p5.serialport
+ -->
 
 ## Week 11 **Functions**
 - [Interaction 2](notes/interaction_2)
