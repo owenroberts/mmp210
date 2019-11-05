@@ -137,8 +137,6 @@ https://vimeo.com/237203208 // serial output from arduino
 
 ## Week 10 **p5 + Arduino**
 - [Connect Arduino with p5](notes/arduino)
-- [Download p5 serial for Windows](examples/arduino/p5.serialcontrol-win32-x64.zip){:target="blank"}
-- [Download p5 serial for Mac](https://github.com/vanevery/p5.serialcontrol/releases/download/0.0.6/p5.serialcontrol-darwin-x64.zip){:target="blank"}
 - **In Class Assignment**
 	- Finish setting up arduino sensor with p5 sketch
 	- Choose another sensor and create a sketch to use the sensor value to update a shape or color
