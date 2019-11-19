@@ -166,7 +166,7 @@ https://vimeo.com/237203208 // serial output from arduino
 - Optional: Work with a partner
 
 ## **Final Proposal**
-- Pitch with presentation [Slides Template](examples/presentation){:target="blank"}
+- Pitch with presentation
 - Explain the plan for the final
 - How sensor will be used
 - How input will change the graphics/sketch
