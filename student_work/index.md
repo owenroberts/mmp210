@@ -42,4 +42,8 @@ title: MMP 210 - Student Work
 - [Animated Meme](https://cotilla.github.io/MEME3/){:target="_blank"} by Matthew Cotilla
 
 
-
+## Fall 2019
+- [Interactive Self Portrait](https://erencameron.github.io/MMP210/interactive/index.html){:target="_blank"} by Eren Cameron
+- [Animated Meme](https://arlatius.github.io/mmp210/Projects/memelogoAnimation/index.html){:target="_blank"} by Spenver Ayvas
+- [Interactive Self Portrait](https://lepingjiang.github.io/MMP210_Leping_Jiang/p1_2/index.html){:target="_blank"} by Leping Jiang
+- [Final Project](https://lepingjiang.github.io/MMP210_Leping_Jiang/final/index.html){:target="_blank"} by Leping Jiang
