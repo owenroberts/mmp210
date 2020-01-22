@@ -9,7 +9,7 @@ The class notes, schedule and assignments are all found here.
 
 - [Schedule](schedule.html)
 <!-- - <a href="https://mmp210f17.slack.com/" target="_blank">Slack channel</a> -->
-- [Class syllabus](https://docs.google.com/document/d//edit?usp=sharing){:target="_blank"}
+- [Class syllabus](https://docs.google.com/document/d/1i8LDG2QUxxUIxWnlZMeUm4vZOIJC13dh90h2ioX-_nQ/edit?usp=sharing){:target="_blank"}
 - [Student Work](student_work/)
 - [Examples](examples/)
 - [Inspiration](inspiration/)
