@@ -8,8 +8,8 @@ This is the class page of MMP 210 at BMCC.
 The class notes, schedule and assignments are all found here.
 
 - [Schedule](schedule.html)
-<!-- - <a href="https://mmp210f17.slack.com/" target="blank">Slack channel</a> -->
-- [Class syllabus](https://docs.google.com/document/d/1NXYi8daebqD7Ld4jrUxqn7_vQUorRw-K0M_w_SAcVDM/edit?usp=sharing){:target="blank"}
+<!-- - <a href="https://mmp210f17.slack.com/" target="_blank">Slack channel</a> -->
+- [Class syllabus](https://docs.google.com/document/d//edit?usp=sharing){:target="_blank"}
 - [Student Work](student_work/)
 - [Examples](examples/)
 - [Inspiration](inspiration/)
@@ -18,16 +18,16 @@ The class notes, schedule and assignments are all found here.
 ## Class Description
 This course introduces the basic concepts of programming for multimedia. Students will learn the principles of object-oriented programming and how to create scripts for the manipulation of graphics, audio and text to construct a web-based multimedia presentation. 
 
-In addition to the above, the current version of this course focuses on creating interactive art and learning basic programming concepts using JavaScript along with the [p5 JavaScript library](https://p5js.org/){:target="blank"}.
+In addition to the above, the current version of this course focuses on creating interactive art and learning basic programming concepts using JavaScript along with the [p5 JavaScript library](https://p5js.org/){:target="_blank"}.
 
 ## Fall 2019
 - Instructor: Owen Roberts
 - Email: oroberts AT bmcc DOT cuny  DOT edu
 - Office: S622J
 - Office extension: 8057
-- Office hours: Monday 2pm - 5pm, Wednesday afternoons by appointment
+- Office hours: Tuesday 4pm - 6pm, Thursday 4pm - 5pm, Wednesday afternoon by appointment
 - Class times: Tuesday & Thursday 2:00pm - 3:40pm
-- Chambers S608 
+- Class room: Chambers S608 
 
 ## Turning in assignments
 - Assignments turned in on Blackboard
@@ -35,40 +35,40 @@ In addition to the above, the current version of this course focuses on creating
 
 ## Citations for code resources
 - Coding assignments must use citations for any code borrowed from resources outside of class, including Google, Stack Overflow, YouTube or any tutorial, even if it's as little as one line of code
-- This is good practice to keep track of resources as well
+- This is good practice to keep track of resources
 - In comments at the top of include a link to the resource
+```
+/*
+	example project
+	flower design from: https://p5js.org/examples/hello-p5-simple-shapes.html
+*/
+```
+
 
 ## Software
-- Text Editor: [Brackets](http://brackets.io/){:target="blank"}
-- Browser: Chrome
-- [GitHub](https://github.com/){:target="blank"}
+- Text Editor: [Brackets](http://brackets.io/){:target="_blank"}
+- Text Editor: [Sublime](https://www.sublimetext.com/){:target="_blank"}
+- Browser: [Chrome](https://www.google.com/chrome/){:target="_blank"}
+- [GitHub](https://github.com/){:target="_blank"}
+- [GitHub Desktop](https://desktop.github.com/){:target="_blank"}
 
 ## Computer Labs
-Computers are available for student usage in the locations listed on [http://www.bmcc.cuny.edu/it](http://www.bmcc.cuny.edu/it)
+Computers are available for student usage in the locations listed on [http://www.bmcc.cuny.edu/it](http://www.bmcc.cuny.edu/it){:target="_blank"}
 
 ## Tutoring
-For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmcc.cuny.edu/lrc/schedule.jsp)
+For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](https://www.bmcc.cuny.edu/students/lrc/in-person-tutoring/tutoring-schedule/){:target="_blank"}
 
-## Topics
-- Programming Basics
-	- statements
-	- control structures
-	- expressions
-	- functions
-	- methods
-	- objects
-	- variables
-- JavaScript syntax and best practices
-- Document Object Model (DOM)
-- Object oriented coding
-- Interactivity with events, keyboard and mouse input
-- APIs
-- HTML5
-- Canvas and graphics
-- Multimedia elements
-- Web Applications
 
 ## Resources
 - [p5 inspiration](https://github.com/ITPNYU/ICM-2016/wiki/Inspiration)
 - [p5 web editor](http://alpha.editor.p5js.org/)
 - [p5 reference](http://p5js.org/reference/)
+
+## Statement of Inclusion
+This class room strives to be an inclusive learning community, respecting those of differing backgrounds and beliefs.  It is my intent to present materials and activities that are respectful of diversity: gender identity, sexuality, disability, age, socioeconomic status, ethnicity, race, nationality, religion, and culture.
+
+This course affirms people of all gender expressions and gender identities. If you go by a different name than what is on the class roster, please let me know. Using correct gender pronouns is important to me, so you are encouraged to share your pronouns with me and correct me if a mistake is made. 
+
+Your suggestions are encouraged and appreciated.  If you have any questions or concerns, please do not hesitate to contact me.
+
+

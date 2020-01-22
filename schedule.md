@@ -27,7 +27,7 @@ dek: Schedule with class notes & assignments
 - [JavaScript Intro](notes/javascript)
 - [Shapes and Functions](notes/p5)
 - [Color Functions and Values](notes/color)
-- [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/){:target="blank"}
+- [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/){:target="_blank"}
 - **Assignment 2: Self Portrait**
 	- Draw a self portrait in a p5 sketch
 	- Use the shape and color functions
@@ -64,7 +64,7 @@ dek: Schedule with class notes & assignments
 ## Week 5 **Text & Image**
 - [Text](notes/text)
 - [Image](notes/image)
-- [Code Academy: Variables](https://www.codecademy.com/courses/learn-javascript-introduction/lessons/variables/exercises/intro-variables){:target="blank"}
+- [Code Academy: Variables](https://www.codecademy.com/courses/learn-javascript-introduction/lessons/variables/exercises/intro-variables){:target="_blank"}
 - **Assignment 5: Meme/Logo**
 	- Rough draft of logo or meme
 	- Can be hard coded, extra credit for using variables
@@ -72,7 +72,7 @@ dek: Schedule with class notes & assignments
 ## Week 6 **Logic**
 - [Conditional logic](notes/logic)
 - [Drawing with logic](notes/logic/p5.html)
-- [Code Academy: Control Flow](https://www.codecademy.com/courses/learn-javascript-control-flow/lessons/control-flow/exercises/control-flow-intro){:target="blank"}
+- [Code Academy: Control Flow](https://www.codecademy.com/courses/learn-javascript-control-flow/lessons/control-flow/exercises/control-flow-intro){:target="_blank"}
 - **Assignment 6: Interactive Meme/Logo**
 	- Divide the canvas into four parts using if/else statements
 	- Each quadrant changes the design when the user hovers mouse over it
@@ -92,19 +92,19 @@ dek: Schedule with class notes & assignments
 	- [Animated logos](http://www.howdesign.com/featured/animated-logos/)
 
 ## Week 8 **Intro to Physical Computing**
-- [Introduction to Physical Computing](https://mea211blog.wordpress.com/introduction_physcomp/){:target="blank"}
-- [Using a Microcontroller](https://mea211blog.wordpress.com/using-a-microcontroller/){:target="blank"}
-- [Programming an Arduino](https://mea211blog.wordpress.com/programming-the-arduino/){:target="blank"}
+- [Introduction to Physical Computing](https://mea211blog.wordpress.com/introduction_physcomp/){:target="_blank"}
+- [Using a Microcontroller](https://mea211blog.wordpress.com/using-a-microcontroller/){:target="_blank"}
+- [Programming an Arduino](https://mea211blog.wordpress.com/programming-the-arduino/){:target="_blank"}
 - **In Class Assignment**
-	- [Building a Circuit](https://mea211blog.wordpress.com/building-a-circuit/){:target="blank"}
+	- [Building a Circuit](https://mea211blog.wordpress.com/building-a-circuit/){:target="_blank"}
 	- Work with a partner
 	- Document your progress
 	- Include a short video of the blinking light circuit
 	- Submit video via direct upload to Blackboard or link to YouTube video
 - **In Class Assignment**
-	- [Digital Input/Output](https://mea211blog.wordpress.com/digital-input-and-output/){:target="blank"}
-	- [Add a speaker](http://arduinotogo.com/2016/10/08/chapter-5-add-a-speaker-and-adjust-the-code/){:target="blank"}
-	- [Add more buttons](http://arduinotogo.com/2016/10/08/chapter-5-add-2-more-buttons-and-adjust-the-code/){:target="blank"}
+	- [Digital Input/Output](https://mea211blog.wordpress.com/digital-input-and-output/){:target="_blank"}
+	- [Add a speaker](http://arduinotogo.com/2016/10/08/chapter-5-add-a-speaker-and-adjust-the-code/){:target="_blank"}
+	- [Add more buttons](http://arduinotogo.com/2016/10/08/chapter-5-add-2-more-buttons-and-adjust-the-code/){:target="_blank"}
 	- Work on tutorial with a partner
 	- Document each tutorial with a video
 - **Resources**
@@ -119,7 +119,7 @@ dek: Schedule with class notes & assignments
 
 ## Week 9 **Sensors**
 - **In Class Assignment**
-	- [Analog I/O](https://mea211blog.wordpress.com/analog-input-and-output/){:target="blank"}
+	- [Analog I/O](https://mea211blog.wordpress.com/analog-input-and-output/){:target="_blank"}
 	- [Using the serial monitor](http://arduinotogo.com/2017/02/28/chapter-6-using-the-serial-monitor/)
 	- [Adding a speaker](http://arduinotogo.com/2017/02/28/chapter-6-adding-the-speaker/)
 	- [Adding photocell](http://arduinotogo.com/2017/02/28/chapter-6-adding-the-photocell/)
@@ -207,7 +207,7 @@ https://vimeo.com/237203208 // serial output from arduino
 - [Arrays](notes/array)
 - [Spaceship Array](notes/array/p5.html)
 - [Array & Random](notes/array/random.html)
-- [Khan Academy: Arrays](https://www.khanacademy.org/computing/computer-programming/programming/arrays/p/intro-to-arrays){:target="blank"}
+- [Khan Academy: Arrays](https://www.khanacademy.org/computing/computer-programming/programming/arrays/p/intro-to-arrays){:target="_blank"}
 
 ## Final **Project**
 - The final project will be an interactive media player
