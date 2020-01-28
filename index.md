@@ -20,12 +20,11 @@ This course introduces the basic concepts of programming for multimedia. Student
 
 In addition to the above, the current version of this course focuses on creating interactive art and learning basic programming concepts using JavaScript along with the [p5 JavaScript library](https://p5js.org/){:target="_blank"}.
 
-## Fall 2019
 - Instructor: Owen Roberts
 - Email: oroberts AT bmcc DOT cuny  DOT edu
 - Office: S622J
 - Office extension: 8057
-- Office hours: Tuesday 4pm - 6pm, Thursday 4pm - 5pm, Wednesday afternoon by appointment
+- Office hours: Tuesday 2pm - 4pm, Thursday 3pm - 4pm, Wednesday afternoon by appointment
 - Class times: Tuesday & Thursday 2:00pm - 3:40pm
 - Class room: Chambers S608 
 
@@ -60,9 +59,9 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](https://www.bm
 
 
 ## Resources
-- [p5 inspiration](https://github.com/ITPNYU/ICM-2016/wiki/Inspiration)
-- [p5 web editor](http://alpha.editor.p5js.org/)
-- [p5 reference](http://p5js.org/reference/)
+- [p5 inspiration](https://github.com/ITPNYU/ICM-2016/wiki/Inspiration){:target="_blank"}
+- [p5 web editor](http://alpha.editor.p5js.org/){:target="_blank"}
+- [p5 reference](http://p5js.org/reference/){:target="_blank"}
 
 ## Statement of Inclusion
 This class room strives to be an inclusive learning community, respecting those of differing backgrounds and beliefs.  It is my intent to present materials and activities that are respectful of diversity: gender identity, sexuality, disability, age, socioeconomic status, ethnicity, race, nationality, religion, and culture.
