@@ -64,7 +64,7 @@ dek: Schedule with class notes & assignments
 ## Week 5 **Text & Image**
 - [Text](notes/text)
 - [Image](notes/image)
-- [Code Academy: Variables](https://www.codecademy.com/courses/learn-javascript-introduction/lessons/variables/exercises/intro-variables){:target="_blank"}
+- [Code Academy: Variables](https://www.codecademy.com/courses/introduction-to-javascript/lessons/variables/){:target="_blank"}
 - **Assignment 5: Meme/Logo**
 	- Rough draft of logo or meme
 	- Can be hard coded, extra credit for using variables
@@ -72,11 +72,11 @@ dek: Schedule with class notes & assignments
 ## Week 6 **Logic**
 - [Conditional logic](notes/logic)
 - [Drawing with logic](notes/logic/p5.html)
-- [Code Academy: Control Flow](https://www.codecademy.com/courses/learn-javascript-control-flow/lessons/control-flow/exercises/control-flow-intro){:target="_blank"}
+- [Code Academy: Control Flow](https://www.codecademy.com/courses/introduction-to-javascript/lessons/control-flow/){:target="_blank"}
 - **Assignment 6: Interactive Meme/Logo**
-	- Divide the canvas into four parts using if/else statements
-	- Each quadrant changes the design when the user hovers mouse over it
-	- Use variables to change parameters for the shape, color, image and/or text functions
+	- Use interactivity to update the project
+	- Use conditional statements to control how the projects changes
+	- Change parameters for the shape, color, image and/or text functions
 
 ## Week 7 **Animation**
 - [Animation](notes/animation)
