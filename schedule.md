@@ -89,9 +89,11 @@ dek: Schedule with class notes & assignments
 	- Extra credit: Combine animation from first and second category
 - Inspiration
 	- [Animated name logos](http://www.flamingtext.com/Animated-Logos)
-	- [Animated logos](http://www.howdesign.com/featured/animated-logos/)
+	<!-- - [Animated logos](http://www.howdesign.com/featured/animated-logos/) -->
 
-## Week 8 **Intro to Physical Computing**
+
+
+<!-- ## Week 8 **Intro to Physical Computing**
 - [Introduction to Physical Computing](https://mea211blog.wordpress.com/introduction_physcomp/){:target="_blank"}
 - [Using a Microcontroller](https://mea211blog.wordpress.com/using-a-microcontroller/){:target="_blank"}
 - [Programming an Arduino](https://mea211blog.wordpress.com/programming-the-arduino/){:target="_blank"}
@@ -109,7 +111,7 @@ dek: Schedule with class notes & assignments
 	- Document each tutorial with a video
 - **Resources**
 	- [Arduino Reference](https://www.arduino.cc/reference/en/){:target="_blank"}
-	- [How Electricity Works](https://www.youtube.com/watch?v=mc979OhitAg){:target="_blank"}
+	- [How Electricity Works](https://www.youtube.com/watch?v=mc979OhitAg){:target="_blank"} -->
 
 <!-- 
 	arduino vids
@@ -117,7 +119,7 @@ dek: Schedule with class notes & assignments
 
  -->
 
-## Week 9 **Sensors**
+<!-- ## Week 9 **Sensors**
 - **In Class Assignment**
 	- [Analog I/O](https://mea211blog.wordpress.com/analog-input-and-output/){:target="_blank"}
 	- [Using the serial monitor](http://arduinotogo.com/2017/02/28/chapter-6-using-the-serial-monitor/)
@@ -129,25 +131,25 @@ dek: Schedule with class notes & assignments
 	- Choose a new sensor from the lab supplies
 	- Research the web to find a circuit and code to read the sensor
 	- Output the sensor reading using a LED or speaker
-	- Document the circuit
+	- Document the circuit -->
 
 <!-- 
 https://vimeo.com/237203208 // serial output from arduino
  -->
-
+<!-- 
 ## Week 10 **p5 + Arduino**
 - [Connect Arduino with p5](notes/arduino)
 - **In Class Assignment**
 	- Finish setting up arduino sensor with p5 sketch
 	- Choose another sensor and create a sketch to use the sensor value to update a shape or color
-	- Document working project
+	- Document working project -->
 
 <!-- 
 	https://github.com/sarahgp/p5bots
 	new serial port: https://github.com/p5-serial/p5.serialport
  -->
 
-## Week 11 **Functions**
+<!-- ## Week 11 **Functions**
 - [Interaction 2](notes/interaction_2)
 - [Functions](notes/functions)
 
@@ -170,7 +172,7 @@ https://vimeo.com/237203208 // serial output from arduino
 - Explain the plan for the final
 - How sensor will be used
 - How input will change the graphics/sketch
-- Work in progress design or mood board
+- Work in progress design or mood board -->
 
 <!-- 
 
