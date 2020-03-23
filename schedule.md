@@ -91,6 +91,27 @@ dek: Schedule with class notes & assignments
 	- [Animated name logos](http://www.flamingtext.com/Animated-Logos)
 	<!-- - [Animated logos](http://www.howdesign.com/featured/animated-logos/) -->
 
+## Project 3 **Pattern Generator**
+- This project introduces using loops and a user interface that allows users to generate a pattern.
+- That pattern could applied to different themes, like a product design, website background, or game setting.
+
+
+## Week 8 **Loop**
+- [Loop](notes/loop)
+- [Random](notes/random)
+- In class: [Code academy: loops](https://www.codecademy.com/courses/introduction-to-javascript/lessons/loops/)
+- **Assignment 8: Variations**
+	- Using a loop and random, create several varations of a drawing
+	- You could use your self portrait
+	- Use a series of windows on a building
+	- An abstract pattern
+
+## Week 9 **User Interface**
+- [DOM](notes/dom)
+
+
+## Week **Pattern**
+- [Generating patterns](notes/pattern)
 
 
 <!-- ## Week 8 **Intro to Physical Computing**
@@ -176,17 +197,6 @@ https://vimeo.com/237203208 // serial output from arduino
 
 <!-- 
 
-## Week **Loops**
-- [Loops](notes/loops)
-- [Drawing with loops](notes/loops/p5.html)
-- In class: [Code academy: for loops](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/0/1)
-- **Assignment 8: Windows**
-	- Draw the a grid of windows like the front of a city building.  
-	- Each window should be at least 5 shapes.  
-	- Use your apartment building or [Windows of New York](http://windowsofnewyork.com/) for inspiration.
-
-## Week **Pattern**
-- [Generating patterns](notes/pattern)
 
 ## Midterm **Generative design**
 - Create a concept for a product that will have a generative pattern design

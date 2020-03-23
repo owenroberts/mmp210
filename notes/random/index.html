@@ -1,0 +1,106 @@
+---
+layout: slides
+title: Random
+week: 8
+---
+
+<div class="slide">
+	<p>JavaScript has a <code>Math</code> global object, which contains basic methods for manipulating numbers.</p>
+	<p>We can use the Math object to generate random numbers.</p>
+	<ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank">Math</a></li></ul>
+</div>
+
+<div class="slide">
+	<p>p5 has a <code>random</code> function, which returns a random value within a specific range.</p>
+	<pre><code>random(5); // a random number between 0 and 5
+random(-5, 5);// a random number between -5 and 5
+random(5, 10);// a random number between 5 and 10</code></pre>
+</div>
+
+<div class="slide">
+	<p>Randomness can be used to introduce some variation into our pattern.</p>
+	<p>We can randomize the size, shape, color and position, and choose randoms for the randomness.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() { 
+	createCanvas(640, 360);
+	background(220);
+	rectMode(CENTER);
+
+	// random fill, with less green, more blue
+	for (var x = 50; x < width; x += 50) {
+		var r = random(0, 255);
+		var g = random(0, 100);
+		var b = random(100, 255);
+		fill(r, g, b);
+		ellipse(x, height/2, 40);
+		ellipse(x - 10, height/2 - 10, 10);
+		ellipse(x + 10, height/2 - 10, 10);
+		rect(x, height/2 + 10, 30, 10, 5);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() { 
+	createCanvas(640, 360);
+	background(220);
+	rectMode(CENTER);
+
+	// random size 
+	for (var x = 50; x < width; x += 50) {
+		var size = random(50, 100);
+		ellipse(x, height/2, size);
+		ellipse(x - 10, height/2 - 10, size / 10);
+		ellipse(x + 10, height/2 - 10, size / 10);
+		rect(x, height/2 + 10, size, size / 10, 5);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() { 
+	createCanvas(640, 360);
+	background(220);
+	rectMode(CENTER);
+
+	// random y position
+	for (var x = 50; x < width; x += 50) {
+		var y = random(height/2 + 40, height/2 - 40);
+		ellipse(x, y, 40);
+		ellipse(x - 10, y - 10, 10);
+		ellipse(x + 10, y - 10, 10);
+		rect(x, y + 10, 30, 10, 5);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() { 
+	createCanvas(640, 360);
+	background(220);
+	rectMode(CENTER);
+
+	// combination
+	for (var x = 50; x < width; x += 50) {
+		var y = random(height/2 + 40, height/2 - 40);
+		var s = random(50, 100);
+
+		var r = random(0, 255);
+		var g = random(0, 255);
+		var b = random(0, 255);
+		fill(r, g, b);
+
+		ellipse(x, y, s);
+		ellipse(x - s / 4, y - s / 4, s / 2);
+		ellipse(x + s / 4, y - s / 4, s / 2);
+
+		r += 50;
+		g += 50;
+		b += 50;
+		fill(r, g, b);
+		rect(x, y + 10, s / 2, s / 4, s / 8);
+	}
+}</div>
+</div>
