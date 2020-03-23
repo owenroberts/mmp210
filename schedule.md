@@ -110,7 +110,7 @@ dek: Schedule with class notes & assignments
 - [DOM](notes/dom)
 
 
-## Week **Pattern**
+## Week 10 **Pattern**
 - [Generating patterns](notes/pattern)
 
 
