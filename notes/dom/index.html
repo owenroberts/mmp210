@@ -12,8 +12,7 @@ week: 9
 
 <div class="slide">
 	<h2>Button</h2>
-	<p>We can create a new function to actually draw the pattern.  Then the user can click the button to generate new patterns.  Once they find one they like, they can click the "Save Image" button.</p>
-	
+	<p>We can create a new function to actually draw the pattern.  Then the user can click the button to generate new patterns.</p>
 </div>
 
 <div class="slide">
@@ -124,7 +123,7 @@ function setup() {
 	noStroke();
 
 	rotateSlider = createSlider(0, TWO_PI, 0);
-	rotateButton.input(pattern);
+	rotateSlider.input(pattern);
  
 	pattern(); // generate a pattern to start
 }
