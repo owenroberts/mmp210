@@ -112,7 +112,7 @@ dek: Schedule with class notes & assignments
 	- Add buttons to save and regenerate your pattern from Assignment 8
 	- Style the buttons using CSS
 	- Add one more variation to the pattern
-	- Connect the varation to a button or buttons
+	- Connect the varation to a button, slider, or other interface elements
 
 
 ## Week 10 **Pattern**
