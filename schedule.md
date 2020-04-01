@@ -107,7 +107,12 @@ dek: Schedule with class notes & assignments
 	- An abstract pattern
 
 ## Week 9 **User Interface**
-- [DOM](notes/dom)
+- [DOM Elements](notes/dom)
+- **Assignment 9: User Interface**
+	- Add buttons to save and regenerate your pattern from Assignment 8
+	- Style the buttons using CSS
+	- Add one more variation to the pattern
+	- Connect the varation to a button or buttons
 
 
 ## Week 10 **Pattern**

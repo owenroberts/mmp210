@@ -1,49 +1,177 @@
 ---
 layout: slides
-title: MMP 210
+title: Document Object Model
 week: 9
-dek: Dom Library
 ---
 
-
 <div class="slide">
-	<h2>HTML buttons</h2>
-	<p>We can also use HTML buttons in the sketch, which is a lot easier, because they keep track of their own events.  But we need to the <strong>p5 DOM library</strong> for that, <a href="http://p5js.org/download/" target="_blank">which can be dowloaded as part of the whole p5 package here.</a></p>
-	<p>Then we need to attach it to our HTML page with another script tag:</p>
-	<pre><code>&lt;script src="p5.min.js" type="text/javascript"></script>
-&lt;script src="p5.dom.min.js" type="text/javascript"&gt;&lt;/script&gt;
-&lt;script src="example.js" type="text/javascript"&gt;&lt;/script&gt;</code></pre>
+	<p>This week we're going to add HTML elements to our p5 project to create a user interface using common components from HTML.</p>
+	<p>Of course, we can add HTML and CSS to our projects in the traditional manner by editing <note>index.html</note> or <note>style.css</note>, but p5 also has functions to create the elements from the <note>sketch.js</note> file to keep our work in one place.</p>
+	<p>These function are part of the <a href="https://p5js.org/reference/#group-DOM" target="_blank">DOM</a> (Document Object Model) library, which is now a default part of p5.</p>
 </div>
 
 <div class="slide">
-	<pre><code>var r, g, b;
-var x, y, w, h;
-var angle = 0;
-var button;
-function setup(){
-	createCanvas(720, 360);
-	rectMode(CENTER);
-	r = random(0, 255);
-	g = random(0, 255);
-	b = random(0, 255);
+	<h2>Button</h2>
+	<p>We can create a new function to actually draw the pattern.  Then the user can click the button to generate new patterns.  Once they find one they like, they can click the "Save Image" button.</p>
 	
-	button = createButton('Rotate');
-	button.mousePressed(rotateAngle);
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
+ 
+	pattern(); // generate a pattern to start
+
+	var patternButton = createButton('New Pattern');
+	patternButton.mousePressed(pattern);
 }
+
+function pattern() {
+	background('plum');
+	noStroke();
+	fill('lightblue');
+	for (let x = 0; x <= width; x += 50) {
+		ellipse(x, random(height), random(100));
+	}
+}</div>
+</div>
+
+
+
+<div class="slide">
+	<p>Let's add another button.</p>
+	<p>For this one, let's add a button for the user to save an image.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
+	noStroke();
+ 
+	pattern(); // generate a pattern to start
+
+	var patternButton = createButton('New Pattern');
+	patternButton.mousePressed(pattern);
+
+	var saveButton = createButton('Save Image');
+	saveButton.mousePressed(saveImage);
+}
+
+function saveImage() {
+	save('pattern.png');
+}
+
+function pattern() {
+	background('plum');
+	
+	fill('lightblue');
+	
+	for (let x = 0; x <= width; x += 50) {
+		ellipse(x, random(height), random(100));
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<h2>Changing the pattern</h2>
+	<p>We can use buttons to change the values that determine how our pattern looks.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var angle = 0;
+function setup() {
+	createCanvas(640, 360);
+	noStroke();
+ 
+	pattern(); // generate a pattern to start
+
+	var rotateButton = createButton('New Pattern');
+	rotateButton.mousePressed(updatePattern);
+}
+
+function updatePattern() {
+	angle += 0.1 * PI;
+	pattern();
+}
+
+function pattern() {
+	background('plum');
+	
+	fill('lightblue');
+	
+	for (let x = 0; x <= width; x += 50) {
+
+		push();
+		translate(x, height/2);
+		rotate(angle);
+		rect(0, 0, random(100), random(100));
+		pop();
+	}
+}</div>
+</div>
+
+
+
+<div class="slide">
+	<h2>More HTML</h2>
+	<p>In this example using a slider, we'll use the <code>rotateSlider</code> to give the user more control over the rotation.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview data-err>var rotateSlider;
+function setup() {
+	createCanvas(640, 360);
+	noStroke();
+
+	rotateSlider = createSlider(0, TWO_PI, 0);
+	rotateButton.input(pattern);
+ 
+	pattern(); // generate a pattern to start
+}
+
+function pattern() {
+	background('plum');
+	
+	fill('lightblue');
+	
+	for (let x = 0; x <= width; x += 50) {
+
+		push();
+		translate(x, height/2);
+		rotate(rotateSlider.value());
+		rect(0, 0, random(100), random(100));
+		pop();
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>Using HTML form input is another way to let the user interact with our sketch.  We can also take input in the form of text.</p>
+	<p>In this example using a text input, we need the <code>nameInput</code> variable to keep track of the user input.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview data-err>var nameInput;
+
+function setup() {
+	var canvas = createCanvas(640, 360);
+	canvas.drawingContext.miterLimit = 2;
+
+	nameInput = createInput("Type here");
+
+	textSize(100);
+	textAlign(CENTER, CENTER);
+}
+
 function draw(){
-	background("black");
-	fill(r, g, b);
-	
-	push();
+	background(0);
 	translate(width/2, height/2);
-	rotate(angle);
-	rect(0, 0, 200, 200);
-	pop();
-}
-function rotateAngle() {
-	angle += 0.1;
-}
-</code></pre>
+	
+	fill("plum");
+	stroke("blue");
+	strokeWeight(20);
+	text(nameInput.value(), 0, 0);
+}</div>
 </div>
 
 <div class="slide">
@@ -62,11 +190,11 @@ button {
 	cursor: pointer;
 }
 &lt;/style&gt;</code></pre>
-
 </div>
 
 <div class="slide">
-	<p>By default, buttons created by p5 are position absolute, with a top and left value set by the <code>button.position()</code> function.  We can position it inside of the sketch, but we need to add the sketch to a new container to make that easier.  Since we already have <code>p5.dom.js</code> attached, we can do this easily.</p>
+	<h2>CSS positioning</h2>
+	<p>By default, buttons created by p5 are position absolute, with a top and left value set by the <code>button.position()</code> function.  We can position it inside of the sketch, but we need to add the sketch to a new container to make that easier.</p>
 	<p>First we'll add a new <code>div</code> to contain the sketch and it's buttons:</p>
 	<pre><code>&lt;div id="sketch"&gt;&lt;/div&gt;</code></pre>
 	<p>Then add some styling in that old style.css we haven't touched in a while.  The element width should match the width of our canvas:</p>
@@ -76,6 +204,7 @@ button {
 	position:relative;
 }</code></pre>
 </div>
+
 <div class="slide">
 	<p>Now that we have the sketch container set up, set the parent of the sketch canvas and any other elements to that sketch:</p>
 	<pre><code>var myCanvas = createCanvas(720, 360);
@@ -86,53 +215,16 @@ button.position(10, 10);</code></pre>
 </div>
 
 <div class="slide">
-	<h2>More HTML</h2>
-	<p>So using HTML form input is another way to let the user interact with our sketch.  We can also take input in the form of text:</p>
-	<pre><code>var r, g, b;
-var button, input, name;
-function setup(){
-	var myCanvas = createCanvas(720, 360);
-	myCanvas.parent("sketch");
-	rectMode(CENTER);
-	r = random(0, 255);
-	g = random(0, 255);
-	b = random(0, 255);
-	
-	button = createButton('Add your name');
-	button.position(10, 40);
-	button.mousePressed(addName);
-	button.parent("sketch");
-	
-	input = createInput();
-	input.parent("sketch");
-	input.position(10, 10);
-	
-	textSize(40);
-	textAlign(CENTER);
-}
-function draw(){
-	background("black");
-	fill(r, g, b);
-	translate(width/2, height/2);
-	rect(0, 0, 200, 200);
-	fill("pink");
-	stroke("purple");
-	strokeWeight(10);
-	text(name, 0, 0);
-}
-function addName() {
-	name = input.value();
-}</code></pre>
-</div>
-
-<div class="slide">
 	<p>Check out more examples of HTML and CSS functionality in p5 with this tutorial: <a href="https://github.com/processing/p5.js/wiki/Beyond-the-canvas" target="_blank">Beyond the canvas</a></p>
 </div>
 
-<div class="slide">
+<!-- <div class="slide">
 	<h2>keyPress</h2>
 	<p>We can also use <code>keyPress</code> events to detect user input.</p>
-	<pre><code>var rot = 0, rotSpeed = 0.1;
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var rot = 0, rotSpeed = 0.1;
 function setup(){
 	var myCanvas = createCanvas(720, 360);
 	myCanvas.parent("sketch");
@@ -158,5 +250,5 @@ function keyPressed() {
 	} else if (keyCode === LEFT_ARROW) {
 		rot -= rotSpeed;
 	}
-}</code></pre>
-</div>
+}</div>
+</div> -->
