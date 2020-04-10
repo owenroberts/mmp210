@@ -1,0 +1,36 @@
+---
+layout: slides
+title: Nested for loop
+week: 10
+---
+
+<div class="slide">
+	<p>This visualization shows the loop progressing one loop at a time.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">for (let x = 0; x <= width; x += 100) {
+	for (let y = 0; y <= height; y += 100) {
+		ellipse(x + 50, y + 50, 100);
+	}
+}</div>
+
+	<iframe class="sketch" src="{{site.url}}{{site.baseurl}}{{page.url}}loop/" width="600" height="410" frameborder="0" style="margin-top: 1em"></iframe>
+</div>
+
+<div class="slide">
+	<p>The next visualization shows how different paremeters update the loop.</p>
+</div>
+
+<div class="slide">
+	<iframe class="sketch" src="{{site.url}}{{site.baseurl}}{{page.url}}xy/" width="600" height="630" frameborder="0"></iframe>
+</div>
+
+
+<div class="slide">
+	<p>Here's a similar example using the <code>translate</code> function instead of the <code>x</code> and <code>y</code> coordinates.</p>
+</div>
+
+<div class="slide">
+	<iframe class="sketch" src="{{site.url}}{{site.baseurl}}{{page.url}}translate/" width="600" height="710" frameborder="0"></iframe>
+</div>

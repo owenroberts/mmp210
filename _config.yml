@@ -8,3 +8,4 @@ includes_dir: slides/_jeks/includes
 exclude:
   - README.md
   - update.sh
+  - screen_casts/
