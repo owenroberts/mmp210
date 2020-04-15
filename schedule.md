@@ -114,7 +114,6 @@ dek: Schedule with class notes & assignments
 	- Add one more variation to the pattern
 	- Connect the varation to a button, slider, or other interface elements
 
-
 ## Week 10 **Pattern**
 - [Nested Loop](notes/loop/nested)
 - [Generating patterns](notes/pattern)
@@ -122,6 +121,29 @@ dek: Schedule with class notes & assignments
 	- Using a nested for loop, create a pattern
 	- Use randomness and variation
 	- Use user interface components for user to customize pattern
+
+## Week 11 **Keyboard + Sound**
+- [Keyboard interaction](notes/keyboard)
+- [Sound](notes/sound)
+- **Assignment 11: Keyboard Sampler**
+	- Combine sounds with keyboard events to create a sound sampler
+	- Use simple colors or images to reflect changes in sound
+
+## Week 12 **Interaction 2**
+- [Functions](notes/functions)
+- [Interaction 2](notes/interaction_2)
+- **Assignment 12: Visual sounds sampler**
+	- Use functions with button detection to play sounds
+	- Use different sounds associated with different images or graphics
+
+## **Final Proposal**
+- Presentation sketch
+- Choose a previous project to elaborate on or propose something new, hybrid
+- How will user interact with sketch?
+- What type of graphics will be used?
+
+
+
 
 
 <!-- ## Week 8 **Intro to Physical Computing**
@@ -180,30 +202,7 @@ https://vimeo.com/237203208 // serial output from arduino
 	new serial port: https://github.com/p5-serial/p5.serialport
  -->
 
-<!-- ## Week 11 **Functions**
-- [Interaction 2](notes/interaction_2)
-- [Functions](notes/functions)
-
-## Week 12 **Sound**
-- [Sound](notes/sound)
-- [Keyboard interaction](notes/keyboard)
-
-## Week 13 **Final Workshop**
-- Present Final Proposal
-- Work on Final Project
-
-## **Final Project**
-- Interactive animation using a physical interface
-- Choose a sensor to connect to p5 through Arduino
-- Design animation using interaction with the sensor
-- Optional: Work with a partner
-
-## **Final Proposal**
-- Pitch with presentation
-- Explain the plan for the final
-- How sensor will be used
-- How input will change the graphics/sketch
-- Work in progress design or mood board -->
+<!-- -->
 
 <!-- 
 
