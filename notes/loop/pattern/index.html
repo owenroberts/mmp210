@@ -3,6 +3,8 @@ layout: slides
 title: Generating patterns
 week: 10
 ---
+
+<!-- 
 <div class="slide">
 	<p>For the midterm we are going to put together several concepts we've been covering throughout the semester to try to make something that really justifies all the code we've been learning.</p>
 	<p>What makes p5 and programming useful?  If you're a designer, you probably think it's a lot easier to draw a rectangle in Illustrator or Photoshop than p5 or JavaScript.  So why are we learning to code?</p>
@@ -125,10 +127,14 @@ week: 10
 	}
 }</div>
 </div>
+-->
+
 
 <div class="slide">
-	<h2>Simplified grid</h2>
-	<p>Okay, okay, a simpler way of doing this is just deciding how many rows and columns we want to begin with.  Since we've already determined we can draw > 1000 squares with 32 columns and 32 rows, let's stick with that.  But we could change it later.</p>
+	<h2>Grid variations</h2>
+<!-- 	<p>Okay, okay, a simpler way of doing this is just deciding how many rows and columns we want to begin with.  Since we've already determined we can draw > 1000 squares with 32 columns and 32 rows, let's stick with that.  But we could change it later.</p> -->
+	<p>One advantage of using code in a design is introducing a grid that uses precise measurements and then adding variation.</p>
+	<p>We can break our composition down into a grid using a nested for loop based on the width and height of the canvas and the number of rows and columsn we want in the grid.</p>
 </div>
 
 <div class="slide">
@@ -319,10 +325,11 @@ var h = height / rows;</code></pre>
 		}
 	}
 
-	// let's save an image
-	save();
+
+	// save(); 	//  uncomment to save an image
 }</div>
 </div>
+
 <div class="slide">
 	<p>How can the effects be combined to create a meaningful composition?</p>
 </div>

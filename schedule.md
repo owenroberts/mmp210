@@ -136,9 +136,6 @@ dek: Schedule with class notes & assignments
 ## Week 12 **Interaction 2**
 - [Functions](notes/functions)
 - [Interaction 2](notes/interaction_2)
-- **Assignment 12: Visual sounds sampler**
-	- Use functions with button detection to play sounds
-	- Use different sounds associated with different images or graphics
 
 ## **Final Proposal**
 - Presentation sketch
@@ -146,8 +143,13 @@ dek: Schedule with class notes & assignments
 - How will user interact with sketch?
 - What type of graphics will be used?
 
-
-
+## Final Project
+- p5 sketch
+- User interaction (with sketch variables or DOM elements or both)
+- At least one external file (image or sound)
+- Use variables
+- Use at least one example of logic (if statement)
+- Use at least one of loop or function
 
 
 <!-- ## Week 8 **Intro to Physical Computing**
