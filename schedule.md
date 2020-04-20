@@ -122,6 +122,10 @@ dek: Schedule with class notes & assignments
 	- Use randomness and variation
 	- Use user interface components for user to customize pattern
 
+## Project 4 **Sound Sampler**
+- This project introduces adding sound files to a p5 project.
+- We will combine interactivity and sound to create interactive samplers.
+
 ## Week 11 **Keyboard + Sound**
 - [Keyboard interaction](notes/keyboard)
 - [Sound](notes/sound)
