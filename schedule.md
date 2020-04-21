@@ -116,7 +116,7 @@ dek: Schedule with class notes & assignments
 
 ## Week 10 **Pattern**
 - [Nested Loop](notes/loop/nested)
-- [Generating patterns](notes/pattern)
+- [Generating patterns](notes/loop/pattern)
 - **Assignment 10: Generated Pattern**
 	- Using a nested for loop, create a pattern
 	- Use randomness and variation
