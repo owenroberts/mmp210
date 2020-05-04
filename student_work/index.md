@@ -36,21 +36,21 @@ title: MMP 210 - Student Work
 
 
 ## Spring 2017
-- [Midterm](marcus_novoa/midterm/){:target="_blank"} by Marcus Novoa
-- [Midterm](savannah_hendrix/midterm/){:target="_blank"} by Savannah Hendrix
-- [Midterm](philip_cohen/midterm/){:target="_blank"} by Philip Cohen
-- [Midterm](fane_lili/midterm/){:target="_blank"} by Fane Lili
-- [Final](cammy_wan/final/){:target="_blank"} by Cammy Wan
+- [Midterm](17s/marcus_novoa/midterm/){:target="_blank"} by Marcus Novoa
+- [Midterm](17s/savannah_hendrix/midterm/){:target="_blank"} by Savannah Hendrix
+- [Midterm](17s/philip_cohen/midterm/){:target="_blank"} by Philip Cohen
+- [Midterm](17s/fane_lili/midterm/){:target="_blank"} by Fane Lili
+- [Final](17s/cammy_wan/final/){:target="_blank"} by Cammy Wan
 
 
 
 ## Spring 2016
-- [Midterm](chriscel_halili/midterm){:target="_blank"} by Chriscel Halili	
-- [Midterm](daeun_kang/midterm/){:target="_blank"} by Daeun Kang	
-- [Midterm](eduardo_pantaleon/midterm/){:target="_blank"} by Eduardo Pantaleon	
-- [Final](sanghwa_je/final/){:target="_blank"} by Sanghwa Je	
-- [Final](viktoriya_sosa/final/){:target="_blank"} by Viktoriya Sosa	
-- [Final](steven_taveras/final/){:target="_blank"} by Steven Taveras	
+- [Midterm](16s/chriscel_halili/midterm){:target="_blank"} by Chriscel Halili	
+- [Midterm](16s/daeun_kang/midterm/){:target="_blank"} by Daeun Kang	
+- [Midterm](16s/eduardo_pantaleon/midterm/){:target="_blank"} by Eduardo Pantaleon	
+- [Final](16s/sanghwa_je/final/){:target="_blank"} by Sanghwa Je	
+- [Final](16s/viktoriya_sosa/final/){:target="_blank"} by Viktoriya Sosa	
+- [Final](16s/steven_taveras/final/){:target="_blank"} by Steven Taveras	
 
 
 
