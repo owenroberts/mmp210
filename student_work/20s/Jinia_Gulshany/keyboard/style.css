@@ -1,0 +1,39 @@
+body {
+	background: rgb(148,146,179);
+    background: linear-gradient(90deg, rgba(148,146,179,1) 0%, rgba(218,199,216,1) 100%, rgba(0,212,255,1) 100%);
+		font-family: futura;
+		font-size: 15px;
+        text-align: center; 
+        text-decoration: none;
+}
+
+h1, p, a {
+	font-size: 1.5em;
+	color: white;
+}
+
+a{ 
+    color: white; 
+    transition: color 300ms ease-in;
+    }
+
+a:hover {
+	color: #6a0979;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+#container {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+ul { padding: 0;  
+}
+
+li  {
+	list-style: none; 
+}

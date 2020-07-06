@@ -1,0 +1,32 @@
+body {
+	margin: 0;
+	overflow: hidden;
+}
+
+label{
+	color: grey;
+	font-size: 18px;
+	font-family: sans-serif;	
+}
+
+button {
+	border: 4px solid gold;
+	border-radius: 5px;
+	padding: 6px;
+	background-color: grey;
+	color: gold;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+button:hover{
+	background-color: gold;
+	color: grey;
+
+}
+
+button:active {
+	background-color: grey;
+	border-color: gold;
+	color: gold;
+}

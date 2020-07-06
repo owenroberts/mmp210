@@ -1,0 +1,20 @@
+ body{
+ 	background: rgb(61,53,188);
+    background: linear-gradient(90deg, rgba(61,53,188,0.9063231850117096) 12%, rgba(64,135,185,0.8899297423887588) 23%, rgba(0,57,255,0.6962305986696231) 35%, rgba(52,170,194,1) 53%, rgba(0,212,255,1) 92%);
+ 	font-family: Impact, Charcoal, san-serif;
+ 	font-size: 25px;
+ }
+ h1, p, a {
+ 	font-size: 1.5em;
+ }
+ a {
+ 	color: white;
+ 	tansition: color 300ms ease-in;
+ }
+ a:hover {
+ 	color: #00d4ff;
+ }
+ #container {
+ 	max-width: 600px;
+ 	margin: 0 auto;
+ }

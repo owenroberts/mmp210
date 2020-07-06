@@ -1,0 +1,66 @@
+body {
+	background-color: #303030;
+	background-size: 100%;
+	color: white;
+	font-family: Tahoma,Verdana,Segoe,sans-serif;
+	font-size: 20px;
+	text-align: center;
+}
+h1 {
+	font-size:  2.5em;
+	color: #ffb300;
+	padding: 20px;
+	text-align: center;
+	font-family: Bodoni MT,Didot,Didot LT STD,Hoefler Text,Garamond,Times New Roman,serif; 
+	
+}
+p {font-size:  1.5em;
+	color:#ffb300;
+	font-family: Bodoni MT,Didot,Didot LT STD,Hoefler Text,Garamond,Times New Roman,serif; 
+	margin: -3.5px;
+
+
+}
+a { 
+	font-size: 1.5em;
+	color: #ffb300;
+	color: white;
+	transition: color 300ms ease-in;
+	text-align: center;
+}
+
+a:hover { 
+	color: #004eff;
+
+}
+
+
+img {
+	max-width: 100%;
+	border: solid 8px white;
+}
+
+#container {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+#sketch {
+	max-width: 640px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.link {
+	list-style: none;
+}
+
+button {
+	display: block ;
+	margin: 5px;
+	background: black;
+	border: 2px solid yellow;
+	font-size: 20px;
+	color: yellow;
+
+}

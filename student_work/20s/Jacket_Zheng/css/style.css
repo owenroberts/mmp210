@@ -1,0 +1,56 @@
+#logo{  
+    float: center;
+    text-align: center;
+    font-family: 'Spicy Rice', cursive;
+}
+
+h2{
+    color: #000;
+}
+
+.menu{
+    width: 550;
+    height: 55px;
+    border: 2px solid #ccc;
+    float: center;
+    margin-top: 40px;
+    background: #ECE4B7;
+}
+
+.menu ul{}
+
+.menu ul li{
+    list-style: none;
+    float: left;    
+}
+
+.menu ul li a{
+    text-decoration: none;
+    padding: 10px 10px;
+    border: 0px solid #ccc;
+    color: #033A40
+}
+
+.menu ul li a:hover{
+    background: #0D3B66;
+    color: #fff;
+    transition: background 1s, color 1s
+}
+
+canvas {
+	position: absolute;
+	width: 600px;
+	height: 400px;
+	left: 50%;
+	top: 50%;
+	margin-left: -300px; /* This is half the width */
+	margin-top: -200px; /* This is half the height */
+}
+
+body{
+    background-image: url(../back.jpg);
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family:Franklin Gothic Medium;
+}

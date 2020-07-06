@@ -3,6 +3,25 @@ layout: main
 title: MMP 210 - Student Work
 ---
 
+## Spring 2020
+- [Interactive Self Portrait](https://mikenguyenleister.github.io/classwork/selfportrait3.html){:target="_blank"} by Michael Leister  
+- [Final Project](https://mikenguyenleister.github.io/classwork/finalproject2.html){:target="_blank"} by Michael Leister  
+- [Final Project](https://calvingarcia.github.io/mmp210/Final/){:target="_blank"} by Calvin Garcia  
+- [keyboard](https://jiniagulshany.github.io/mmp210/keyboard/){:target="_blank"} by Jinia Gulshany  
+- [Final](https://khalidhubbart.github.io/mmp210/Final/){:target="_blank"} by Khalid Hubbart  
+- [Interactive Self Portrait](https://raja-ee.github.io/mmp210/interactive/){:target="_blank"} by Raja'ee Loney  
+- [Animated Meme](https://valentina177.github.io/mmp210/meme3/){:target="_blank"} by Valentina Garcia-Loaiza  
+- [Interactive Meme](https://jznekker.github.io/mmp_v2/meme_v4/index.html){:target="_blank"} by Jacket Zheng  
+- [Final Project](https://angelcord20.github.io/MMP210/finalproject/){:target="_blank"} by Angel Cordero   
+- [User Interface](https://anthonyh0216.github.io/mmp210/user_interface/){:target="_blank"} by Anthony   Hernandez  
+- [Final Project](https://mirandashy.github.io/mmp210/final_project/){:target="_blank"} by Miranda Shytaj  
+- [Button Game](https://aarongarcia2017.github.io/MMP210/button_game/){:target="_blank"} by Aaron Garcia  
+- [Sound Sampler](https://maria282.github.io/mmp210/Sound/){:target="_blank"} by Maria Sarmiento  
+
+
+
+
+
 ## Fall 2019
 - [Interactive Self Portrait](https://erencameron.github.io/MMP210/interactive/index.html){:target="_blank"} by Eren Cameron
 - [Animated Meme](https://arlatius.github.io/mmp210/Projects/memelogoAnimation/index.html){:target="_blank"} by Spenver Ayvas
@@ -11,12 +30,12 @@ title: MMP 210 - Student Work
 
 
 ## Fall 2018
-- [Final](https://nanae1984.github.io/MMP210/finalproject/){:target="_blank"} by Nanae Itoi 
+<!-- - [Final](https://nanae1984.github.io/MMP210/finalproject/){:target="_blank"} by Nanae Itoi  -->
 - [Self Portrait](https://kseniiakrasilich.github.io/mmp210/self_portrait_Black/index.html){:target="_blank"} by Kseniia Krasilich
 - [Self Portrait](https://seba11001.github.io/MMP210/SelfPortrait2/index.html){:target="_blank"} by Sebastian Miezgiel
 - [Self Portrait](https://leightonsnyder.github.io/mmp210/selfportrait_2.html){:target="_blank"} by Leighton Snyder
 - [Meme](https://leightonsnyder.github.io/mmp210/meme.html){:target="_blank"} by Leighton Snyder
-- [Self Portrait](https://admadary.github.io/mmp210/self_portrait_v3/index.html){:target="_blank"} by Bryan Suncar
+- [Self Portrait](18f/bryan_suncar/self_portrait_v3/index.html){:target="_blank"} by Bryan Suncar
 - [Interactive Meme](https://trinidawn.github.io/mmp210/meme_1/){:target="_blank"} by Dawn Joseph
 - [Interactive Meme](https://lufire08.github.io/MMP_210/Meme_v1/index.html){:target="_blank"} by Luis Vazquez
 - [Animated Meme](https://cotilla.github.io/MEME3/){:target="_blank"} by Matthew Cotilla

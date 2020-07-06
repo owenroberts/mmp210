@@ -1,0 +1,54 @@
+body {
+	background: rgb(63,94,251);
+background: linear-gradient(187deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+color: white;
+font-family: Impact;
+font-size: 35px;
+text-align: center;
+}
+
+h1,  {
+	font-size: 45px;
+	text-align: center;
+
+}
+
+p {
+	font-size: 30px;
+}
+
+h2 {
+	font-size: 39px;
+	font-family: Bodoni MT;
+	text-align: center;
+	text-decoration: underline;
+}
+
+a {
+	color: white;
+	transition: color 300ms ease-in;
+
+}
+
+  a:hover {
+	color:#e97d7d;
+	text-align: center;
+}
+
+img {
+	max-width: 100%;
+
+}
+
+ #container {
+	max-width: 600px
+	margin: 0 auto;
+	text-align: center;
+
+
+}
+
+  .link {
+	list-style: none;
+	text-align: center;
+}
