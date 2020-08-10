@@ -9,7 +9,7 @@ The class notes, schedule and assignments are all found here.
 
 - [Schedule](schedule.html)
 <!-- - <a href="https://mmp210f17.slack.com/" target="_blank">Slack channel</a> -->
-- [Class syllabus](https://docs.google.com/document/d/1i8LDG2QUxxUIxWnlZMeUm4vZOIJC13dh90h2ioX-_nQ/edit?usp=sharing){:target="_blank"}
+- [Class syllabus](https://docs.google.com/document/d/1RSkk5f_AOf-caV_KPTPn7P_WzKvcYtT02_KDWiOmV3E/edit?usp=sharing){:target="_blank"}
 - [Student Work](student_work/)
 - [Examples](examples/)
 - [Inspiration](inspiration/)
@@ -24,9 +24,6 @@ In addition to the above, the current version of this course focuses on creating
 - Email: oroberts AT bmcc DOT cuny  DOT edu
 - Office: S622J
 - Office extension: 8057
-- Office hours: Tuesday 2pm - 4pm, Thursday 3pm - 4pm, Wednesday afternoon by appointment
-- Class times: Tuesday & Thursday 2:00pm - 3:40pm
-- Class room: Chambers S608 
 
 ## Turning in assignments
 - Assignments turned in on Blackboard
