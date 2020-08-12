@@ -20,11 +20,6 @@ This course introduces the basic concepts of programming for multimedia. Student
 
 In addition to the above, the current version of this course focuses on creating interactive art and learning basic programming concepts using JavaScript along with the [p5 JavaScript library](https://p5js.org/){:target="_blank"}.
 
-- Instructor: Owen Roberts
-- Email: oroberts AT bmcc DOT cuny  DOT edu
-- Office: S622J
-- Office extension: 8057
-
 ## Turning in assignments
 - Assignments turned in on Blackboard
 - Late assignments are 25 points off
