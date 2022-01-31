@@ -5,16 +5,25 @@ dek: Schedule with class notes & assignments
 ---
 
 ## Week 1 **Intro**
-- [HTML](notes/html) & [CSS](notes/css) Review 
-- [GitHub Publishing](notes/github)
-- **Assignment 1: Portolfio web page**
-	- Create a simple web site to use as the portfolio page for your work this semester
-	- Publish the site on Github Pages
-	- Your site should have at least one of each:
-		- Image
-		- Stylesheet
-		- Menu, with links
-	- Submit URL to published site
+<!-- - [HTML](notes/html) & [CSS](notes/css) Review  -->
+<!-- - [GitHub Publishing](notes/github) -->
+- [JavaScript Intro](notes/javascript)
+- Intro to [p5](https://p5js.org/){:target="_blank"}
+- Create an account for the [p5 editor](https://editor.p5js.org/){:target="_blank"}
+- Join the course on [Open Lab](https://openlab.bmcc.cuny.edu/groups/mmp-210-spring-2022/){:target="_blank"}
+- Click Visit Course Site or Login to the [Course Site here](https://openlab.bmcc.cuny.edu/mmp-210-spring-22/){:target="_blank"}
+- **Assignment 1: Recreate an artwork**
+	- Choose an artwork from one of the artists in the list
+	- Recreate the artwork in p5
+	- You can be creative -- try to capture the idea or feeling of the work without necessarily recreating each shape and color exactly
+	- Save an image of the sketch and post on Open Lab
+	- You can suggest an image if you want to use something else
+	- Arists
+		- [Wassily Kandinksy](https://www.wassilykandinsky.net/painting1896-1944.php){:target="_blank"}
+		- [Julio Le Parc](https://www.metmuseum.org/exhibitions/objects?exhibitionId=98b35973-e36a-4fa7-be26-c1f3186ca4d2&pkgids=541){:target="_blank"}
+		- [Kazimir Malevich](https://www.kazimirmalevich.org/paintings/){:target="_blank"}
+		- [Agnes Martin](https://www.moma.org/artists/3787){:target="_blank"}
+		- [Carmen Herrera](https://whitney.org/exhibitions/carmen-herrera){:target="_blank"}
 
 ## Project 1 **Self Portrait**
 - Over the next three weeks you will make a self portrait, starting with a simple drawing and ending with an interactive artwork using variables.
@@ -24,7 +33,7 @@ dek: Schedule with class notes & assignments
 - Giving feedback is part of the assignment.
 
 ## Week 2 **Shape & Color**
-- [JavaScript Intro](notes/javascript)
+
 - [Shapes and Functions](notes/p5)
 - [Color Functions and Values](notes/color)
 - [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/){:target="_blank"}

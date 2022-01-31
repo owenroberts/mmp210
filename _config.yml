@@ -1,7 +1,8 @@
 description: mmp 210 class website
 class: MMP 210
 semester: 18f
-baseurl: /
+schedule: true
+# baseurl: /
 layouts_dir: slides/_jeks/layouts
 includes_dir: slides/_jeks/includes
 # Exclude these files from your production _site

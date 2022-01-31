@@ -8,12 +8,11 @@ This is the class page of MMP 210 at BMCC.
 The class notes, schedule and assignments are all found here.
 
 - [Schedule](schedule.html)
-<!-- - <a href="https://mmp210f17.slack.com/" target="_blank">Slack channel</a> -->
-- [Class syllabus](https://docs.google.com/document/d/1RSkk5f_AOf-caV_KPTPn7P_WzKvcYtT02_KDWiOmV3E/edit?usp=sharing){:target="_blank"}
+- [Class syllabus](https://docs.google.com/document/d/1HdeR2rel11VqFnZytoIaNVNeeXvo1nLz2Nx5q2gI5ac/edit?usp=sharing){:target="_blank"}
 - [Student Work](student_work/)
 - [Examples](examples/)
 - [Inspiration](inspiration/)
-- [Public Pad](pad)
+- [Discord](https://discord.gg/Kb3bm2dcZQ){:target="_blank"}
 
 ## Class Description
 This course introduces the basic concepts of programming for multimedia. Students will learn the principles of object-oriented programming and how to create scripts for the manipulation of graphics, audio and text to construct a web-based multimedia presentation. 
@@ -52,7 +51,7 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](https://www.bm
 
 ## Resources
 - [p5 inspiration](https://github.com/ITPNYU/ICM-2016/wiki/Inspiration){:target="_blank"}
-- [p5 web editor](http://alpha.editor.p5js.org/){:target="_blank"}
+- [p5 web editor](http://editor.p5js.org/){:target="_blank"}
 - [p5 reference](http://p5js.org/reference/){:target="_blank"}
 
 ## Statement of Inclusion
