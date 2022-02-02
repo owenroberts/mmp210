@@ -12,7 +12,7 @@ The class notes, schedule and assignments are all found here.
 - [Student Work](student_work/)
 - [Examples](examples/)
 - [Inspiration](inspiration/)
-- [Discord](https://discord.gg/Kb3bm2dcZQ){:target="_blank"}
+- [Discord](https://discord.com/invite/YTNKaWr7VA){:target="_blank"}
 
 ## Class Description
 This course introduces the basic concepts of programming for multimedia. Students will learn the principles of object-oriented programming and how to create scripts for the manipulation of graphics, audio and text to construct a web-based multimedia presentation. 
