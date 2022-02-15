@@ -18,7 +18,7 @@ dek: Schedule with class notes & assignments
 	- You can be creative -- try to capture the idea or feeling of the work without necessarily recreating each shape and color exactly
 	- Save an image of the sketch and post on Open Lab
 	- You can suggest an image if you want to use something else
-	- Arists
+	- Artists
 		- [Wassily Kandinksy](https://www.wassilykandinsky.net/painting1896-1944.php){:target="_blank"}
 		- [Julio Le Parc](https://www.metmuseum.org/exhibitions/objects?exhibitionId=98b35973-e36a-4fa7-be26-c1f3186ca4d2&pkgids=541){:target="_blank"}
 		- [Kazimir Malevich](https://www.kazimirmalevich.org/paintings/){:target="_blank"}
