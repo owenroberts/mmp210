@@ -28,12 +28,8 @@ dek: Schedule with class notes & assignments
 ## Project 1 **Self Portrait**
 - Over the next three weeks you will make a self portrait, starting with a simple drawing and ending with an interactive artwork using variables.
 - One version due each week.  The three versions include a hard coded drawing, a static drawing with variables, an interactive version.
-- We will give feedback in class.  Part of the evaluation is writing down feedback and using it to make changes to the self portrait.  It could be as simple as changing a color or moving a line.
-- Each version should have it's own URL added to the GitHub Pages home page and submitted via Blackboard.
-- Giving feedback is part of the assignment.
 
 ## Week 2 **Shape & Color**
-
 - [Shapes and Functions](notes/p5)
 - [Color Functions and Values](notes/color)
 - [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/){:target="_blank"}
@@ -43,22 +39,20 @@ dek: Schedule with class notes & assignments
 	- Add something unique to you
 	- Doesn't necessarily have to have a face/body, could be abstract
 
-
 ## Week 3 **Variables**
 - [JavaScript statements & operators](notes/javascript/statements.html)
 - [Variables](notes/variables/)
 - [JavaScript debugging](notes/debug)
 - [Debugging challenge](notes/debug/debug.zip)
 - **Assignment 3: Self Portrait with Variables**
-	- All hard coded numbers and strings in shape and color functions replaced with variables
-	- Variable names describe what they are used for
-	- Update drawing based on class feedback
+	- Use variables for the x and y position of the self portrait
+	- The entire portrait should move when x and y are changed
+	- Optional: Add variables for size or color
 
 ## Week 4 **Interaction 1**
 - [System variables](notes/system_variables)
 - [Interaction](notes/interaction_1)
 - **Assignment 4: Interactive Self Portrait**
-	- Final changes based on class feedback
 	- Choose part of your self portrait to animate with interaction
 		- size, position or color, or a combination
 	- Use the `map` function at least once
