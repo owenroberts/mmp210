@@ -43,7 +43,12 @@ dek: Schedule with class notes & assignments
 - [JavaScript statements & operators](notes/javascript/statements.html)
 - [Variables](notes/variables/)
 - [JavaScript debugging](notes/debug)
-- [Debugging challenge](notes/debug/debug.zip)
+<!-- - [Debugging challenge](notes/debug/debug.zip) -->
+- [Debugging exercise](https://editor.p5js.org/owenroberts/sketches/g9ZgKuDWJ){:target="_blank"}
+	- Duplicate this p5 sketch
+	- Solve the bugs
+	- Submit the link to your new sketch
+	- Finished version should look like [this image](https://210.owen.cool/notes/debug/debug.png){:target="_blank"}
 - **Assignment 3: Self Portrait with Variables**
 	- Use variables for the x and y position of the self portrait
 	- The entire portrait should move when x and y are changed
