@@ -66,8 +66,6 @@ dek: Schedule with class notes & assignments
 ## Project 2 **Meme/Logo**
 - The next three weeks will be dedicated to the second project.  You have a choice to create a logo for youself or a fictional client or to make a "meme", meaning a humorous combination of image and text (must be appropriate for class).
 - This project will also have three versions: rough draft, simple interaction, and final animation.
-- Feedback in class.
-- Each version has its own URL.
 
 ## Week 5 **Text & Image**
 - [Text](notes/text)
@@ -75,7 +73,7 @@ dek: Schedule with class notes & assignments
 - [Code Academy: Variables](https://www.codecademy.com/courses/introduction-to-javascript/lessons/variables/){:target="_blank"}
 - **Assignment 5: Meme/Logo**
 	- Rough draft of logo or meme
-	- Can be hard coded, extra credit for using variables
+	- Use at least two variables
 
 ## Week 6 **Logic**
 - [Conditional logic](notes/logic)
@@ -94,7 +92,6 @@ dek: Schedule with class notes & assignments
 	- Choose what type of animation to use
 		- One from first category: size, position or color
 		- One from second category: translate, rotate, shear or scale
-	- Extra credit: Combine animation from first and second category
 - Inspiration
 	- [Animated name logos](http://www.flamingtext.com/Animated-Logos)
 	<!-- - [Animated logos](http://www.howdesign.com/featured/animated-logos/) -->
