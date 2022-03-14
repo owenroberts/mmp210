@@ -112,17 +112,26 @@ function draw() {
 
 	fill("white");
 
+	// set rect params
+	var x = 0;
+	var y = 0;
+	var w = width / 2;
+	var h = height / 2;
+
 	/* for each quandrant, determine of mouse 
 		is inside bounds */	
-	if (mouseX > width/2 && mouseY > height/2) {
-		rect(width/2, height/2, width, height);
-	} else if (mouseX < width/2 && mouseY > height/2) {
-		rect(0, height/2, width/2, height);
-	} else if (mouseX > width/2 && mouseY < height/2) {
-		rect(width/2, 0, width, height/2);
-	} else {
-		rect(0, 0, width/2, height/2);
+	if (mouseX > w && mouseY > h) {
+		x = w;
+		y = h;
+	} else if (mouseX < w && mouseY > h) {
+		y = h;
+	} else if (mouseX > w && mouseY < h) {
+		x = w;
 	}
+	// else is 0, 0
+
+	// draw rect
+	rect(x, y, width / 2, height / 2);
 }</div>
 </div>
 
@@ -209,6 +218,78 @@ function draw() {
 			eyeWidth = 100;
 			eyeHeight = 100;
 		}
+	}
+
+
+	noStroke();
+	fill("plum");
+	ellipse(x, y, s); // face
+
+	fill("yellow");
+	ellipse(x - o, y, eyeWidth, eyeHeight); // right eye
+	ellipse(x + o, y, eyeWidth, eyeHeight); // left eye
+
+	fill('plum');
+	stroke("#ffddff");
+	strokeWeight(4);
+	
+	rect(x, y + o, mouthWidth, mouthHeight, 10); // mouth	
+}</div>
+</div>
+
+
+
+<div class="slide">
+	<h2>Sequence</h2>
+	<p>Let's do the same thing with one click.</p>
+	<p>Instead of detecting areas on the canvas, we can increment a counter.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var counter = 0;
+
+function mousePressed() {
+	counter += 1;
+	if (counter == 4) {
+		counter = 0;
+	}
+}
+
+function draw() {
+	background(220);
+	rectMode(CENTER);
+	
+	var x = width/2;
+	var y = height/2;
+	var s = 200; // size
+	var o = 50; // offset
+	
+	// default expression
+	var mouthWidth = 100;
+	var mouthHeight = 10;
+	var eyeWidth = 25;
+	var eyeHeight = 25;
+	
+	if (counter == 0) {
+		// surprised expression
+		mouthHeight = 10;
+		eyeWidth = 50;
+		eyeHeight = 50;
+	} else if (counter == 1) {
+		// angry
+		mouthHeight = 5;
+		eyeWidth = 50;
+		eyeHeight = 10;
+	} else if (counter == 2) {
+		// sad
+		mouthWidth = 20;
+		eyeWidth = 50;
+		eyeHeight = 50;
+	} else {
+		// scared   
+		mouthHeight = 50;
+		eyeWidth = 100;
+		eyeHeight = 100;
 	}
 
 
