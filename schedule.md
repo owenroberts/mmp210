@@ -100,7 +100,6 @@ dek: Schedule with class notes & assignments
 - This project introduces using loops and a user interface that allows users to generate a pattern.
 - That pattern could applied to different themes, like a product design, website background, or game setting.
 
-
 ## Week 8 **Loop**
 - [Loop](notes/loop)
 - [Random](notes/random)
@@ -111,13 +110,13 @@ dek: Schedule with class notes & assignments
 	- Use a series of windows on a building
 	- An abstract pattern
 
-## Week 9 **User Interface**
+## Week 9 **Functions**
+- [Functions](notes/functions)
 - [DOM Elements](notes/dom)
 - **Assignment 9: User Interface**
 	- Add buttons to save and regenerate your pattern from Assignment 8
 	- Style the buttons using CSS
-	- Add one more variation to the pattern
-	- Connect the varation to a button, slider, or other interface elements
+	- Add a custom function for drawing the pattern elements
 
 ## Week 10 **Pattern**
 - [Nested Loop](notes/loop/nested)
@@ -139,7 +138,6 @@ dek: Schedule with class notes & assignments
 	- Use simple colors or images to reflect changes in sound
 
 ## Week 12 **Interaction 2**
-- [Functions](notes/functions)
 - [Interaction 2](notes/interaction_2)
 
 ## **Final Proposal**
