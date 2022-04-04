@@ -106,9 +106,8 @@ dek: Schedule with class notes & assignments
 - In class: [Code academy: loops](https://www.codecademy.com/courses/introduction-to-javascript/lessons/loops/)
 - **Assignment 8: Variations**
 	- Using a loop and random, create several varations of a drawing
-	- You could use your self portrait
-	- Use a series of windows on a building
-	- An abstract pattern
+	- You could use your self portrait, a series of windows on a building, an abstract pattern or any pattern you want to create
+	- Document three variations of the pattern
 
 ## Week 9 **Functions**
 - [Functions](notes/functions)
@@ -124,7 +123,7 @@ dek: Schedule with class notes & assignments
 - **Assignment 10: Generated Pattern**
 	- Using a nested for loop, create a pattern
 	- Use randomness and variation
-	- Use user interface components for user to customize pattern
+	- Use user interface components for use to regenerate and save pattern
 
 ## Project 4 **Sound Sampler**
 - This project introduces adding sound files to a p5 project.
