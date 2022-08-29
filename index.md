@@ -7,12 +7,12 @@ This is the class page of MMP 210 at BMCC.
 
 The class notes, schedule and assignments are all found here.
 
-- [Schedule](schedule.html)
+- [Schedule](schedule)
 - [Class syllabus](https://docs.google.com/document/d/1HdeR2rel11VqFnZytoIaNVNeeXvo1nLz2Nx5q2gI5ac/edit?usp=sharing){:target="_blank"}
 - [Student Work](student_work/)
 - [Examples](examples/)
 - [Inspiration](inspiration/)
-- [Discord](https://discord.com/invite/YTNKaWr7VA){:target="_blank"}
+- [Discord](https://discord.com/invite/GaHnPfZUs6){:target="_blank"}
 
 ## Class Description
 This course introduces the basic concepts of programming for multimedia. Students will learn the principles of object-oriented programming and how to create scripts for the manipulation of graphics, audio and text to construct a web-based multimedia presentation. 
@@ -34,13 +34,13 @@ In addition to the above, the current version of this course focuses on creating
 */
 ```
 
-
 ## Software
-- Text Editor: [Brackets](http://brackets.io/){:target="_blank"}
-- Text Editor: [Sublime](https://www.sublimetext.com/){:target="_blank"}
 - Browser: [Chrome](https://www.google.com/chrome/){:target="_blank"}
-- [GitHub](https://github.com/){:target="_blank"}
-- [GitHub Desktop](https://desktop.github.com/){:target="_blank"}
+<!-- - Text Editor: [Brackets](http://brackets.io/){:target="_blank"}
+- Text Editor: [Sublime](https://www.sublimetext.com/){:target="_blank"}
+ -->
+<!-- - [GitHub](https://github.com/){:target="_blank"}
+- [GitHub Desktop](https://desktop.github.com/){:target="_blank"} -->
 
 ## Computer Labs
 Computers are available for student usage in the locations listed on [http://www.bmcc.cuny.edu/it](http://www.bmcc.cuny.edu/it){:target="_blank"}

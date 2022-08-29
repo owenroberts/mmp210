@@ -10,7 +10,7 @@ dek: Schedule with class notes & assignments
 - [JavaScript Intro](notes/javascript)
 - Intro to [p5](https://p5js.org/){:target="_blank"}
 - Create an account for the [p5 editor](https://editor.p5js.org/){:target="_blank"}
-- Join the course on [Open Lab](https://openlab.bmcc.cuny.edu/groups/mmp-210-spring-2022/){:target="_blank"}
+- Join the course on [Open Lab](https://openlab.bmcc.cuny.edu/groups/mmp-210-fall-2022/){:target="_blank"}
 - Click Visit Course Site or Login to the [Course Site here](https://openlab.bmcc.cuny.edu/mmp-210-spring-22/){:target="_blank"}
 - **Assignment 1: Recreate an artwork**
 	- Choose an artwork from one of the artists in the list
