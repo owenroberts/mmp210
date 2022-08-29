@@ -9,18 +9,18 @@ function setup() {
 	createCanvas(_W, 620);
 	noStroke();
 	textSize(_textSize);
-	textFont('Monaco');
+	textFont('monospace');
 	textAlign(LEFT, TOP);
 
-	_x = new DragNumber(0, -100, _W, 155, 30);
-	_y = new DragNumber(0, -100, _H, 205, 60);
-	_w = new DragNumber(_W, 0, _W, 255, 30);
-	_h = new DragNumber(_H, 0, _H, 304, 60);
-	_c = new DragNumber(100, 1, _W, 370, 30); // 0 will stack overflow
-	_r = new DragNumber(100, 1, _H, 420, 60);
-	_oX = new DragNumber(0, 0, 50, 240, 90); // x offset
-	_oY = new DragNumber(0, 0, 50, 330, 90); // y offset
-	_s = new DragNumber(_c.n/2, 1, 200, 380, 90); // size
+	_x = new DragNumber(0, -100, _W, 10, 10);
+	_y = new DragNumber(0, -100, _H, 10, 30);
+	_w = new DragNumber(_W, 0, _W, 30, 10);
+	_h = new DragNumber(_H, 0, _H, 30, 30);
+	_c = new DragNumber(100, 1, _W, 60, 10); // 0 will stack overflow
+	_r = new DragNumber(100, 1, _H, 60, 30);
+	_oX = new DragNumber(0, 0, 50, 10, 50); // x offset
+	_oY = new DragNumber(0, 0, 50, 30, 50); // y offset
+	_s = new DragNumber(_c.n/2, 1, 90, 60, 50); // size
 	drags = [_x, _y, _w, _h, _c, _r, _oX, _oY, _s];
 }
 
@@ -50,7 +50,7 @@ function draw() {
 
 	fill(0);
 	// text(`for (let x = ${_x.n}; x <= ${_w.n}; x += 100) {`, _W, 30);
-	text(`for (let x =   ; x <=   ; x +=    ) {`, 0, 30);
+	text(`for (let x = ${_x.n}; x <= ${_w.n}; x += ${_c.n}) {`, 0, 30);
 	text('    for (let y = 0 ; y <=   ; y +=    ) {', 0, 60);
 	text('        ellipse(x +   , y +   ,    );', 0, 90);
 	text('    }', 0, 120);
