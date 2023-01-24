@@ -20,8 +20,6 @@ title: MMP 210 - Student Work
 
 
 
-
-
 ## Fall 2019
 - [Interactive Self Portrait](https://erencameron.github.io/MMP210/interactive/index.html){:target="_blank"} by Eren Cameron
 - [Animated Meme](https://arlatius.github.io/mmp210/Projects/memelogoAnimation/index.html){:target="_blank"} by Spenver Ayvas
