@@ -4,12 +4,7 @@ title: 	p5.js
 week: 2
 ---
 
-<!-- HTML canvas -->
-<div class="slide">
-	<h2>HTML5 Canvas</h2>
-	<p>The HTML5 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API" target="_blank">Canvas</a> is a HTML element introduced with the HTML5 standard around 2011 to implement graphical programming within the web browser.</p>
-	<p>The canvas can be used to draw graphics on the screen using JavaScript.  This can be done in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial" target="_blank">vanilla JavaScript</a> (vanilla refers to the practice of writing JavaScript without the addition of libraries like jQuery) but there are many libraries that make drawing to the canvas easier.</p>
-</div>
+
 
 <!-- what is p5? -->
 <div class="slide">
@@ -24,37 +19,19 @@ week: 2
 
 <!-- adding p5 -->
 <div class="slide">
-	<p>Let's get started by adding the p5 library to an HTML project and creating a new JavaScript sketch file to begin writing our program.</p>
-	<p>Start by <a href="https://p5js.org/download/" target="_blank">downloading the p5 library</a>.  Scroll to <note>Single Files</note> and click <code>p5.min.js</code>.</p>
-	<p>In our HTML/CSS review, we created a basic HTML and CSS file to be a placeholder for our project this semester. To begin let's make a copy of those files to start a new project.  We're going to work on the first assignemnt, a self portrait, so we can name that folder <note>self_portrait/</note> and place it inside our main <note>mmp210/</note> folder.</p>
+	<p>Let's take a look at how <note>p5</note> is set up. We are going to use the <a href="https://editor.p5js.org/" target="_blank">p5 Web Editor</a> as our Integrated Development Environment (IDE) this semester. That basically means that the tools we need to write, run and test our code are all built into the same place.</p>
 </div>
 
 <div class="slide">
-	<p>Then add the <code>p5.min.js</code> file into the same folder and update your HTML page to add two <code>&lt;script&gt;</code> tags, which are like a <code>&lt;link&gt;</code> tag for CSS or <code>&lt;img&gt;</code> tag for images, but for loading JavaScript documents.</p>
+	<p>When you create a new <em>sketch</em> with the p5 editor, it set ups a small website by default. To see the files that are created, use the arrow button next to the <code>sketch.js</code> bar on the top left of your code. You will see three files, <code>index.html</code>, <code>style.css</code> and <code>sketch.js</code>. These are the three main components of a website.</p>
+	<p>For a p5 sketch, these files are very simple. They set up a basic site where we can begin to write our own code and preview it in the browser using the HTML canvas. </p>
 </div>
 
+<!-- HTML canvas -->
 <div class="slide">
-	<div class="ex" data-lang="html">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-	&lt;title&gt;MMP 210 Homepage&lt;/title&gt;
-	&lt;link rel="stylesheet" type="text/css" href="style.css"&gt;
-	&lt;meta charset="utf-8"&gt;
-&lt;/head&gt;
-&lt;body id="home"&gt;
-	&lt;h1&gt;Self Portrait&lt;/h1&gt;
-	&lt;ul&gt;
-		&lt;li class="link"&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-	&lt;script src="p5.min.js"&gt;&lt;/script&gt;
-	&lt;script src="sketch.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</div>
-</div>
-
-<div class="slide">
-	<p>The second <code>&lt;script&gt;</code> tag is for <code>sketch.js</code> which doesn't exist yet, so create a new file and save it as <code>sketch.js</code>.  This is where our JavaScript program will begin.</p>
-	<p>Before we start let's talk about the way a p5 sketch considers dimensions.</p>
+	<h2>HTML5 Canvas</h2>
+	<p>The HTML5 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API" target="_blank">Canvas</a> is a HTML element introduced with the HTML5 standard around 2011 to implement graphical programming within the web browser.</p>
+	<p>The canvas can be used to draw graphics on the screen using JavaScript.  This can be done in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial" target="_blank">vanilla JavaScript</a> (vanilla refers to the practice of writing JavaScript without the addition of libraries like jQuery) but there are many libraries that make drawing to the canvas easier.</p>
 </div>
 
 <!-- cartesian vs screen coordinates -->
