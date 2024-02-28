@@ -2,7 +2,7 @@ description: mmp 210 class website
 class: MMP 210
 semester: 22f
 semester_string: fall
-schedule: true
+schedule: false
 # baseurl: /
 layouts_dir: slides/_jeks/layouts
 includes_dir: slides/_jeks/includes
